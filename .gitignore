@@ -1,0 +1,56 @@
+# Raw and processed datasets
+data/
+datasets/
+raw_data/
+processed_data/
+*.zip
+*.tar
+*.tar.gz
+*.tfrecord
+*.dcm
+/jpeg/
+/train/
+/test/
+/tfrecords/
+private_splits/
+
+# Large model files and checkpoints
+models/
+checkpoints/
+artifacts/
+*.keras
+*.h5
+*.pt
+*.pth
+*.ckpt
+
+# Authentication and secrets
+.env
+kaggle.json
+credentials.json
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Experiment tracking
+wandb/
+mlruns/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary outputs
+*.log
+*.tmp
