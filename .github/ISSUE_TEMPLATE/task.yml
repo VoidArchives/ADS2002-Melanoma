@@ -54,13 +54,13 @@ body:
       required: true
       
   - type: input
-  id: due_date
-  attributes:
-    label: Due Date
-    description: When should this task be completed?
-    placeholder: DD/MM/YYYY
-  validations:
-    required: true
+    id: due_date
+    attributes:
+      label: Due Date
+      description: When should this task be completed?
+      placeholder: DD/MM/YYYY
+    validations:
+      required: true
 
   - type: textarea
     id: tasks
