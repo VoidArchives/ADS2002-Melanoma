@@ -1,3 +1,3 @@
 # Melanoma Detection
 
-Repository skeleton for the ADS2002 melanoma detection project.
+Project Notes: [Here] (https://docs.google.com/document/d/1rMOSNjIrVSib8rnjD8M53RhmcC24fubRem6pFThek0M/edit?usp=sharing)
