@@ -1,0 +1,92 @@
+---
+name: Project Task
+description: Create a task for the melanoma classification project
+title: "[TASK] "
+labels: []
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to define a clear, trackable project task.
+        Keep tasks small enough that one person can reasonably complete them within 1-2 weeks.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should this task accomplish?
+      placeholder: Describe the main objective.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_area
+    attributes:
+      label: Project Area
+      options:
+        - Dataset setup
+        - Metadata EDA
+        - Image EDA
+        - Data cleaning
+        - Preprocessing
+        - Feature engineering
+        - Validation
+        - Modelling
+        - Evaluation
+        - Documentation
+        - Research
+        - Repository / setup
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: Break the task into clear steps.
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Step 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What should be produced?
+      placeholder: |
+        - Updated notebook
+        - Figure / table
+        - Code
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings / Notes
+      description: Record important results, problems, or decisions.
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues / PRs
+      placeholder: |
+        Example: #4, #12
