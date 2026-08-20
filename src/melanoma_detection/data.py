@@ -19,7 +19,6 @@ def get_competition_file(filename):
 
 
 def load_train_metadata():
-    print("Loading data...")
     """Load the training metadata into a pandas DataFrame."""
 
     path = get_competition_file("train.csv")
@@ -28,3 +27,12 @@ def load_train_metadata():
         path,
         compression="zip"
     )
+
+def load_test_metadata():
+    """Load the testing metadata into a pandas DataFrame"""
+
+    path = get_competition_file("test.csv")
+
+    return pd.read_csv(
+        path)
+    

@@ -5,3 +5,5 @@ matplotlib
 kagglehub
 ipykernel
 ipywidgets
+seaborn
+math
