@@ -6,5 +6,9 @@ kagglehub
 ipykernel
 ipywidgets
 seaborn
-math
 pydicom
+tqdm
+Pillow
+scikit-image
+ImageHash
+opencv-python
