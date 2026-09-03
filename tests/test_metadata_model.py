@@ -9,6 +9,8 @@ from melanoma_detection.metadata_model import (
     DEFAULT_METADATA_FEATURES,
     binary_probability_metrics,
     build_logistic_metadata_pipeline,
+    build_random_forest_metadata_pipeline,
+    build_xgboost_metadata_pipeline,
     generate_oof_probabilities,
 )
 
@@ -44,6 +46,23 @@ class MetadataModelTests(unittest.TestCase):
         self.assertEqual(probabilities.shape, (len(frame),))
         self.assertTrue(np.isfinite(probabilities).all())
         self.assertTrue(((probabilities >= 0) & (probabilities <= 1)).all())
+
+    def test_tree_pipelines_produce_binary_probabilities(self):
+        frame = self.make_folded_frame()
+
+        for pipeline in (
+            build_random_forest_metadata_pipeline(),
+            build_xgboost_metadata_pipeline(),
+        ):
+            with self.subTest(classifier=type(pipeline.named_steps["classifier"]).__name__):
+                pipeline.fit(frame[list(DEFAULT_METADATA_FEATURES)], frame["target"])
+                probabilities = pipeline.predict_proba(
+                    frame[list(DEFAULT_METADATA_FEATURES)]
+                )[:, 1]
+
+                self.assertEqual(probabilities.shape, (len(frame),))
+                self.assertTrue(np.isfinite(probabilities).all())
+                self.assertTrue(((probabilities >= 0) & (probabilities <= 1)).all())
 
     def test_oof_predictions_are_aligned_stable_and_non_mutating(self):
         frame = self.make_folded_frame()

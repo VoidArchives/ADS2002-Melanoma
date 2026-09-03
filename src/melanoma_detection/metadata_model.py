@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, clone
 from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     average_precision_score,
@@ -26,20 +27,8 @@ DEFAULT_METADATA_FEATURES = (
 )
 
 
-def build_logistic_metadata_pipeline(
-    feature_columns: Sequence[str] = DEFAULT_METADATA_FEATURES,
-    *,
-    class_weight: str | dict[int, float] | None = None,
-    random_state: int = 42,
-) -> Pipeline:
-    """Build the deterministic metadata-only logistic-regression baseline.
-
-    All supplied features are treated as categorical and one-hot encoded inside
-    the pipeline. Keeping preprocessing inside the estimator ensures categories
-    are learned from each training fold rather than from validation data. The
-    default unweighted fit preserves the observed class prevalence; callers can
-    pass ``class_weight="balanced"`` for an explicit imbalance-aware variant.
-    """
+def _build_metadata_preprocessor(feature_columns: Sequence[str]) -> ColumnTransformer:
+    """Build the shared one-hot metadata preprocessor."""
 
     features = tuple(feature_columns)
     if not features:
@@ -47,7 +36,7 @@ def build_logistic_metadata_pipeline(
     if len(features) != len(set(features)):
         raise ValueError("feature_columns must not contain duplicates.")
 
-    preprocessor = ColumnTransformer(
+    return ColumnTransformer(
         transformers=[
             (
                 "categorical",
@@ -58,9 +47,24 @@ def build_logistic_metadata_pipeline(
         remainder="drop",
         verbose_feature_names_out=False,
     )
+
+
+def build_logistic_metadata_pipeline(
+    feature_columns: Sequence[str] = DEFAULT_METADATA_FEATURES,
+    *,
+    random_state: int = 42,
+) -> Pipeline:
+    """Build the deterministic metadata-only logistic-regression baseline.
+
+    All supplied features are treated as categorical and one-hot encoded inside
+    the pipeline. Keeping preprocessing inside the estimator ensures categories
+    are learned from each training fold rather than from validation data. The
+    unweighted fit preserves the observed class prevalence.
+    """
+
+    preprocessor = _build_metadata_preprocessor(feature_columns)
     classifier = LogisticRegression(
         C=1.0,
-        class_weight=class_weight,
         solver="liblinear",
         max_iter=1_000,
         random_state=random_state,
@@ -70,6 +74,64 @@ def build_logistic_metadata_pipeline(
         steps=[
             ("preprocessor", preprocessor),
             ("classifier", classifier),
+        ]
+    )
+
+
+def build_random_forest_metadata_pipeline(
+    feature_columns: Sequence[str] = DEFAULT_METADATA_FEATURES,
+    *,
+    random_state: int = 42,
+) -> Pipeline:
+    """Build a regularised random-forest metadata classifier."""
+
+    return Pipeline(
+        steps=[
+            ("preprocessor", _build_metadata_preprocessor(feature_columns)),
+            (
+                "classifier",
+                RandomForestClassifier(
+                    n_estimators=300,
+                    max_depth=8,
+                    min_samples_leaf=5,
+                    random_state=random_state,
+                    n_jobs=-1,
+                ),
+            ),
+        ]
+    )
+
+
+def build_xgboost_metadata_pipeline(
+    feature_columns: Sequence[str] = DEFAULT_METADATA_FEATURES,
+    *,
+    random_state: int = 42,
+) -> Pipeline:
+    """Build a compact gradient-boosted-tree metadata classifier."""
+
+    try:
+        from xgboost import XGBClassifier
+    except ImportError as error:
+        raise ImportError(
+            "XGBoost is required for build_xgboost_metadata_pipeline; "
+            "install the project requirements first."
+        ) from error
+
+    return Pipeline(
+        steps=[
+            ("preprocessor", _build_metadata_preprocessor(feature_columns)),
+            (
+                "classifier",
+                XGBClassifier(
+                    n_estimators=200,
+                    max_depth=3,
+                    learning_rate=0.05,
+                    objective="binary:logistic",
+                    eval_metric="logloss",
+                    random_state=random_state,
+                    n_jobs=-1,
+                ),
+            ),
         ]
     )
 
