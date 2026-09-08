@@ -5,7 +5,6 @@ src/melanoma_detection/data.py
 src/melanoma_detection/evaluation.py
 src/melanoma_detection/fusion_model.py
 src/melanoma_detection/image_model.py
-src/melanoma_detection/metadata_model.py
 src/melanoma_detection/preprocessing.py
 src/melanoma_detection/splitting.py
 src/melanoma_detection/utils.py
