@@ -12,3 +12,5 @@ Pillow
 scikit-image
 ImageHash
 opencv-python
+cv2
+xgboost
