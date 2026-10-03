@@ -1,0 +1,8 @@
+{
+  "historical_b0_checkpoint_reconstruction": true,
+  "predictions": 1834,
+  "maximum_probability_difference": 9.974659986866641e-17,
+  "device": "cuda",
+  "seconds": 12.950228600002447,
+  "historical_files_verified": 54
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "outer_label_rows_perturbed_in_memory": 1370,
+  "excluded_invalid_label_ignored": true,
+  "actual_decoded_image_audit": true,
+  "training_compatibility_unchanged": true,
+  "fitting_validation_frames_unchanged": true,
+  "condition_manifest_unchanged": true,
+  "actual_prediction_max_abs_difference": {
+    "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_augmentation_12e_v1\\conditions\\A_weak_none\\inner_validation_predictions.csv": 0.0,
+    "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_augmentation_12e_v1\\conditions\\A_weak_none\\epoch12_inner_validation_predictions.csv": 0.0
+  },
+  "training_artifacts_unchanged": 13,
+  "raw_source_csv_not_modified": true
+}

@@ -1,0 +1,404 @@
+{
+  "architecture_policy": {
+    "architecture": "efficientnet_b0",
+    "centre_crop": false,
+    "dropout": 0.2,
+    "head_lr_parameters": "new_output_linear_only",
+    "image_size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "native_pretrained_preparation": {
+      "crop_size": [
+        224
+      ],
+      "interpolation": "bicubic",
+      "resize_size": [
+        256
+      ]
+    },
+    "native_stochastic_depth_retained": true,
+    "normalisation_policy": "batchnorm_statistics_and_affines_frozen",
+    "output_head": "dropout_then_one_logit_linear",
+    "preparation": "whole_image_bilinear_resize_imagenet_normalisation",
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "transformation_profile": {
+      "augmentation": {
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_fill": 0,
+          "rotation_interpolation": "nearest",
+          "vertical_flip_probability": 0.5
+        },
+        "version": "weak_v1"
+      },
+      "centre_crop": false,
+      "image_size": 224,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "preprocessing": {
+        "parameters": {},
+        "version": "none_v1"
+      },
+      "resize_antialias": true,
+      "resize_interpolation": "bilinear"
+    },
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "compatibility_hash": "024a6753e36cd26287ad8ea8614f00af75189c706b3dc8cc76c5370b0612e27f",
+  "environment": {
+    "cuda_version": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "fitting": "004a896c33a514e13d171148fe33fade6fafef1308c5295d4fb6ab56f994d7ab",
+  "initial_model_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "initial_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "manifest": {
+    "candidate_library": {
+      "conditions": {
+        "A": {
+          "augmentation": "weak",
+          "label": "Weak augmentation",
+          "pipeline_id": "A_weak_none",
+          "preprocessing": "none"
+        },
+        "B": {
+          "augmentation": "stronger",
+          "label": "Stronger augmentation",
+          "pipeline_id": "B_stronger_none",
+          "preprocessing": "none"
+        },
+        "C": {
+          "augmentation": "weak",
+          "label": "Weak augmentation plus CLAHE",
+          "optional": true,
+          "pipeline_id": "C_weak_clahe",
+          "preprocessing": "clahe"
+        }
+      },
+      "experiment": {
+        "classification_threshold": 0.5,
+        "early_stopping": false,
+        "epochs": 12,
+        "inner_fold": 0,
+        "minimum_ap_gain": 0.005,
+        "outer_fold": 0,
+        "quality_images": 24,
+        "selection_algorithm_version": "b0_matched_augmentation_12e_v1",
+        "variants_per_image": 4
+      },
+      "model": {
+        "architecture": "efficientnet_b0",
+        "dropout": 0.2,
+        "image_size": 224,
+        "weights": "IMAGENET1K_V1"
+      },
+      "recipe": {
+        "backbone_lr": 3e-05,
+        "id": "lr3e5_sqrt",
+        "loss_weight": "sqrt_ratio"
+      },
+      "training": {
+        "amp": true,
+        "effective_batch": 64,
+        "gradient_clip": 1.0,
+        "head_lr": 0.001,
+        "microbatch": 64,
+        "min_lr_factor": 0.1,
+        "min_microbatch": 4,
+        "num_workers": 0,
+        "schedule_epochs": 30,
+        "seed": 42,
+        "warmup_epochs": 1,
+        "weight_decay": 0.0001
+      },
+      "transformation_profiles": {
+        "A": {
+          "augmentation": {
+            "parameters": {
+              "horizontal_flip_probability": 0.5,
+              "rotation_degrees": [
+                -20.0,
+                20.0
+              ],
+              "rotation_fill": 0,
+              "rotation_interpolation": "nearest",
+              "vertical_flip_probability": 0.5
+            },
+            "version": "weak_v1"
+          },
+          "centre_crop": false,
+          "image_size": 224,
+          "normalisation_mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "normalisation_std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "order": [
+            "RGB_decode",
+            "whole_image_bilinear_resize",
+            "deterministic_preprocessing",
+            "training_only_stochastic_augmentation",
+            "tensor_conversion",
+            "ImageNet_normalisation"
+          ],
+          "preprocessing": {
+            "parameters": {},
+            "version": "none_v1"
+          },
+          "resize_antialias": true,
+          "resize_interpolation": "bilinear"
+        },
+        "B": {
+          "augmentation": {
+            "parameters": {
+              "affine_interpolation": "bilinear",
+              "brightness": [
+                0.8,
+                1.2
+              ],
+              "contrast": [
+                0.8,
+                1.2
+              ],
+              "horizontal_flip_probability": 0.5,
+              "hue": [
+                0.0,
+                0.0
+              ],
+              "reflection_padding_pixels": 112,
+              "rotation_degrees": [
+                -45.0,
+                45.0
+              ],
+              "saturation": [
+                0.9,
+                1.1
+              ],
+              "scale": [
+                0.9,
+                1.05
+              ],
+              "shear_degrees": [
+                0.0,
+                0.0
+              ],
+              "translation_fraction": [
+                0.05,
+                0.05
+              ],
+              "translation_reference": "original_resized_image",
+              "vertical_flip_probability": 0.5
+            },
+            "version": "stronger_v1"
+          },
+          "centre_crop": false,
+          "image_size": 224,
+          "normalisation_mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "normalisation_std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "order": [
+            "RGB_decode",
+            "whole_image_bilinear_resize",
+            "deterministic_preprocessing",
+            "training_only_stochastic_augmentation",
+            "tensor_conversion",
+            "ImageNet_normalisation"
+          ],
+          "preprocessing": {
+            "parameters": {},
+            "version": "none_v1"
+          },
+          "resize_antialias": true,
+          "resize_interpolation": "bilinear"
+        },
+        "C": {
+          "augmentation": {
+            "parameters": {
+              "horizontal_flip_probability": 0.5,
+              "rotation_degrees": [
+                -20.0,
+                20.0
+              ],
+              "rotation_fill": 0,
+              "rotation_interpolation": "nearest",
+              "vertical_flip_probability": 0.5
+            },
+            "version": "weak_v1"
+          },
+          "centre_crop": false,
+          "image_size": 224,
+          "normalisation_mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "normalisation_std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "order": [
+            "RGB_decode",
+            "whole_image_bilinear_resize",
+            "deterministic_preprocessing",
+            "training_only_stochastic_augmentation",
+            "tensor_conversion",
+            "ImageNet_normalisation"
+          ],
+          "preprocessing": {
+            "parameters": {
+              "channel": "lightness_only",
+              "clip_limit": 2.0,
+              "colour_space": "CIELAB",
+              "learned_state": false,
+              "position": "after_resize_before_stochastic_augmentation",
+              "tile_grid_size": [
+                8,
+                8
+              ]
+            },
+            "version": "clahe_lab_l_v1"
+          },
+          "resize_antialias": true,
+          "resize_interpolation": "bilinear"
+        }
+      }
+    },
+    "compatibility_sha256": "76a7ab7e10ee67ef3fb931726ab5c011f1fb42a7e8cf1c9eb59ff1a3488df45e",
+    "condition_id": "A",
+    "fitting_membership_sha256": "3bef96275796f7f620c2d55d2473ceb11aeec4bdc92bf193bb88954ce73500c5",
+    "quality_review_sha256": "ba88b2d09c4d3da1045a0306df16963207bd7c7377b65e0fd776a096d8d15f02",
+    "run_id": "b0_augmentation_12e_v1",
+    "schema_version": 1,
+    "stage": "exploratory_fresh_matched_12_epoch_condition",
+    "transformation_profile": {
+      "augmentation": {
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_fill": 0,
+          "rotation_interpolation": "nearest",
+          "vertical_flip_probability": 0.5
+        },
+        "version": "weak_v1"
+      },
+      "centre_crop": false,
+      "image_size": 224,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "preprocessing": {
+        "parameters": {},
+        "version": "none_v1"
+      },
+      "resize_antialias": true,
+      "resize_interpolation": "bilinear"
+    }
+  },
+  "microbatch": 64,
+  "model_factory": "efficientnet_b0",
+  "positive_weight": 7.1614044911395895,
+  "preprocessing_environment": {
+    "opencv": "not_used"
+  },
+  "pretrained_identity": {
+    "file_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "kind": "torchvision",
+    "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "recipe": {
+    "backbone_lr": 3e-05,
+    "id": "lr3e5_sqrt",
+    "loss_weight": "sqrt_ratio"
+  },
+  "source_sha256": "2ca3ae8edbdb14f344b1b834d0ba2bed277879ba45a62904ff2ea6fd4a13e2ab",
+  "spec": {
+    "architecture": "efficientnet_b0",
+    "augmentation": "weak",
+    "dropout": 0.2,
+    "image_size": 224,
+    "preprocessing": "none",
+    "weights": "IMAGENET1K_V1"
+  },
+  "stopping_reason": "complete",
+  "training": {
+    "amp": true,
+    "effective_batch": 64,
+    "gradient_clip": 1.0,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "min_lr_factor": 0.1,
+    "min_microbatch": 4,
+    "num_workers": 0,
+    "schedule_epochs": 30,
+    "seed": 42,
+    "warmup_epochs": 1,
+    "weight_decay": 0.0001
+  },
+  "transformation_source_sha256": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+  "validation": "a109c9410f6f5f4c1ec2b4b7f694097fc3f556f2994644ae44c522174769b61c"
+}

@@ -1,0 +1,36 @@
+{
+  "reporting_version": 2,
+  "historical_run_id": "b0_pilot_v1",
+  "verified": {
+    "archive_verified": true,
+    "artifacts_verified": true,
+    "checkpoints_verified": true,
+    "images_verified": true,
+    "reserved_test_loaded": false
+  },
+  "threshold": 0.5,
+  "threshold_tuned": false,
+  "calibration_fitted": false,
+  "outer_predictions_generated": false,
+  "status": "complete",
+  "reporting_source_sha256": {
+    "src/melanoma_detection/image_evaluation.py": "116af991361b361f25c842a0a8434de843835120d40be527c8670237b773e7c4",
+    "src/melanoma_detection/image_reporting.py": "e9678c4d198f80ac2bfb2b4e81147a41e82c5495c8541f3d15d88a02f2248132",
+    "scripts/build_image_notebook.py": "24c6c9701d1b98d637008b4206ca6a3f20b32e95145293db0fdaff8fa11534a6"
+  },
+  "summary_sha256": "c9e22f828b4be2594e05e3583f9fa05681e2ece78291d9ef80b2048a00d772b1",
+  "prediction_csv_sha256": {
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr1e4_none\\inner_validation_predictions.csv": "f7e7ee10c11b48e22eb0911ca3a1eadb10e821e3c1f0729dc1b655589e0096e6",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr1e4_sqrt\\inner_validation_predictions.csv": "d45ca47c81a942718d6eea8dc37b1889f29972d6982dab800e2471307722885a",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr3e5_none\\inner_validation_predictions.csv": "d7235d1bd4d1317fcdde74f78c80af6c96254516494b60ea3bf6a3914294e580",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr3e5_sqrt\\inner_validation_predictions.csv": "7ecc238ec135b93fb3fdce13e9fe7793754cd30da6ac6f1b44297c3ff9851879"
+  },
+  "figures": [
+    "confusion_threshold_0_5.png",
+    "learning_curves.png",
+    "raw_reliability.png",
+    "roc_precision_recall.png",
+    "training_loss_by_weight.png",
+    "weak_augmentation_preview.png"
+  ]
+}

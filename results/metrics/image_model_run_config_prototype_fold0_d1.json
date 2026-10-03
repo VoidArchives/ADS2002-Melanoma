@@ -1,0 +1,17 @@
+{
+  "run_mode": "prototype",
+  "folds_run": [
+    0
+  ],
+  "model_name": "efficientnet_b0_wip",
+  "random_seed": 42,
+  "image_size": 224,
+  "batch_size": 128,
+  "epochs": 3,
+  "classifier_learning_rate": 0.001,
+  "fine_tuning_learning_rate": 0.0001,
+  "training_transform": "resize, random horizontal/vertical flip, random rotation",
+  "validation_transform": "resize, tensor conversion, ImageNet normalisation",
+  "uncertainty_calculated": false,
+  "test_set_loaded": false
+}

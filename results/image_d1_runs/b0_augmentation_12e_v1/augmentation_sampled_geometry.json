@@ -1,0 +1,2694 @@
+{
+  "draw_order": "flips, affine, then stronger colour jitter",
+  "translation_reference_pixels": 224,
+  "samples": [
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4200,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 19.724090576171875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4200,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 44.37921142578125,
+      "translation_pixels": [
+        -11,
+        2
+      ],
+      "scale": 0.9997007846832275
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4201,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 4.728065490722656,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4201,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 10.638145446777344,
+      "translation_pixels": [
+        11,
+        3
+      ],
+      "scale": 1.002705454826355
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4202,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -17.271120071411133,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4202,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -38.86001968383789,
+      "translation_pixels": [
+        -11,
+        3
+      ],
+      "scale": 1.0276039838790894
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4203,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 13.17483901977539,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8068693",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4203,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 29.643386840820312,
+      "translation_pixels": [
+        7,
+        2
+      ],
+      "scale": 0.9331076145172119
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4204,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -1.5867023468017578,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4204,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -3.570079803466797,
+      "translation_pixels": [
+        5,
+        2
+      ],
+      "scale": 0.9234139919281006
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4205,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 4.176063537597656,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4205,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 9.396141052246094,
+      "translation_pixels": [
+        2,
+        6
+      ],
+      "scale": 0.9532431960105896
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4206,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 10.109691619873047,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4206,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 22.746803283691406,
+      "translation_pixels": [
+        -4,
+        -11
+      ],
+      "scale": 0.9843384027481079
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4207,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -16.657245635986328,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5733748",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4207,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -37.47880172729492,
+      "translation_pixels": [
+        -4,
+        -7
+      ],
+      "scale": 0.9338938593864441
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4208,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 5.83154296875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4208,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 13.120967864990234,
+      "translation_pixels": [
+        -8,
+        8
+      ],
+      "scale": 0.9993566274642944
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4209,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 18.773170471191406,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4209,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 42.23963928222656,
+      "translation_pixels": [
+        10,
+        11
+      ],
+      "scale": 0.9788230657577515
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4210,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 1.3197021484375,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4210,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 2.969329833984375,
+      "translation_pixels": [
+        -2,
+        -2
+      ],
+      "scale": 0.9198524355888367
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4211,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -7.966117858886719,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6110888",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4211,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -17.923765182495117,
+      "translation_pixels": [
+        -3,
+        3
+      ],
+      "scale": 0.925407350063324
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4212,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 16.694061279296875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4212,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 37.56163787841797,
+      "translation_pixels": [
+        4,
+        -3
+      ],
+      "scale": 0.9225161075592041
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4213,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -5.676770210266113,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4213,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -12.77273178100586,
+      "translation_pixels": [
+        11,
+        5
+      ],
+      "scale": 0.9967756867408752
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4214,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -11.734382629394531,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4214,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -26.402362823486328,
+      "translation_pixels": [
+        7,
+        4
+      ],
+      "scale": 1.0324745178222656
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4215,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 2.0517044067382812,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0914168",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4215,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 4.6163330078125,
+      "translation_pixels": [
+        6,
+        4
+      ],
+      "scale": 0.9759162068367004
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4216,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -4.616217613220215,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4216,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -10.386489868164062,
+      "translation_pixels": [
+        -3,
+        -10
+      ],
+      "scale": 1.0143077373504639
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4217,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -13.189826011657715,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4217,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -29.677108764648438,
+      "translation_pixels": [
+        10,
+        4
+      ],
+      "scale": 1.0331636667251587
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4218,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 9.0865478515625,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4218,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 20.444732666015625,
+      "translation_pixels": [
+        -7,
+        1
+      ],
+      "scale": 0.9578101634979248
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4219,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 10.435653686523438,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8066110",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4219,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 23.48021697998047,
+      "translation_pixels": [
+        7,
+        8
+      ],
+      "scale": 0.9318141937255859
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4220,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -12.444351196289062,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4220,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -27.999788284301758,
+      "translation_pixels": [
+        -7,
+        6
+      ],
+      "scale": 1.0243887901306152
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4221,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 12.380729675292969,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4221,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 27.856643676757812,
+      "translation_pixels": [
+        -7,
+        7
+      ],
+      "scale": 1.040184736251831
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4222,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 9.418689727783203,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4222,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 21.192054748535156,
+      "translation_pixels": [
+        -1,
+        1
+      ],
+      "scale": 0.9243061542510986
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4223,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -12.82672119140625,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2724529",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4223,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -28.860124588012695,
+      "translation_pixels": [
+        -1,
+        10
+      ],
+      "scale": 0.9657557010650635
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4224,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -18.028076171875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4224,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -40.56317138671875,
+      "translation_pixels": [
+        -2,
+        -2
+      ],
+      "scale": 1.0189846754074097
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4225,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -9.711553573608398,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4225,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -21.850996017456055,
+      "translation_pixels": [
+        6,
+        -5
+      ],
+      "scale": 0.9287446141242981
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4226,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 0.47359275817871094,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4226,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 1.065582275390625,
+      "translation_pixels": [
+        6,
+        -1
+      ],
+      "scale": 1.0258256196975708
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4227,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 11.197090148925781,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_9012513",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4227,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 25.193450927734375,
+      "translation_pixels": [
+        -7,
+        8
+      ],
+      "scale": 0.9628699421882629
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4228,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 19.494739532470703,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4228,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 43.8631591796875,
+      "translation_pixels": [
+        9,
+        7
+      ],
+      "scale": 0.9518516659736633
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4229,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -11.092998504638672,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4229,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -24.959247589111328,
+      "translation_pixels": [
+        11,
+        -7
+      ],
+      "scale": 1.0405046939849854
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4230,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -17.912729263305664,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4230,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -40.30363845825195,
+      "translation_pixels": [
+        5,
+        9
+      ],
+      "scale": 0.9620780348777771
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4231,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 6.185434341430664,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7183212",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4231,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 13.917224884033203,
+      "translation_pixels": [
+        1,
+        7
+      ],
+      "scale": 1.0306732654571533
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4232,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 11.374237060546875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4232,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 25.59203338623047,
+      "translation_pixels": [
+        4,
+        -2
+      ],
+      "scale": 0.9370075464248657
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4233,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -7.9883527755737305,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4233,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -17.973793029785156,
+      "translation_pixels": [
+        7,
+        -2
+      ],
+      "scale": 1.0407135486602783
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4234,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 10.513343811035156,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4234,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 23.65502166748047,
+      "translation_pixels": [
+        -11,
+        6
+      ],
+      "scale": 0.9533571004867554
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4235,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 9.34260368347168,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4676270",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4235,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 21.020858764648438,
+      "translation_pixels": [
+        4,
+        1
+      ],
+      "scale": 0.927372932434082
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4236,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -4.593420028686523,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4236,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -10.335193634033203,
+      "translation_pixels": [
+        11,
+        8
+      ],
+      "scale": 1.028220772743225
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4237,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 11.749055862426758,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4237,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 26.43537139892578,
+      "translation_pixels": [
+        8,
+        8
+      ],
+      "scale": 1.0028018951416016
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4238,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -14.962074279785156,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4238,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -33.664669036865234,
+      "translation_pixels": [
+        2,
+        9
+      ],
+      "scale": 0.9537784457206726
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4239,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 11.712451934814453,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5415761",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4239,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 26.353012084960938,
+      "translation_pixels": [
+        -4,
+        -10
+      ],
+      "scale": 1.0477571487426758
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4240,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -12.087736129760742,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4240,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -27.197406768798828,
+      "translation_pixels": [
+        2,
+        -4
+      ],
+      "scale": 1.0016354322433472
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4241,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 10.158287048339844,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4241,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 22.85614013671875,
+      "translation_pixels": [
+        8,
+        4
+      ],
+      "scale": 1.0319011211395264
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4242,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 9.845306396484375,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4242,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 22.151939392089844,
+      "translation_pixels": [
+        5,
+        11
+      ],
+      "scale": 1.037673830986023
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4243,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -4.69599723815918,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_6620377",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4243,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -10.565994262695312,
+      "translation_pixels": [
+        -7,
+        -2
+      ],
+      "scale": 0.9780340194702148
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4244,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -8.665678024291992,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4244,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -19.49777603149414,
+      "translation_pixels": [
+        10,
+        -1
+      ],
+      "scale": 1.0203850269317627
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4245,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -0.6861782073974609,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4245,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -1.5438995361328125,
+      "translation_pixels": [
+        -8,
+        8
+      ],
+      "scale": 0.9357451796531677
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4246,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -19.1179256439209,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4246,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -43.01533126831055,
+      "translation_pixels": [
+        -4,
+        -9
+      ],
+      "scale": 1.0472761392593384
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4247,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -7.969198226928711,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2937642",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4247,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -17.930696487426758,
+      "translation_pixels": [
+        -1,
+        -8
+      ],
+      "scale": 0.9856202006340027
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4248,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -3.75341796875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4248,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -8.445194244384766,
+      "translation_pixels": [
+        -7,
+        -5
+      ],
+      "scale": 0.9377166628837585
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4249,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 4.527170181274414,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4249,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 10.186134338378906,
+      "translation_pixels": [
+        8,
+        -2
+      ],
+      "scale": 1.0138696432113647
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4250,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -0.8429698944091797,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4250,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -1.8966827392578125,
+      "translation_pixels": [
+        -7,
+        9
+      ],
+      "scale": 0.9120845198631287
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4251,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -12.816341400146484,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1050000",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4251,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -28.836767196655273,
+      "translation_pixels": [
+        -3,
+        5
+      ],
+      "scale": 0.9864005446434021
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4252,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 12.875953674316406,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4252,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 28.97089385986328,
+      "translation_pixels": [
+        -9,
+        11
+      ],
+      "scale": 0.9410427808761597
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4253,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 4.990879058837891,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4253,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 11.229476928710938,
+      "translation_pixels": [
+        1,
+        -2
+      ],
+      "scale": 1.00748610496521
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4254,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -12.15782642364502,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4254,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -27.35511016845703,
+      "translation_pixels": [
+        -9,
+        6
+      ],
+      "scale": 0.9228566884994507
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4255,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -1.8080291748046875,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8331313",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4255,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -4.068061828613281,
+      "translation_pixels": [
+        -10,
+        7
+      ],
+      "scale": 0.9681887030601501
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4256,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -13.856582641601562,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4256,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -31.177310943603516,
+      "translation_pixels": [
+        -7,
+        11
+      ],
+      "scale": 1.0392072200775146
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4257,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 11.167070388793945,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4257,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 25.12590789794922,
+      "translation_pixels": [
+        11,
+        0
+      ],
+      "scale": 1.0360333919525146
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4258,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -8.576889038085938,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4258,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -19.29800033569336,
+      "translation_pixels": [
+        11,
+        -9
+      ],
+      "scale": 0.9671633839607239
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4259,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 15.091667175292969,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4474170",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4259,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 33.95625305175781,
+      "translation_pixels": [
+        11,
+        -6
+      ],
+      "scale": 1.0250743627548218
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4260,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 14.908672332763672,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4260,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 33.54450988769531,
+      "translation_pixels": [
+        -2,
+        7
+      ],
+      "scale": 1.0473601818084717
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4261,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -17.440387725830078,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4261,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -39.240875244140625,
+      "translation_pixels": [
+        9,
+        -8
+      ],
+      "scale": 1.0497716665267944
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4262,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -8.575937271118164,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4262,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -19.295860290527344,
+      "translation_pixels": [
+        -11,
+        7
+      ],
+      "scale": 0.9256022572517395
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4263,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -3.2074146270751953,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_7168935",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4263,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -7.216682434082031,
+      "translation_pixels": [
+        4,
+        0
+      ],
+      "scale": 0.9916452169418335
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4264,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -14.249383926391602,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4264,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -32.06111526489258,
+      "translation_pixels": [
+        6,
+        -4
+      ],
+      "scale": 1.048061490058899
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4265,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 3.538471221923828,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4265,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 7.961559295654297,
+      "translation_pixels": [
+        4,
+        -2
+      ],
+      "scale": 0.9954613447189331
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4266,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -11.126802444458008,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4266,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -25.03530502319336,
+      "translation_pixels": [
+        -5,
+        -8
+      ],
+      "scale": 1.0432307720184326
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4267,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 10.38492202758789,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_2195070",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4267,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 23.366073608398438,
+      "translation_pixels": [
+        1,
+        -4
+      ],
+      "scale": 1.044609785079956
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4268,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -18.15056037902832,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4268,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -40.83876037597656,
+      "translation_pixels": [
+        -10,
+        8
+      ],
+      "scale": 0.9516070485115051
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4269,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 12.844192504882812,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4269,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 28.899429321289062,
+      "translation_pixels": [
+        -6,
+        4
+      ],
+      "scale": 0.9553748369216919
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4270,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -6.175174713134766,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4270,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -13.894142150878906,
+      "translation_pixels": [
+        -2,
+        1
+      ],
+      "scale": 1.0302073955535889
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4271,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 8.203605651855469,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1358757",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4271,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 18.458114624023438,
+      "translation_pixels": [
+        -1,
+        4
+      ],
+      "scale": 1.0354169607162476
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4272,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -17.962257385253906,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4272,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -40.41508102416992,
+      "translation_pixels": [
+        3,
+        -1
+      ],
+      "scale": 0.9374316930770874
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4273,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -2.0880794525146484,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4273,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -4.698177337646484,
+      "translation_pixels": [
+        -11,
+        8
+      ],
+      "scale": 1.0318238735198975
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4274,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 13.156257629394531,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4274,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 29.601585388183594,
+      "translation_pixels": [
+        3,
+        -11
+      ],
+      "scale": 1.0241601467132568
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4275,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 15.79703140258789,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1219894",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4275,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": 35.54331970214844,
+      "translation_pixels": [
+        -1,
+        6
+      ],
+      "scale": 0.9028692245483398
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4276,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 15.873237609863281,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4276,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 35.71478271484375,
+      "translation_pixels": [
+        2,
+        7
+      ],
+      "scale": 1.0316029787063599
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4277,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -11.828147888183594,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4277,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -26.61333465576172,
+      "translation_pixels": [
+        0,
+        5
+      ],
+      "scale": 0.9752659201622009
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4278,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -11.970958709716797,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4278,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -26.93465805053711,
+      "translation_pixels": [
+        7,
+        -7
+      ],
+      "scale": 0.9220436811447144
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4279,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 15.697563171386719,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_5377693",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4279,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": 35.31951904296875,
+      "translation_pixels": [
+        5,
+        11
+      ],
+      "scale": 0.9903213977813721
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4280,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -11.463203430175781,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4280,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -25.792207717895508,
+      "translation_pixels": [
+        10,
+        3
+      ],
+      "scale": 0.9594805836677551
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4281,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -6.289777755737305,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4281,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -14.152000427246094,
+      "translation_pixels": [
+        -8,
+        -6
+      ],
+      "scale": 0.9269559383392334
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4282,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -1.5971183776855469,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4282,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -3.593517303466797,
+      "translation_pixels": [
+        11,
+        11
+      ],
+      "scale": 1.030997633934021
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4283,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -10.067205429077148,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_8822016",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4283,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -22.651212692260742,
+      "translation_pixels": [
+        -10,
+        9
+      ],
+      "scale": 0.9584333300590515
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4284,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 17.29192352294922,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4284,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": 38.906822204589844,
+      "translation_pixels": [
+        -5,
+        9
+      ],
+      "scale": 0.9496932625770569
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4285,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 19.71971893310547,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4285,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 44.369361877441406,
+      "translation_pixels": [
+        5,
+        8
+      ],
+      "scale": 1.0140488147735596
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4286,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -5.525396347045898,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4286,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -12.432140350341797,
+      "translation_pixels": [
+        -5,
+        -4
+      ],
+      "scale": 0.9913790225982666
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4287,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -16.001712799072266,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_4206472",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4287,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": -36.00385284423828,
+      "translation_pixels": [
+        9,
+        -1
+      ],
+      "scale": 1.0064308643341064
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4288,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -19.067481994628906,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4288,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -42.90183639526367,
+      "translation_pixels": [
+        7,
+        -10
+      ],
+      "scale": 0.9514769315719604
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4289,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -6.586091995239258,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4289,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -14.818706512451172,
+      "translation_pixels": [
+        -9,
+        -5
+      ],
+      "scale": 0.9402024745941162
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4290,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 9.713136672973633,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4290,
+      "horizontal_flip": true,
+      "vertical_flip": true,
+      "rotation_degrees": 21.85456085205078,
+      "translation_pixels": [
+        -10,
+        0
+      ],
+      "scale": 1.0199612379074097
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4291,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -17.944507598876953,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_1726444",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4291,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -40.37514114379883,
+      "translation_pixels": [
+        -7,
+        8
+      ],
+      "scale": 1.035056233406067
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "A",
+      "variant": 0,
+      "seed": 4292,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -6.673107147216797,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "B",
+      "variant": 0,
+      "seed": 4292,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -15.01449203491211,
+      "translation_pixels": [
+        0,
+        4
+      ],
+      "scale": 1.003505825996399
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "A",
+      "variant": 1,
+      "seed": 4293,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -12.34997272491455,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "B",
+      "variant": 1,
+      "seed": 4293,
+      "horizontal_flip": true,
+      "vertical_flip": false,
+      "rotation_degrees": -27.787439346313477,
+      "translation_pixels": [
+        10,
+        -4
+      ],
+      "scale": 1.0031049251556396
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "A",
+      "variant": 2,
+      "seed": 4294,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -13.184561729431152,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "B",
+      "variant": 2,
+      "seed": 4294,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "rotation_degrees": -29.665264129638672,
+      "translation_pixels": [
+        1,
+        0
+      ],
+      "scale": 0.9740017652511597
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "A",
+      "variant": 3,
+      "seed": 4295,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -11.797318458557129,
+      "translation_pixels": [
+        0,
+        0
+      ],
+      "scale": 1.0
+    },
+    {
+      "image_id": "ISIC_0736928",
+      "condition_id": "B",
+      "variant": 3,
+      "seed": 4295,
+      "horizontal_flip": false,
+      "vertical_flip": true,
+      "rotation_degrees": -26.54396629333496,
+      "translation_pixels": [
+        -6,
+        6
+      ],
+      "scale": 1.0223182439804077
+    }
+  ]
+}

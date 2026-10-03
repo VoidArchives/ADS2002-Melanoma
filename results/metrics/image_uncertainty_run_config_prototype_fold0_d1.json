@@ -1,0 +1,45 @@
+{
+  "run_mode": "prototype",
+  "folds_run": [
+    0
+  ],
+  "model_name": "efficientnet_b0_wip",
+  "random_seed": 42,
+  "image_size": 224,
+  "batch_size": 128,
+  "image_model_predictions": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\image_model_oof_prototype_fold0_d1.csv",
+  "primary_uncertainty_method": "mc_dropout_sd",
+  "mc_dropout_passes": 30,
+  "mc_dropout_definition": "population standard deviation of probabilities across stochastic dropout masks for the unchanged validation image",
+  "dropout_audit": [
+    {
+      "fold": 0,
+      "dropout_modules": [
+        {
+          "name": "classifier.0",
+          "rate": 0.2
+        }
+      ],
+      "batchnorm_training": false
+    }
+  ],
+  "tta_variants": [
+    "identity",
+    "horizontal_flip",
+    "vertical_flip",
+    "rotate_90",
+    "rotate_180",
+    "rotate_270",
+    "horizontal_flip_rotate_90",
+    "vertical_flip_rotate_90"
+  ],
+  "tta_uncertainty_definition": "population standard deviation of probabilities across fixed TTA orientations with dropout disabled",
+  "scores_combined": false,
+  "maximum_handoff_probability_difference": 1.1102230246251565e-16,
+  "maximum_deterministic_repeat_difference": 0.0,
+  "maximum_identity_tta_difference": 1.1102230246251565e-16,
+  "nonzero_mc_uncertainty_share": 1.0,
+  "calibrator_fitted": false,
+  "referral_threshold_selected": false,
+  "test_set_loaded": false
+}

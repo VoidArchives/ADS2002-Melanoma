@@ -1,0 +1,1044 @@
+{
+  "session_started_utc": "2026-10-03T09:17:41+00:00",
+  "session_deadline_utc": "2026-10-03T11:17:41+00:00",
+  "training_cutoff_utc": "2026-10-03T10:57:41+00:00",
+  "optional_c_ab_completion_cutoff_utc": "2026-10-03T10:27:41+00:00",
+  "budget_minutes": 120,
+  "files": {
+    "configs/image_architecture_pilot.yaml": {
+      "sha256": "7b0d6576bdff597b6b1d9e65ca65fced2b8c00231e46aab9c52014bdf714e917",
+      "bytes": 1284
+    },
+    "configs/image_model.yaml": {
+      "sha256": "efb5e9a779c2a204289288f9443e8a3963faa7617cbec5a9fa7352f5ba6623a6",
+      "bytes": 3211
+    },
+    "docs/image_methodology.md": {
+      "sha256": "5baa23e0dbab31130e2ec1bc9a70d3caa0164dc2998b634e571e20dcf91b12be",
+      "bytes": 20245
+    },
+    "models/image_d1_wip/efficientnet_b0_wip_fold_0.pth": {
+      "sha256": "0c7bce17e32e98caeb799e60bc671ee715cfac50c67460dd403b4583b904ac80",
+      "bytes": 16341145
+    },
+    "models/image_pretrained/checkpoints/convnext_tiny-983f1562.pth": {
+      "sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d",
+      "bytes": 114419221
+    },
+    "models/image_pretrained/checkpoints/densenet121-a639ec97.pth": {
+      "sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395",
+      "bytes": 32342954
+    },
+    "models/image_pretrained/weight_receipt.json": {
+      "sha256": "488752286a1b68cf4765f9e816e12212b45f82ea9c3661497bddf98a22cb9666",
+      "bytes": 806
+    },
+    "models/metadata_d1/frozen_spline.joblib": {
+      "sha256": "706b28072393662e46ce0b9c3332029457ade111f5fede1c22bd5fef60e3d51f",
+      "bytes": 115149
+    },
+    "models/metadata_d1/frozen_spline.json": {
+      "sha256": "88ee046dc1f432e41e9bd6dad18728e1e966d5fceae823d3a3bdd4ce063e3e2f",
+      "bytes": 2246
+    },
+    "notebooks/05_image_model_d1.ipynb": {
+      "sha256": "788708517faede64f8744df21bfeaa5ececcd8a816da8b4eacf25e587897b1a8",
+      "bytes": 3101921
+    },
+    "notebooks/05_image_model_d1_wip.ipynb": {
+      "sha256": "9e07d190a31f199b9096db75350797a7a8ccdc41ce2500c86d0d7140fb3b25cc",
+      "bytes": 40305
+    },
+    "notebooks/05a_image_uncertainty_d1_wip.ipynb": {
+      "sha256": "e7048213c2a89032c4f922303b53f126730c56c8b4be31fec1a9dfb3c8037514",
+      "bytes": 594011
+    },
+    "notebooks/05e_image_architecture_comparison_d1.ipynb": {
+      "sha256": "d269320fd296ebbe2338c91aaa403a8bd90af633e3fee748153825a2557ee723",
+      "bytes": 4564149
+    },
+    "requirements-image.txt": {
+      "sha256": "897f7ec664104e6d6063857e15cd8934d7a2f16825343971ee1f859db3c11748",
+      "bytes": 415
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/completion_receipt.json": {
+      "sha256": "2eefdc5fb84b8c71633c07fb7298881506c35faad319f29136482a286cfb2980",
+      "bytes": 2793
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/best.pt": {
+      "sha256": "decee066ab6fa0a7f284ff29adce6b062f2f16e91f1481c7dc9c52c7eae125a1",
+      "bytes": 334071691
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/best.pt.sha256.json": {
+      "sha256": "f66899844cc9c442b557234f928c7f500ec071fd208eaa46b6f23853d374fc15",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/history.csv": {
+      "sha256": "d2b4b616b19074fee0916232138aac5e0c94dabde34554e93bf5f7ecddc7c27a",
+      "bytes": 1343
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/history.json": {
+      "sha256": "51a3fa2e06b18991f99f5ccba7df0a7519d08b1979c85bfe0851c15ec918f713",
+      "bytes": 3304
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/inner_validation_predictions.csv": {
+      "sha256": "10d353b8e4129f8e038f2854f35ede0d900280b0c26abf7e6958585693f06346",
+      "bytes": 377759
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/latest.pt": {
+      "sha256": "8724ca997d31d6a2ef71e935c72f2019cd9da98386cbdfa5d632d9c464d4efe2",
+      "bytes": 334073739
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/latest.pt.sha256.json": {
+      "sha256": "fc1dd758da7e6f5f7ee5dc01a22e3f1ce9e1a182320b81944bb10933063c4e5c",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/manifest.json": {
+      "sha256": "5e353678329f39990590e55f17e1a784a6c1a53738668fb6d63c15c238301b8c",
+      "bytes": 2892
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/recipe_result.json": {
+      "sha256": "1e55e6af95888314b9439f4032a0d8ddc0854113fa80e5846713611ffdca6695",
+      "bytes": 4979
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/reliability.csv": {
+      "sha256": "6ab86c602d7b365adb9c0a4c3e1dbb60b5d2974c53c4d3011e7049453d25c4d2",
+      "bytes": 563
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/best.pt": {
+      "sha256": "2b0b57dd8222e798bceb1f8cc8f6c23ada4fd3e1904ef02cee0480f801264ed5",
+      "bytes": 334071691
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/best.pt.sha256.json": {
+      "sha256": "1009052e4fde84f84a500cbd500914e46bceda49db91308e320badd5313895d9",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/history.csv": {
+      "sha256": "6740ac0a96c6ec4634fa2c8ed20eb40cf0fee020d530b73e1950fc97970b9b6e",
+      "bytes": 1339
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/history.json": {
+      "sha256": "7b7524428977470fc09e8d9ccb9c8e7e4bd0229c3e4fc8764c756a74a6d9845d",
+      "bytes": 3300
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/inner_validation_predictions.csv": {
+      "sha256": "cfbc0d60d4c0bdda0481eda70601f5ecb64e2bbd129b8744d6061ff01b8a92c6",
+      "bytes": 376428
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/latest.pt": {
+      "sha256": "a5891dc137c0a75aed20fafeb91a95757534640b55243183ccb9cfef843c0cb5",
+      "bytes": 334073739
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/latest.pt.sha256.json": {
+      "sha256": "acb7ba75f525e28121596dec606fc6cf5d5b8797ce2662d7d71438dd2bfb18b6",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/manifest.json": {
+      "sha256": "a2e79007e6cf4c31ffa7cac0c385d1354d4d73d3574ab265d84d6fa75cf48f62",
+      "bytes": 2913
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/recipe_result.json": {
+      "sha256": "74404ba9558fe181bf43146120298dbb8f4ae97db825475e6dc9e463ece6df74",
+      "bytes": 4975
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/reliability.csv": {
+      "sha256": "5ede4459e764376fb08e53a5436cf14668587bbba969df33f2333573f66fad2d",
+      "bytes": 551
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/best.pt": {
+      "sha256": "53faf7361513619e222b86f26f81c3a1de47358a24227e41af46e3d1fa18792d",
+      "bytes": 334071627
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/best.pt.sha256.json": {
+      "sha256": "a77a545e3b5246f524e8413c73e8eb47fd6154068663167e04b81ab939c5a820",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/history.csv": {
+      "sha256": "b0816d24767b84b344533b64ec44798b3cb44fdf2a40431ac7ce9195b4720877",
+      "bytes": 1343
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/history.json": {
+      "sha256": "6433e6aea5c7cc62be59c113d8e4f1aec7023132f85dc5d8f63ada87520982bb",
+      "bytes": 3304
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/inner_validation_predictions.csv": {
+      "sha256": "d860f7b8e6aed059643bdbc97f42b2d5a35a749b3761aeca3e0e966849277e61",
+      "bytes": 371498
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/latest.pt": {
+      "sha256": "1d7aa69310c5be8ebad70f4304bde575e7e52e9a397a09ddebc61e59b87ad36d",
+      "bytes": 334073739
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/latest.pt.sha256.json": {
+      "sha256": "b342d343f4df0dedba71d8333e0baf94ca6211932fee7d6f8bfe1c855a83b300",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/manifest.json": {
+      "sha256": "eb42230f48dc3e5bc0ac501a705c19b6bae3012f74e13409ba91c9bf7ca6e6f7",
+      "bytes": 2890
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/recipe_result.json": {
+      "sha256": "c75fc550ff7559f73f88a38fb5497b81617e8e9b3832c9c2bd40c3f50b7a9244",
+      "bytes": 4972
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/reliability.csv": {
+      "sha256": "0fb21abb61c8b3183b3998f42165ef8658adf85a09ecca24edd4146dfc45a55e",
+      "bytes": 557
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/best.pt": {
+      "sha256": "f809e7b2e3c6d3f2c66ad9b5d59786c622311b7c5f4299213439589dcc3d0f24",
+      "bytes": 334071691
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/best.pt.sha256.json": {
+      "sha256": "e3939c64d1beb82c02e4c8c6e111bf2dbc0893b3264256341fbc010211b73651",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/history.csv": {
+      "sha256": "1d331fc8cc17b1184328ba0f66f2560477687de5af372c8506888dcd2e1884ce",
+      "bytes": 1340
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/history.json": {
+      "sha256": "97d838da29de50ae08c2abe890a682c1198dd0082c36caf0f1610ae13693596e",
+      "bytes": 3301
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/inner_validation_predictions.csv": {
+      "sha256": "e1419321b4e47fc71ca0ab97e113c47c8c0c93a5fbf8dc20e6232de84f3dedbf",
+      "bytes": 370255
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/latest.pt": {
+      "sha256": "45f4cf4b5250870a824c408d3abdff5159e97454c9b5f8f9e8e8e8eb11d57898",
+      "bytes": 334073739
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/latest.pt.sha256.json": {
+      "sha256": "3e5cd600330494a9b4546789ceadb625c4885512587f639aeb03d1f1749a8522",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/manifest.json": {
+      "sha256": "e1a3d043759646e2b10d5e12fcfbd9fc834bcb8cd1ccbfb397d635ad0fc6535c",
+      "bytes": 2911
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/recipe_result.json": {
+      "sha256": "7024183b984e46873a890f036c9d6c472a8f811836a6d21a928c83348548ebb8",
+      "bytes": 4975
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/reliability.csv": {
+      "sha256": "ba3c46251ff88eb2c983dddd346f675e5640985a775a63969598b3e9a45fa48a",
+      "bytes": 550
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/best.pt": {
+      "sha256": "ce9f57742a3973728b9070df6b9314616a68b101fdd07638c82e280f3caf1c0b",
+      "bytes": 83478096
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/best.pt.sha256.json": {
+      "sha256": "1845257ab688dba0b8bca0a8f66d00e71a139f921863f85f34620268183e6881",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/history.csv": {
+      "sha256": "32dceb301957e22fb6b5bed3ba34f03c2fc33cf2c311fe119621f74a8c8e17fe",
+      "bytes": 1340
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/history.json": {
+      "sha256": "65f1079020f9ba3edb755e5dc7d5e5a999c71cc22c5b05c66949bc163b898a73",
+      "bytes": 3301
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/inner_validation_predictions.csv": {
+      "sha256": "4be4e6dae5a39191979c230948748516303377ad8c794a02f7313d72ef4c46bb",
+      "bytes": 365051
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/latest.pt": {
+      "sha256": "751179881d9cb31cbd6da44bdac422a5cb80092759b81c991c960c11bd039f8a",
+      "bytes": 83481194
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/latest.pt.sha256.json": {
+      "sha256": "cab115e359980ad4e0f805da0526be18f511d0fa62ea7443ab893f95085a13a7",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/manifest.json": {
+      "sha256": "191485211a219d13fe8762304f5209785341967102a713e5dabc78dd8c44abfa",
+      "bytes": 2869
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/recipe_result.json": {
+      "sha256": "72e8fafd588ec467f502ae1596fe2861efe563af21a2f18ab3f7972ce226f425",
+      "bytes": 4959
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/reliability.csv": {
+      "sha256": "7630389224cf313916ae1194b04e81024e439ef6bd79e817a47bc9567fecb85a",
+      "bytes": 549
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/best.pt": {
+      "sha256": "609197b78846374b607938850f7174729eb4057147995cd222bde59822697e82",
+      "bytes": 83477968
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/best.pt.sha256.json": {
+      "sha256": "ecef1d9782c4c137a6e5085e50e9e048b71db3d9cc45bd7d4bf7f099724f4ca9",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/history.csv": {
+      "sha256": "44ca6d157436ee7dcfc02cac4c9aa2c7c54c914da26e56eb24626d3468949acb",
+      "bytes": 1337
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/history.json": {
+      "sha256": "5172340e0a7b006ded5ef55d451e0792048afd5d31e2c93e1883c7fea8308cbc",
+      "bytes": 3298
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/inner_validation_predictions.csv": {
+      "sha256": "dba8206b010ba2417175b7008881e32a7dbb58a17528817afeb075ca4db57845",
+      "bytes": 363751
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/latest.pt": {
+      "sha256": "84b21ac1bbb5ae052eb496a62900d44726950f2519842cb0de1a98442f65f31b",
+      "bytes": 83481194
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/latest.pt.sha256.json": {
+      "sha256": "f56c037fe6c6126d0b0d8f80b0ec26e5254f532e1f261715017f6da508d20e06",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/manifest.json": {
+      "sha256": "2804fa5cdc2956ef990e546f6830957538dfd7a84f9e596cf355b69251b08eb9",
+      "bytes": 2890
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/recipe_result.json": {
+      "sha256": "51ef59212551575ec3ef94fc057ae19a3c73d2465764bcd0017b723d082f8a31",
+      "bytes": 4965
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/reliability.csv": {
+      "sha256": "5344a4e050d8664ec88a303b82305f49978d0692d0d333b6ea877afde4710525",
+      "bytes": 541
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/best.pt": {
+      "sha256": "e7791419b52fa7c36f400de7860475fb2ce8f620c7630c3ab4218eba3258b532",
+      "bytes": 83477776
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/best.pt.sha256.json": {
+      "sha256": "2688a17b8c19274d8033db9121b26ca46e877ecb74d5d95243e0afeeccfd226b",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/history.csv": {
+      "sha256": "1806458dde8ce5328a94a7396a1bf207d52259664d06f970c43ef754dcc8a8df",
+      "bytes": 1340
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/history.json": {
+      "sha256": "7b2fe05ce177309f466e8b3dce01b9fa70c589620c4ffda18e4873f03893d1bf",
+      "bytes": 3301
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/inner_validation_predictions.csv": {
+      "sha256": "22d4dac11aedb4d747b5101117c8c4a6ed70989df11c354be4dfaf4161d7a962",
+      "bytes": 359330
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/latest.pt": {
+      "sha256": "e46ab3b9c9200186cb5beff4d507688d5a771b1a82fe4c35bfa8432544b987c4",
+      "bytes": 83481194
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/latest.pt.sha256.json": {
+      "sha256": "7142ea7d5afcf16a2f402896ed8bde71e35a23f4f6f5a69640a1061e01619c9c",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/manifest.json": {
+      "sha256": "4fcf9d302d5c69a46cb4b9a458177cdec6ec501070955c0f65047755807b8eed",
+      "bytes": 2866
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/recipe_result.json": {
+      "sha256": "20874bf370c40a5cf114733b2217210cf45d73c6ede63eaf124a73c99f7344ee",
+      "bytes": 4952
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/reliability.csv": {
+      "sha256": "619d72e98ebe695a988efc172e87ee2cb2251ffa11b8bcf8032edd288227d529",
+      "bytes": 565
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/best.pt": {
+      "sha256": "9103ea725c1fac408f3474bfdd4521fc9a4ac25995ddb27a899aed944c46b326",
+      "bytes": 83478480
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/best.pt.sha256.json": {
+      "sha256": "3618903b52d3aa4ac663f5770fd6ae67bfa85db1bfa3ccaa5c6543d6a88827d4",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/history.csv": {
+      "sha256": "18b8820961a53df31f28751f3fb8af7de8fbf5cad1085521396c70430ef3c615",
+      "bytes": 1340
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/history.json": {
+      "sha256": "7469f8d872ae7fce9988f186d4b24ecc0f2a1cf69d47b7b8dcc5551a4bd75c89",
+      "bytes": 3301
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/inner_validation_predictions.csv": {
+      "sha256": "93a945053edea639bfdef9d5c139a72432b8fb272189cb2b5da123407ff5e85f",
+      "bytes": 359981
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/latest.pt": {
+      "sha256": "ac1d9f5bca5b94ce81ddafde4d8052ef9acd33048bb8461b5a438655ab136983",
+      "bytes": 83481194
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/latest.pt.sha256.json": {
+      "sha256": "ba3d3dc17007d9bf83f6bdf238f4672be2c2fbc485e85b585af439486bc19a96",
+      "bytes": 84
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/manifest.json": {
+      "sha256": "df06dc427f94981c7467bd8725304a338994af64be38da622c7dd06ece003d96",
+      "bytes": 2887
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/recipe_result.json": {
+      "sha256": "60dcda0488c99d304d04bd2652d159e65c08c71ec45c227047bfa9e73cae6b63",
+      "bytes": 4962
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/reliability.csv": {
+      "sha256": "50e6324b676d30c869e649d6ccce6458ea4b04e0d96e2b832442799fd3c929d6",
+      "bytes": 553
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/convnext_tiny_learning_curves.png": {
+      "sha256": "3a3d6c2e26da2517a187fabeffde4f034eb1957f76b84b7d3a899680729efb1b",
+      "bytes": 225426
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/convnext_tiny_training_loss.png": {
+      "sha256": "7edee669dfbdc815833d4aeb1ec0d1d411e7dd4105bd06836204e8a8aa752b7d",
+      "bytes": 111189
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/densenet121_learning_curves.png": {
+      "sha256": "47f73537b4849e0a3d9caebf7647e449dedc9193cf2e221ac32ac8257e247632",
+      "bytes": 244288
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/densenet121_training_loss.png": {
+      "sha256": "e80ff5c02ec4c0c5aa1ac60e7ec8f61b32276e5649db429eb619c45037251fd2",
+      "bytes": 120515
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/efficientnet_b0_learning_curves.png": {
+      "sha256": "53f48b8a057f143b90ed7f3d1ec9bd77aed719b044d679879f26ea318b913ab6",
+      "bytes": 238797
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/efficientnet_b0_training_loss.png": {
+      "sha256": "0850a896ed747919801c5cf08009c76533bb532fd08e9281ca9c8e25914cf7a3",
+      "bytes": 115076
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_confusion_threshold_0_5.png": {
+      "sha256": "fc580273d37b2b1c122a2e184934390814b1dba679507b1de22583d48309276f",
+      "bytes": 94594
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_raw_reliability.png": {
+      "sha256": "0e74c2e956693c16f4abc5fa352f435220046acd98550f649bde216aac0d2f33",
+      "bytes": 107448
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_roc_precision_recall.png": {
+      "sha256": "cc6fcd32fdbc2aef3f88bf740befa8c3bd40c5c3114cca16a8d68d8df448d160",
+      "bytes": 129331
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_confusion_threshold_0_5.png": {
+      "sha256": "70345b2081a0e437e5ece015c3218b3ae18ccf0cacfea50a3d743de37fba7d89",
+      "bytes": 98780
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_raw_reliability.png": {
+      "sha256": "e6e0f5889ab74992e7870c8c88a1204af60c51b2fe71d3eb377e42c90da8cbaa",
+      "bytes": 112993
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_roc_precision_recall.png": {
+      "sha256": "9006dc996974269baed19fd8ced5005b3b50218f47de8db9e69705dd3fbecea4",
+      "bytes": 131311
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_confusion_threshold_0_5.png": {
+      "sha256": "87e9493cae9748c789a6835b4627dacaece6ae6813dba3d55e6c7757b00a815a",
+      "bytes": 94270
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_raw_reliability.png": {
+      "sha256": "f728859d468b83ac464a95a39f721f88c6fcc373d633d7ca4e0d51988a66f567",
+      "bytes": 107799
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_roc_precision_recall.png": {
+      "sha256": "bf3ee686065cbd187d6738b8837eb460845e864837b135a32952be10ffce973b",
+      "bytes": 129172
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_confusion_threshold_0_5.png": {
+      "sha256": "4586ecded9d321fff98465265a6ed73c5ffb44a726683f4edf315d24e7cf05ca",
+      "bytes": 100843
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_raw_reliability.png": {
+      "sha256": "10f7da1b3e54c5eac562a331577d3097847aaf1836d9ffc5b2df36404a0bea9c",
+      "bytes": 113953
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_roc_precision_recall.png": {
+      "sha256": "f4bc4711be83982c9898237c91084f2a37af92c49c8514dab9bb587ded03fa38",
+      "bytes": 130145
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/matched_performance_time_memory.png": {
+      "sha256": "37f9fa3b438455992cda748c89702212b070266d2d447ac81640b05ca357cdf9",
+      "bytes": 148639
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/figures/weak_augmentation_preview.png": {
+      "sha256": "a459c598448e5c4fdff55c07e7381c840d5400c1ef4fc97a04cc2046f1d1e1ed",
+      "bytes": 2679566
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/image_audit.json": {
+      "sha256": "b12f62d40ad92828735e682bae672ee97e18aadbfb5e20bdf481ce33243d60cc",
+      "bytes": 2443502
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/prediction_receipt.json": {
+      "sha256": "3c1ce15604c527cc4129bc0ae9d6421b85b5dc43a70a262f085c98bfd0a870b6",
+      "bytes": 44234
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/reporting_receipt.json": {
+      "sha256": "1404561191e1a0d90fa7f9e80995399a989a0ecc53669f08f47fce2b55066f3c",
+      "bytes": 4530
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/run_manifest.json": {
+      "sha256": "02381a26d56cf2b93456aeff440dbebb18818afd5e3b6b993f5a96ca5156f4c0",
+      "bytes": 2220824
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/session.json": {
+      "sha256": "869ec0cc533e21b3d4d0446285fcaffd90f778857073560a673377b0c09c94c0",
+      "bytes": 722
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/configs/image_architecture_pilot.yaml": {
+      "sha256": "7b0d6576bdff597b6b1d9e65ca65fced2b8c00231e46aab9c52014bdf714e917",
+      "bytes": 1284
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/scripts/run_image_architecture.py": {
+      "sha256": "9d82e0d683c5b4259da057ebc6e905b3dd8ac2a0c5dda02843a13a2f09946f4c",
+      "bytes": 5077
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_architecture.py": {
+      "sha256": "e6442d63fc7d751ba1f7eeb3714c16ae8f8b56e02d16e9c4590f253d4b8f4f05",
+      "bytes": 27832
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_model.py": {
+      "sha256": "615b24ade7e979e79cf6e77af5372bf3269903ce9774f1a6e8c8d46b734dcfa1",
+      "bytes": 39238
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_pilot.py": {
+      "sha256": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+      "bytes": 27673
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/metadata_evaluation.py": {
+      "sha256": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+      "bytes": 18380
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/metadata_validation.py": {
+      "sha256": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+      "bytes": 7416
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/split_memberships.json": {
+      "sha256": "599c572be0255d7556f5965c7444e699392b9f3553f723648b4b6315c9296c17",
+      "bytes": 941922
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/summary.json": {
+      "sha256": "b39d163c991b154aa26f7535402a091c76354072e678d500491f9a88f8d8c9a8",
+      "bytes": 64975
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/completion_ledger.csv": {
+      "sha256": "608ef9c4a1f773e436df55096b6913e78f0bef7a1365217828422c834032e2e4",
+      "bytes": 1028
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_none_precision_recall.csv": {
+      "sha256": "94c769124834f343e93d449b770470c48d35473371b0c30916730b34d2ba00cc",
+      "bytes": 95292
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_none_roc.csv": {
+      "sha256": "55ed6beeb21ded55c606442873ac62656e28492fadaaad6759e7fd9618527dd0",
+      "bytes": 3915
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_sqrt_precision_recall.csv": {
+      "sha256": "b1e1a5321c2f8c49113cc70af10e7edfa61ce3a3eb41e62e34adf2a7dce8ff6c",
+      "bytes": 93673
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_sqrt_roc.csv": {
+      "sha256": "389b2cb2864189d476bac7ee0ff308b41dad0aaa07f0ae5477e3f77cd8c2c253",
+      "bytes": 3673
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_none_precision_recall.csv": {
+      "sha256": "3801742a37d2467cf7d7269eaad6c44492063e608e2410bc89e999bfc47f2d40",
+      "bytes": 94879
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_none_roc.csv": {
+      "sha256": "b0833b2ae01aecfeb3ad8ad3c97fca5a473d75fc30c2ab10d19f6005a4d0006a",
+      "bytes": 3898
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_sqrt_precision_recall.csv": {
+      "sha256": "1718f71aa754ab3eeb6da650e2668942bc2b68a09d1b4e9be61e5b3887b531c2",
+      "bytes": 94958
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_sqrt_roc.csv": {
+      "sha256": "39ba25d63e5fdd12beefd6ee0f6eaf7f66f57a282f6da1ad3ccbb082a6122464",
+      "bytes": 3667
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_none_precision_recall.csv": {
+      "sha256": "50dd08a03ea6e4ffeb069d63ff42597ee994de001acd9626aca10fd8f994b7b9",
+      "bytes": 94914
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_none_roc.csv": {
+      "sha256": "c953434001c4c7767bc12f91f2d4e6c5a5361d2b493b3e2633b37894b960f861",
+      "bytes": 3774
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_sqrt_precision_recall.csv": {
+      "sha256": "6d4b2d74c39e2b47a6a10444fdb327b73f776b63aad35cdf8f9330b0e7b7027d",
+      "bytes": 96887
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_sqrt_roc.csv": {
+      "sha256": "37337c069fd9313c1c51f94c0df857ca9a141304a73949b6bc4f2293ae657b2f",
+      "bytes": 3721
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_none_precision_recall.csv": {
+      "sha256": "df8206599730092cd13aac01f29c5bb2e9018bdebfd184659b5b5d8c474dc95b",
+      "bytes": 99447
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_none_roc.csv": {
+      "sha256": "e1890e24d6ff00005082471f2040fe186adacfc363eba11d9087aa295df7b5f1",
+      "bytes": 3664
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_sqrt_precision_recall.csv": {
+      "sha256": "875c49d19f29f5db443b0ef87db7873038e2986e3751a5ddff89085c7124f083",
+      "bytes": 93343
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_sqrt_roc.csv": {
+      "sha256": "c2f0df5bb6c945f6bfb60fb569b6559eb116375f879926337820cfad14f14d76",
+      "bytes": 3866
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_none_precision_recall.csv": {
+      "sha256": "97e4478e9ddf22b09fecde97d5ab47bd62968fc5665d3a677eb2e4bdf8de04cf",
+      "bytes": 97799
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_none_roc.csv": {
+      "sha256": "7ece9aa0849d8997ce5508f080eb4dc029951f25480f954d3233b9a21278f84d",
+      "bytes": 3904
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_sqrt_precision_recall.csv": {
+      "sha256": "af75cf6e15dd6fb3c6221bb682fb2c2b24e7cbd16f0eec55c60c683721251638",
+      "bytes": 90568
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_sqrt_roc.csv": {
+      "sha256": "cd548b078f5051dc0b8e979642fd3ca4ca252da00c7c87b8eda3170a38c7a505",
+      "bytes": 3780
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_none_precision_recall.csv": {
+      "sha256": "7b2b3625186f5d2b87a3174155f48252925fecc882063fac3ac4dcccd14dbfe3",
+      "bytes": 96472
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_none_roc.csv": {
+      "sha256": "4930e5b08022abedca1cc6fd8000de1b415ea9fe1b1b645b6a64afa069c7e61e",
+      "bytes": 3773
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_sqrt_precision_recall.csv": {
+      "sha256": "129031938bea611a32ab75fdbb1e1e2e807470df3024fb5c05f93b2330a70403",
+      "bytes": 92601
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_sqrt_roc.csv": {
+      "sha256": "1e6739169e84324f31cee281bfe6ea3beb5f0cb6b0edfbdbae35303bb4b3e83e",
+      "bytes": 3777
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/high_none_reliability_support.csv": {
+      "sha256": "3c8d013b30857fc96a57384557d631bb01abfab2e0376e8d6e3b82957bfbb55d",
+      "bytes": 1776
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/high_sqrt_reliability_support.csv": {
+      "sha256": "6f225f29510e241825982ec66b0bfdc0f8f9a01e84fcfb461b94220912420309",
+      "bytes": 1731
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/low_none_reliability_support.csv": {
+      "sha256": "22c92137535045e42aa1cb92525356faf92d780c615eea36a86057e724eeeb9d",
+      "bytes": 1763
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/low_sqrt_reliability_support.csv": {
+      "sha256": "0f584634daf8860b5fb1030c04a01f89cd14dea93a688fe94b618a0437e77647",
+      "bytes": 1731
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/tables/matched_metrics_raw_threshold_0_5.csv": {
+      "sha256": "5d7bc09f6bc935abbfb025b1f970ed0932a72afa4af00210b3cc93ebc601e96a",
+      "bytes": 3535
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/validation_receipt.json": {
+      "sha256": "c3a9904dfda317a39e8cf0f26579701a09b3d1db0cbfc2f5232286053ba88474",
+      "bytes": 3406
+    },
+    "results/image_d1_runs/architecture_pilot_3h_v1/work_ledger.json": {
+      "sha256": "ae444ab257a03192b2cff0d90f328d020d3abaf622384e7d7d59c1ba34d3452e",
+      "bytes": 44155
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/configs/image_model.yaml": {
+      "sha256": "efb5e9a779c2a204289288f9443e8a3963faa7617cbec5a9fa7352f5ba6623a6",
+      "bytes": 3211
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/notebooks/05_image_model_d1.ipynb": {
+      "sha256": "37c1e202048c3965e196578d9234427c91d88cfb6a218f059fe0db5f2d858f24",
+      "bytes": 2752609
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/scripts/build_image_notebook.py": {
+      "sha256": "ff991230634a7b5875a1273773d66ae7de999240362229561cda8a3934b1cb65",
+      "bytes": 16104
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_model.py": {
+      "sha256": "a8cc1d2d1bd7b7fe1b408ec1967935a393cf3be69e896264ae4d4d6248efc57f",
+      "bytes": 32690
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_pilot.py": {
+      "sha256": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+      "bytes": 27673
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_reporting.py": {
+      "sha256": "f2f0bad4c3e64ea3a8a4b4c28cd5b0f6216f73cda958f46df1a3145af93d62f8",
+      "bytes": 5780
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/metadata_evaluation.py": {
+      "sha256": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+      "bytes": 18380
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/metadata_validation.py": {
+      "sha256": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+      "bytes": 7416
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/checkpoint_validation.json": {
+      "sha256": "600af1d0b1c5e0c41b0c6c11e508eeef4f8bd32642e24e39ad30e1f7314a97b2",
+      "bytes": 232
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/confusion_threshold_0_5.png": {
+      "sha256": "60cc8db8548532b5bbeaf01d4873784fec88038dbd1b352bf3f9486dca09f841",
+      "bytes": 133677
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/learning_curves.png": {
+      "sha256": "d7f38a7075cce31471f0a2c5752a02c45559e54f4899278491f3833ffe9f0cf9",
+      "bytes": 252711
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/raw_reliability.png": {
+      "sha256": "a66598204f7e3f9bad23b0e5ed902a3cdc08d41a91b77ed66a5f6ab5fa8aa7d3",
+      "bytes": 145514
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/roc_precision_recall.png": {
+      "sha256": "d481e4f8a54d627571d410d0ec06ff0581ff844bfe2e3116354718f578c63105",
+      "bytes": 146399
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/training_loss_by_weight.png": {
+      "sha256": "97439aed113b50a0c77fefb82b80cb9d2c21ad21c2ed1f69648b75772cb9a02a",
+      "bytes": 118453
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/figures/weak_augmentation_preview.png": {
+      "sha256": "a459c598448e5c4fdff55c07e7381c840d5400c1ef4fc97a04cc2046f1d1e1ed",
+      "bytes": 2679566
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/preservation_receipt.json": {
+      "sha256": "ca9ca21e29f1bd4edebf8f5dfb57a69e26da67b0615eca9255901912659e01f2",
+      "bytes": 8716
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/reporting_receipt.json": {
+      "sha256": "b0c52f87014aadceeacb03a8a556390c5154749978fecfdb38ad7535fd60529e",
+      "bytes": 1798
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_none_precision_recall.csv": {
+      "sha256": "97e4478e9ddf22b09fecde97d5ab47bd62968fc5665d3a677eb2e4bdf8de04cf",
+      "bytes": 97799
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_none_roc.csv": {
+      "sha256": "7ece9aa0849d8997ce5508f080eb4dc029951f25480f954d3233b9a21278f84d",
+      "bytes": 3904
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_sqrt_precision_recall.csv": {
+      "sha256": "af75cf6e15dd6fb3c6221bb682fb2c2b24e7cbd16f0eec55c60c683721251638",
+      "bytes": 90568
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_sqrt_roc.csv": {
+      "sha256": "cd548b078f5051dc0b8e979642fd3ca4ca252da00c7c87b8eda3170a38c7a505",
+      "bytes": 3780
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_none_precision_recall.csv": {
+      "sha256": "7b2b3625186f5d2b87a3174155f48252925fecc882063fac3ac4dcccd14dbfe3",
+      "bytes": 96472
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_none_roc.csv": {
+      "sha256": "4930e5b08022abedca1cc6fd8000de1b415ea9fe1b1b645b6a64afa069c7e61e",
+      "bytes": 3773
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_sqrt_precision_recall.csv": {
+      "sha256": "129031938bea611a32ab75fdbb1e1e2e807470df3024fb5c05f93b2330a70403",
+      "bytes": 92601
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_sqrt_roc.csv": {
+      "sha256": "1e6739169e84324f31cee281bfe6ea3beb5f0cb6b0edfbdbae35303bb4b3e83e",
+      "bytes": 3777
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/exploratory_metrics_threshold_0_5.csv": {
+      "sha256": "7951d58f131942cadf6ef8b030233982b0f08df0591a387f49ec770faf340e5c",
+      "bytes": 1410
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/measured_resources.csv": {
+      "sha256": "170e95f4473c95ca02fc65395caf293ad57dda3cf7e01e8aa998a0c9b176f6fa",
+      "bytes": 485
+    },
+    "results/image_d1_runs/b0_pilot_reporting_v2/tables/raw_reliability_support.csv": {
+      "sha256": "41622a27ef56dface0fdcf96f855ff786e4874fdeb87b61ba8801ca4b68bceda",
+      "bytes": 1981
+    },
+    "results/image_d1_runs/b0_pilot_v1/figures/learning_curves.png": {
+      "sha256": "7b8875e4a06c2dda4dba2c85d5b3847b415afb83419347c3c6892425d39f0a5e",
+      "bytes": 236759
+    },
+    "results/image_d1_runs/b0_pilot_v1/figures/raw_reliability.png": {
+      "sha256": "a3833c6881cbe621431d49407e0190c7425e8080bb52e6388cc00cbc06ea3150",
+      "bytes": 140989
+    },
+    "results/image_d1_runs/b0_pilot_v1/figures/weak_augmentation_preview.png": {
+      "sha256": "8c6e3f694034a504e3704978d74e0e831966e1c8eac7bb627ef6c60667079464",
+      "bytes": 2674612
+    },
+    "results/image_d1_runs/b0_pilot_v1/image_audit.json": {
+      "sha256": "b12f62d40ad92828735e682bae672ee97e18aadbfb5e20bdf481ce33243d60cc",
+      "bytes": 2443502
+    },
+    "results/image_d1_runs/b0_pilot_v1/prediction_preservation_before.json": {
+      "sha256": "cb3a910fd9c0c159641e89914da32b08bb0ae29296b426e48f354278527b54a5",
+      "bytes": 3475
+    },
+    "results/image_d1_runs/b0_pilot_v1/prediction_receipt.json": {
+      "sha256": "034bed09cf405867ae90cce46b5b7f0246a76416d949526b33b72b6c25ea8411",
+      "bytes": 18319
+    },
+    "results/image_d1_runs/b0_pilot_v1/preparation_specification.json": {
+      "sha256": "ce5c3a5420b33ff8df9cfcb2ede0fec8d2bcf09acd0540cdf94998afb5505817",
+      "bytes": 1527
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/best.pt": {
+      "sha256": "ff78551c47513b7f8ba1558988d859bf7ea0a669fd04e74a4ec04b98b34f865a",
+      "bytes": 48158649
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/best.pt.sha256.json": {
+      "sha256": "1d689c62145032193758958cc7183266deb5e11f11d1108b499c9b2a0d5f86a2",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/history.csv": {
+      "sha256": "ecdacfa851aa0fabb9141549ec88d71051408c6642b152b862e4d35fdebc7967",
+      "bytes": 1247
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/history.json": {
+      "sha256": "4ca058013a1eb8df324c0d95d9a0af751a8d527949a37346bf5eb777a43558df",
+      "bytes": 3019
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/inner_validation_predictions.csv": {
+      "sha256": "f7e7ee10c11b48e22eb0911ca3a1eadb10e821e3c1f0729dc1b655589e0096e6",
+      "bytes": 269153
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/latest.pt": {
+      "sha256": "19d0b60d3f648f90c37209cd63ded69caee2ea1f5609cb81806d605e4935cbbd",
+      "bytes": 48160971
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/latest.pt.sha256.json": {
+      "sha256": "62d69a3f94191166d44182c2b5907d06336da1ddf75f32e014e27dcab507315a",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/manifest.json": {
+      "sha256": "f32c8307cf0b656adcca0a0165bb86f0412c0f5d9a99fa9e2b52b1712a23d076",
+      "bytes": 1998
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/recipe_result.json": {
+      "sha256": "ca68fd815d49e5e1601277e079c3c36c61369465bfcab3a32c7c2048a0e3cb8f",
+      "bytes": 3848
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/reliability.csv": {
+      "sha256": "44bbc52b2f48e2a8d26c483070508c9eb54423f23ae30aecd7826ca127eedfb0",
+      "bytes": 565
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/best.pt": {
+      "sha256": "0170691c05cbc821a54697eb9b4c6d4ef4dfe91324082de822a13f5862ba2361",
+      "bytes": 48159033
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/best.pt.sha256.json": {
+      "sha256": "fbc0ba8cd6fa16f22cfdc8a595298cf693d3dda6c857c4e5d5124f81e77a731d",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/history.csv": {
+      "sha256": "d7033b5d2300f8132f2f07561ba868eb9bc8c94250ffd2ed2b94e2ba6e1c79f5",
+      "bytes": 1239
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/history.json": {
+      "sha256": "07711a5bb6f318c9723a588aeba996a4bd9ac30fd213e683e5821b63aa1110b9",
+      "bytes": 3011
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/inner_validation_predictions.csv": {
+      "sha256": "d45ca47c81a942718d6eea8dc37b1889f29972d6982dab800e2471307722885a",
+      "bytes": 269771
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/latest.pt": {
+      "sha256": "a611131ad0fe90e436c013d59eb818dd6deae788ee73448d459b83e7ee080ea1",
+      "bytes": 48160971
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/latest.pt.sha256.json": {
+      "sha256": "bdac4821580bbb91e9c85656985555d1dc95fbaa4ca244cdaaf379c5b2301c6e",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/manifest.json": {
+      "sha256": "13292ac9da62aa375d9599520fe2232c31752438f1ae4fef98441ab116f4b21d",
+      "bytes": 2019
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/recipe_result.json": {
+      "sha256": "9ec23055e34a04b850fc6c0817cece9cefa32a004e86187e2a1022f2d06abf51",
+      "bytes": 3841
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/reliability.csv": {
+      "sha256": "cfdb294466dfe4a5d06bf27b80389e81fbf84b5285db4821f6a9e88c7ff6a2bf",
+      "bytes": 532
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/best.pt": {
+      "sha256": "3e8a003bbdada1281b8b7a9c9bb885693f7c8de18b7d29c7f50978d50904aa6a",
+      "bytes": 48158777
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/best.pt.sha256.json": {
+      "sha256": "07e42cb6085f64b2183e9b83f0d449b5ca5d3e1266e19f1bfee017271b0cf1d6",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/history.csv": {
+      "sha256": "1e53eb41b2860bf5f873b6f5be09530c5a27a94808c3543390e8a3d097ba92f7",
+      "bytes": 1249
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/history.json": {
+      "sha256": "7b79efbfc0a2a67f83a188338941dba5392ab8d58141f7d20f0834eca8c77058",
+      "bytes": 3021
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/inner_validation_predictions.csv": {
+      "sha256": "d7235d1bd4d1317fcdde74f78c80af6c96254516494b60ea3bf6a3914294e580",
+      "bytes": 270551
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/latest.pt": {
+      "sha256": "af344668c7c7c95ab6968ae7194807c2351c5db9134b58df25f37b52a1d7e7bc",
+      "bytes": 48160971
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/latest.pt.sha256.json": {
+      "sha256": "f5efdecb12b31a071a8b88253e57221a4932dbaf8556848012cf6fe5505b0b4d",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/manifest.json": {
+      "sha256": "5967a7dd12cfff452aa2c2fefe56a05bf67aa35dcc54c1aa73c4b6f5eddb1b10",
+      "bytes": 1997
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/recipe_result.json": {
+      "sha256": "a5df966d3df1f206b58835dc856d886faf12e612bf3677af1fea357342c8c9e6",
+      "bytes": 3849
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/reliability.csv": {
+      "sha256": "e385e80cd5a8349a8b2702b8c7fe95128274f24d515080f43f43926e2c10db75",
+      "bytes": 559
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/best.pt": {
+      "sha256": "3d40ad389a98eb11b22135776f2d54f685feb9fddd96fd39d18caa9fb9dfd8e0",
+      "bytes": 48159033
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/best.pt.sha256.json": {
+      "sha256": "336178a6c7b6de8362252ff84a16501c17e6a9bd9fb107d76068e2b0d42e6bee",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/history.csv": {
+      "sha256": "462ea69d113aa46050f39b893d7e6c614405f7c840e8eb6847cfddfb831e9c6b",
+      "bytes": 1245
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/history.json": {
+      "sha256": "801325d555e688f38ff61fae8b185ee2c76261114d8317428bfc85cffe902e00",
+      "bytes": 3017
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/inner_validation_predictions.csv": {
+      "sha256": "7ecc238ec135b93fb3fdce13e9fe7793754cd30da6ac6f1b44297c3ff9851879",
+      "bytes": 269115
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/latest.pt": {
+      "sha256": "acd3aa7136bf1ad2c08d5599aaf3cb283de267b526fc3327e996b4086ca648c7",
+      "bytes": 48160971
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/latest.pt.sha256.json": {
+      "sha256": "0112cf3889410ce9a1a47af1cd4d8ed85c4f363f38799fdf1ea07061c29d48fe",
+      "bytes": 84
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/manifest.json": {
+      "sha256": "4aeb0a3cde1287ff7056c33f5906e22e3658b3a971a77d20d41afa63ef5d2b0f",
+      "bytes": 2018
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/recipe_result.json": {
+      "sha256": "e5b3603d41ccf259153a4a7ca8bfb2de7e38d9b5916aa7de2c40f47791442ace",
+      "bytes": 3844
+    },
+    "results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/reliability.csv": {
+      "sha256": "74b6190e09093701eb193d300ad26e6b64de291760b71bd159505d86c34c48af",
+      "bytes": 546
+    },
+    "results/image_d1_runs/b0_pilot_v1/run_manifest.json": {
+      "sha256": "f58dd370f15c34825c6c38218a192403f8dcf081eb82ed59ab00c56498bdc251",
+      "bytes": 2370230
+    },
+    "results/image_d1_runs/b0_pilot_v1/split_memberships.json": {
+      "sha256": "56c452d9ed4b6c9809ef73a97b1d1b46160d2f716ba9e8ec223329d1e09b166f",
+      "bytes": 1057361
+    },
+    "results/image_d1_runs/b0_pilot_v1/summary.json": {
+      "sha256": "c9e22f828b4be2594e05e3583f9fa05681e2ece78291d9ef80b2048a00d772b1",
+      "bytes": 19463
+    },
+    "results/image_d1_runs/b0_pilot_v1/validation_receipt.json": {
+      "sha256": "9e0afa0c753e56df7e3735cfb8241d7e92ed979aa4f621afe1e0cd461e245200",
+      "bytes": 1213
+    },
+    "scripts/build_image_architecture_notebook.py": {
+      "sha256": "4d0a707df926b680b49a63e8f5903779f3675ca2e25b38ddc5182e394a32bf22",
+      "bytes": 15931
+    },
+    "scripts/build_image_notebook.py": {
+      "sha256": "24c6c9701d1b98d637008b4206ca6a3f20b32e95145293db0fdaff8fa11534a6",
+      "bytes": 13273
+    },
+    "scripts/cache_image_architecture_weights.py": {
+      "sha256": "9322f0ea58c41297a559f8f30230b13c24666543d9feef83e0b1fd58cc02fcb8",
+      "bytes": 1347
+    },
+    "scripts/execute_image_notebook.py": {
+      "sha256": "1f7ec2fed2cdfe005c6e68062c54ab097312a1f3d9591833530f9d2813bab28a",
+      "bytes": 1112
+    },
+    "scripts/run_image_architecture.py": {
+      "sha256": "83457e449be732da6f94496626c1b07a57b6bb9720dbdc2bc1793cc6fa154474",
+      "bytes": 5300
+    },
+    "scripts/run_image_pilot.py": {
+      "sha256": "0517dd08bfbeee7a4b5aaf2684e1b4bdfc001d76a64c4c1d945e81fd2e49a8ea",
+      "bytes": 2339
+    },
+    "scripts/validate_image_architecture_outputs.py": {
+      "sha256": "ea6d8b4682f1ed3146858000095c4e3af2fe593930d1a2204c1d8c27c848f2dd",
+      "bytes": 8352
+    },
+    "src/melanoma_detection/image_architecture.py": {
+      "sha256": "e6442d63fc7d751ba1f7eeb3714c16ae8f8b56e02d16e9c4590f253d4b8f4f05",
+      "bytes": 27832
+    },
+    "src/melanoma_detection/image_evaluation.py": {
+      "sha256": "116af991361b361f25c842a0a8434de843835120d40be527c8670237b773e7c4",
+      "bytes": 12762
+    },
+    "src/melanoma_detection/image_model.py": {
+      "sha256": "615b24ade7e979e79cf6e77af5372bf3269903ce9774f1a6e8c8d46b734dcfa1",
+      "bytes": 39238
+    },
+    "src/melanoma_detection/image_pilot.py": {
+      "sha256": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+      "bytes": 27673
+    },
+    "src/melanoma_detection/image_reporting.py": {
+      "sha256": "e9678c4d198f80ac2bfb2b4e81147a41e82c5495c8541f3d15d88a02f2248132",
+      "bytes": 15438
+    },
+    "src/melanoma_detection/image_validation.py": {
+      "sha256": "761464bcc3209b674b9147032392f23aef03624c28ed14ac40bc5466f7389e8f",
+      "bytes": 6980
+    },
+    "tests/test_image_architecture_runner.py": {
+      "sha256": "6ec3162a40294f7b26ec6862c46f1fe22768f8595f8fbc1e8f02433b65553312",
+      "bytes": 13926
+    },
+    "tests/test_image_architectures.py": {
+      "sha256": "1d312570bc180652fd04362150286443f48746d9d9da77d13f31e6717c25d90a",
+      "bytes": 9600
+    },
+    "tests/test_image_model.py": {
+      "sha256": "5615bdbe7510b23fbfbb36bce258474dfb62dcb749d5eebf3477254aa498846f",
+      "bytes": 17970
+    },
+    "tests/test_image_reporting.py": {
+      "sha256": "76d15af231909916b363113f7629f5d8bb6a5296e228b062f2cb1b3ec1cd3e85",
+      "bytes": 6088
+    },
+    "tests/test_image_validation.py": {
+      "sha256": "fa48dcccb980b264e1037ef820dbb5de0d95b4af0f9488cb4ed7d91641ebb913",
+      "bytes": 2967
+    }
+  },
+  "git_status_before": " M configs/image_model.yaml\n M notebooks/00_data_cleaning_d1.ipynb\n M notebooks/00_data_cleaning_d2.ipynb\n M notebooks/01_data_exploration_d1.ipynb\n M notebooks/01_data_exploration_d2.ipynb\n M notebooks/02_patient_splitting_d1.ipynb\n M notebooks/03_metadata_model_d1.ipynb\n M notebooks/03a_dummy_logistic_d1.ipynb\n D notebooks/04_image_model_d1.ipynb\n D notebooks/05_fusion_model_d1.ipynb\n D notebooks/06_final_evaluation_d1.ipynb\n M notebooks/README.md\n M notebooks/check_train_image_files_d2.ipynb\n M notebooks/train_legacy.ipynb\n M src/melanoma_detection/image_model.py\n?? configs/image_architecture_pilot.yaml\n?? docs/image_methodology.md\n?? docs/metadata_methodology.md\n?? notebooks/03b_metadata_neural_network_d1.ipynb\n?? notebooks/04_metadata_tuning_d1.ipynb\n?? notebooks/04b_metadata_robustness_d1.ipynb\n?? notebooks/05_image_model_d1.ipynb\n?? notebooks/05_image_model_d1_wip.ipynb\n?? notebooks/05a_image_uncertainty_d1_wip.ipynb\n?? notebooks/05e_image_architecture_comparison_d1.ipynb\n?? notebooks/06_fusion_model_d1.ipynb\n?? notebooks/07_final_evaluation_d1.ipynb\n?? requirements-image.txt\n?? requirements-metadata.txt\n?? results/audits/implementation_audit_2026-10-03.md\n?? results/figures/image_risk_coverage_prototype_fold0_d1.png\n?? results/figures/image_uncertainty_comparison_prototype_fold0_d1.png\n?? results/figures/image_uncertainty_mc_convergence_prototype_fold0_d1.png\n?? results/figures/image_uncertainty_reliability_prototype_fold0_d1.png\n?? results/figures/image_uncertainty_risk_coverage_prototype_fold0_d1.png\n?? results/figures/metadata_baseline_curves_d1.png\n?? results/figures/metadata_calibration_d1.png\n?? results/figures/metadata_nested_tuning_average_precision_bars_d1.png\n?? results/figures/metadata_nested_tuning_curves_d1.png\n?? results/figures/metadata_nested_tuning_roc_auc_bars_d1.png\n?? results/figures/metadata_nn_stability_d1.png\n?? results/figures/metadata_patient_bootstrap_d1.png\n?? results/figures/metadata_subgroups_d1.png\n?? results/figures/patient_split_image_malignancy_rate_d1.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/completion_receipt.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_none/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/high_sqrt/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_none/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/convnext_tiny/recipes/low_sqrt/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_none/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/high_sqrt/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_none/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/history.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/history.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/recipe_result.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/families/densenet121/recipes/low_sqrt/reliability.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/convnext_tiny_learning_curves.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/convnext_tiny_training_loss.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/densenet121_learning_curves.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/densenet121_training_loss.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/efficientnet_b0_learning_curves.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/efficientnet_b0_training_loss.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_confusion_threshold_0_5.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_raw_reliability.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_none_roc_precision_recall.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_confusion_threshold_0_5.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_raw_reliability.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/high_sqrt_roc_precision_recall.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_confusion_threshold_0_5.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_raw_reliability.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_none_roc_precision_recall.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_confusion_threshold_0_5.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_raw_reliability.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/low_sqrt_roc_precision_recall.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/matched_performance_time_memory.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/figures/weak_augmentation_preview.png\n?? results/image_d1_runs/architecture_pilot_3h_v1/image_audit.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/prediction_receipt.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/reporting_receipt.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/run_manifest.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/session.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/configs/image_architecture_pilot.yaml\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/scripts/run_image_architecture.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_architecture.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_model.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/image_pilot.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/metadata_evaluation.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/source_snapshots/src/melanoma_detection/metadata_validation.py\n?? results/image_d1_runs/architecture_pilot_3h_v1/split_memberships.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/summary.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/completion_ledger.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__high_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/convnext_tiny__low_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__high_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/densenet121__low_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__high_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_none_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_none_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_sqrt_precision_recall.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/efficientnet_b0__low_sqrt_roc.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/high_none_reliability_support.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/high_sqrt_reliability_support.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/low_none_reliability_support.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/low_sqrt_reliability_support.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/tables/matched_metrics_raw_threshold_0_5.csv\n?? results/image_d1_runs/architecture_pilot_3h_v1/validation_receipt.json\n?? results/image_d1_runs/architecture_pilot_3h_v1/work_ledger.json\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/configs/image_model.yaml\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/notebooks/05_image_model_d1.ipynb\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/scripts/build_image_notebook.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_model.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_pilot.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/image_reporting.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/metadata_evaluation.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/archive/src/melanoma_detection/metadata_validation.py\n?? results/image_d1_runs/b0_pilot_reporting_v2/checkpoint_validation.json\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/confusion_threshold_0_5.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/learning_curves.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/raw_reliability.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/roc_precision_recall.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/training_loss_by_weight.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/figures/weak_augmentation_preview.png\n?? results/image_d1_runs/b0_pilot_reporting_v2/preservation_receipt.json\n?? results/image_d1_runs/b0_pilot_reporting_v2/reporting_receipt.json\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_none_precision_recall.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_none_roc.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_sqrt_precision_recall.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr1e4_sqrt_roc.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_none_precision_recall.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_none_roc.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_sqrt_precision_recall.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/efficientnet_b0__lr3e5_sqrt_roc.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/exploratory_metrics_threshold_0_5.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/measured_resources.csv\n?? results/image_d1_runs/b0_pilot_reporting_v2/tables/raw_reliability_support.csv\n?? results/image_d1_runs/b0_pilot_v1/figures/learning_curves.png\n?? results/image_d1_runs/b0_pilot_v1/figures/raw_reliability.png\n?? results/image_d1_runs/b0_pilot_v1/figures/weak_augmentation_preview.png\n?? results/image_d1_runs/b0_pilot_v1/image_audit.json\n?? results/image_d1_runs/b0_pilot_v1/prediction_preservation_before.json\n?? results/image_d1_runs/b0_pilot_v1/prediction_receipt.json\n?? results/image_d1_runs/b0_pilot_v1/preparation_specification.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/best.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/history.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/history.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/inner_validation_predictions.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/latest.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/manifest.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/recipe_result.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_none/reliability.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/history.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/history.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/manifest.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/recipe_result.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr1e4_sqrt/reliability.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/best.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/history.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/history.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/inner_validation_predictions.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/latest.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/manifest.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/recipe_result.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_none/reliability.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/best.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/history.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/history.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/inner_validation_predictions.csv\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/latest.pt.sha256.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/manifest.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/recipe_result.json\n?? results/image_d1_runs/b0_pilot_v1/recipes/lr3e5_sqrt/reliability.csv\n?? results/image_d1_runs/b0_pilot_v1/run_manifest.json\n?? results/image_d1_runs/b0_pilot_v1/split_memberships.json\n?? results/image_d1_runs/b0_pilot_v1/summary.json\n?? results/image_d1_runs/b0_pilot_v1/validation_receipt.json\n?? results/metrics/image_model_oof_metrics_prototype_fold0_d1.csv\n?? results/metrics/image_model_run_config_prototype_fold0_d1.json\n?? results/metrics/image_model_training_history_prototype_fold0_d1.csv\n?? results/metrics/image_oof_metrics_prototype_fold0_d1.csv\n?? results/metrics/image_risk_coverage_prototype_fold0_d1.csv\n?? results/metrics/image_run_config_prototype_fold0_d1.json\n?? results/metrics/image_training_history_prototype_fold0_d1.csv\n?? results/metrics/image_uncertainty_mc_convergence_prototype_fold0_d1.csv\n?? results/metrics/image_uncertainty_metrics_prototype_fold0_d1.csv\n?? results/metrics/image_uncertainty_referral_summary_prototype_fold0_d1.csv\n?? results/metrics/image_uncertainty_risk_coverage_prototype_fold0_d1.csv\n?? results/metrics/image_uncertainty_run_config_prototype_fold0_d1.json\n?? results/metrics/metadata_nested_threshold_intervals_d1.csv\n?? results/metrics/metadata_nested_threshold_metrics_d1.csv\n?? results/metrics/metadata_nested_tuning_metrics_d1.csv\n?? results/metrics/metadata_nn_metrics_d1.csv\n?? results/metrics/metadata_nn_run_config_d1.json\n?? results/metrics/metadata_nn_stability_d1.csv\n?? results/metrics/metadata_patient_bootstrap_d1.csv\n?? results/metrics/metadata_robustness_fold_metrics_d1.csv\n?? results/metrics/metadata_robustness_run_config_d1.json\n?? results/predictions/image_model_oof_prototype_fold0_d1.csv\n?? results/predictions/image_oof_tta_passes_prototype_fold0_d1.csv\n?? results/predictions/image_oof_tta_prototype_fold0_d1.csv\n?? results/predictions/image_uncertainty_mc_passes_prototype_fold0_d1.csv\n?? results/predictions/image_uncertainty_oof_prototype_fold0_d1.csv\n?? results/predictions/image_uncertainty_tta_passes_prototype_fold0_d1.csv\n?? results/predictions/metadata_nn_oof_d1.csv\n?? results/predictions/metadata_robustness_oof_d1.csv\n?? results/tables/metadata_calibration_bins_d1.csv\n?? results/tables/metadata_nested_tuning_parameters_d1.csv\n?? results/tables/metadata_nn_epochs_d1.csv\n?? results/tables/metadata_robustness_split_audit_d1.csv\n?? results/tables/metadata_subgroup_checks_d1.csv\n?? scripts/build_image_architecture_notebook.py\n?? scripts/build_image_notebook.py\n?? scripts/cache_image_architecture_weights.py\n?? scripts/evaluate_metadata_holdout.py\n?? scripts/execute_image_notebook.py\n?? scripts/run_image_architecture.py\n?? scripts/run_image_pilot.py\n?? scripts/validate_image_architecture_outputs.py\n?? src/melanoma_detection/image_architecture.py\n?? src/melanoma_detection/image_evaluation.py\n?? src/melanoma_detection/image_pilot.py\n?? src/melanoma_detection/image_reporting.py\n?? src/melanoma_detection/metadata_evaluation.py\n?? src/melanoma_detection/metadata_model.py\n?? src/melanoma_detection/metadata_validation.py\n?? tests/test_image_architecture_runner.py\n?? tests/test_image_architectures.py\n?? tests/test_image_model.py\n?? tests/test_image_reporting.py\n?? tests/test_metadata_evaluation.py\n?? tests/test_metadata_model.py\n?? tests/test_metadata_validation.py\n",
+  "architecture_notebook_hash_discrepancy_preserved": true,
+  "status": "preserved_before_implementation"
+}

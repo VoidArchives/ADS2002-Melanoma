@@ -1,0 +1,74 @@
+{
+  "status": "implemented_reference_complete_comparison_quality_blocked",
+  "finished_utc": "2026-10-03T10:20:35.783641+00:00",
+  "session_elapsed_minutes": 62.913060683333335,
+  "within_120_minute_budget": true,
+  "condition_status": {
+    "A": "complete",
+    "B": "quality_blocked",
+    "C": "deferred"
+  },
+  "comparison_complete": false,
+  "winner_declared": false,
+  "A_training_seconds": 423.2454359999974,
+  "A_mean_epoch_seconds": 34.81745242499952,
+  "A_peak_allocated_bytes": 3020574208,
+  "A_best_epoch": 6,
+  "A_best_metrics": {
+    "average_precision": 0.13831775092020718,
+    "roc_auc": 0.8663368835495431,
+    "log_loss": 0.0876421450979734,
+    "brier": 0.02102584961603304
+  },
+  "A_epoch12_metrics": {
+    "average_precision": 0.10052887513531428,
+    "roc_auc": 0.8613060084464859,
+    "log_loss": 0.09250735214002032,
+    "brier": 0.020209900564176514
+  },
+  "quality_failed_B_variant_count": 7,
+  "tests": {
+    "full_suite_run_count": 132,
+    "optional_real_opencv_skipped": 1,
+    "failures": 0,
+    "reporting_recheck_count": 6,
+    "reporting_recheck_failures": 0
+  },
+  "prediction_independence_receipt": "session/prediction_independence_receipt.json",
+  "preservation_receipt": "session/preservation_check_final.json",
+  "figure_inspection_receipt": "session/figure_inspection_receipt.json",
+  "notebooks": {
+    "b0_augmentation_12e_v1": {
+      "notebook": "notebooks\\05b_image_augmentation_d1.ipynb",
+      "notebook_sha256": "e0b5e8257ffece53061faf0c4b599392c189a9a6767c7946a75c52cd957db895",
+      "training_enabled": false,
+      "executed_code_cells": 7,
+      "error_count": 0,
+      "embedded_png_count": 18
+    },
+    "b0_lighting_12e_v1": {
+      "notebook": "notebooks\\05c_image_lighting_d1.ipynb",
+      "notebook_sha256": "dd002e4a900be52ff16576c51982084ea2df52e3dbb83c83fe8ff012fd4a9c15",
+      "training_enabled": false,
+      "executed_code_cells": 7,
+      "error_count": 0,
+      "embedded_png_count": 6
+    }
+  },
+  "opencv_installed": false,
+  "reserved_test_evaluated": false,
+  "outer_evaluation_performed": false,
+  "threshold_tuned": false,
+  "calibrator_fitted": false,
+  "deferred": [
+    "safer stronger profile and complete matched A/B comparison",
+    "optional CLAHE admission and experiment",
+    "hair removal and combinations",
+    "longer three-inner-fold confirmation",
+    "architecture-specific transformation searches",
+    "Swin and nested evaluation",
+    "OOF calibration and tuned thresholds",
+    "uncertainty, fusion and reserved test"
+  ],
+  "timing_notes": "Implementation/testing and fitting-image QA overlapped through parallel work. Total elapsed includes reporting and end-to-end verification; the fit timing is measured separately."
+}

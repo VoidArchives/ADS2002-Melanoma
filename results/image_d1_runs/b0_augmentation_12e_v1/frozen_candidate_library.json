@@ -1,0 +1,223 @@
+{
+  "model": {
+    "architecture": "efficientnet_b0",
+    "weights": "IMAGENET1K_V1",
+    "image_size": 224,
+    "dropout": 0.2
+  },
+  "training": {
+    "microbatch": 64,
+    "effective_batch": 64,
+    "min_microbatch": 4,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 1,
+    "schedule_epochs": 30,
+    "min_lr_factor": 0.1,
+    "gradient_clip": 1.0,
+    "amp": true,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "recipe": {
+    "id": "lr3e5_sqrt",
+    "backbone_lr": 3e-05,
+    "loss_weight": "sqrt_ratio"
+  },
+  "conditions": {
+    "A": {
+      "pipeline_id": "A_weak_none",
+      "label": "Weak augmentation",
+      "augmentation": "weak",
+      "preprocessing": "none"
+    },
+    "B": {
+      "pipeline_id": "B_stronger_none",
+      "label": "Stronger augmentation",
+      "augmentation": "stronger",
+      "preprocessing": "none"
+    },
+    "C": {
+      "pipeline_id": "C_weak_clahe",
+      "label": "Weak augmentation plus CLAHE",
+      "augmentation": "weak",
+      "preprocessing": "clahe",
+      "optional": true
+    }
+  },
+  "transformation_profiles": {
+    "A": {
+      "augmentation": {
+        "version": "weak_v1",
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "vertical_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_interpolation": "nearest",
+          "rotation_fill": 0
+        }
+      },
+      "preprocessing": {
+        "version": "none_v1",
+        "parameters": {}
+      },
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "image_size": 224,
+      "resize_interpolation": "bilinear",
+      "resize_antialias": true,
+      "centre_crop": false,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "B": {
+      "augmentation": {
+        "version": "stronger_v1",
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "vertical_flip_probability": 0.5,
+          "rotation_degrees": [
+            -45.0,
+            45.0
+          ],
+          "translation_fraction": [
+            0.05,
+            0.05
+          ],
+          "translation_reference": "original_resized_image",
+          "scale": [
+            0.9,
+            1.05
+          ],
+          "shear_degrees": [
+            0.0,
+            0.0
+          ],
+          "reflection_padding_pixels": 112,
+          "affine_interpolation": "bilinear",
+          "brightness": [
+            0.8,
+            1.2
+          ],
+          "contrast": [
+            0.8,
+            1.2
+          ],
+          "saturation": [
+            0.9,
+            1.1
+          ],
+          "hue": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "preprocessing": {
+        "version": "none_v1",
+        "parameters": {}
+      },
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "image_size": 224,
+      "resize_interpolation": "bilinear",
+      "resize_antialias": true,
+      "centre_crop": false,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "C": {
+      "augmentation": {
+        "version": "weak_v1",
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "vertical_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_interpolation": "nearest",
+          "rotation_fill": 0
+        }
+      },
+      "preprocessing": {
+        "version": "clahe_lab_l_v1",
+        "parameters": {
+          "colour_space": "CIELAB",
+          "channel": "lightness_only",
+          "clip_limit": 2.0,
+          "tile_grid_size": [
+            8,
+            8
+          ],
+          "position": "after_resize_before_stochastic_augmentation",
+          "learned_state": false
+        }
+      },
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "image_size": 224,
+      "resize_interpolation": "bilinear",
+      "resize_antialias": true,
+      "centre_crop": false,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "experiment": {
+    "selection_algorithm_version": "b0_matched_augmentation_12e_v1",
+    "outer_fold": 0,
+    "inner_fold": 0,
+    "epochs": 12,
+    "early_stopping": false,
+    "minimum_ap_gain": 0.005,
+    "classification_threshold": 0.5,
+    "quality_images": 24,
+    "variants_per_image": 4
+  }
+}

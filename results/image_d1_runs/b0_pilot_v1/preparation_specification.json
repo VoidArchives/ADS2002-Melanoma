@@ -1,0 +1,54 @@
+{
+  "run_id": "b0_pilot_v1",
+  "compatibility_sha256": "e8b08f551f3785c74ace53f5b5dc5d282f146de04bdbd7a1df82a48277ed4fbc",
+  "source_sha256": {
+    "src/melanoma_detection/image_model.py": "a8cc1d2d1bd7b7fe1b408ec1967935a393cf3be69e896264ae4d4d6248efc57f",
+    "src/melanoma_detection/image_pilot.py": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9"
+  },
+  "decode": "RGB",
+  "resize": {
+    "size": [
+      224,
+      224
+    ],
+    "interpolation": "bilinear",
+    "antialias": true
+  },
+  "preprocessing": "none",
+  "learned_preprocessing_state": null,
+  "training_only": {
+    "horizontal_flip_p": 0.5,
+    "vertical_flip_p": 0.5,
+    "rotation_degrees": [
+      -20,
+      20
+    ],
+    "rotation_interpolation": "nearest",
+    "rotation_fill": 0,
+    "rotation_expand": false,
+    "colour_jitter": false
+  },
+  "normalisation": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "order": [
+    "RGB",
+    "whole_image_resize",
+    "unchanged_preprocessing",
+    "training_augmentation_if_fitting",
+    "tensor",
+    "normalisation"
+  ],
+  "native_pretrained_crop": "256 bicubic resize then 224 centre crop; deliberately overridden"
+}

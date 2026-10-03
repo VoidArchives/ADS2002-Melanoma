@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "run": {
+    "augmentation_run_id": "b0_augmentation_12e_v1",
+    "lighting_run_id": "b0_lighting_12e_v1",
+    "folds_csv": "data/subset/processed/train_folds.csv",
+    "image_dir": "data/subset/train",
+    "output_dir": "results/image_d1_runs",
+    "reference_memberships": "results/image_d1_runs/b0_pilot_v1/split_memberships.json",
+    "session_file": "results/image_d1_runs/b0_augmentation_12e_v1/session.json",
+    "session_start_utc": "2026-10-03T09:17:41+00:00"
+  },
+  "model": {
+    "architecture": "efficientnet_b0",
+    "weights": "IMAGENET1K_V1",
+    "image_size": 224,
+    "dropout": 0.2
+  },
+  "training": {
+    "microbatch": 64,
+    "effective_batch": 64,
+    "min_microbatch": 4,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 1,
+    "schedule_epochs": 30,
+    "min_lr_factor": 0.1,
+    "gradient_clip": 1.0,
+    "amp": true,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "recipe": {
+    "id": "lr3e5_sqrt",
+    "backbone_lr": 3e-05,
+    "loss_weight": "sqrt_ratio"
+  },
+  "experiment": {
+    "selection_algorithm_version": "b0_matched_augmentation_12e_v1",
+    "outer_fold": 0,
+    "inner_fold": 0,
+    "epochs": 12,
+    "early_stopping": false,
+    "minimum_ap_gain": 0.005,
+    "classification_threshold": 0.5,
+    "quality_images": 24,
+    "variants_per_image": 4,
+    "initial_epoch_seconds": {
+      "A": 60,
+      "B": 90,
+      "C": 75
+    },
+    "epoch_safety_factor": 1.25,
+    "prediction_reserve_seconds": 120,
+    "final_reporting_minutes": 20,
+    "session_minutes": 120,
+    "latest_optional_admission_minutes": 70,
+    "optional_setup_minutes": 10,
+    "optional_margin_minutes": 5,
+    "optional_package": "opencv-python-headless==4.13.0.92"
+  },
+  "conditions": {
+    "A": {
+      "pipeline_id": "A_weak_none",
+      "label": "Weak augmentation",
+      "augmentation": "weak",
+      "preprocessing": "none"
+    },
+    "B": {
+      "pipeline_id": "B_stronger_none",
+      "label": "Stronger augmentation",
+      "augmentation": "stronger",
+      "preprocessing": "none"
+    },
+    "C": {
+      "pipeline_id": "C_weak_clahe",
+      "label": "Weak augmentation plus CLAHE",
+      "augmentation": "weak",
+      "preprocessing": "clahe",
+      "optional": true
+    }
+  },
+  "roadmap": {
+    "stage_status": "exploratory_inner_validation_only",
+    "independent_architecture_validation": [
+      "efficientnet_b0",
+      "densenet121",
+      "convnext_tiny"
+    ],
+    "deferred": [
+      "hair_removal",
+      "transformation_combinations",
+      "three_inner_fold_confirmation",
+      "swin_tiny",
+      "nested_outer_evaluation",
+      "calibration_fitting",
+      "threshold_tuning",
+      "uncertainty",
+      "fusion",
+      "reserved_test"
+    ],
+    "combination_gate": "both_individual_quality_pass_and_ap_gain_ge_0.005_then_compare_with_better_individual",
+    "final_selection": "repeat_all_selection_independently_inside_each_outer_training_partition"
+  }
+}

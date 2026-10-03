@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "protected_file_count": 258,
+  "unchanged_count": 254,
+  "authorised_source_changes": [
+    {
+      "path": "configs/image_model.yaml",
+      "before": "efb5e9a779c2a204289288f9443e8a3963faa7617cbec5a9fa7352f5ba6623a6",
+      "after": "edef0d69f6336906f99567a6c479b9593c914cf402ed2bac2944b5683fae951a"
+    },
+    {
+      "path": "docs/image_methodology.md",
+      "before": "5baa23e0dbab31130e2ec1bc9a70d3caa0164dc2998b634e571e20dcf91b12be",
+      "after": "13c074a5853f96e5a74f0742fc25025e1328831f23418f36a9aa26ea1bd41cf7"
+    },
+    {
+      "path": "src/melanoma_detection/image_model.py",
+      "before": "615b24ade7e979e79cf6e77af5372bf3269903ce9774f1a6e8c8d46b734dcfa1",
+      "after": "a0cda7dbe5b9af4c3b41f2a0e0619d79f650eb61d275b2008f0627ea5c43bbbf"
+    },
+    {
+      "path": "tests/test_image_model.py",
+      "before": "5615bdbe7510b23fbfbb36bce258474dfb62dcb749d5eebf3477254aa498846f",
+      "after": "34c8e024f16f5442909d0bb3a81457340063de213d9c341a4193c593814a0ac9"
+    }
+  ],
+  "historical_artifact_failures": [],
+  "current_architecture_notebook_preserved": true
+}

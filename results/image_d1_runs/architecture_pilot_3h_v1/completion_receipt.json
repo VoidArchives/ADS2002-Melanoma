@@ -1,0 +1,84 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-03T08:12:14.743057+00:00",
+  "session_elapsed_minutes": 71.14571761666666,
+  "training_wall_minutes": 38.50721886666667,
+  "training_limit_minutes": 50,
+  "session_limit_minutes": 180,
+  "new_completed_fits": 8,
+  "new_completed_epochs": 48,
+  "family_exploratory_best": {
+    "efficientnet_b0": {
+      "recipe_id": "lr3e5_sqrt",
+      "best_epoch": 6,
+      "best_metrics": {
+        "average_precision": 0.13831775092020718,
+        "roc_auc": 0.8663368835495431,
+        "log_loss": 0.0876421450979734,
+        "brier": 0.02102584961603304
+      }
+    },
+    "densenet121": {
+      "recipe_id": "low_none",
+      "best_epoch": 2,
+      "best_metrics": {
+        "average_precision": 0.1452055616770542,
+        "roc_auc": 0.7729712449312671,
+        "log_loss": 0.0803045640063066,
+        "brier": 0.017226054456718563
+      }
+    },
+    "convnext_tiny": {
+      "recipe_id": "high_sqrt",
+      "best_epoch": 6,
+      "best_metrics": {
+        "average_precision": 0.14949345244346499,
+        "roc_auc": 0.864183197886696,
+        "log_loss": 0.08267019488905246,
+        "brier": 0.02059286017928496
+      }
+    }
+  },
+  "final_model_selected": false,
+  "historical_files_hash_verified": 54,
+  "prediction_only_training_artifacts_preserved": 59,
+  "prediction_only_all_new_scores_exact": true,
+  "tests": {
+    "full_suite_passed": 91,
+    "post_change_runner_passed": 12,
+    "post_change_reporting_passed": 8
+  },
+  "notebooks": {
+    "05_image_model_d1.ipynb": {
+      "executed_code_cells": 10,
+      "errors": 0,
+      "sha256": "788708517faede64f8744df21bfeaa5ececcd8a816da8b4eacf25e587897b1a8"
+    },
+    "05e_image_architecture_comparison_d1.ipynb": {
+      "executed_code_cells": 8,
+      "errors": 0,
+      "sha256": "a7f3afb7e5a08f0ca76f02dc1c457540de97850ccb91891f59ecf1ceb550c673"
+    }
+  },
+  "architecture_figures_manually_inspected": 20,
+  "b0_figures_manually_inspected": 6,
+  "training_cli_snapshot_sha256": "9d82e0d683c5b4259da057ebc6e905b3dd8ac2a0c5dda02843a13a2f09946f4c",
+  "current_inference_cli_sha256": "83457e449be732da6f94496626c1b07a57b6bb9720dbdc2bc1793cc6fa154474",
+  "validation_receipt_sha256": "c3a9904dfda317a39e8cf0f26579701a09b3d1db0cbfc2f5232286053ba88474",
+  "reporting_receipt_sha256": "1404561191e1a0d90fa7f9e80995399a989a0ecc53669f08f47fce2b55066f3c",
+  "reserved_test_loaded": false,
+  "outer_evaluation_performed": false,
+  "deferred": [
+    "longer three-inner-fold training",
+    "stronger augmentation",
+    "hair removal",
+    "lighting correction",
+    "Swin",
+    "final nested evaluation",
+    "calibration fitting",
+    "tuned thresholds",
+    "uncertainty",
+    "fusion",
+    "reserved test"
+  ]
+}

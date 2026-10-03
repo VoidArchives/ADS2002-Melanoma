@@ -1,0 +1,56 @@
+{
+  "input_path": "data\\subset\\processed\\train_folds.csv",
+  "input_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+  "specification": {
+    "model": "fixed_spline_logistic",
+    "features": [
+      "age_approx",
+      "sex",
+      "anatom_site_general_challenge"
+    ],
+    "age_knots": 4,
+    "age_degree": 3,
+    "age_knot_placement": "quantile",
+    "logistic_C": 1.0,
+    "class_weight": null,
+    "seed": 42,
+    "primary_probability": "raw",
+    "threshold_rule": "highest cutoff attaining training OOF recall",
+    "target_recall": 0.8,
+    "threshold_purpose": "academic sensitivity scenario; not a clinical target",
+    "calibration_comparator": "logistic recalibration of training-only OOF logits, C=1.0",
+    "metric_unit": "image/lesion",
+    "validation_and_bootstrap_unit": "patient"
+  },
+  "threshold": 0.010600059310474265,
+  "training_images": 6864,
+  "training_patients": 422,
+  "bundle_path": "models\\metadata_d1\\frozen_spline.joblib",
+  "bundle_sha256": "706b28072393662e46ce0b9c3332029457ade111f5fede1c22bd5fef60e3d51f",
+  "source_sha256": {
+    "src\\melanoma_detection\\metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src\\melanoma_detection\\metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src\\melanoma_detection\\metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+    "scripts\\evaluate_metadata_holdout.py": "8fa419cb90a64de332e2885293c6fc5a5192eafa09d2fe7443da136fcc0d654f"
+  },
+  "python": "3.14.6",
+  "versions": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "joblib": "1.5.3",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  },
+  "bootstrap": {
+    "unit": "patient",
+    "repetitions": 2000,
+    "seed": 42,
+    "interval": "percentile95",
+    "retraining": false
+  },
+  "nn_input_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+  "nn_prediction_sha256": "7c84717d1cf77ad9acc2dc023e4c8918625fa7e556b387154fab0b221758a001",
+  "status": "fitted on development only; final test not evaluated"
+}

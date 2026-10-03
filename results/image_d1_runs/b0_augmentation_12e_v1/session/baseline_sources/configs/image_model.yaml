@@ -1,0 +1,89 @@
+schema_version: 1
+run:
+  run_id: b0_pilot_v1
+  mode: pilot
+  folds_csv: data/subset/processed/train_folds.csv
+  image_dir: data/subset/train
+  output_dir: results/image_d1_runs
+model:
+  architecture: efficientnet_b0
+  weights: IMAGENET1K_V1
+  image_size: 224
+  dropout: 0.2
+  augmentation: weak
+  preprocessing: none
+training:
+  microbatch: 64
+  effective_batch: 64
+  min_microbatch: 4
+  head_lr: 0.001
+  weight_decay: 0.0001
+  warmup_epochs: 1
+  schedule_epochs: 30
+  min_lr_factor: 0.1
+  gradient_clip: 1.0
+  amp: true
+  num_workers: 0
+  seed: 42
+pilot:
+  outer_fold: 0
+  inner_folds: 3
+  inner_fold: 0
+  epochs: 6
+  budget_minutes: 60
+  ap_tie_tolerance: 0.0001
+candidates:
+  pilot_recipes:
+    - {id: lr3e5_none, backbone_lr: 0.00003, loss_weight: none}
+    - {id: lr1e4_none, backbone_lr: 0.0001, loss_weight: none}
+    - {id: lr3e5_sqrt, backbone_lr: 0.00003, loss_weight: sqrt_ratio}
+    - {id: lr1e4_sqrt, backbone_lr: 0.0001, loss_weight: sqrt_ratio}
+  # Declared future procedures; execution is intentionally not registered yet.
+  augmentation:
+    weak: {flips: true, rotation_degrees: 20, colour_jitter: false}
+    stronger:
+      rotation_degrees: 45
+      translation_fraction: 0.05
+      scale: [0.9, 1.05]
+      padding: reflection
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.1
+      hue: 0
+      quality_review_images: 24
+      seeded_variants_per_image: 4
+  preprocessing:
+    none: {}
+    hair_removal:
+      blackhat_kernel: 17
+      blackhat_shape: ellipse
+      threshold_gt: 20
+      dilation_kernel: 3
+      dilation_iterations: 1
+      method: telea
+      inpaint_radius: 3
+      maximum_mask_fraction: 0.1
+    clahe: {colour_space: CIELAB, channel: lightness, clip_limit: 2, grid: [8, 8]}
+    combination_order: [hair_removal, clahe]
+  architectures:
+    efficientnet_b0: {weights: IMAGENET1K_V1, backbone_lr: [0.00003, 0.0001], microbatch: 64}
+    densenet121: {weights: IMAGENET1K_V1, backbone_lr: [0.00003, 0.0001], microbatch: 32}
+    convnext_tiny: {weights: IMAGENET1K_V1, backbone_lr: [0.00001, 0.00003], microbatch: 16}
+    swin_tiny: {weights: IMAGENET1K_V1, backbone_lr: [0.00001, 0.00003], microbatch: 16, optional: true}
+roadmap:
+  status: declared_not_implemented
+  selection_algorithm_version: bounded_screen_v1
+  stages:
+    augmentation: {gpu_hours: 2, max_fits: 2, epochs: 12, minimum_ap_gain: 0.005}
+    preprocessing: {gpu_hours: 4, max_fits: 4, epochs: 12, minimum_ap_gain: 0.005}
+    architecture: {gpu_hours: 12, epochs: 30, minimum_epochs: 12, patience: 7, patience_ap_delta: 0.001}
+    optional_swin: {gpu_hours: 6, maximum_added_nested_gpu_hours: 12}
+    nested: {gpu_hours: 48, outer_folds: 5, inner_folds: 3, maximum_logical_fits: 180, maximum_training_epochs: 4380}
+  optional_swin_added_fits: 35
+  optional_stability_added_fits: 10
+  stability_seeds: [17, 202]
+  bootstrap_replicates: 2000
+  calibration: {method: regularised_sigmoid, C: 1, fitting_source: training_only_oof, reject_nonpositive_slope: true}
+  recall_scenario: {target_recall: 0.8, fitting_source: training_only_oof, purpose: academic}
+  budget_action: checkpoint_and_pause_between_epochs
+  architecture_tie_order: [efficientnet_b0, densenet121, convnext_tiny, swin_tiny]

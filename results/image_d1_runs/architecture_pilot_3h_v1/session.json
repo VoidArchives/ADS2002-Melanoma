@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-03T07:01:06+00:00",
+  "session_deadline_utc": "2026-10-03T10:01:06+00:00",
+  "latest_training_start_utc": "2026-10-03T08:56:06+00:00",
+  "training_cutoff_utc": "2026-10-03T09:46:06+00:00",
+  "max_training_minutes": 50,
+  "status": "complete",
+  "training_started": true,
+  "session_id": "architecture_3h_20261003_070106",
+  "training_started_utc": "2026-10-03T07:17:44.957729+00:00",
+  "training_window_deadline_utc": "2026-10-03T08:07:44.957729+00:00",
+  "last_training_exit_utc": "2026-10-03T07:56:15.390847+00:00",
+  "training_wall_seconds_since_first_start": 2310.433132,
+  "completed_utc": "2026-10-03T08:12:14.743057+00:00",
+  "session_elapsed_minutes": 71.14571761666666
+}

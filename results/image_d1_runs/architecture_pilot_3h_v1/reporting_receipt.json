@@ -1,0 +1,71 @@
+{
+  "run_id": "architecture_pilot_3h_v1",
+  "training_enabled_in_notebook": false,
+  "matched_recipe_slots": [
+    "low_none",
+    "low_sqrt",
+    "high_none",
+    "high_sqrt"
+  ],
+  "threshold": 0.5,
+  "threshold_tuned": false,
+  "calibration_fitted": false,
+  "test_loaded": false,
+  "status": "complete",
+  "trial_statuses": {
+    "efficientnet_b0/low_none": "complete",
+    "efficientnet_b0/low_sqrt": "complete",
+    "efficientnet_b0/high_none": "complete",
+    "efficientnet_b0/high_sqrt": "complete",
+    "densenet121/low_none": "complete",
+    "convnext_tiny/low_none": "complete",
+    "densenet121/low_sqrt": "complete",
+    "convnext_tiny/low_sqrt": "complete",
+    "densenet121/high_none": "complete",
+    "convnext_tiny/high_none": "complete",
+    "densenet121/high_sqrt": "complete",
+    "convnext_tiny/high_sqrt": "complete"
+  },
+  "reporting_source_sha256": {
+    "src/melanoma_detection/image_evaluation.py": "116af991361b361f25c842a0a8434de843835120d40be527c8670237b773e7c4",
+    "src/melanoma_detection/image_reporting.py": "e9678c4d198f80ac2bfb2b4e81147a41e82c5495c8541f3d15d88a02f2248132",
+    "scripts/build_image_architecture_notebook.py": "4d0a707df926b680b49a63e8f5903779f3675ca2e25b38ddc5182e394a32bf22"
+  },
+  "summary_sha256": "b39d163c991b154aa26f7535402a091c76354072e678d500491f9a88f8d8c9a8",
+  "prediction_csv_sha256": {
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr3e5_none\\inner_validation_predictions.csv": "d7235d1bd4d1317fcdde74f78c80af6c96254516494b60ea3bf6a3914294e580",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr3e5_sqrt\\inner_validation_predictions.csv": "7ecc238ec135b93fb3fdce13e9fe7793754cd30da6ac6f1b44297c3ff9851879",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr1e4_none\\inner_validation_predictions.csv": "f7e7ee10c11b48e22eb0911ca3a1eadb10e821e3c1f0729dc1b655589e0096e6",
+    "results\\image_d1_runs\\b0_pilot_v1\\recipes\\lr1e4_sqrt\\inner_validation_predictions.csv": "d45ca47c81a942718d6eea8dc37b1889f29972d6982dab800e2471307722885a",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\densenet121\\recipes\\low_none\\inner_validation_predictions.csv": "22d4dac11aedb4d747b5101117c8c4a6ed70989df11c354be4dfaf4161d7a962",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\convnext_tiny\\recipes\\low_none\\inner_validation_predictions.csv": "d860f7b8e6aed059643bdbc97f42b2d5a35a749b3761aeca3e0e966849277e61",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\densenet121\\recipes\\low_sqrt\\inner_validation_predictions.csv": "93a945053edea639bfdef9d5c139a72432b8fb272189cb2b5da123407ff5e85f",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\convnext_tiny\\recipes\\low_sqrt\\inner_validation_predictions.csv": "e1419321b4e47fc71ca0ab97e113c47c8c0c93a5fbf8dc20e6232de84f3dedbf",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\densenet121\\recipes\\high_none\\inner_validation_predictions.csv": "4be4e6dae5a39191979c230948748516303377ad8c794a02f7313d72ef4c46bb",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\convnext_tiny\\recipes\\high_none\\inner_validation_predictions.csv": "10d353b8e4129f8e038f2854f35ede0d900280b0c26abf7e6958585693f06346",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\densenet121\\recipes\\high_sqrt\\inner_validation_predictions.csv": "dba8206b010ba2417175b7008881e32a7dbb58a17528817afeb075ca4db57845",
+    "results\\image_d1_runs\\architecture_pilot_3h_v1\\families\\convnext_tiny\\recipes\\high_sqrt\\inner_validation_predictions.csv": "cfbc0d60d4c0bdda0481eda70601f5ecb64e2bbd129b8744d6061ff01b8a92c6"
+  },
+  "figures": [
+    "convnext_tiny_learning_curves.png",
+    "convnext_tiny_training_loss.png",
+    "densenet121_learning_curves.png",
+    "densenet121_training_loss.png",
+    "efficientnet_b0_learning_curves.png",
+    "efficientnet_b0_training_loss.png",
+    "high_none_confusion_threshold_0_5.png",
+    "high_none_raw_reliability.png",
+    "high_none_roc_precision_recall.png",
+    "high_sqrt_confusion_threshold_0_5.png",
+    "high_sqrt_raw_reliability.png",
+    "high_sqrt_roc_precision_recall.png",
+    "low_none_confusion_threshold_0_5.png",
+    "low_none_raw_reliability.png",
+    "low_none_roc_precision_recall.png",
+    "low_sqrt_confusion_threshold_0_5.png",
+    "low_sqrt_raw_reliability.png",
+    "low_sqrt_roc_precision_recall.png",
+    "matched_performance_time_memory.png",
+    "weak_augmentation_preview.png"
+  ]
+}

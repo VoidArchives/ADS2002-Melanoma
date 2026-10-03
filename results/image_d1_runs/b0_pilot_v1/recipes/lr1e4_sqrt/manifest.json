@@ -1,0 +1,61 @@
+{
+  "compatibility_hash": "f43c5184b163e0ec297d003292533273b470bb75bdcbc47123be376c0e39461a",
+  "environment": {
+    "cuda_version": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "fitting": "004a896c33a514e13d171148fe33fade6fafef1308c5295d4fb6ab56f994d7ab",
+  "manifest": {
+    "compatibility_sha256": "e8b08f551f3785c74ace53f5b5dc5d282f146de04bdbd7a1df82a48277ed4fbc",
+    "recipe_id": "lr1e4_sqrt",
+    "recipe_sha256": "e22a0c68f8b5c3286dfff0146e43b606723807fd2768664168eb1e7fcd5a7164",
+    "run_id": "b0_pilot_v1",
+    "schema_version": 1,
+    "stage": "exploratory_b0_inner_pilot"
+  },
+  "microbatch": 64,
+  "model_factory": "efficientnet_b0",
+  "positive_weight": 7.1614044911395895,
+  "pretrained_identity": {
+    "file_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "kind": "torchvision",
+    "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "recipe": {
+    "backbone_lr": 0.0001,
+    "id": "lr1e4_sqrt",
+    "loss_weight": "sqrt_ratio"
+  },
+  "source_sha256": "a8cc1d2d1bd7b7fe1b408ec1967935a393cf3be69e896264ae4d4d6248efc57f",
+  "spec": {
+    "architecture": "efficientnet_b0",
+    "augmentation": "weak",
+    "dropout": 0.2,
+    "image_size": 224,
+    "preprocessing": "none",
+    "weights": "IMAGENET1K_V1"
+  },
+  "stopping_reason": "complete",
+  "training": {
+    "amp": true,
+    "effective_batch": 64,
+    "gradient_clip": 1.0,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "min_lr_factor": 0.1,
+    "min_microbatch": 4,
+    "num_workers": 0,
+    "schedule_epochs": 30,
+    "seed": 42,
+    "warmup_epochs": 1,
+    "weight_decay": 0.0001
+  },
+  "validation": "a109c9410f6f5f4c1ec2b4b7f694097fc3f556f2994644ae44c522174769b61c"
+}

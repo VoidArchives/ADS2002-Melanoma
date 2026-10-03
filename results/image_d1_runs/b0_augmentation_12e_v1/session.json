@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-03T09:17:41+00:00",
+  "training_cutoff_utc": "2026-10-03T10:57:41+00:00",
+  "session_deadline_utc": "2026-10-03T11:17:41+00:00",
+  "optional_admission_utc": "2026-10-03T10:27:41+00:00",
+  "status": "implemented_reference_complete_comparison_quality_blocked",
+  "finished_utc": "2026-10-03T10:20:35.783641+00:00",
+  "comparison_complete": false,
+  "completion_receipt": "session/completion_receipt.json"
+}

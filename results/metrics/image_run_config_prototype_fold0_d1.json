@@ -1,0 +1,25 @@
+{
+  "run_mode": "prototype",
+  "folds_run": [
+    0
+  ],
+  "model_name": "efficientnet_b0_wip",
+  "random_seed": 42,
+  "image_size": 224,
+  "batch_size": 128,
+  "epochs": 3,
+  "classifier_learning_rate": 0.001,
+  "fine_tuning_learning_rate": 0.0001,
+  "tta_variants": [
+    "identity",
+    "horizontal_flip",
+    "vertical_flip",
+    "rotate_90",
+    "rotate_180",
+    "rotate_270",
+    "horizontal_flip_rotate_90",
+    "vertical_flip_rotate_90"
+  ],
+  "uncertainty_definition": "population standard deviation of probabilities across fixed TTA",
+  "test_set_loaded": false
+}

@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "recipe_id": "lr3e5_none",
+      "images": 1834,
+      "patients": 113,
+      "recomputed_metrics_match": true,
+      "outer_patient_overlap": 0
+    },
+    {
+      "recipe_id": "lr1e4_none",
+      "images": 1834,
+      "patients": 113,
+      "recomputed_metrics_match": true,
+      "outer_patient_overlap": 0
+    },
+    {
+      "recipe_id": "lr3e5_sqrt",
+      "images": 1834,
+      "patients": 113,
+      "recomputed_metrics_match": true,
+      "outer_patient_overlap": 0
+    },
+    {
+      "recipe_id": "lr1e4_sqrt",
+      "images": 1834,
+      "patients": 113,
+      "recomputed_metrics_match": true,
+      "outer_patient_overlap": 0
+    }
+  ],
+  "wip_notebooks_unchanged": true,
+  "focused_tests_passed": 16,
+  "full_tests_passed": 62,
+  "prediction_only_protected_files_unchanged": 24,
+  "test_set_loaded": false,
+  "outer_predictions_generated": false,
+  "notebook_validated": true,
+  "notebook_executed_code_cells": 10,
+  "notebook_execution_errors": 0,
+  "visual_inspection": [
+    "weak_augmentation_preview",
+    "learning_curves",
+    "raw_reliability"
+  ],
+  "training_sources_match_run_manifest": true
+}

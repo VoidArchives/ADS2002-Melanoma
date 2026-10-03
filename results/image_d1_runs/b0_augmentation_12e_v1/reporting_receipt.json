@@ -1,0 +1,36 @@
+{
+  "run_id": "b0_augmentation_12e_v1",
+  "training_enabled_in_notebook": false,
+  "status": "incomplete",
+  "threshold": 0.5,
+  "threshold_tuned": false,
+  "calibration_fitted": false,
+  "reserved_test_loaded": false,
+  "outer_evaluation": false,
+  "reporting_source_sha256": {
+    "src/melanoma_detection/image_condition_reporting.py": "67919ae999788a5e3f554a4c677ef3953b48fca82d72e80ae8c475b48dc4e42a",
+    "scripts/build_image_condition_notebooks.py": "7e6a079e2353f3b991e14bbffad59b5718efe8df01222066c634ecefb1258608"
+  },
+  "summary_sha256": "3b3f54db4ea5781565ec5f0b735ce57777e0c974ce5a6d8006f6fe4a2ac6d9fc",
+  "quality_review_sha256": "19d3ce4366ed4b92195758a3c4696fbfbbb9066863b0c9b04099c2d3c901e3cb",
+  "figures": [
+    "figures\\learning_curves.png",
+    "figures\\training_loss.png",
+    "figures\\best_roc_precision_recall.png",
+    "figures\\best_confusion_threshold_0_5.png",
+    "figures\\best_raw_reliability.png",
+    "figures\\epoch12_roc_precision_recall.png"
+  ],
+  "figure_sha256": {
+    "figures\\learning_curves.png": "617ffd41e785f7828cb28ba8eb63460f42d48c12066ec44d16c886eccd5936fd",
+    "figures\\training_loss.png": "d91cb491db8c78e6e4b7c75539e83bd5e61505eaa1b0159c6156bfc73ccabec5",
+    "figures\\best_roc_precision_recall.png": "60ad05023240d4f76ccb0d38051f22188a92ebb0e3182679122b885902f24732",
+    "figures\\best_confusion_threshold_0_5.png": "2f39c9f9477fd3e91f94de1f39d20802da9a7980c050e55597bbb88d6d174a43",
+    "figures\\best_raw_reliability.png": "ad9b2e3c1d2a56da2f497df92561a54e437fc943ea885d88c11fad6b4ca83f65",
+    "figures\\epoch12_roc_precision_recall.png": "60576f656064a4ad85baf377d2b9a77a7cd08b88610e20f828a9a437451e297c"
+  },
+  "prediction_csv_sha256": {
+    "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_augmentation_12e_v1\\conditions\\A_weak_none\\inner_validation_predictions.csv": "aa4f1155fb230fa08922bfa15b3316d95d53f54b511bdaf0d782bcb524e80d38",
+    "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_augmentation_12e_v1\\conditions\\A_weak_none\\epoch12_inner_validation_predictions.csv": "780c2753079940141bdc1cd156a6219b811041c3102a9766cf6e7c8fb2940025"
+  }
+}
