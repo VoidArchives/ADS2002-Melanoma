@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "run_id": "b0_nested_5fold_5h_v1",
+  "protocol": "bounded_b0_screen_confirm_v1",
+  "status": "complete",
+  "folds": [
+    {
+      "fold": 0,
+      "status": "complete",
+      "selected_recipe": "lr3e5_sqrt",
+      "refit_epochs": 6,
+      "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_5fold_5h_v1\\folds\\0\\refit\\latest.pt",
+      "checkpoint_sha256": "1c89acfbdf4d5bedb05d3ab538083504d4bb13f5a36ac1333304ecba148ff327",
+      "predictions_sha256": "072e69fb9c63d8a2d1b5d6282102082ff7169826e8d8134a174b44909f8fd51b",
+      "average_precision": 0.1500528376879797,
+      "roc_auc": 0.867092936802974,
+      "log_loss": 0.07906434121510372,
+      "brier": 0.01932939756373886
+    },
+    {
+      "fold": 1,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "refit_epochs": 8,
+      "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_5fold_5h_v1\\folds\\1\\refit\\latest.pt",
+      "checkpoint_sha256": "d718c096c84d4f63ab0991bff3c00f79850042bce99efa293ededc8359d8f0c9",
+      "predictions_sha256": "034085580b8d77024361ba9a90d7e9bb87a61ea0fd556ee2e927f7f3a07a8cf0",
+      "average_precision": 0.16841492510988088,
+      "roc_auc": 0.8401817350554349,
+      "log_loss": 0.09417951305862261,
+      "brier": 0.021454903641882194
+    },
+    {
+      "fold": 2,
+      "status": "complete",
+      "selected_recipe": "lr1e4_sqrt",
+      "refit_epochs": 11,
+      "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_5fold_5h_v1\\folds\\2\\refit\\latest.pt",
+      "checkpoint_sha256": "43175d64f219d93bbdd985aab9b2bfd221d1e82eebcd81769ca798cdf95c7833",
+      "predictions_sha256": "1a3c1f762f5803451ed3ae16ca20830b98a1dda70f3c695af6e1d895c9220eba",
+      "average_precision": 0.10521898211881286,
+      "roc_auc": 0.8442520579051944,
+      "log_loss": 0.09259993362501402,
+      "brier": 0.02329476333210047
+    },
+    {
+      "fold": 3,
+      "status": "complete",
+      "selected_recipe": "lr1e4_sqrt",
+      "refit_epochs": 12,
+      "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_5fold_5h_v1\\folds\\3\\refit\\latest.pt",
+      "checkpoint_sha256": "44a46ad05830f283c278f1ba0754a7404debd81a50ecdb9d80f46e573cb5b8fa",
+      "predictions_sha256": "e46cd6775c27acf05a2f44ffdc7d40d4ced324c8b371de447ba75827d56d6bdd",
+      "average_precision": 0.08706046564378087,
+      "roc_auc": 0.8145616641901932,
+      "log_loss": 0.09806777167672046,
+      "brier": 0.021530329442199986
+    },
+    {
+      "fold": 4,
+      "status": "complete",
+      "selected_recipe": "lr1e4_sqrt",
+      "refit_epochs": 7,
+      "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_5fold_5h_v1\\folds\\4\\refit\\latest.pt",
+      "checkpoint_sha256": "42a63d4413d4851275910fd6b25c1d92f270378140ac40b354fcba38a45b6134",
+      "predictions_sha256": "abacd69fe1d307d00c536fb5cb2800b397124ce3ecf651f5a8b5146dd2c876c5",
+      "average_precision": 0.21283436235141664,
+      "roc_auc": 0.8378262362637363,
+      "log_loss": 0.08306153178410922,
+      "brier": 0.018821268290366268
+    }
+  ],
+  "completed_outer_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_set_loaded": false,
+  "calibration_fitted": false,
+  "threshold_fitted": false,
+  "stopping_reason": null,
+  "qualification": "Development folds influenced earlier pilots, including an archived fold-0 prototype. OOF estimates this declared bounded procedure, not untouched final-test generalisation.",
+  "updated_utc": "2026-10-04T06:09:47.479761+00:00",
+  "outer_oof_predictions_sha256": "4c58c4f037dd3ca71e9db8c8962cfbc52bda2662bc3f04e39921a38baac92547",
+  "fold_metrics_sha256": "4e6a94f9e5dc1c87042032c5e4aec8f93e13afe70abc6313a526969462d869c0",
+  "n_images": 6864,
+  "n_patients": 422,
+  "mean_fold_average_precision": 0.1447163145823742,
+  "pooled_metrics": {
+    "average_precision": 0.11595211228914316,
+    "roc_auc": 0.8279034757274346,
+    "log_loss": 0.08940241276664919,
+    "brier": 0.020890252016852174
+  },
+  "evaluation": {
+    "schema_version": 1,
+    "status": "complete_five_fold_evaluation",
+    "n_images": 6864,
+    "n_patients": 422,
+    "n_positive": 128,
+    "prevalence": 0.018648018648018648,
+    "outer_folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "primary_metric": "unweighted mean outer-fold average precision",
+    "primary_mean_fold_average_precision": 0.1447163145823742,
+    "primary_mean_fold_ap_ci95": [
+      0.10329088857044068,
+      0.22249149924584305
+    ],
+    "mean_fold_metrics": {
+      "average_precision": 0.1447163145823742,
+      "roc_auc": 0.8407829260435065,
+      "log_loss": 0.08939461827191421,
+      "brier": 0.020886132454057554
+    },
+    "fold_metric_standard_deviation": {
+      "average_precision": 0.05028520468344454,
+      "roc_auc": 0.018714363202330934,
+      "log_loss": 0.007987732205521203,
+      "brier": 0.0018184526845319003
+    },
+    "pooled_metrics_secondary": {
+      "average_precision": 0.11595211228914316,
+      "roc_auc": 0.8279034757274346,
+      "log_loss": 0.08940241276664938,
+      "brier": 0.020890252016852174
+    },
+    "raw_threshold_05": {
+      "threshold": 0.5,
+      "score_type": "raw_base_probability",
+      "decision_rule": "score >= threshold",
+      "TP": 15,
+      "FP": 59,
+      "TN": 6677,
+      "FN": 113,
+      "sensitivity": 0.1171875,
+      "specificity": 0.9912410926365796,
+      "precision": 0.20270270270270271,
+      "flagged_fraction": 0.01078088578088578,
+      "recall": 0.1171875,
+      "f1": 0.1485148514851485
+    },
+    "bootstrap_replicates": 2000,
+    "valid_bootstrap_replicates": 2000,
+    "rejected_single_class_bootstrap_replicates": 0,
+    "bootstrap_seed": 42,
+    "bootstrap_method": "95% percentile patient-cluster bootstrap, resampling patients within each outer fold. All images of a sampled patient stay together. Single-class draws in any fold are excluded from all metrics and comparisons. Intervals are conditional on these fitted models, selected recipes, fixed folds and observed fold memberships; no retraining or recipe reselection is performed. They omit training variability and prior pilot adaptivity.",
+    "development_caveat": "Development OOF evidence after earlier architecture, augmentation and recipe pilots; fold 0 also has archived exploratory results. Independent outer prediction within this run does not erase earlier adaptation to this development dataset. The locked test remains necessary after decisions are frozen.",
+    "score_interpretation": "Raw sigmoid scores; class weighting can distort probability scale. No fitted calibration or tuned decision cutoff.",
+    "pooled_caveat": "Pooled AP mixes scores from independently fitted models; mean fold AP is primary because fold score scales may differ.",
+    "comparator_models": [
+      "metadata_mlp_mean",
+      "metadata_spline_raw"
+    ],
+    "reserved_test_loaded": false,
+    "evaluation_artifact_sha256": {
+      "evaluation/metrics_summary.json": "a96041d5460f92f7cefac98a41ef15fef848d45d73101fa2ccbd903510fef6a2",
+      "evaluation/fold_metrics.csv": "868fa3cced6eb2af9676b7c707acdf203d481f93403d9d0cb0b81bdad0382a2d",
+      "evaluation/bootstrap_intervals.csv": "8d0940e7067dff64cd16aaf035c6f55aa02a8a28ca81f3d4d4014d195697015d",
+      "evaluation/raw_threshold_05.csv": "ea1961e91068fe7310e4e62e8ab842be260a9da7f321f445fdf8fc8a30115310",
+      "evaluation/raw_reliability_bins.csv": "d34cbc019e9ab504882bd5b6ad2e1ff0bbc6dd5eb99b7eeb8585a891529b6802",
+      "figures/outer_fold_pr_roc.png": "f53a26ed03241a00e4b5b6dc05af488a728f9ef6b648a0c180fa4848662bbf2e",
+      "figures/outer_fold_average_precision.png": "7970544da8e25a59b6c7f7637631934358c07d486608d2efb8e397741c65a3cc",
+      "figures/raw_reliability.png": "001e5f0222c93d45b24f837b62d09160c15f764dc42ecaa810b5faad29bc74d1",
+      "evaluation/paired_metadata_differences.csv": "c8665e99fcf679a771b97f994f577cf058b96d15d4c21ec43c3b3da8782bd3ba"
+    },
+    "metadata_comparator_status": "verified exact canonical coverage, saved input/prediction hashes and notebook code",
+    "metadata_comparator_provenance": {
+      "receipt_path": "results/metrics/metadata_nn_run_config_d1.json",
+      "receipt_sha256": "f34a6fc6712e097aab964e0f35ddef92e4fbef23fab48bab705a2a5c54f83154",
+      "prediction_path": "results/predictions/metadata_nn_oof_d1.csv",
+      "prediction_sha256": "7c84717d1cf77ad9acc2dc023e4c8918625fa7e556b387154fab0b221758a001",
+      "interpretation": "development diagnostics after earlier OOF comparisons; not final test evidence"
+    }
+  }
+}

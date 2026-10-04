@@ -1,0 +1,24 @@
+{
+  "notebook": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\notebooks\\05a_image_uncertainty_d1_wip.ipynb",
+  "notebook_sha256": "7a8c45efb376add2efe64cc11b0ec4533e8e03eeeb8fdb8af379fa7b72d1881d",
+  "code_cells_executed": 15,
+  "notebook_errors": 0,
+  "full_default_inference_executed": true,
+  "mc_raw_rows": 55020,
+  "tta_raw_rows": 7336,
+  "figures_inspected": 6,
+  "full_suite_tests": 165,
+  "tests_passed": 164,
+  "tests_skipped": 1,
+  "skip_reason": "optional OpenCV unavailable",
+  "all_existing_results_preservation": {
+    "existing_results_and_model_files_checked": 414,
+    "all_existing_files_unchanged": true,
+    "failures": []
+  },
+  "alternative_checkpoint_smokes": {
+    "densenet121": "low_none",
+    "convnext_tiny": "high_sqrt"
+  },
+  "build_script_sha256": "e98b93481cfcd874cf621855f5225c2a3cac042b71217614cc4bacaf848a0472"
+}

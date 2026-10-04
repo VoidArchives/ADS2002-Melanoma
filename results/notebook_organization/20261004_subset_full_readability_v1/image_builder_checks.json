@@ -1,0 +1,32 @@
+[
+  {
+    "notebook": "09_image_b0_pilot.ipynb",
+    "cells": 22,
+    "markdown_templates_match": true,
+    "code_templates_match": true
+  },
+  {
+    "notebook": "10_image_architecture_comparison.ipynb",
+    "cells": 17,
+    "markdown_templates_match": true,
+    "code_templates_match": true
+  },
+  {
+    "notebook": "11_image_augmentation.ipynb",
+    "cells": 15,
+    "markdown_templates_match": true,
+    "code_templates_match": true
+  },
+  {
+    "notebook": "12_image_lighting.ipynb",
+    "cells": 15,
+    "markdown_templates_match": true,
+    "code_templates_match": true
+  },
+  {
+    "notebook": "13_image_uncertainty.ipynb",
+    "cells": 29,
+    "markdown_templates_match": true,
+    "code_templates_match": true
+  }
+]

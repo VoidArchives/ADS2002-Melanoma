@@ -381,5 +381,117 @@ class ImageTrainingTests(SyntheticImages):
                                        model_factory=tiny_factory)
 
 
+class ImageFixedDurationRefitTests(SyntheticImages):
+    def refit(self, output, epochs=3, *, fitting=None, training=None,
+              factory=stochastic_tiny_factory, deadline=None):
+        if fitting is None:
+            fitting, _ = self.training_parts()
+        return core.train_recipe(
+            fitting, None, self.model_spec, self.training if training is None else training,
+            RECIPE, self.root / output, {"training_partition": "synthetic_refit_v1"},
+            epochs=epochs, refit=True, device="cpu", resume=True,
+            model_factory=factory, deadline=deadline,
+        )
+
+    def test_refit_never_predicts_or_selects_an_epoch_from_validation_labels(self):
+        with patch.object(core, "predict_frame", side_effect=AssertionError("Refit must not evaluate")) as predict:
+            result = self.refit("fixed", epochs=3)
+        predict.assert_not_called()
+        self.assertEqual(result["status"], "complete")
+        self.assertEqual(result["completed_epochs"], 3)
+        self.assertEqual(result["final_epoch"], 3)
+        self.assertEqual(result["final_checkpoint"], result["latest_checkpoint"])
+        self.assertIsNone(result["best_checkpoint"])
+        self.assertIsNone(result["best_epoch"])
+        self.assertIsNone(result["best_metrics"])
+        self.assertFalse((self.root / "fixed" / "best.pt").exists())
+        self.assertEqual([row["epoch"] for row in result["history"]], [1, 2, 3])
+        for row in result["history"]:
+            self.assertTrue(np.isfinite(row["train_loss"]))
+            self.assertTrue({"average_precision", "roc_auc", "log_loss", "brier"}.isdisjoint(row))
+        state = torch.load(result["final_checkpoint"], map_location="cpu", weights_only=True)
+        self.assertEqual(state["epoch"], 3)
+        self.assertIsNone(state["identity"]["validation"])
+        self.assertEqual(state["identity"]["training_purpose"], "fixed_duration_refit")
+        core.load_model_checkpoint(result["final_checkpoint"], device="cpu", model_factory=stochastic_tiny_factory)
+
+    def test_refit_requires_explicit_mode_and_rejects_any_validation_frame(self):
+        fitting, validation = self.training_parts()
+        arguments = (fitting, None, self.model_spec, self.training, RECIPE, self.root / "invalid", {})
+        with self.assertRaisesRegex(ValueError, "use refit=True"):
+            core.train_recipe(*arguments, epochs=1, device="cpu", model_factory=tiny_factory)
+        with self.assertRaisesRegex(ValueError, "validation=None"):
+            core.train_recipe(fitting, validation, self.model_spec, self.training, RECIPE,
+                              self.root / "invalid", {}, epochs=1, refit=True,
+                              device="cpu", model_factory=tiny_factory)
+
+    def test_held_out_label_changes_do_not_change_refit_identity_or_parameters(self):
+        frame = self.make_frame(patients_per_fold=3, images_per_patient=2)
+        changed = frame.copy()
+        changed.loc[changed.fold.eq(0), "target"] = 1 - changed.loc[changed.fold.eq(0), "target"]
+        original = self.refit("original_labels", epochs=2,
+                              fitting=frame.loc[frame.fold.ne(0)].reset_index(drop=True))
+        perturbed = self.refit("perturbed_labels", epochs=2,
+                               fitting=changed.loc[changed.fold.ne(0)].reset_index(drop=True))
+        first = torch.load(original["final_checkpoint"], map_location="cpu", weights_only=True)
+        second = torch.load(perturbed["final_checkpoint"], map_location="cpu", weights_only=True)
+        self.assertEqual(first["compatibility_hash"], second["compatibility_hash"])
+        for key in first["model_state"]:
+            torch.testing.assert_close(first["model_state"][key], second["model_state"][key], rtol=0, atol=0)
+
+    def test_stochastic_refit_resume_matches_uninterrupted_fixed_duration_fit(self):
+        uninterrupted = self.refit("uninterrupted_refit", epochs=3)
+        self.refit("resumed_refit", epochs=1)
+        core.seed_everything(901)
+        _ = torch.rand(7)
+        resumed = self.refit("resumed_refit", epochs=3)
+        first = torch.load(uninterrupted["final_checkpoint"], map_location="cpu", weights_only=True)
+        second = torch.load(resumed["final_checkpoint"], map_location="cpu", weights_only=True)
+        for key in first["model_state"]:
+            torch.testing.assert_close(first["model_state"][key], second["model_state"][key], rtol=0, atol=0)
+        columns = ["epoch", "train_loss", "head_lr", "backbone_lr"]
+        pd.testing.assert_frame_equal(pd.DataFrame(uninterrupted["history"])[columns],
+                                      pd.DataFrame(resumed["history"])[columns])
+
+    def test_partial_refit_has_no_final_checkpoint_and_rejects_shorter_duration(self):
+        initial = self.refit("paused_refit", epochs=1)
+        paused = self.refit("paused_refit", epochs=3, deadline=time.monotonic() - 1)
+        self.assertEqual(paused["status"], "budget_exhausted")
+        self.assertEqual(paused["completed_epochs"], 1)
+        self.assertIsNone(paused["final_checkpoint"])
+        self.assertIsNone(paused["final_epoch"])
+        resumed = self.refit("paused_refit", epochs=3)
+        self.assertEqual(resumed["final_epoch"], 3)
+        previous = digest(resumed["final_checkpoint"])
+        with self.assertRaisesRegex(ValueError, "exceeds the requested fixed duration"):
+            self.refit("paused_refit", epochs=2)
+        self.assertEqual(digest(resumed["final_checkpoint"]), previous)
+        self.assertEqual(initial["final_epoch"], 1)
+
+    def test_refit_oom_rolls_back_before_reduced_microbatch_retry(self):
+        settings = {**self.training, "microbatch": 2, "min_microbatch": 2}
+        reference = self.refit("refit_oom_reference", epochs=2, training=settings, factory=tiny_factory)
+        original = core.train_epoch
+        calls = 0
+
+        def partial_update_then_fail(*args, **kwargs):
+            nonlocal calls
+            calls += 1
+            if calls == 1:
+                original(*args, **kwargs)
+                raise torch.cuda.OutOfMemoryError("injected refit partial-epoch failure")
+            return original(*args, **kwargs)
+
+        with patch.object(core, "train_epoch", side_effect=partial_update_then_fail):
+            retried = self.refit("refit_oom_retry", epochs=2,
+                                 training={**self.training, "min_microbatch": 2}, factory=tiny_factory)
+        self.assertEqual(retried["status"], "complete")
+        self.assertEqual(retried["microbatch"], 2)
+        first = torch.load(reference["final_checkpoint"], map_location="cpu", weights_only=True)
+        second = torch.load(retried["final_checkpoint"], map_location="cpu", weights_only=True)
+        for key in first["model_state"]:
+            torch.testing.assert_close(first["model_state"][key], second["model_state"][key], rtol=0, atol=0)
+
+
 if __name__ == "__main__":
     unittest.main()

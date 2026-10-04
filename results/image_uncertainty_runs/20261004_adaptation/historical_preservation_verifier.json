@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "protected_file_count": 258,
+  "unchanged_count": 251,
+  "authorised_source_changes": [
+    {
+      "path": "configs/image_model.yaml",
+      "before": "efb5e9a779c2a204289288f9443e8a3963faa7617cbec5a9fa7352f5ba6623a6",
+      "after": "edef0d69f6336906f99567a6c479b9593c914cf402ed2bac2944b5683fae951a"
+    },
+    {
+      "path": "docs/image_methodology.md",
+      "before": "5baa23e0dbab31130e2ec1bc9a70d3caa0164dc2998b634e571e20dcf91b12be",
+      "after": "df7fd65b2b42fc7eaacb2b8a6c4c85ab73a0f30d1136abeca386b2f374112ae1"
+    },
+    {
+      "path": "scripts/execute_image_notebook.py",
+      "before": "1f7ec2fed2cdfe005c6e68062c54ab097312a1f3d9591833530f9d2813bab28a",
+      "after": "65616dce833608a6b6dee5e5ca471cedf92ed3ad4883dc2d65c30174435b5c0f"
+    },
+    {
+      "path": "src/melanoma_detection/image_evaluation.py",
+      "before": "116af991361b361f25c842a0a8434de843835120d40be527c8670237b773e7c4",
+      "after": "ca5bbd1631f782cad5595bc845a8bdee4a2f1fc324610556c8e72d00b334850c"
+    },
+    {
+      "path": "src/melanoma_detection/image_model.py",
+      "before": "615b24ade7e979e79cf6e77af5372bf3269903ce9774f1a6e8c8d46b734dcfa1",
+      "after": "2ca3ae8edbdb14f344b1b834d0ba2bed277879ba45a62904ff2ea6fd4a13e2ab"
+    },
+    {
+      "path": "tests/test_image_model.py",
+      "before": "5615bdbe7510b23fbfbb36bce258474dfb62dcb749d5eebf3477254aa498846f",
+      "after": "34c8e024f16f5442909d0bb3a81457340063de213d9c341a4193c593814a0ac9"
+    }
+  ],
+  "authorised_historical_archives": [
+    {
+      "path": "notebooks/05a_image_uncertainty_d1_wip.ipynb",
+      "archive": "notebooks/archive/05a_image_uncertainty_d1_historical_three_epoch_fold0.ipynb",
+      "sha256": "e7048213c2a89032c4f922303b53f126730c56c8b4be31fec1a9dfb3c8037514"
+    }
+  ],
+  "historical_artifact_failures": [],
+  "current_architecture_notebook_preserved": true
+}

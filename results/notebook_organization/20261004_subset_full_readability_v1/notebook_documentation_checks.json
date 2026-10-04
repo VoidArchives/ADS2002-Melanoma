@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "notebooks": 21,
+  "all_notebooks_valid_and_code_parses": true,
+  "all_saved_outputs_execution_counts_ids_and_metadata_unchanged": true,
+  "code_changes_are_only_requested_path_substitutions": [
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "cell": 13
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "cell": 5
+    }
+  ],
+  "archives_byte_identical": true,
+  "local_links_checked": 115,
+  "missing_links": [],
+  "saved_outputs": 353,
+  "saved_png_figures": 84,
+  "markdown_words_before": 23932,
+  "markdown_words_after": 24937,
+  "notebook_reviews": [
+    {
+      "notebook": "notebooks/archive/image_model_three_epoch_fold0.ipynb",
+      "markdown_cells_updated": 0,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/archive/image_uncertainty_three_epoch_fold0.ipynb",
+      "markdown_cells_updated": 0,
+      "saved_png_figures": 4
+    },
+    {
+      "notebook": "notebooks/archive/legacy_training.ipynb",
+      "markdown_cells_updated": 0,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/Full/01_data_cleaning.ipynb",
+      "markdown_cells_updated": 3,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/Full/02_data_exploration.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 5
+    },
+    {
+      "notebook": "notebooks/Full/03_image_inventory.ipynb",
+      "markdown_cells_updated": 2,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/Subset/01_data_cleaning.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/Subset/02_data_exploration.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 5
+    },
+    {
+      "notebook": "notebooks/Subset/03_patient_splitting.ipynb",
+      "markdown_cells_updated": 3,
+      "saved_png_figures": 1
+    },
+    {
+      "notebook": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 2
+    },
+    {
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 4
+    },
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "markdown_cells_updated": 7,
+      "saved_png_figures": 1
+    },
+    {
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "markdown_cells_updated": 4,
+      "saved_png_figures": 3
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "markdown_cells_updated": 9,
+      "saved_png_figures": 3
+    },
+    {
+      "notebook": "notebooks/Subset/09_image_b0_pilot.ipynb",
+      "markdown_cells_updated": 12,
+      "saved_png_figures": 6
+    },
+    {
+      "notebook": "notebooks/Subset/10_image_architecture_comparison.ipynb",
+      "markdown_cells_updated": 9,
+      "saved_png_figures": 20
+    },
+    {
+      "notebook": "notebooks/Subset/11_image_augmentation.ipynb",
+      "markdown_cells_updated": 8,
+      "saved_png_figures": 18
+    },
+    {
+      "notebook": "notebooks/Subset/12_image_lighting.ipynb",
+      "markdown_cells_updated": 8,
+      "saved_png_figures": 6
+    },
+    {
+      "notebook": "notebooks/Subset/13_image_uncertainty.ipynb",
+      "markdown_cells_updated": 10,
+      "saved_png_figures": 6
+    },
+    {
+      "notebook": "notebooks/Subset/14_fusion_model.ipynb",
+      "markdown_cells_updated": 3,
+      "saved_png_figures": 0
+    },
+    {
+      "notebook": "notebooks/Subset/15_final_evaluation.ipynb",
+      "markdown_cells_updated": 3,
+      "saved_png_figures": 0
+    }
+  ]
+}

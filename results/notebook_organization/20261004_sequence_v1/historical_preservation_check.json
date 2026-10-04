@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "protected_file_count": 258,
+  "unchanged_count": 246,
+  "authorised_source_changes": [
+    {
+      "path": "configs/image_model.yaml",
+      "before": "efb5e9a779c2a204289288f9443e8a3963faa7617cbec5a9fa7352f5ba6623a6",
+      "after": "edef0d69f6336906f99567a6c479b9593c914cf402ed2bac2944b5683fae951a",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/configs/image_model.yaml"
+    },
+    {
+      "path": "docs/image_methodology.md",
+      "before": "5baa23e0dbab31130e2ec1bc9a70d3caa0164dc2998b634e571e20dcf91b12be",
+      "after": "8d61ef4826c43b4cb4894cc900d882b5992351bc80b367bf526a85365e763fb5",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/docs/image_methodology.md"
+    },
+    {
+      "path": "scripts/build_image_architecture_notebook.py",
+      "before": "4d0a707df926b680b49a63e8f5903779f3675ca2e25b38ddc5182e394a32bf22",
+      "after": "7dc8bf12a922199ba57da161a2f2afdab940d389ff64ff210819c96676da66e9",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/scripts/build_image_architecture_notebook.py"
+    },
+    {
+      "path": "scripts/build_image_notebook.py",
+      "before": "24c6c9701d1b98d637008b4206ca6a3f20b32e95145293db0fdaff8fa11534a6",
+      "after": "4cefb3c74241eec5a5a5ea58a9e72dbb316101121db700ec3caf9bd8eb1514f8",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/scripts/build_image_notebook.py"
+    },
+    {
+      "path": "scripts/execute_image_notebook.py",
+      "before": "1f7ec2fed2cdfe005c6e68062c54ab097312a1f3d9591833530f9d2813bab28a",
+      "after": "2ac98775db056e0126cdac00a6ca3362eb9d9ecf2387b6cfe5dc47f14e7d03be",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/scripts/execute_image_notebook.py"
+    },
+    {
+      "path": "src/melanoma_detection/image_evaluation.py",
+      "before": "116af991361b361f25c842a0a8434de843835120d40be527c8670237b773e7c4",
+      "after": "27836c6164387836493d67e3539a9772f9003dab5a98acb70f33668465710b2d",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/src/melanoma_detection/image_evaluation.py"
+    },
+    {
+      "path": "src/melanoma_detection/image_model.py",
+      "before": "615b24ade7e979e79cf6e77af5372bf3269903ce9774f1a6e8c8d46b734dcfa1",
+      "after": "2ca3ae8edbdb14f344b1b834d0ba2bed277879ba45a62904ff2ea6fd4a13e2ab",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/src/melanoma_detection/image_model.py"
+    },
+    {
+      "path": "tests/test_image_model.py",
+      "before": "5615bdbe7510b23fbfbb36bce258474dfb62dcb749d5eebf3477254aa498846f",
+      "after": "34c8e024f16f5442909d0bb3a81457340063de213d9c341a4193c593814a0ac9",
+      "original_snapshot": "results/image_d1_runs/b0_augmentation_12e_v1/session/baseline_sources/tests/test_image_model.py"
+    }
+  ],
+  "authorised_historical_archives": [
+    {
+      "path": "notebooks/05_image_model_d1.ipynb",
+      "archive": "results/notebook_organization/20261004_sequence_v1/originals/notebooks/05_image_model_d1.ipynb",
+      "sha256": "788708517faede64f8744df21bfeaa5ececcd8a816da8b4eacf25e587897b1a8"
+    },
+    {
+      "path": "notebooks/05_image_model_d1_wip.ipynb",
+      "archive": "notebooks/archive/image_model_three_epoch_fold0.ipynb",
+      "sha256": "9e07d190a31f199b9096db75350797a7a8ccdc41ce2500c86d0d7140fb3b25cc"
+    },
+    {
+      "path": "notebooks/05a_image_uncertainty_d1_wip.ipynb",
+      "archive": "notebooks/archive/image_uncertainty_three_epoch_fold0.ipynb",
+      "sha256": "e7048213c2a89032c4f922303b53f126730c56c8b4be31fec1a9dfb3c8037514"
+    },
+    {
+      "path": "notebooks/05e_image_architecture_comparison_d1.ipynb",
+      "archive": "results/notebook_organization/20261004_sequence_v1/originals/notebooks/05e_image_architecture_comparison_d1.ipynb",
+      "sha256": "d269320fd296ebbe2338c91aaa403a8bd90af633e3fee748153825a2557ee723"
+    }
+  ],
+  "historical_artifact_failures": [],
+  "current_architecture_notebook_preserved": true
+}

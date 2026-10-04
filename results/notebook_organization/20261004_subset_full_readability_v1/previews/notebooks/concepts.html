@@ -1,0 +1,89 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/concepts.md</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/concepts.md · code was not executed</div><h1>Concepts used in the notebooks</h1>
+<p>Use this page when a term is unfamiliar. Each notebook explains the terms needed
+for its own task; you can read its explanation first and return here for context.</p>
+<h2>Data and evaluation</h2>
+<ul>
+<li><strong>Metadata</strong> means recorded information such as age, sex and lesion location.
+An image model instead learns from pixels.</li>
+<li><strong>Target</strong> is the recorded label: 1 for malignant and 0 for benign. One row is
+usually one image; a patient may contribute several images.</li>
+<li><strong>Patient grouping</strong> keeps a person&#39;s images together when dividing data.
+Otherwise, a model could recognise information about a patient it has already
+seen, making evaluation look better than performance on new patients.</li>
+<li><strong>Fold</strong> means one group used for validation. <strong>Out-of-fold (OOF) predictions</strong>
+come from models fitted without the predicted patient&#39;s fold. Pooling all folds
+gives broader development evidence than inspecting just one fold.</li>
+<li><strong>Inner validation</strong> is a separate patient group inside the training portion.
+It helps compare settings or choose a saved model. Results on that same group
+remain development diagnostics because those decisions used its labels.</li>
+<li><strong>Reserved test</strong> is held back until the whole workflow is fixed. The planned
+final-evaluation notebook has no test results yet.</li>
+</ul>
+<h2>Reading model results</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>What to read</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Prediction score</td>
+<td>Higher means the model ranks an image as more likely malignant</td>
+<td>A score between 0 and 1 is not automatically a reliable risk probability</td>
+</tr>
+<tr>
+<td>Average precision (AP)</td>
+<td>Higher means malignant images tend to appear earlier in the ranking</td>
+<td>Useful with rare malignant cases; compare with the malignant fraction of the evaluated sample</td>
+</tr>
+<tr>
+<td>ROC-AUC</td>
+<td>Higher means stronger separation of malignant and benign scores; 0.5 is a chance-ranking reference</td>
+<td>It measures ranking, rather than the percentage classified correctly</td>
+</tr>
+<tr>
+<td>Sensitivity / recall</td>
+<td>Fraction of malignant images flagged at a chosen cutoff</td>
+<td>Shows how many labelled malignant images the classification rule captures</td>
+</tr>
+<tr>
+<td>Specificity</td>
+<td>Fraction of benign images left unflagged</td>
+<td>Shows the other side of the same cutoff tradeoff</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Agreement between scores and observed malignant frequency</td>
+<td>On a reliability diagram, below the diagonal means scores exceed observed frequency</td>
+</tr>
+<tr>
+<td>Brier score / log loss</td>
+<td>Lower means closer agreement between scores and labels</td>
+<td>These assess the score scale as well as prediction errors</td>
+</tr>
+<tr>
+<td>Patient-bootstrap interval</td>
+<td>Range obtained by repeatedly resampling whole patients</td>
+<td>Keeps a patient&#39;s images together when describing uncertainty in a result; it is not an individual risk interval</td>
+</tr>
+</tbody></table>
+<h2>Repeated image predictions</h2>
+<p>A <strong>checkpoint</strong> stores a trained model and its recorded settings. An <strong>epoch</strong>
+is one pass through the training data. <strong>Augmentation</strong> changes training images
+to vary their appearance; those changes must preserve the lesion and its label.</p>
+<p>A <strong>logit</strong> is the model&#39;s raw output before a sigmoid converts it to a score
+between 0 and 1. <strong>BatchNorm</strong> standardises features using stored training
+statistics during evaluation. <strong>LayerNorm</strong> standardises a selected set of
+features within each example. These normalisation layers stay in evaluation mode
+during the dropout experiment so the intended change comes from dropout alone.</p>
+<p><strong>MC dropout</strong> repeatedly predicts the same image while randomly disabling some
+units in explicit dropout layers. <strong>TTA</strong>, or test-time augmentation, instead
+predicts a fixed set of permitted image views. Their <strong>standard deviations (SDs)</strong>
+measure different sources of prediction variation. A stable prediction can still
+be wrong, and a larger SD does not mean a larger melanoma risk.</p>
+<p><strong>Referral</strong> sets aside a fraction of images for hypothetical review.
+<strong>Coverage</strong> is the fraction retained by the model. Compare referral rankings at
+the same fraction using the same underlying scores. Lower error in the retained
+group does not measure what happens to referred images or prove that review helps.</p>

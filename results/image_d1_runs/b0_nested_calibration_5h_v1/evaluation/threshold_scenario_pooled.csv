@@ -1,0 +1,3 @@
+fold,model,n_images,n_patients,n_positive,training_target_recall,threshold,threshold_scope,TP,FP,TN,FN,sensitivity,specificity,precision,flagged_fraction,recall,f1
+pooled,raw,6864,422,128,0.8,,fixed per outer fold from training-only OOF scores,106,2578,4158,22,0.828125,0.6172802850356295,0.039493293591654245,0.391025641025641,0.828125,0.07539118065433854
+pooled,calibrated,6864,422,128,0.8,,fixed per outer fold from training-only OOF scores,106,2578,4158,22,0.828125,0.6172802850356295,0.039493293591654245,0.391025641025641,0.828125,0.07539118065433854

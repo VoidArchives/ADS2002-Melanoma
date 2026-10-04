@@ -1,0 +1,26 @@
+{
+  "protocol": "fixed_duration_training_oof_sigmoid_v1",
+  "method": "regularised_sigmoid_on_logits",
+  "C": 1.0,
+  "logit_clip": 1e-07,
+  "target_recall": 0.8,
+  "threshold_source": "training_only_fixed_duration_oof",
+  "training_images": 5492,
+  "training_patients": 338,
+  "training_malignant_images": 102,
+  "outer_labels_used": false,
+  "status": "complete",
+  "slope": 0.6263000371999956,
+  "intercept": -1.1371660692931949,
+  "raw_threshold": 0.009362679906189442,
+  "calibrated_threshold": 0.017011013555102313,
+  "fold": 1,
+  "fixed_epochs": 8,
+  "recipe": {
+    "id": "lr1e4_none",
+    "backbone_lr": 0.0001,
+    "loss_weight": "none"
+  },
+  "training_oof_sha256": "992b7480c5cd458a1b3c8f0f8ed3258c10bb4f5ddb69fecfb0b4db280d97c004",
+  "training_selection_sha256": "82bef867071451a418ae298e335de3b1e72ad37f0fbe07bb6510c760f0efefd1"
+}

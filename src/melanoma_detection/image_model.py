@@ -724,6 +724,7 @@ def load_model_checkpoint(path, *, device="cpu", expected_manifest=None,
 
 def train_recipe(fitting, validation, spec, training, recipe, output_dir, manifest,
                  *, epochs=6, device="cuda", deadline=None, resume=True,
+                 refit: bool = False,
                  model_factory: Callable | None = None,
                  epoch_admission_seconds: float | None = None,
                  epoch_admission_safety_factor: float = 1.0,
@@ -736,9 +737,24 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
     Optional epoch admission guards reserve 30 seconds for checkpointing and
     use the worst measured epoch, or the supplied first-epoch estimate. The
     caller still owns a hard process deadline for unexpectedly slow epochs.
+
+    Set ``refit=True`` and ``validation=None`` for a fixed-duration fit whose
+    epoch count was selected on separate inner patients. This mode never reads
+    validation labels or selects a checkpoint by performance. A completed fit
+    returns its final epoch as ``final_checkpoint``; incomplete fits return no
+    final checkpoint. ``latest_checkpoint`` remains available for resume.
     """
     spec, training = validate_spec(spec), validate_training(training)
-    validate_partitions(fitting, validation)
+    if not isinstance(refit, bool):
+        raise ValueError("refit must be a boolean.")
+    if refit:
+        if validation is not None:
+            raise ValueError("Fixed-duration refits require validation=None; held-out labels are not accepted.")
+        validate_frame(fitting)
+    else:
+        if validation is None:
+            raise ValueError("Checkpoint selection requires validation; use refit=True for a fixed-duration fit.")
+        validate_partitions(fitting, validation)
     recipe = dict(recipe)
     if recipe.get("loss_weight") not in ("none", "sqrt_ratio"):
         raise ValueError("loss_weight must be 'none' or 'sqrt_ratio'.")
@@ -760,19 +776,23 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
     source_hash = file_sha256(__file__)
     identity = {"spec": spec, "training": training, "recipe": recipe,
                 "manifest": _json_value(manifest), "fitting": _frame_identity(fitting),
-                "validation": _frame_identity(validation), "environment": _environment(device),
+                "validation": None if refit else _frame_identity(validation), "environment": _environment(device),
                 "source_sha256": source_hash,
                 "transformation_source_sha256": file_sha256(transform_profiles.__file__),
                 "preprocessing_environment": ({"opencv": str(transform_profiles.require_opencv().__version__)}
                                               if spec["preprocessing"] == "clahe" else {"opencv": "not_used"}),
                 "architecture_policy": architecture_policy(spec),
                 "model_factory": spec["architecture"] if model_factory is None else model_factory.__qualname__}
+    if refit:
+        identity["training_purpose"] = "fixed_duration_refit"
     compatibility_hash = canonical_hash(identity)
     if latest.exists() and not resume:
         raise FileExistsError("Run already has a checkpoint; use resume or a new output directory.")
     saved = _read_checkpoint(latest) if latest.exists() else None
     if saved is not None and saved["compatibility_hash"] != compatibility_hash:
         raise ValueError("Checkpoint is incompatible with data/configuration/source/environment/manifest.")
+    if refit and saved is not None and saved["epoch"] > epochs:
+        raise ValueError("Refit checkpoint exceeds the requested fixed duration; use a new output directory.")
     seed_everything(training["seed"])
     factory = model_factory or build_model
     model = factory(spec, pretrained=saved is None, device=device)
@@ -860,9 +880,11 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
             train_loss = train_epoch(model, loader, optimizer, criterion, scaler, device,
                                      effective_batch=training["effective_batch"],
                                      gradient_clip=training["gradient_clip"], amp=training["amp"])
-            eval_training = {**training, "microbatch": microbatch}
-            predictions = predict_frame(model, validation, spec, eval_training, device)
-            metrics = probability_metrics(predictions["target"], predictions["base_probability"])
+            metrics = {}
+            if not refit:
+                eval_training = {**training, "microbatch": microbatch}
+                predictions = predict_frame(model, validation, spec, eval_training, device)
+                metrics = probability_metrics(predictions["target"], predictions["base_probability"])
             peak = torch.cuda.max_memory_allocated(device) if device.type == "cuda" else 0
             reserved = torch.cuda.max_memory_reserved(device) if device.type == "cuda" else 0
         except torch.cuda.OutOfMemoryError:
@@ -897,7 +919,7 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
                "effective_batch": training["effective_batch"]}
         history.append(row)
         completed = epoch
-        improved = best_metrics is None or metrics["average_precision"] > best_metrics["average_precision"]
+        improved = not refit and (best_metrics is None or metrics["average_precision"] > best_metrics["average_precision"])
         if improved:
             best_epoch, best_metrics = epoch, dict(metrics)
             _save_checkpoint(best, checkpoint_payload("best_ap"))
@@ -905,7 +927,8 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
         _save_checkpoint(latest, checkpoint_payload(status))
         _atomic_json(output_dir / "history.json", history)
         pd.DataFrame(history).to_csv(output_dir / "history.csv", index=False)
-        print(f"{recipe['id']}: epoch {epoch}/{epochs}; AP={metrics['average_precision']:.5f}; "
+        evaluation = "fixed-duration refit" if refit else f"AP={metrics['average_precision']:.5f}"
+        print(f"{recipe['id']}: epoch {epoch}/{epochs}; {evaluation}; "
               f"loss={train_loss:.5f}; {row['epoch_seconds']:.1f}s", flush=True)
     _save_checkpoint(latest, checkpoint_payload(status))
     _atomic_json(output_dir / "history.json", history)
@@ -918,12 +941,17 @@ def train_recipe(fitting, validation, spec, training, recipe, output_dir, manife
                                              "stopping_reason": status, "microbatch": microbatch,
                                              "positive_weight": weight,
                                              "pretrained_identity": pretrained_identity})
-    return {"status": status, "best_epoch": best_epoch, "best_metrics": best_metrics,
+    result = {"status": status, "best_epoch": best_epoch, "best_metrics": best_metrics,
             "initial_model_state_sha256": initial_model_state_sha256,
             "initial_state_sha256": initial_model_state_sha256,
             "history": history, "latest_checkpoint": str(latest),
-            "best_checkpoint": str(best) if best.is_file() else None,
+            "best_checkpoint": str(best) if not refit and best.is_file() else None,
             "microbatch": microbatch, "elapsed_seconds": elapsed_previous + time.monotonic() - start}
+    if refit:
+        result.update({"final_checkpoint": str(latest) if status == "complete" else None,
+                       "final_epoch": completed if status == "complete" else None,
+                       "completed_epochs": completed, "training_purpose": "fixed_duration_refit"})
+    return result
 
 
 __all__ = ["DEFAULT_SPEC", "DEFAULT_TRAINING", "build_model", "make_transform",

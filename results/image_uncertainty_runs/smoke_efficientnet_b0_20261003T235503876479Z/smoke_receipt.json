@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "images": 16,
+  "malignant_images": 2,
+  "saved_comparison_original_batch_images": 192,
+  "saved_comparison_original_microbatch": 64,
+  "seed": 20261004,
+  "preprocessing_repeatable": true,
+  "deterministic_repeatable": true,
+  "identity_tta_agreement": true,
+  "saved_prediction_max_abs_difference": 9.71445146547012e-17,
+  "saved_prediction_tolerance": 1e-06,
+  "seeded_mc_repeatable": true,
+  "mc_seed_changes_predictions": true,
+  "dropout_forward_calls": {
+    "classifier.0": 3
+  },
+  "only_explicit_dropout_active": true,
+  "trained_dropout_rate_preserved": true,
+  "batchnorm_buffers_checked": 147,
+  "batchnorm_buffers_unchanged": true,
+  "model_state_unchanged": true,
+  "preservation": {
+    "protected_files_checked": 124,
+    "all_protected_files_unchanged": true
+  },
+  "selection": {
+    "run_id": "b0_augmentation_12e_v1",
+    "recipe_id": "lr3e5_sqrt",
+    "architecture": "efficientnet_b0",
+    "condition_id": "A"
+  }
+}

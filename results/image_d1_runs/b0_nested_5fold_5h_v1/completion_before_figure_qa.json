@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "verified_utc": "2026-10-04T07:10:30.757873+00:00",
+  "raw_run_id": "b0_nested_5fold_5h_v1",
+  "calibration_run_id": "b0_nested_calibration_5h_v1",
+  "raw_training_sources_verified": 6,
+  "calibration_training_sources_verified": 8,
+  "historical_files_unchanged": 408,
+  "raw_final_checkpoints_verified": 5,
+  "calibration_fixed_refit_checkpoints_verified": 15,
+  "calibration_inner_artifact_hashes_verified": 60,
+  "calibration_checkpoint_state_device": "cpu",
+  "fitting_patient_isolation_verified": true,
+  "existing_raw_roundtrip_receipt_sha256": "a6bb333807fdbd5dc1c985039411edacc8d90c7f7950683f89031c143314862d",
+  "tests": {
+    "total": 244,
+    "passed": 243,
+    "skipped": 1,
+    "elapsed_seconds": 45.943,
+    "log_sha256": "5c1114106be0ced5beea85b4305f0e1ebaa59a350638de6ba76b98e7e18bde21"
+  },
+  "notebook": {
+    "path": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+    "sha256": "94b1946f870418b32136044dbc7e8060ee52325a515689464c4918acf5f3f3d5",
+    "executed_code_cells": 10,
+    "error_outputs": 0,
+    "complete_calibration_branch": true,
+    "embedded_png_outputs": 5
+  },
+  "session": {
+    "started_utc": "2026-10-04T02:50:00+00:00",
+    "training_cutoff_utc": "2026-10-04T07:30:00+00:00",
+    "session_deadline_utc": "2026-10-04T07:50:00+00:00",
+    "budget_minutes": 300,
+    "elapsed_minutes_at_verification": 260.51263121666665,
+    "remaining_minutes_at_verification": 39.48736878333335,
+    "verified_within_original_budget": true
+  },
+  "raw_metrics": {
+    "primary_mean_fold_average_precision": 0.1447163145823742,
+    "primary_mean_fold_ap_ci95": [
+      0.10329088857044068,
+      0.22249149924584305
+    ],
+    "pooled_metrics_secondary": {
+      "average_precision": 0.11595211228914316,
+      "roc_auc": 0.8279034757274346,
+      "log_loss": 0.08940241276664938,
+      "brier": 0.020890252016852174
+    }
+  },
+  "calibration_metrics": {
+    "mean_fold_metrics": {
+      "calibrated": {
+        "average_precision": 0.1447163145823742,
+        "roc_auc": 0.8407829260435065,
+        "log_loss": 0.07908179788193034,
+        "brier": 0.017411040550929926
+      },
+      "raw": {
+        "average_precision": 0.1447163145823742,
+        "roc_auc": 0.8407829260435065,
+        "log_loss": 0.08939461827191421,
+        "brier": 0.020886132454057554
+      }
+    },
+    "mean_fold_ap_invariant": true,
+    "training_selected_decisions_identical": true,
+    "threshold_metrics_pooled": [
+      {
+        "fold": "pooled",
+        "model": "raw",
+        "n_images": 6864,
+        "n_patients": 422,
+        "n_positive": 128,
+        "training_target_recall": 0.8,
+        "threshold": null,
+        "threshold_scope": "fixed per outer fold from training-only OOF scores",
+        "TP": 106,
+        "FP": 2578,
+        "TN": 4158,
+        "FN": 22,
+        "sensitivity": 0.828125,
+        "specificity": 0.6172802850356295,
+        "precision": 0.039493293591654245,
+        "flagged_fraction": 0.391025641025641,
+        "recall": 0.828125,
+        "f1": 0.07539118065433854
+      },
+      {
+        "fold": "pooled",
+        "model": "calibrated",
+        "n_images": 6864,
+        "n_patients": 422,
+        "n_positive": 128,
+        "training_target_recall": 0.8,
+        "threshold": null,
+        "threshold_scope": "fixed per outer fold from training-only OOF scores",
+        "TP": 106,
+        "FP": 2578,
+        "TN": 4158,
+        "FN": 22,
+        "sensitivity": 0.828125,
+        "specificity": 0.6172802850356295,
+        "precision": 0.039493293591654245,
+        "flagged_fraction": 0.391025641025641,
+        "recall": 0.828125,
+        "f1": 0.07539118065433854
+      }
+    ]
+  },
+  "n_images": 6864,
+  "n_patients": 422,
+  "reserved_test_loaded": false
+}

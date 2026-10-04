@@ -1,0 +1,15 @@
+{
+  "checkpoint_compatibility": true,
+  "patient_separation": true,
+  "evaluation_image_hashes_verified": 1834,
+  "saved_predictions_agree": true,
+  "saved_prediction_max_abs_difference": 9.974659986866641e-17,
+  "identity_tta_agreement": true,
+  "only_explicit_dropout_active": true,
+  "trained_dropout_rate_preserved": true,
+  "batchnorm_buffers_checked": 147,
+  "batchnorm_buffers_unchanged": true,
+  "model_state_unchanged": true,
+  "protected_files_checked": 14,
+  "all_protected_files_unchanged": true
+}

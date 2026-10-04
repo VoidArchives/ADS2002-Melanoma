@@ -1,0 +1,41 @@
+{
+  "fold": 3,
+  "status": "complete",
+  "selected_recipe": "lr1e4_sqrt",
+  "fixed_epochs": 12,
+  "slope": 0.30225117830972015,
+  "intercept": -1.8862452217722614,
+  "raw_threshold": 0.0003563059726729989,
+  "calibrated_threshold": 0.013574062385713603,
+  "training_oof_sha256": "6a720ecac9017c0644e63e55e92caa7286857f2a454de32d050af3f52e28a924",
+  "training_selection_sha256": "39b159bdf8415f19da2cf04d39005704bdb26f7848ced960d1d61bfecd90f153",
+  "calibrator_sha256": "5fb4dd4cb4e7b045462632d6bf6c345a90d1ea0e0acc4fee7b7854dd4ad611eb",
+  "predictions_sha256": "7d40d15e947c4ab736cc829d6683edf7fd3a603fd1b88ca75ffbcce4c2f30d79",
+  "reference_outer_predictions_sha256": "e46cd6775c27acf05a2f44ffdc7d40d4ced324c8b371de447ba75827d56d6bdd",
+  "inner_refits": [
+    {
+      "inner_fold": 0,
+      "fixed_epochs": 12,
+      "checkpoint_sha256": "68c46440a628c999ec3c84b28c663aba560e38b9a7fcfd627561334910d8a1d6",
+      "job_manifest_sha256": "504f45bf0d2bb5a53864c5eb36defb0a79abe5fa33d780d21b83cb3310339400",
+      "history_sha256": "4569bad1e39816156592236f4984815f8e59b1ca58abddfeddcf0fe0e06b88a1",
+      "predictions_sha256": "cdcd41eee84e126f1ef8a8b72e49691cd3860dd99a5e07ef26378e5ef2695427"
+    },
+    {
+      "inner_fold": 1,
+      "fixed_epochs": 12,
+      "checkpoint_sha256": "7bdb4585df21ccddde5ef03d424b31431c505148c5f695fca269640a22df3114",
+      "job_manifest_sha256": "e7e272eb53cb54ad71a1e8384c1ad3d07ccc0c0a3fd891a90bf1a4505ae6d315",
+      "history_sha256": "06dcb4f8d8093fc138d806bce41607dfa009fb6911d8cc19b51b1110ceea88e6",
+      "predictions_sha256": "c777b8499b3f271f9ad12374f9936101e1ee153c5037e2c5fb9dab1058603227"
+    },
+    {
+      "inner_fold": 2,
+      "fixed_epochs": 12,
+      "checkpoint_sha256": "8ce3bf69a306d0723dd847c47be1f102502ad064c22773fbb026ef5f8abbd32f",
+      "job_manifest_sha256": "b00ecedd04bca514e83a10369a5758b7854674d6de3c04604f87a89adb9112c3",
+      "history_sha256": "ef426fe38b3e2b4f3ea2dd3311b925f975b05bcad3a0870f38775a2a89c5b24e",
+      "predictions_sha256": "45e86102db9287f25c7b0087790cde4d60be462a3b1672dac7be23058f66ba81"
+    }
+  ]
+}

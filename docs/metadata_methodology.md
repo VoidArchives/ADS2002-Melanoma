@@ -1,8 +1,35 @@
-# How the metadata evaluation now works
+# Metadata modelling: purpose, evidence and interpretation
 
 The aim is to predict whether **one lesion image is malignant** from age, sex and anatomical site. A patient may contribute several images. We therefore predict and score individual images, but keep each patient's images together whenever we split or resample data.
 
-Start with `notebooks/04b_metadata_robustness_d1.ipynb`. It contains the explanations, calculations, tables and figures. Run `03b_metadata_neural_network_d1.ipynb` first if its prediction files need refreshing. These experiments use d1 development data only; d2 received the same label-validation fix, without new modelling.
+For a first read, follow [Subset notebooks 01–04](../notebooks/README.md): prepare
+records, explore them, separate patients and establish a simple baseline. Notebooks
+05–07 compare model choices. [Notebook 08, metadata robustness](../notebooks/Subset/08_metadata_robustness.ipynb)
+then asks whether the apparent differences and decision rules hold up to stronger
+checks. The [concept guide](../notebooks/concepts.md) defines shared terms.
+
+These models read patient-grouped Subset development records and produce
+per-image predictions, comparison tables and figures. Full data has preparation
+and exploration notebooks, without new model evaluation. Dataset folder names are
+now `Subset` and `Full`; recorded data/model/result identifiers such as
+`models/metadata_d1` stay unchanged. To regenerate the NN prediction files, run
+[notebook 06](../notebooks/Subset/06_metadata_neural_network.ipynb) before 08.
+
+## Read the figures and tables
+
+| Output | How to read it | Why it matters |
+|---|---|---|
+| Precision–recall curve / AP | Recall is the fraction of malignant images found; precision is the fraction of flagged images that are malignant. Higher precision at the same recall is useful; AP summarises the curve. Compare against the malignant prevalence. | Malignant images are rare, so accuracy alone can hide missed cases. |
+| ROC curve / ROC-AUC | The horizontal axis is the benign false-positive rate; the vertical axis is malignant recall. Curves nearer the top-left rank better. | This is a ranking view; it does not tell us the number of false referrals at a chosen cutoff. |
+| Confusion matrix and cutoff table | Read actual versus predicted labels from the axes. Missed malignant images are false negatives; benign flags are false positives. Compare recall with precision and the flagged fraction. | A high recall can require reviewing many benign images. |
+| Calibration / reliability plot | Mean predicted score is horizontal; observed malignant fraction is vertical. The diagonal indicates agreement. Below it suggests overprediction, above it underprediction. Read bin counts and patient-bootstrap intervals too. | A useful ranking need not provide accurate risk estimates; small bins are uncertain. |
+| Bootstrap difference plot | Read the stated model order in the subtraction. For AP/AUC, positive means the first model ranks better; for losses, negative means lower error. A 95% interval crossing zero does not clearly resolve the difference. | Paired resampling keeps the same patients in each model comparison. |
+| NN learning curves / seed comparison | Epoch counts training passes; loss measures prediction error. Improving training loss with worsening validation loss suggests overfitting. Report all fixed seeds, without choosing the luckiest run. | Random fitting and the stopping split can change apparent performance. |
+| Subgroup table / figure | Compare rates only alongside patient counts, malignant-patient counts and intervals. Missing AP or recall can mean no malignant cases; it is not zero performance. | Sparse groups and different case mix limit conclusions about fairness or clinical risk. |
+
+The sections below explain how these outputs are computed. Development labels
+have already informed model exploration; the reported estimates are development
+evidence, rather than a final performance claim.
 
 ## 1. Check the values before changing their type
 
@@ -18,11 +45,16 @@ The primary model remains the existing spline logistic regression:
 
 - Age passes through a median imputer, a four-knot cubic spline and scaling. The spline lets the relationship between age and risk bend smoothly.
 - Sex and site become indicator columns, including a missing category where needed. An unseen category at prediction time is handled without refitting the encoder.
-- Logistic regression combines these inputs into a malignancy probability, using the existing regularisation setting C=1.
+- Logistic regression combines these inputs into a score on a probability scale, using the existing regularisation setting C=1. Regularisation limits large coefficients to reduce overfitting; the score still needs calibration checks.
 
 All of these steps are fitted inside each training pipeline. A held-out patient's age cannot influence the training median, age curve or scaling. Patient ID, image ID, fold, diagnosis and target never enter the predictor list.
 
-The small NN remains an alternative: encoded metadata → 32 hidden units with ReLU → 20% training dropout → one output score → sigmoid probability. We did not expand the architecture search, because better evaluation was the main missing evidence.
+The small neural network (NN) remains an alternative: encoded metadata → 32
+hidden units → 20% training dropout → one sigmoid score between 0 and 1. ReLU
+allows the hidden layer to learn nonlinear relationships; dropout randomly
+omits units during fitting to limit reliance on any one unit. A sigmoid output
+does not by itself make the score a calibrated probability. Better evaluation,
+rather than a larger architecture search, was the main missing evidence.
 
 ## 3. Choose a cutoff before evaluating its performance
 
@@ -41,7 +73,7 @@ For a clear academic example, we request 80% recall on the inner scores. Suppose
 
 The 80% request is a demonstration, not a clinical requirement. It does not guarantee 80% recall on new patients. In the executed outer evaluation, recall was **79.7%**, but **67.0%** of images were flagged and precision was only **2.2%**. That large false-positive burden is an important limitation of metadata alone.
 
-The older OOF-selected cutoffs in notebooks 03 and 03a remain exploratory examples. Use notebook 04b for the evaluation of a training-selected cutoff policy.
+The older OOF-selected cutoffs in notebooks 04 and 05 remain exploratory examples. Use notebook 08 for the evaluation of a training-selected cutoff policy.
 
 ## 4. Check whether probabilities match observed risk
 
@@ -67,7 +99,7 @@ These intervals hold predictions fixed. They do not retrain models, include rand
 
 ## 6. Repeat NN training without choosing the luckiest run
 
-Notebook 03b now uses three fixed seeds: 42, 142 and 242. It also rotates the patient fold used for epoch stopping. Each run keeps the outer patients outside preprocessing, stopping and fitting. After selecting the epoch count, the network is reinitialised and fitted on all outer training patients for that count.
+Notebook 06 uses three fixed seeds: 42, 142 and 242. It also rotates the patient fold used for epoch stopping. Each run keeps the outer patients outside preprocessing, stopping and fitting. After selecting the epoch count, the network is reinitialised and fitted on all outer training patients for that count.
 
 All runs are reported. Their AP values are **0.04575, 0.04865 and 0.04613**. The mean prediction gives every run equal weight; it does not select the best seed. This spread measures the combined effect of random training and stopping-partition choice. It is not a confidence interval or three independent studies.
 
@@ -77,13 +109,13 @@ We report fixed age bands (<50 and ≥50), sex and anatomical site. Each group u
 
 Tables include images, patients, malignant images and patients with malignancy. A large number of images does not imply many independent positive patients. Patients can contribute to multiple age/site groups when per-image metadata differs, so those patient counts must not be added across groups.
 
-Groups with at least ten positive patients receive exploratory patient-bootstrap intervals. Below that count, intervals are suppressed and the evidence is marked sparse. Palms/soles has no malignant images in d1 development data, so its AP and sensitivity are undefined, rather than zero.
+Groups with at least ten positive patients receive exploratory patient-bootstrap intervals. Below that count, intervals are suppressed and the evidence is marked sparse. Palms/soles has no malignant images in Subset development data, so its AP and sensitivity are undefined, rather than zero.
 
 The held-out sensitivity is **43.8% below age 50** versus **91.7% at age 50 or above** under this policy. This is a material descriptive gap. Case mix, prevalence and limited samples affect comparisons; the result does not establish a causal explanation or fairness conclusion.
 
 ## 8. Freeze decisions before the final test
 
-Notebook 04b fits the fixed **raw spline** on all development patients and stores its weights and training-OOF-selected cutoff in `models/metadata_d1/frozen_spline.joblib`. Its manifest records the specification, training identities, input and code fingerprints, Python version and package versions. Model files are locally generated and excluded from Git by the repository's existing rules.
+Notebook 08 fits the fixed **raw spline** on all development patients and stores its weights and training-OOF-selected cutoff in `models/metadata_d1/frozen_spline.joblib`. Its manifest records the specification, training identities, input and code fingerprints, Python version and package versions. Model files are locally generated and excluded from Git by the repository's existing rules.
 
 The prepared final-test command is:
 
@@ -97,12 +129,12 @@ Run it only after all modelling decisions are settled. It checks the manifest, r
 
 ## Files and verification
 
-- `03b_metadata_neural_network_d1.ipynb`: three NN repetitions, explanations and saved OOF predictions.
-- `04b_metadata_robustness_d1.ipynb`: cutoff/calibration evaluation, patient intervals, subgroup checks and frozen model fitting.
+- [notebooks/Subset/06_metadata_neural_network.ipynb](../notebooks/Subset/06_metadata_neural_network.ipynb): three NN repetitions, explanations and saved OOF predictions.
+- [notebooks/Subset/08_metadata_robustness.ipynb](../notebooks/Subset/08_metadata_robustness.ipynb): cutoff/calibration evaluation, patient intervals, subgroup checks and frozen model fitting.
 - `src/melanoma_detection/metadata_validation.py`: original-value label and patient-fold checks.
 - `src/melanoma_detection/metadata_evaluation.py`: metrics, thresholds, paired bootstrap and calibration bins.
 - `src/melanoma_detection/metadata_model.py`: the fixed spline and training-only decision procedures.
 - `scripts/evaluate_metadata_holdout.py`: the later frozen final evaluation.
-- `requirements-metadata.txt`: the recorded dependencies for notebooks 03b and 04b. The executed Python version is 3.14.6; NumPy requires at least Python 3.12.
+- `requirements-metadata.txt`: the recorded dependencies for notebooks 06 and 08. The executed Python version is 3.14.6; NumPy requires at least Python 3.12.
 
-Both modelling notebooks executed fully and their charts were inspected. Both EDA notebooks also executed fully with unchanged charts. The cleaning functions were tested directly and reproduced valid training outputs; their full file-writing notebooks were not rerun. **46 tests passed**, including checks that changing outer labels cannot change model predictions, calibration or cutoffs, that paired patient bootstrap matches independently resampled rows, and that the final-test script rejects altered artifacts and repeated attempts.
+Both modelling notebooks executed fully and their charts were inspected. Both EDA notebooks also executed fully with unchanged charts. The cleaning functions were tested directly and reproduced valid training outputs; their full file-writing notebooks were not rerun. At the original metadata evaluation step, **46 tests passed**, including checks that changing outer labels cannot change model predictions, calibration or cutoffs, that paired patient bootstrap matches independently resampled rows, and that the final-test script rejects altered artifacts and repeated attempts.

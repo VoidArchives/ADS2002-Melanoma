@@ -1,0 +1,29 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/Subset/15_final_evaluation.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/Subset/15_final_evaluation.ipynb · code was not executed</div><section id="cell-0"><h1>15 — Final evaluation on reserved patients</h1>
+<p>The <strong>reserved test</strong> contains patients kept out of model development. It asks
+how the completed workflow performs after choices have been fixed, without
+letting its labels choose the model or decision rules.</p>
+<p>Earlier notebooks compare candidates using development data, including the
+planned <a href="14_fusion_model.html">fusion experiment</a>. Before this stage, record
+the selected model, image preparation, any calibration (a score-to-probability
+mapping), and classification/referral rules. A metadata-only final test is also
+possible if that is the workflow chosen before viewing test results.</p>
+<h2>Current status</h2>
+<p>This placeholder contains no final-evaluation code, test results, tables or
+figures. It has not evaluated reserved patients. The test should be used once
+after the complete workflow is fixed. Report malignant cases found and missed,
+false alarms, ranking and reliability, with intervals that keep each patient&#39;s
+images together; a single accuracy number would hide the rare malignant cases.</p>
+</section>
+<section id="cell-1"><h2>Limitations</h2>
+<p>Without a test run this file cannot establish final performance or support a
+deployment decision. Even a completed test would describe this dataset and
+patient mix, not prove clinical safety or performance elsewhere. Few malignant
+cases would make recall and model comparisons uncertain. Changing choices after
+seeing test results would turn the test into further development data.</p>
+</section>
+<section id="cell-2"><h2>Summary</h2>
+<p>Final evaluation remains pending. Record the chosen workflow and rules first,
+then evaluate reserved patients once and report patient-based uncertainty and
+the costs of missed malignancies and false alarms. This file has no findings
+and cannot select a final model.</p>
+</section>

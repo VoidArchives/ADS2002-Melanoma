@@ -1,0 +1,67 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/archive/README.md</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/archive/README.md · code was not executed</div><h1>Reading the historical notebooks</h1>
+<p>These files preserve earlier experiments exactly, including their old titles,
+paths and saved outputs. Read them as records of how the project developed.
+Use the <a href="../README.html">current notebook index</a> for work with the current pipeline.
+The <a href="../concepts.html">concept guide</a> explains the shared terminology.</p>
+<h2>Original image model</h2>
+<p><a href="image_model_three_epoch_fold0.html">image_model_three_epoch_fold0.ipynb</a>
+contains the original three-epoch EfficientNet-B0 training recipe. A fold is a
+group of held-out patients; this prototype evaluated only fold 0. It has no saved
+cell outputs or figures. Its recorded metrics are cited inside the notebook from
+existing result files, so they do not represent a fresh execution of this copy.</p>
+<p>Read the fold table as counts of images, patients and malignant images. Read AP
+and ROC-AUC as ranking measures, with higher values indicating better ranking.
+Lower Brier score and log loss indicate better agreement between scores and
+labels. Class-weighted training gives malignant images more influence; the
+resulting scores need calibration checks before they can describe risk.</p>
+<p>For the current workflow, start with
+<a href="../Subset/09_image_b0_pilot.html">09 Image B0 pilot</a>. It reports checkpoints from
+the shared training pipeline, recorded recipes and a separate inner-validation
+patient split.</p>
+<h2>Original image uncertainty</h2>
+<p><a href="image_uncertainty_three_epoch_fold0.html">image_uncertainty_three_epoch_fold0.ipynb</a>
+contains the earlier 30-pass dropout and eight-view TTA analysis of 1,370 images
+from 84 held-out patients. Its results concern the old checkpoint and fold only.
+The word <code>probability</code> in historical column and axis names denotes a prediction
+score; the reliability check shows that those scores are poorly calibrated.</p>
+<p>Read its four figures as follows:</p>
+<ul>
+<li><strong>MC convergence:</strong> the horizontal axis counts dropout passes; the vertical
+axis is the median absolute difference from the 30-pass mean or SD. Falling lines mean
+closer agreement with that reference. Zero at 30 is guaranteed by comparison
+with itself and does not prove convergence beyond 30 passes.</li>
+<li><strong>Four-panel uncertainty comparison:</strong> the upper histograms count images at
+each SD. The lower-left scatterplot compares dropout SD with TTA SD for each
+image. The lower-right panel compares mean absolute score error across groups ordered
+by SD. An upward line associates higher variation with larger error, but benign
+images dominate and their absolute error equals their score.</li>
+<li><strong>Reliability diagram:</strong> each point places a group&#39;s mean score on the
+horizontal axis and its observed malignant fraction on the vertical axis.
+Points below the diagonal indicate scores above the observed frequency.
+There are only 25 malignant images and no interval around those points.</li>
+<li><strong>Risk–coverage curve:</strong> start at 100% retained on the right and move left as
+more images are set aside. A lower line means lower mean score error among
+retained images at the same coverage. It does not measure reviewer outcomes.</li>
+</ul>
+<p>The archive lacks score-ranking and random-referral baselines and patient-based
+intervals for key differences. Those comparisons are provided in
+<a href="../Subset/13_image_uncertainty.html">13 Image uncertainty</a> for the current
+checkpoint pipeline.</p>
+<h2>Legacy preparation experiments</h2>
+<p><a href="legacy_training.html">legacy_training.ipynb</a> records early attempts to select a
+patient subset, assign folds and count missing metadata. It has no figures or
+model evaluation. In its fold table, <code>count</code> is the number of images, <code>sum</code> the
+number malignant and <code>mean</code> their fraction. Similar fractions suggest comparable
+class balance, rather than model quality. A missing-value count of zero after
+replacement means the rows now carry <code>Unknown</code>; it does not recover the original
+information. The old subset and paths differ from the current inputs.</p>
+<p>Use <a href="../Subset/01_data_cleaning.html">Subset cleaning</a> or
+<a href="../Full/01_data_cleaning.html">Full cleaning</a>, followed by the matching exploration
+notebook, for current data preparation.</p>
+<h2>Limitations</h2>
+<p>Historical paths and settings are retained for provenance, so these notebooks
+are outside the current run sequence. Their limited checks and saved results
+cannot establish final model performance or a clinical referral rule.</p>
+<h2>Summary</h2>
+<p>The archives explain earlier choices and their limitations. Follow the current
+Subset or Full sequence to reproduce the present workflow.</p>

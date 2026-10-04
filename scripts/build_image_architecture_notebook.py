@@ -8,17 +8,27 @@ def md(text): cells.append(nbf.v4.new_markdown_cell(text.strip() + "\n"))
 def code(text): cells.append(nbf.v4.new_code_cell(text.strip() + "\n"))
 
 md("""
-# 05e — d1 architecture exploration within a three-hour session
+# 10 — Compare image-model architectures
 
-EfficientNet-B0 is the reference, not a predetermined winner. Compare its saved
-six-epoch records with independently configured pretrained DenseNet121 and
-ConvNeXt-Tiny on the same inner validation patients. All eight new fits are a
-maximum target, not a completion promise. A short trial cannot eliminate a
-slower family. Outer fold 0 and the reserved test remain excluded.
+Does changing the image network improve early ranking at an affordable cost?
+This notebook compares pretrained convolutional neural networks on matching
+patients: **EfficientNet-B0** is a compact reference; **DenseNet121** passes
+earlier features to later layers; **ConvNeXt-Tiny** uses a modernised convolutional
+design. Different designs may learn useful patterns at different speeds.
 
-The notebook defaults to reading executed results. Training, when explicitly
-enabled, calls the shared runner and existing training loop. No independent
-training implementation appears here.
+An architecture is the network design; a **recipe** specifies how it is trained.
+A **checkpoint** stores weights after an epoch (one pass through fitting data).
+For each recipe, the highest validation AP checkpoint is reported.
+
+These are **inner-validation diagnostics**: held-out fitting-pool patients guide
+recipe and epoch choices. Full out-of-fold (OOF) evaluation would test the entire
+selection process on independent outer patients. Outer fold 0 and the reserved
+test are excluded here. Eight new fits were budgeted; the saved completion
+ledger establishes what actually ran. Short pilots cannot eliminate a slower
+family or select the final model.
+
+Training defaults to disabled. The notebook reads executed results using shared
+training/reporting utilities. See the [concept guide](../concepts.md) for terms.
 """)
 code("""
 import json
@@ -61,23 +71,30 @@ print("Unmatched completed trials:", summary["unmatched_completed_trials"])
 display(Markdown(summary["recommendation"]))
 """)
 md("""
-## Controlled preparation, recipes and completion ledger
+## Shared preparation and the completion ledger
 
-The same patient memberships, RGB whole-image 224-pixel bilinear preparation,
-weak flips/rotation and unchanged preprocessing apply to every family. ImageNet
-normalisation remains fixed. B0/DenseNet freeze BatchNorm statistics and affine
-parameters; ConvNeXt preserves its native LayerNorm and trains it during full
-fine-tuning. Each new output uses explicit dropout 0.2 and one logit.
+Every family uses the same patient memberships and whole RGB images resized
+to 224 × 224 pixels, with the same weak fitting flips/rotation and ImageNet
+colour normalisation. Ordinary validation has no random augmentation. These
+controls make the network comparison easier to interpret.
 
-Each family has its own lower/higher backbone learning rates crossed with
-unweighted or fitting-only square-root positive weighting. Effective batch is
-64. Use one classifier-only warmup and a fixed 30-epoch schedule, executing six
-epochs with no early stopping. The selected checkpoint is actual highest AP;
-exact ties retain the earlier epoch.
+Each family tries its own low/high backbone learning rates (the size of weight
+updates), with either no class weighting or fitting-only square-root positive
+weighting (more influence for rare malignant examples). Thus `low_sqrt` is a
+matched recipe **slot**, not an identical numerical learning rate across networks.
+Effective batch size is 64 images. Each admitted fit runs six epochs, including
+one classifier-only warmup, under a fixed 30-epoch learning-rate schedule. The
+selected epoch is the highest AP so far; exact ties retain the earlier epoch.
 
-Finish DenseNet/ConvNeXt in matched pairs before starting the next slot. Paused
-trials cannot lose a comparison. At most 50 minutes are available for training,
-subject to the overall session deadline and reporting reserve.
+B0/DenseNet keep BatchNorm statistics and parameters fixed, limiting changes
+to their pretrained normalisation with small image batches. ConvNeXt retains
+its native LayerNorm, trained during full fine-tuning. All new classifiers use
+dropout 0.2 and one logit, converted to a score between 0 and 1. The
+[concept guide](../concepts.md) explains these terms.
+
+Read `status` and `completed_epochs` before comparing results. Only completed
+matching slots rank families; a paused trial is unfinished, not inferior. The
+original session allowed at most 50 training minutes within its wider deadline.
 """)
 code("""
 ledger_rows = []
@@ -94,9 +111,12 @@ display(pd.DataFrame(summary.get("runtime_estimates", {})).T)
 print("Ordinary validation: deterministic | calibrated scores: unavailable | tuned thresholds: deferred")
 """)
 md("""
-Fitting-only weak-preparation preview. The existing rotation can create black
-corners and clip peripheral pixels; the limited preview does not certify every
-lesion. Stronger augmentation, hair removal and lighting correction are deferred.
+**Read the preparation preview:** each row contains one fitting image; the
+original is left and three seeded weak variants follow. `target=1` means melanoma,
+`target=0` benign. Compare the full lesion boundary, texture and colour. Rotation
+can create black corners or clip peripheral pixels. This small deliberate label
+mix checks image preparation; it does not certify every lesion or represent
+dataset prevalence. Later augmentation and lighting stages are separate.
 """)
 code("""
 preview = plot_augmentation_preview(historical["fitting"], config["model"])
@@ -104,13 +124,22 @@ save_figure(preview, figures_dir / "weak_augmentation_preview.png", dpi=130)
 plt.show()
 """)
 md("""
-## Executed learning trajectories
+## Learning over epochs
 
-The panels below use committed epochs only, including paused trials explicitly
-marked in their legends. Hollow rings mark highest-AP epochs so far.
-Weighted and unweighted fitting losses represent different objectives and are
-shown separately; validation log loss and Brier are unweighted for all trials.
-Checkpoints from a six-epoch cap remain exploratory duration choices.
+For each family, the first figure uses completed epoch horizontally and four
+validation metrics vertically. Each line is a recipe; paused runs are labelled.
+**AP** summarises precision across recall levels and is useful for rare melanoma;
+**ROC-AUC** measures overall ranking. Higher is better for both; their guides
+are malignant-image prevalence and chance AUC 0.5. **Log loss** penalises confident
+wrong scores and **Brier** averages squared score errors; lower is better. A low
+loss can still accompany poor melanoma detection, so read the ranking panels too.
+
+Hollow rings mark the AP-selected epoch across all panels. The dotted vertical
+line separates warmup from whole-network fine-tuning. The next figure plots
+fitting BCE (binary cross-entropy, the training objective) against epoch, grouped
+by weighting. Falling fitting loss should be checked against validation trends.
+Weighted and unweighted fitting-loss magnitudes are not comparable. Six epochs
+show early progress, not each family's full learning potential.
 """)
 code("""
 if not history.empty:
@@ -126,14 +155,28 @@ else:
     print("No completed trial histories available; no curves fabricated.")
 """)
 md("""
-## Matched family comparison
+## Compare completed matching recipes
 
-Only recipe slots completed for **all three families** enter the comparative
-tables and plots. All use matching validation images and patients. AP is primary;
-ROC-AUC and actual precision–recall/ROC curves describe ranking. Measured epoch
-time excludes weight-download/setup overhead. Peak memory is measured allocated
-GPU memory, not total device usage. These are early learning results, not a
-final architecture selection.
+Only slots completed for **all three families** enter these tables and plots.
+All scores concern the same validation images and patients. AP is primary;
+log loss and Brier describe score errors, and ROC-AUC supplies another ranking
+view. Raw scores remain uncalibrated.
+
+**Read the horizontal bars:** each row is a network/recipe. The three panels
+show selected-checkpoint AP (longer is better), total measured training minutes
+and peak allocated GPU memory in GiB (shorter is cheaper). Time sums the recorded
+epochs despite the figure's "epoch time" title and excludes downloads/setup;
+memory is allocated by training, not total device usage. Assess the trade-off
+without treating the small AP difference as final evidence.
+
+**Read each matched-slot curve pair:** each line is one family. The left ROC
+panel plots benign false-positive rate horizontally against melanoma recall
+vertically; nearer the upper left is better than the chance diagonal. The right
+precision–recall panel plots recall horizontally against precision (malignancy
+among flags) vertically; higher at the same recall is better. The horizontal
+guide is prevalence. Moving along a curve changes the cutoff; the legend names
+the selected epoch and metric. AP is not the trapezoidal area under the plotted
+steps. No curve chooses a referral or classification cutoff here.
 """)
 code("""
 if matched:
@@ -160,15 +203,27 @@ else:
     print("No matched DenseNet/ConvNeXt/B0 slot completed; no family ranking reported.")
 """)
 md("""
-## Fixed-threshold exploratory classification and raw calibration
+## Fixed-cutoff errors and descriptive reliability
 
-Flag scores `>= 0.5` using raw base probabilities. The cutoff is declared, not
-fitted to validation labels. Confusion plots show counts and percentages within
-each true class; report F1, precision, recall/sensitivity and specificity with
-the cutoff, checkpoint and support. Undefined precision remains missing.
+Flag a raw score `>= 0.5`; the stored `base_probability` column is an uncalibrated
+score despite its name. The cutoff is declared rather than fitted to these labels.
+Recall/sensitivity measures malignant images found; specificity measures benign
+images correctly unflagged. Precision measures malignancy among flags; F1
+balances precision and recall. Undefined precision remains missing.
 
-Reliability plots are descriptive raw-score checks, not fitted calibration or
-clinical risk. The academic 80%-recall cutoff awaits training-only OOF scores.
+**Read the confusion matrices:** one panel per family, rows are true class and
+columns predicted class. Diagonal cells are correct; bottom left is missed
+melanoma, top right is benign images flagged. Text gives counts and percentages
+within each true-class row; darker blue means a larger row fraction. Compare
+missed malignancies and false alarms alongside AP.
+
+**Read the reliability panels:** horizontal position is mean score in a bin;
+vertical position is observed melanoma fraction. Points on the diagonal agree;
+below it scores exceed the observed frequency, above it scores fall below it.
+Panels share the observed-range axes and the table gives bin support. Few
+malignant images and shared patients make bins noisy. This describes reliability
+without fitting a calibrator or validating clinical risk. An 80%-recall cutoff
+requires later training-only OOF predictions.
 """)
 code("""
 if matched:
@@ -188,18 +243,19 @@ if matched:
         display(bins)
 """)
 md("""
-## Unmatched executed records and next steps
+## Incomplete records and next steps
 
-Completed unmatched trials are saved below separately. They are not used to
-rank families. Paused fits retain compatible model/optimiser/scheduler/scaler/RNG
-states and resume at epoch boundaries; budget exhaustion supplies no evidence
-against them. Finish paused comparisons before independently validating every
-family with longer training and three inner folds.
+The table below lists any completed unmatched trials separately. They cannot
+rank families. Paused fits preserve model and training states for compatible
+resumption at epoch boundaries; reaching a time budget is not evidence against
+their performance. Complete matching comparisons before expanding conclusions.
 
-Later stages test augmentation/preprocessing separately for each architecture
-and repeat all selection inside five outer-training partitions. Short-pilot
-results cannot globally prune candidates. Swin, final evaluation, uncertainty,
-fusion and reserved-test evaluation remain outside this session.
+Next, validate every family with longer training and three inner patient folds.
+Choose augmentation and preparation separately for each architecture, then
+repeat the complete selection procedure within each outer-training partition.
+The current [uncertainty notebook](13_image_uncertainty.ipynb) supplies inference
+diagnostics only. Fusion, final outer evaluation, any eligible Swin experiment
+and reserved-test evaluation remain separate work.
 """)
 code("""
 unmatched = {key: frame for key, frame in predictions.items()
@@ -230,18 +286,20 @@ print("Outer evaluation: not performed | reserved test: not loaded")
 md("""
 ## Limitations
 
-- Six epochs on one inner patient split measure early behaviour, not each family's full learning potential.
-- Best recipes and epochs reuse validation labels. These are exploratory observations, not final outer performance.
-- The fixed weak/unchanged profile controls this comparison; each architecture still requires independent augmentation/preprocessing selection later.
-- Fitting objectives differ under weighting. Raw scores are uncalibrated and threshold 0.5 is not tuned.
-- Paused/unmatched trials cannot lose a comparison, and short results cannot exclude slower families.
-- Three-fold confirmation, calibration/threshold fitting, nested evaluation, uncertainty, fusion and the reserved test remain separate.
+- Six epochs on one inner split measure early learning rather than final potential.
+- Choosing recipes and epochs on these validation labels makes the results optimistic.
+- The shared weak preparation controls this comparison; it does not establish each family's best preparation.
+- Weighted fitting objectives and raw score scales differ; 0.5 is an untuned reporting cutoff.
+- Paused or unmatched trials cannot lose a comparison; short results cannot rule out slower families.
+- Longer confirmation, calibration, full outer evaluation, fusion and the reserved test remain pending.
 """)
 md("""
 ## Summary
 
-The observations below come from executed saved predictions on matching patients.
-They describe the six-epoch experiment; no final architecture winner is selected.
+The saved comparison shows early ranking, fixed-cutoff errors, reliability and
+cost on matching patients. The family observations below are exploratory.
+No final architecture is selected; confirming the selection process on independent
+outer patients remains necessary.
 """)
 code("""
 if matched:
@@ -277,6 +335,7 @@ notebook.metadata.language_info = {"name": "python"}
 nbf.validate(notebook)
 for index, cell in enumerate(cells):
     if cell.cell_type == "code": compile(cell.source, f"architecture_report_cell_{index}", "exec")
-path = ROOT / "notebooks/05e_image_architecture_comparison_d1.ipynb"
+path = ROOT / "notebooks/Subset/10_image_architecture_comparison.ipynb"
+path.parent.mkdir(parents=True, exist_ok=True)
 nbf.write(notebook, path)
 print(f"Created {path} ({len(cells)} cells)")

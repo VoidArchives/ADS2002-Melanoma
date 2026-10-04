@@ -1,0 +1,254 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/README.md</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/README.md · code was not executed</div><h1>Notebook workflows</h1>
+<p>Active workflows are separated by dataset directory and numbered consecutively:</p>
+<ul>
+<li><code>Subset/</code>: subset dataset under <code>data/subset</code>, notebooks 01–15.</li>
+<li><code>Full/</code>: full dataset under <code>data/raw</code> and <code>data/processed</code>, notebooks 01–03.</li>
+<li><code>archive/</code>: historical experiments, outside the active sequence.</li>
+</ul>
+<p><code>Subset</code> was previously called d1; <code>Full</code> was d2. Existing data files, saved runs
+and models retain their original <code>_d1</code>/<code>_d2</code> identifiers so provenance still
+matches. The folder name identifies the notebook&#39;s dataset; keep the two branches&#39;
+results and evaluation splits separate.</p>
+<h2>Start here</h2>
+<p>Read a notebook&#39;s opening question, saved figures, <code>Limitations</code> and <code>Summary</code>
+before running its code. Each code section explains the operation and why it is
+needed; figure guides explain the comparison to make and its limits. The
+<a href="concepts.html">concept guide</a> defines shared terms such as out-of-fold predictions,
+average precision and calibration.</p>
+<ul>
+<li><strong>Understand the data:</strong> Subset 01–03 show cleaning, exploration and patient
+splitting. Full 01–03 provide a separate preparation and inventory reference.</li>
+<li><strong>Understand metadata models:</strong> Subset 04 introduces simple baselines; 05–07
+compare alternatives; 08 checks decisions, probability estimates and subgroups.</li>
+<li><strong>Understand image models:</strong> Subset 09–10 compare saved pilots; 11–12 document
+transformation quality checks and incomplete experiments; 13 studies variation
+in predictions and whether it helps prioritise images for review.</li>
+<li><strong>See what remains:</strong> 14–15 are plans for combining models and evaluating a
+frozen workflow. They contain no fusion or reserved-test results.</li>
+</ul>
+<p>“Executed” means outputs are saved, not that a method is a final model. Image
+pilots reuse one inner validation split, while metadata out-of-fold (OOF)
+predictions combine held-out development folds. Neither replaces an independent
+reserved test. Opening saved outputs does not require training; running preparation
+or modelling cells can write files, as described in each notebook.</p>
+<h2>Subset sequence</h2>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="Subset/01_data_cleaning.html">01 Data cleaning</a></td>
+<td>Validate and prepare subset data</td>
+<td>Implemented; file-writing preparation</td>
+</tr>
+<tr>
+<td><a href="Subset/02_data_exploration.html">02 Data exploration</a></td>
+<td>Inspect labels, metadata and images</td>
+<td>Executed</td>
+</tr>
+<tr>
+<td><a href="Subset/03_patient_splitting.html">03 Patient splitting</a></td>
+<td>Keep every patient&#39;s images in one fold</td>
+<td>Implemented; patient-grouped folds</td>
+</tr>
+<tr>
+<td><a href="Subset/04_dummy_logistic_baseline.html">04 Dummy/logistic baseline</a></td>
+<td>Establish simple prediction baselines</td>
+<td>Executed; exploratory cutoff example</td>
+</tr>
+<tr>
+<td><a href="Subset/05_metadata_models.html">05 Metadata models</a></td>
+<td>Compare metadata model families</td>
+<td>Executed; development OOF comparisons</td>
+</tr>
+<tr>
+<td><a href="Subset/06_metadata_neural_network.html">06 Metadata neural network</a></td>
+<td>Evaluate three predeclared NN runs</td>
+<td>Executed; development OOF predictions</td>
+</tr>
+<tr>
+<td><a href="Subset/07_metadata_tuning.html">07 Metadata tuning</a></td>
+<td>Check metadata hyperparameter choices</td>
+<td>Executed; development experiment</td>
+</tr>
+<tr>
+<td><a href="Subset/08_metadata_robustness.html">08 Metadata robustness</a></td>
+<td>Evaluate training-selected cutoffs, calibration and subgroups</td>
+<td>Executed; reserved test untouched</td>
+</tr>
+<tr>
+<td><a href="Subset/09_image_b0_pilot.html">09 Image B0 pilot</a></td>
+<td>Report four saved B0 recipes</td>
+<td>Executed; inner-validation diagnostics</td>
+</tr>
+<tr>
+<td><a href="Subset/10_image_architecture_comparison.html">10 Image architecture comparison</a></td>
+<td>Compare saved B0, DenseNet121 and ConvNeXt-Tiny pilots</td>
+<td>Executed; exploratory inner split</td>
+</tr>
+<tr>
+<td><a href="Subset/11_image_augmentation.html">11 Image augmentation</a></td>
+<td>Report the weak B0 control and stronger-profile quality gate</td>
+<td>Executed; stronger condition blocked</td>
+</tr>
+<tr>
+<td><a href="Subset/12_image_lighting.html">12 Image lighting</a></td>
+<td>Record the optional CLAHE experiment</td>
+<td>Deferred; displays the weak control</td>
+</tr>
+<tr>
+<td><a href="Subset/13_image_uncertainty.html">13 Image uncertainty</a></td>
+<td>Compare dropout/TTA variation and referral baselines</td>
+<td>Executed; exploratory inner-validation diagnostics</td>
+</tr>
+<tr>
+<td><a href="Subset/14_fusion_model.html">14 Fusion model</a></td>
+<td>Combine image and metadata predictions</td>
+<td>Planned; no results</td>
+</tr>
+<tr>
+<td><a href="Subset/15_final_evaluation.html">15 Final evaluation</a></td>
+<td>Evaluate the frozen workflow</td>
+<td>Planned; reserved test unevaluated</td>
+</tr>
+</tbody></table>
+<h2>Full sequence</h2>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="Full/01_data_cleaning.html">01 Data cleaning</a></td>
+<td>Validate and prepare full-dataset metadata</td>
+<td>Implemented; separate Full preparation</td>
+</tr>
+<tr>
+<td><a href="Full/02_data_exploration.html">02 Data exploration</a></td>
+<td>Inspect the full dataset</td>
+<td>Executed</td>
+</tr>
+<tr>
+<td><a href="Full/03_image_inventory.html">03 Image inventory</a></td>
+<td>Check raw image filenames and availability</td>
+<td>Image-file utility</td>
+</tr>
+</tbody></table>
+<h2>Historical archive</h2>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Historical purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="archive/image_model_three_epoch_fold0.html">Image model: three-epoch fold 0</a></td>
+<td>Original EfficientNet-B0 prototype</td>
+</tr>
+<tr>
+<td><a href="archive/image_uncertainty_three_epoch_fold0.html">Image uncertainty: three-epoch fold 0</a></td>
+<td>Original MC-dropout/TTA prototype</td>
+</tr>
+<tr>
+<td><a href="archive/legacy_training.html">Legacy training</a></td>
+<td>Older mixed scratch work</td>
+</tr>
+</tbody></table>
+<p>Read these archives to inspect their original code and execution. They retain
+historical paths and settings and are not steps to rerun in the current workflow.
+Their models, predictions, metrics, figures and training histories remain
+unchanged. Older preservation receipts keep their original notebook names and
+verify the corresponding archives against the recorded original hashes.
+Use the <a href="archive/README.html">archive reading guides</a> for context and figure
+interpretation while the original notebooks remain unchanged.</p>
+<h2>Metadata evaluation workflow (Subset)</h2>
+<p>If regenerating metadata results, run <code>Subset/06_metadata_neural_network.ipynb</code>,
+then <code>Subset/08_metadata_robustness.ipynb</code>.
+The first notebook evaluates three predeclared NN runs. The second uses training-only
+cutoff and calibration selection, patient-bootstrap confidence intervals, subgroup
+checks and a frozen spline model fitted without opening the reserved test labels.</p>
+<p>See <a href="../docs/metadata_methodology.html">the plain-language methodology guide</a> for why
+each step is needed, how it works and what its results can establish. The earlier
+04/05 threshold examples are exploratory; use 08 for held-out evaluation of a
+training-selected cutoff. All development OOF results remain development evidence.</p>
+<p>The dependency snapshot for 06/08 is <code>requirements-metadata.txt</code>. Run the notebooks
+with the project environment, for example:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe -m jupyter execute --inplace --timeout=900 notebooks/Subset/06_metadata_neural_network.ipynb
+.venv/Scripts/python.exe -m jupyter execute --inplace --timeout=900 notebooks/Subset/08_metadata_robustness.ipynb
+</code></pre>
+<p>The later final-test script is <code>scripts/evaluate_metadata_holdout.py</code>; the guide
+explains its frozen-model and one-attempt controls. It has been tested with synthetic
+data, but the actual reserved test remains unevaluated.</p>
+<h2>Image pilot workflow (Subset)</h2>
+<p><code>Subset/09_image_b0_pilot.ipynb</code> uses shared utilities and <code>configs/image_model.yaml</code>.
+The first pilot compares four B0 learning-rate/loss settings on one inner
+patient split, excluding outer fold 0 entirely. Its predictions are inner
+validation scores, not final OOF evidence. It does not read the reserved test.</p>
+<p>See <a href="../docs/image_methodology.html">the image methodology and staged roadmap</a>.
+The existing <code>.venv</code> has CUDA enabled; its dependency snapshot is
+<code>requirements-image.txt</code>. The original pilot training command is retained in its
+archived source snapshot. Current code changes must not bypass the historical
+manifest&#39;s source mismatch. The architecture experiment has its own runner:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe scripts/run_image_architecture.py --config configs/image_architecture_pilot.yaml --session-file results/image_d1_runs/architecture_pilot_3h_v1/session.json --resume
+</code></pre>
+<p>That command respects the supplied session deadline and training allowance; an
+expired session cannot silently allocate more time. Future resumption requires
+an explicitly allocated new session. Both image notebooks default to saved
+results. Six-epoch comparisons do not remove slower families from later work.</p>
+<p>To save all result tables and figures using the explicitly selected environment:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe scripts/execute_image_notebook.py
+.venv/Scripts/python.exe scripts/execute_image_notebook.py --notebook Subset/10_image_architecture_comparison.ipynb
+</code></pre>
+<p>The controlled augmentation utilities use <code>configs/image_augmentation.yaml</code>
+and <code>scripts/run_image_conditions.py</code>. Quality approval, source-compatible
+checkpoints and the fixed session deadline are mandatory. The current stronger
+profile remains blocked; a later safer profile requires a new declared experiment.
+CLAHE was not installed or trained because the complete safe A/B prerequisite
+was unavailable. Do not bypass the gate or extend an expired session silently.</p>
+<p>Rebuild and execute the new saved-result reports without training:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe scripts/build_image_condition_notebooks.py --execute
+</code></pre>
+<h2>Image uncertainty workflow (Subset)</h2>
+<p><code>Subset/13_image_uncertainty.ipynb</code> selects an existing run and recipe explicitly.
+Its default is condition A of <code>b0_augmentation_12e_v1</code>, recipe <code>lr3e5_sqrt</code>, using
+the recorded best checkpoint at epoch 6. Supported DenseNet121 and ConvNeXt-Tiny
+recipes from <code>architecture_pilot_3h_v1</code> can be selected explicitly; the notebook
+does not promote the highest pilot AP to a final architecture choice.</p>
+<p>The notebook reconstructs the checkpoint&#39;s deterministic preparation and saved
+inner-validation membership, and checks that evaluation patients were absent
+from fitting. The current split has 1,834 images from 113 patients, including 33
+malignant images, and excludes outer fold 0. These are inner-validation
+diagnostics, not full OOF or final-test results.</p>
+<p>Run a short smoke check before the full default notebook:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke
+.venv/Scripts/python.exe scripts/execute_image_notebook.py --notebook Subset/13_image_uncertainty.ipynb
+</code></pre>
+<p>Alternative smoke checks require an explicit run, architecture and recipe:</p>
+<pre><code class="language-powershell">.venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke --run-id architecture_pilot_3h_v1 --architecture densenet121 --recipe-id low_none
+.venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke --run-id architecture_pilot_3h_v1 --architecture convnext_tiny --recipe-id low_none
+</code></pre>
+<p>Set the matching <code>SOURCE_RUN</code>, <code>ARCHITECTURE</code> and <code>RECIPE_ID</code> in the notebook
+before full alternative inference. Architecture recipe slots are <code>low_none</code>,
+<code>low_sqrt</code>, <code>high_none</code> and <code>high_sqrt</code>.</p>
+<p>Each execution writes to a separate directory under
+<code>results/image_uncertainty_runs</code>, with raw predictions, summaries, figures,
+checks and provenance. It uses 30 dropout passes with only explicit dropout
+active, and separate identity/horizontal/vertical/both-flip TTA views. The
+referral comparisons use common deterministic scores and fractions for dropout
+SD, TTA SD, ordinary score, predictive entropy and repeated seeded random
+ranking, with paired patient-bootstrap intervals. Retained classification error
+uses the fixed raw cutoff 0.5; Brier error checks the score scale. These and the
+reliability checks are descriptive; no calibrator or referral threshold is
+fitted on pilot labels.</p>
+<p>The historical archive retains the original code, execution and result paths.
+Use it to read the old three-epoch fold-0 experiment. New inference does not
+rewrite its results, checkpoints or training histories, and does not train,
+implement fusion or evaluate the reserved test.</p>

@@ -1,0 +1,159 @@
+{
+  "architecture_policy": {
+    "architecture": "efficientnet_b0",
+    "centre_crop": false,
+    "dropout": 0.2,
+    "head_lr_parameters": "new_output_linear_only",
+    "image_size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "native_pretrained_preparation": {
+      "crop_size": [
+        224
+      ],
+      "interpolation": "bicubic",
+      "resize_size": [
+        256
+      ]
+    },
+    "native_stochastic_depth_retained": true,
+    "normalisation_policy": "batchnorm_statistics_and_affines_frozen",
+    "output_head": "dropout_then_one_logit_linear",
+    "preparation": "whole_image_bilinear_resize_imagenet_normalisation",
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "transformation_profile": {
+      "augmentation": {
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_fill": 0,
+          "rotation_interpolation": "nearest",
+          "vertical_flip_probability": 0.5
+        },
+        "version": "weak_v1"
+      },
+      "centre_crop": false,
+      "image_size": 224,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "preprocessing": {
+        "parameters": {},
+        "version": "none_v1"
+      },
+      "resize_antialias": true,
+      "resize_interpolation": "bilinear"
+    },
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "compatibility_hash": "0116edb58f1900c4c1af7c567e534aa678cc885ac81f4917a4ed666c6f2b0a32",
+  "environment": {
+    "cuda_version": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "fitting": "a9c4c647c8fcca43459f07e3b1622da5e8fc1e87fd5994118b7c6ac031d7b010",
+  "initial_model_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "initial_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "manifest": {
+    "calibration_config_sha256": "82616fd62f9dcc15f5e9d3a670d7e70f13d413a363407e1f65aeaca56c211277",
+    "calibration_source_sha256": {
+      "src/melanoma_detection/image_model.py": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+      "src/melanoma_detection/image_nested.py": "ac8d0e0bbda6eea6591155a89d6ef09ebc58bc208c8ff67740623c65660399c4",
+      "src/melanoma_detection/image_nested_calibration.py": "7098fc2f77c33e136827f34b3e093271b1348906c79e5c80af14acd1b17d81e4",
+      "src/melanoma_detection/image_pilot.py": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+      "src/melanoma_detection/image_transforms.py": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+      "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+      "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+      "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9"
+    },
+    "fixed_epochs": 8,
+    "inner_fold": 1,
+    "outer_fold": 1,
+    "protocol": "fixed_duration_training_oof_sigmoid_v1",
+    "purpose": "training_only_fixed_duration_oof_refit",
+    "raw_fold_training_compatibility_sha256": "4d99d161e6d388d74cfd8a387a4de3cd1399de79e724853abf48f38ea01ec8c6",
+    "recipe": {
+      "backbone_lr": 0.0001,
+      "id": "lr1e4_none",
+      "loss_weight": "none"
+    },
+    "reference_run_id": "b0_nested_5fold_5h_v1",
+    "run_id": "b0_nested_calibration_5h_v1",
+    "schema_version": 1
+  },
+  "microbatch": 64,
+  "model_factory": "efficientnet_b0",
+  "positive_weight": 1.0,
+  "preprocessing_environment": {
+    "opencv": "not_used"
+  },
+  "pretrained_identity": {
+    "file_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "kind": "torchvision",
+    "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "recipe": {
+    "backbone_lr": 0.0001,
+    "id": "lr1e4_none",
+    "loss_weight": "none"
+  },
+  "source_sha256": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+  "spec": {
+    "architecture": "efficientnet_b0",
+    "augmentation": "weak",
+    "dropout": 0.2,
+    "image_size": 224,
+    "preprocessing": "none",
+    "weights": "IMAGENET1K_V1"
+  },
+  "stopping_reason": "complete",
+  "training": {
+    "amp": true,
+    "effective_batch": 64,
+    "gradient_clip": 1.0,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "min_lr_factor": 0.1,
+    "min_microbatch": 4,
+    "num_workers": 0,
+    "schedule_epochs": 30,
+    "seed": 42,
+    "warmup_epochs": 1,
+    "weight_decay": 0.0001
+  },
+  "training_purpose": "fixed_duration_refit",
+  "transformation_source_sha256": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+  "validation": null
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "historical_files_unchanged": 408,
+  "outer_checkpoints_verified": 5,
+  "prediction_roundtrips": [
+    {
+      "fold": 0,
+      "images": 1370,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 1,
+      "images": 1372,
+      "maximum_absolute_difference": 9.974659986866641e-17
+    },
+    {
+      "fold": 2,
+      "images": 1381,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 3,
+      "images": 1371,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 4,
+      "images": 1370,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    }
+  ]
+}

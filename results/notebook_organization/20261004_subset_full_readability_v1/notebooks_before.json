@@ -1,0 +1,25 @@
+{
+  "files": {
+    "notebooks/archive/image_model_three_epoch_fold0.ipynb": "9e07d190a31f199b9096db75350797a7a8ccdc41ce2500c86d0d7140fb3b25cc",
+    "notebooks/archive/image_uncertainty_three_epoch_fold0.ipynb": "e7048213c2a89032c4f922303b53f126730c56c8b4be31fec1a9dfb3c8037514",
+    "notebooks/archive/legacy_training.ipynb": "bd5f3cbcbf7797ed4d467d7b9c06d30ff1464cac774090043289a6aef2c17904",
+    "notebooks/Full/01_data_cleaning.ipynb": "f67fc0ed03beb830ff54ac9b612157b256a7cf894282297e1c58a72fc3dbe632",
+    "notebooks/Full/02_data_exploration.ipynb": "68546d5d867886ec2b800d400da1cc84b5dd79e08c36243030331962d50d51c5",
+    "notebooks/Full/03_image_inventory.ipynb": "8f0e65743ba5cc51a99c2b2465cfe7c99e61e78cd2096242bd5d4d446464bfac",
+    "notebooks/Subset/01_data_cleaning.ipynb": "2a8ca191a49bb292178ee231153f691d723945ec6ed4d1e3535e4a5dc2c918ee",
+    "notebooks/Subset/02_data_exploration.ipynb": "d5b92abb508d23dca3212dc0c9bed9196edf6730452b34c7825563981dff4f78",
+    "notebooks/Subset/03_patient_splitting.ipynb": "a8cd35d4eb0660911a27caf0417f5c1f1e36f5e27cbcc9a02b46c7bfadaf29bd",
+    "notebooks/Subset/04_dummy_logistic_baseline.ipynb": "96165f9017e1b4167356aa667b9779bb00544486bdc2023d96765bf6bcd6ae5a",
+    "notebooks/Subset/05_metadata_models.ipynb": "f96af58a266c301671b33b22eb3c18fb4dbbde58e153382e3012e678d1667c81",
+    "notebooks/Subset/06_metadata_neural_network.ipynb": "431437802a2f5bc0f2c045a8a77fcf7623b0396100ecb98411b74c0b9b16f57c",
+    "notebooks/Subset/07_metadata_tuning.ipynb": "44741637e558cef811250c1c6f54f24a98d0025cab4f4d76f412bbc85dc4253f",
+    "notebooks/Subset/08_metadata_robustness.ipynb": "a46b582d021af2eca5f5414c7d24f765a72d343906c159a2de79fa67d838788b",
+    "notebooks/Subset/09_image_b0_pilot.ipynb": "3ef8e6051e1b65434af2e3640082ed2fbd38a30a15828927170073dfef4160aa",
+    "notebooks/Subset/10_image_architecture_comparison.ipynb": "6399e97cfde4e92ff3e9cc40a2daea99e3fe04231516ad7b0ab01864bb0e2ae6",
+    "notebooks/Subset/11_image_augmentation.ipynb": "195c6c0cb75d9fd91c947e466a8e602906e1db1c579dd056f7c5e1a1e3ca8080",
+    "notebooks/Subset/12_image_lighting.ipynb": "960b4ff3248f5838c4d0f41176bbb62715ac47852dd7471fcb2dca6de6795385",
+    "notebooks/Subset/13_image_uncertainty.ipynb": "c907c82ca2e32722a79dda940a7510f2488c244f149ecc6a5e621df8cdd60a95",
+    "notebooks/Subset/14_fusion_model.ipynb": "b5f85bf50b41bb5baa87b76b87969f5fce5e92bdedad01966179a9aaa26e4291",
+    "notebooks/Subset/15_final_evaluation.ipynb": "9fd5fcd6e656ea92aff64d13217fa02299703e9552cd471a45861a671e6a4162"
+  }
+}

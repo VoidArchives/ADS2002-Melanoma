@@ -1,0 +1,66 @@
+[
+  {
+    "recipe": {
+      "id": "lr3e5_none",
+      "backbone_lr": 3e-05,
+      "loss_weight": "none"
+    },
+    "status": "complete",
+    "completed_epochs": 6,
+    "best_epoch": 5,
+    "best_metrics": {
+      "average_precision": 0.11889803287632343,
+      "roc_auc": 0.7194525904203324,
+      "log_loss": 0.08896729835562911,
+      "brier": 0.017726410452234623
+    }
+  },
+  {
+    "recipe": {
+      "id": "lr1e4_none",
+      "backbone_lr": 0.0001,
+      "loss_weight": "none"
+    },
+    "status": "complete",
+    "completed_epochs": 6,
+    "best_epoch": 5,
+    "best_metrics": {
+      "average_precision": 0.12811115178445706,
+      "roc_auc": 0.7479522701992113,
+      "log_loss": 0.08733455305279657,
+      "brier": 0.0182504637895546
+    }
+  },
+  {
+    "recipe": {
+      "id": "lr3e5_sqrt",
+      "backbone_lr": 3e-05,
+      "loss_weight": "sqrt_ratio"
+    },
+    "status": "complete",
+    "completed_epochs": 6,
+    "best_epoch": 5,
+    "best_metrics": {
+      "average_precision": 0.12128520962039804,
+      "roc_auc": 0.7242221997505646,
+      "log_loss": 0.134548439613647,
+      "brier": 0.03357696820231076
+    }
+  },
+  {
+    "recipe": {
+      "id": "lr1e4_sqrt",
+      "backbone_lr": 0.0001,
+      "loss_weight": "sqrt_ratio"
+    },
+    "status": "complete",
+    "completed_epochs": 6,
+    "best_epoch": 6,
+    "best_metrics": {
+      "average_precision": 0.14176598113628447,
+      "roc_auc": 0.760019550342131,
+      "log_loss": 0.11123519266170362,
+      "brier": 0.026915880955845437
+    }
+  }
+]

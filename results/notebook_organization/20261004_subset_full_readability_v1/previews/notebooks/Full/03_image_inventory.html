@@ -1,0 +1,107 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/Full/03_image_inventory.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/Full/03_image_inventory.ipynb · code was not executed</div><section id="cell-0"><h1>03 · Check the Full image inventory</h1>
+<p><strong>Question:</strong> Does every training image named in the metadata have both expected image files, with no missing, extra or duplicated names?</p>
+<p><strong>Inputs:</strong> <code>data/raw/train.csv</code>, <code>data/raw/jpeg/train</code> and <code>data/raw/train</code>. <strong>Output:</strong> an inventory table and a pass/fail check; no files are changed. JPEG is a common image format; DICOM is a medical-imaging format. Matching names does not prove their contents agree.</p>
+<p>This supports <a href="01_data_cleaning.html">Full cleaning</a> and <a href="02_data_exploration.html">Full exploration</a>. Check filenames before image modelling so missing files are found early; opening and visually checking the images is a separate step.</p>
+</section>
+<section id="cell-1"><h2>Setup</h2>
+<p>Set <code>RAW_DATA_DIR</code> to the folder containing the full dataset. JPEG and DICOM are two file formats for the same source images. This check expects one file of each format for every image name in <code>train.csv</code>.</p>
+</section>
+<section id="cell-2"><details><summary>Code cell 2 · execution 1</summary><pre>from pathlib import Path
+
+from melanoma_detection.image_validation import check_image_inventory
+
+
+# Change this one path to your local raw-data directory.
+RAW_DATA_DIR = Path(
+    r&quot;C:/Users/thoma/Documents/GitHub/ADS2002-Melanoma/data/raw&quot;
+)
+
+TRAIN_CSV = RAW_DATA_DIR / &quot;train.csv&quot;
+JPEG_TRAIN_DIR = RAW_DATA_DIR / &quot;jpeg&quot; / &quot;train&quot;
+DICOM_TRAIN_DIR = RAW_DATA_DIR / &quot;train&quot;
+
+print(f&quot;CSV:   {TRAIN_CSV}&quot;)
+print(f&quot;JPEG:  {JPEG_TRAIN_DIR}&quot;)
+print(f&quot;DICOM: {DICOM_TRAIN_DIR}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>CSV:   C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data\raw\train.csv
+JPEG:  C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data\raw\jpeg\train
+DICOM: C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data\raw\train
+</pre></details></section>
+<section id="cell-3"><h2>Compare the metadata with both image folders</h2>
+<p>The check matches the image name in the CSV with each filename, ignoring the extension. It also looks for files that have no matching CSV row and names that appear more than once.</p>
+</section>
+<section id="cell-4"><details><summary>Code cell 4 · execution 2</summary><pre>report = check_image_inventory(
+    train_csv=TRAIN_CSV,
+    jpeg_directory=JPEG_TRAIN_DIR,
+    dicom_directory=DICOM_TRAIN_DIR,
+)
+</pre></details></section>
+<section id="cell-5"><h2>Results</h2>
+<h3>Read the count table</h3>
+<p>The first four rows show how many metadata rows, unique image names and files were found. Matching totals are useful, but totals alone could hide a missing image paired with an extra image. The remaining rows check those mismatches directly; all of those counts should be zero.</p>
+<p>There is no graph here because the question is an exact inventory check. The table tells us which check failed and how many filenames need attention.</p>
+</section>
+<section id="cell-6"><details><summary>Code cell 6 · execution 3</summary><pre>print(f&quot;{'Check':&lt;32} {'Count':&gt;8}&quot;)
+print(&quot;-&quot; * 41)
+for check_name, count in report.summary_rows():
+    print(f&quot;{check_name:&lt;32} {count:&gt;8,}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Check                               Count
+-----------------------------------------
+CSV rows                           33,126
+unique CSV image names             33,126
+JPEG files                         33,126
+DICOM files                        33,126
+duplicated CSV image names              0
+CSV names missing JPEG                  0
+CSV names missing DICOM                 0
+JPEG files absent from CSV              0
+DICOM files absent from CSV             0
+duplicate JPEG stems                    0
+duplicate DICOM stems                   0
+</pre></details></section>
+<section id="cell-7"><h3>Inspect any mismatched names</h3>
+<p>If a mismatch count is above zero, the output below lists up to 20 example names. A missing name means the CSV expects a file that was not found. A file absent from the CSV may be an extra file or belong to another dataset. These examples help locate the issue; a list of 20 is a sample, not the full count.</p>
+</section>
+<section id="cell-8"><details><summary>Code cell 8 · execution 4</summary><pre>for category, examples in report.mismatch_examples(limit=20).items():
+    print(f&quot;{category} ({len(examples)} shown): {list(examples)}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>duplicate_csv_names (0 shown): []
+missing_jpeg (0 shown): []
+missing_dicom (0 shown): []
+orphan_jpeg (0 shown): []
+orphan_dicom (0 shown): []
+duplicate_jpeg_stems (0 shown): []
+duplicate_dicom_stems (0 shown): []
+</pre></details></section>
+<section id="cell-9"><h2>Check that the inventory passes</h2>
+<p>Both checks below should be <code>True</code>. The strict check also rejects duplicate names and extra files. Passing confirms that the filenames match; it does not confirm that the images can be opened or that their labels are correct.</p>
+</section>
+<section id="cell-10"><details><summary>Code cell 10 · execution 5</summary><pre>print(
+    &quot;Every CSV image has JPEG and DICOM:&quot;,
+    report.all_csv_rows_have_both_formats,
+)
+print(&quot;Directories exactly match train.csv:&quot;, report.directories_exactly_match_csv)
+
+# strict=True also rejects duplicate identifiers/stems and orphan image files.
+report.assert_complete(strict=True)
+print(&quot;All image-inventory checks passed.&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Every CSV image has JPEG and DICOM: True
+Directories exactly match train.csv: True
+All image-inventory checks passed.
+</pre></details></section>
+<section id="cell-11"><h2>Reuse the check</h2>
+<p>The same function can check image folders from another notebook once their paths are set.</p>
+<pre><code class="language-python">from melanoma_detection.image_validation import check_image_inventory
+
+report = check_image_inventory(TRAIN_CSV, JPEG_TRAIN_DIR, DICOM_TRAIN_DIR)
+report.assert_complete(strict=True)
+</code></pre>
+</section>
+<section id="cell-12"><h2>Limitations</h2>
+<p>This check compares filenames. It does not open each image, detect corrupted contents, compare the appearance of duplicate images, or verify the diagnosis attached to an image. It also does not check whether the JPEG and DICOM versions show the same lesion.</p>
+<p>The saved result describes the folders present when the notebook ran. Changing those folders or the CSV requires another check. No model is trained, so this notebook cannot establish prediction performance.</p>
+</section>
+<section id="cell-13"><h2>Summary</h2>
+<p>The saved check found 33,126 training images, 33,126 JPEG files and 33,126 DICOM files. It found no missing files, extra files or duplicate names, and the strict inventory check passed.</p>
+<p>Keep this check as a preparation step. There is no model to retain at this stage. Before image training, check that the files can be opened as well as matched by name, then continue with the appropriate dataset&#39;s image workflow.</p>
+<p>Return to the <a href="../README.html">notebook index</a> to choose a workflow. Full-dataset model training is not implemented here.</p>
+</section>

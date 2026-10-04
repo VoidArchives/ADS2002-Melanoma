@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "existing_result_and_model_files_unchanged": 445,
+  "notebook_checks": {
+    "notebooks": 21,
+    "code_cells": 168,
+    "outputs": 353,
+    "saved_outputs_and_execution_counts_unchanged": true,
+    "archive_bytes_unchanged": true,
+    "missing_links": [],
+    "stale_active_notebook_references": []
+  },
+  "active_d1_notebooks": 15,
+  "active_d2_notebooks": 3,
+  "historical_archives": 3,
+  "test_suite": {
+    "run": 176,
+    "passed": 175,
+    "skipped": 1,
+    "failed": 0
+  },
+  "builder_notebooks_match": [
+    "notebooks/d1/09_image_b0_pilot.ipynb",
+    "notebooks/d1/10_image_architecture_comparison.ipynb",
+    "notebooks/d1/11_image_augmentation.ipynb",
+    "notebooks/d1/12_image_lighting.ipynb",
+    "notebooks/d1/13_image_uncertainty.ipynb"
+  ],
+  "read_only_smoke_checks": [
+    "nested-directory baseline setup",
+    "metadata robustness saved-source handoff"
+  ],
+  "models_retrained": false,
+  "reserved_test_evaluated": false
+}

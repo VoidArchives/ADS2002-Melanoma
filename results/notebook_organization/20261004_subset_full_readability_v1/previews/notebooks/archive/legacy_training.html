@@ -1,0 +1,134 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/archive/legacy_training.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/archive/legacy_training.ipynb · code was not executed</div><section id="cell-0"><h1>Earlier data-preparation experiments</h1>
+<p>This notebook keeps the earlier attempts to create a patient-based subset, assign validation folds and inspect missing metadata. Its question was whether the full training dataset could be divided while keeping each patient&#39;s images together.</p>
+<p>It predates the current numbered notebooks. There is no previous notebook in the active workflow that feeds into it. The current cleaning, exploration and patient-splitting notebooks replace these experiments; use those notebooks for new work.</p>
+<p>Keep this file as a record of how the approach developed. The code mixes older folder paths and writes a fold file, so reading the saved outputs is safer than running it as part of the current workflow.</p>
+</section>
+<section id="cell-1"><h2>Try a patient-based subset</h2>
+<p>The first cell takes one of ten groups as a smaller dataset. It groups images by patient so the same person&#39;s images stay together. The folder path belongs to an earlier checkout.</p>
+</section>
+<section id="cell-2"><details><summary>Code cell 2</summary><pre>import pandas as pd
+from sklearn.model_selection import StratifiedGroupKFold
+
+# Load metadata
+train_df = pd.read_csv(&quot;C:/Users/thoma/Documents/Monash/ADS2002/Melanoma-Detection/data/raw/train.csv&quot;)
+
+sgkf = StratifiedGroupKFold(
+    n_splits=10,
+    shuffle=True,
+    random_state=42
+)
+
+# We only need one of the 10 folds
+for _, subset_idx in sgkf.split(
+    X=train_df,
+    y=train_df[&quot;target&quot;],
+    groups=train_df[&quot;patient_id&quot;]
+):
+    subset_df = train_df.iloc[subset_idx].copy()
+    break</pre></details></section>
+<section id="cell-3"><h2>Try five validation folds</h2>
+<p>The next cell assigns the full dataset to five folds and writes a CSV. Read the table&#39;s <code>count</code> as the number of images, <code>sum</code> as the number of malignant images and <code>mean</code> as their fraction in that fold. Similar fractions show similar class balance; they do not establish model performance.</p>
+</section>
+<section id="cell-4"><details><summary>Code cell 4 · execution 2</summary><pre>from pathlib import Path
+
+import pandas as pd
+from sklearn.model_selection import StratifiedGroupKFold
+
+DATA_DIR = Path(&quot;../data&quot;).resolve()
+RAW_DIR = DATA_DIR / &quot;raw&quot;
+
+df = pd.read_csv(&quot;C:/Users/thoma/Documents/GitHub/ADS2002-Melanoma/data/raw/train.csv&quot;)
+
+splitter = StratifiedGroupKFold(
+    n_splits=5,
+    shuffle=True,
+    random_state=42,
+)
+
+df[&quot;fold&quot;] = -1
+
+for fold, (_, val_idx) in enumerate(
+    splitter.split(
+        X=df,
+        y=df[&quot;target&quot;],
+        groups=df[&quot;patient_id&quot;],
+    )
+):
+    df.loc[val_idx, &quot;fold&quot;] = fold
+
+# Check class balance in each fold
+print(
+    df.groupby(&quot;fold&quot;)[&quot;target&quot;]
+      .agg([&quot;count&quot;, &quot;sum&quot;, &quot;mean&quot;])
+)
+
+output_dir = DATA_DIR / &quot;processed&quot;
+output_dir.mkdir(exist_ok=True)
+
+df.to_csv(output_dir / &quot;train_folds.csv&quot;, index=False)</pre></details><details class="output"><summary>Saved text output</summary><pre>      count  sum      mean
+fold                      
+0      6627  117  0.017655
+1      6625  116  0.017509
+2      6621  116  0.017520
+3      6628  117  0.017652
+4      6625  118  0.017811
+</pre></details></section>
+<section id="cell-5"><h2>Inspect the subset size and class balance</h2>
+<p>The printed percentages compare the malignant fraction in the full dataset and the subset. The patient counts help show how many separate people contribute those images. There is no graph because these cells report a few exact counts and proportions.</p>
+</section>
+<section id="cell-6"><details><summary>Code cell 6 · execution 2</summary><pre>print(&quot;Original:&quot;, len(train_df))
+print(&quot;Subset:&quot;, len(subset_df))
+print(&quot;Percentage:&quot;, len(subset_df) / len(train_df) * 100)
+
+print(&quot;\nOriginal target distribution:&quot;)
+print(train_df[&quot;target&quot;].value_counts(normalize=True))
+
+print(&quot;\nSubset target distribution:&quot;)
+print(subset_df[&quot;target&quot;].value_counts(normalize=True))
+
+print(&quot;\nPatients in original:&quot;, train_df[&quot;patient_id&quot;].nunique())
+print(&quot;Patients in subset:&quot;, subset_df[&quot;patient_id&quot;].nunique())</pre></details><details class="output"><summary>Saved text output</summary><pre>Original: 33126
+Subset: 3568
+Percentage: 10.770995592585884
+
+Original target distribution:
+target
+0    0.98237
+1    0.01763
+Name: proportion, dtype: float64
+
+Subset target distribution:
+target
+0    0.983744
+1    0.016256
+Name: proportion, dtype: float64
+
+Patients in original: 2056
+Patients in subset: 207
+</pre></details></section>
+<section id="cell-7"><h2>Count missing sex values</h2>
+<p>This cell loads another older fold file and counts missing values. Its saved count relates to that file, not necessarily the current d1 development data.</p>
+</section>
+<section id="cell-8"><details><summary>Code cell 8 · execution 8</summary><pre>df = pd.read_csv(&quot;C:/Users/thoma/Documents/Monash/ADS2002/Melanoma-Detection/data/processed/train_folds.csv&quot;)
+df[&quot;sex&quot;].isna().sum()</pre></details><details class="output"><summary>Saved text output</summary><pre>65</pre></details></section>
+<section id="cell-9"><h2>Try an explicit category for missing sex</h2>
+<p>Replacing missing sex values with <code>Unknown</code> keeps those rows available for later modelling. A zero count after replacement means the missing values now have a label; it does not mean the original sex information was recovered.</p>
+</section>
+<section id="cell-10"><details><summary>Code cell 10 · execution 15</summary><pre>df[&quot;sex&quot;] = df[&quot;sex&quot;].fillna(&quot;Unknown&quot;)
+df[&quot;sex&quot;].isna().sum()</pre></details><details class="output"><summary>Saved text output</summary><pre>0</pre></details></section>
+<section id="cell-11"><h2>Count missing anatomical sites</h2>
+<p>The output reports how many rows have no site value. This cell only counts them; it does not resolve the missing information.</p>
+</section>
+<section id="cell-12"><details><summary>Code cell 12 · execution 12</summary><pre>df[&quot;anatom_site_general_challenge&quot;].isna().sum()</pre></details><details class="output"><summary>Saved text output</summary><pre>527</pre></details></section>
+<section id="cell-13"><h2>Count missing ages</h2>
+<p>The output reports how many rows have no age value. Any later method for filling missing ages must learn its replacement value from training patients only.</p>
+</section>
+<section id="cell-14"><details><summary>Code cell 14 · execution 13</summary><pre>df[&quot;age_approx&quot;].isna().sum()</pre></details><details class="output"><summary>Saved text output</summary><pre>68</pre></details></section>
+<section id="cell-15"><h2>Limitations</h2>
+<p>This is a set of early experiments rather than a complete run from preparation to evaluation. It reads files from different older paths, and its saved outputs do not establish that all cells used the same data or were run in order.</p>
+<p>The saved subset has 3,568 images from 207 patients, which differs from the current d1 development dataset. The missing-value counts also refer to an older file. No model is fitted or evaluated here, so class balance cannot show how well a classifier would perform. Running the code can write a fold file, which is another reason to keep it outside the active workflow.</p>
+</section>
+<section id="cell-16"><h2>Summary</h2>
+<p>These experiments showed how patient grouping could be used to create a smaller subset and validation folds. They also identified missing values in sex, site and age in the older files.</p>
+<p>Retain this notebook as an archive. There is no trained model to retain, and its outputs should not be used as current project results. For new work, begin with the matching cleaning notebook, then exploration and patient splitting in the numbered workflow.</p>
+</section>

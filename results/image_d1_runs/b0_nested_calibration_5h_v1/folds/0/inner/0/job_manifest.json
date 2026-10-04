@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "b0_nested_calibration_5h_v1",
+  "protocol": "fixed_duration_training_oof_sigmoid_v1",
+  "reference_run_id": "b0_nested_5fold_5h_v1",
+  "outer_fold": 0,
+  "inner_fold": 0,
+  "raw_fold_training_compatibility_sha256": "91d689b33280d6c81977bb4425bf93bdddf7020ec9b47da762af7a573d0f67f1",
+  "calibration_config_sha256": "82616fd62f9dcc15f5e9d3a670d7e70f13d413a363407e1f65aeaca56c211277",
+  "calibration_source_sha256": {
+    "src/melanoma_detection/image_nested_calibration.py": "7098fc2f77c33e136827f34b3e093271b1348906c79e5c80af14acd1b17d81e4",
+    "src/melanoma_detection/image_nested.py": "ac8d0e0bbda6eea6591155a89d6ef09ebc58bc208c8ff67740623c65660399c4",
+    "src/melanoma_detection/image_model.py": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+    "src/melanoma_detection/image_transforms.py": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+    "src/melanoma_detection/image_pilot.py": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+    "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9"
+  },
+  "recipe": {
+    "id": "lr3e5_sqrt",
+    "backbone_lr": 3e-05,
+    "loss_weight": "sqrt_ratio"
+  },
+  "fixed_epochs": 6,
+  "purpose": "training_only_fixed_duration_oof_refit"
+}

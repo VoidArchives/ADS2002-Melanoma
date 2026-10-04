@@ -111,9 +111,9 @@ class NotebookCleaningRegressionTests(unittest.TestCase):
 
     def test_notebook_csv_loads_preserve_original_target_precision(self):
         root = Path(__file__).resolve().parents[1]
-        for prefix in ["00_data_cleaning", "01_data_exploration"]:
-            for dataset in ["d1", "d2"]:
-                path = root / "notebooks" / f"{prefix}_{dataset}.ipynb"
+        for prefix in ["01_data_cleaning", "02_data_exploration"]:
+            for dataset in ["Subset", "Full"]:
+                path = root / "notebooks" / dataset / f"{prefix}.ipynb"
                 notebook = json.loads(path.read_text(encoding="utf-8"))
                 reads = [
                     node
@@ -150,8 +150,8 @@ class NotebookCleaningRegressionTests(unittest.TestCase):
                 "target": [0, 1],
             }
         )
-        for dataset in ["d1", "d2"]:
-            path = root / "notebooks" / f"00_data_cleaning_{dataset}.ipynb"
+        for dataset in ["Subset", "Full"]:
+            path = root / "notebooks" / dataset / "01_data_cleaning.ipynb"
             notebook = json.loads(path.read_text(encoding="utf-8"))
             source = next("".join(cell["source"]) for cell in notebook["cells"] if "def clean_metadata(" in "".join(cell["source"]))
             parsed = ast.parse(source)

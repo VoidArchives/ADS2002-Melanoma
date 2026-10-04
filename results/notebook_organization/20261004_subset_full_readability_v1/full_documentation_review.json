@@ -1,0 +1,52 @@
+{
+  "Full_notebooks": [
+    {
+      "notebook": "notebooks/Full/01_data_cleaning.ipynb",
+      "code_outputs_counts_ids_metadata_unchanged": true,
+      "figure_cells": []
+    },
+    {
+      "notebook": "notebooks/Full/02_data_exploration.ipynb",
+      "code_outputs_counts_ids_metadata_unchanged": true,
+      "figure_cells": [
+        12,
+        14,
+        18
+      ]
+    },
+    {
+      "notebook": "notebooks/Full/03_image_inventory.ipynb",
+      "code_outputs_counts_ids_metadata_unchanged": true,
+      "figure_cells": []
+    }
+  ],
+  "all_local_documentation_links_resolve": true,
+  "saved_figures_visually_inspected": [
+    {
+      "cell": 12,
+      "output": 0,
+      "description": "image versus patient balance"
+    },
+    {
+      "cell": 14,
+      "output": 1,
+      "description": "images per patient histogram"
+    },
+    {
+      "cell": 18,
+      "output": 0,
+      "description": "sex paired panels"
+    },
+    {
+      "cell": 18,
+      "output": 1,
+      "description": "age paired panels"
+    },
+    {
+      "cell": 18,
+      "output": 2,
+      "description": "site paired panels"
+    }
+  ],
+  "scientific_boundaries_preserved": true
+}

@@ -1,0 +1,230 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/Full/01_data_cleaning.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/Full/01_data_cleaning.ipynb · code was not executed</div><section id="cell-0"><h1>01 · Clean the Full metadata</h1>
+<p><strong>Question:</strong> Can we make the image records consistent while preserving every row? Metadata means information recorded alongside an image: here, sex, approximate age and anatomical site.</p>
+<p><strong>Inputs:</strong> <code>data/raw/train.csv</code> and <code>data/raw/test.csv</code>. <strong>Outputs:</strong> cleaned copies in <code>data/processed</code>; the raw files stay unchanged. This notebook prepares files, without training or evaluating a model.</p>
+<p>Use the same rules as <a href="../Subset/01_data_cleaning.html">Subset cleaning</a>, then continue to <a href="02_data_exploration.html">Full exploration</a>. The two dataset branches keep their own files.</p>
+<p>Missing information stays visible as <code>unknown</code>. Diagnosis and the benign/malignant description remain for consistency checks, but later models must exclude them: they reveal the answer the model is meant to predict.</p>
+</section>
+<section id="cell-1"><h2>Setup</h2>
+<p>Set <code>DATA_DIR</code> to your local data folder. The code names the source and output files in one place so you can see which files it reads and where it saves the cleaned copies. It also loads the shared label check, so both dataset branches apply the same rule.</p>
+</section>
+<section id="cell-2"><details><summary>Code cell 2 · execution 1</summary><pre>from pathlib import Path
+import sys
+
+import pandas as pd
+
+# Use this checkout's shared validation checks when run from the project or notebooks folder.
+PROJECT_ROOT = next(
+    (directory for directory in [Path.cwd(), *Path.cwd().parents]
+     if (directory / &quot;src&quot; / &quot;melanoma_detection&quot;).is_dir()),
+    None,
+)
+if PROJECT_ROOT is None:
+    raise FileNotFoundError(&quot;Run this notebook from the project root or its notebooks folder.&quot;)
+if str(PROJECT_ROOT / &quot;src&quot;) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT / &quot;src&quot;))
+from melanoma_detection.metadata_validation import validate_binary_target
+
+# Change this one path to your local data directory.
+DATA_DIR = Path(r&quot;C:/Users/thoma/Documents/GitHub/ADS2002-Melanoma/data&quot;)
+RAW_DIR = DATA_DIR / &quot;raw&quot;
+PROCESSED_DIR = DATA_DIR / &quot;processed&quot;
+
+TRAIN_PATH = RAW_DIR / &quot;train.csv&quot;
+TEST_PATH = RAW_DIR / &quot;test.csv&quot;
+TRAIN_CLEAN_PATH = PROCESSED_DIR / &quot;train_clean.csv&quot;
+TEST_CLEAN_PATH = PROCESSED_DIR / &quot;test_clean.csv&quot;
+
+UNKNOWN_LABEL = &quot;unknown&quot;
+MODEL_FEATURES = [&quot;sex&quot;, &quot;age_approx&quot;, &quot;anatom_site_general_challenge&quot;]
+LEAKAGE_COLUMNS = [&quot;diagnosis&quot;, &quot;benign_malignant&quot;, &quot;target&quot;]
+
+print(f&quot;Data directory: {DATA_DIR}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Data directory: C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data
+</pre></details></section>
+<section id="cell-3"><h2>Load the source metadata</h2>
+<p>Each row represents an image. <code>image_name</code> identifies that image, while <code>patient_id</code> links images from the same person. The row and column counts below give us a starting point: cleaning should not remove rows.</p>
+<p>The target is the recorded outcome, where <code>0</code> means benign and <code>1</code> means malignant. We read it as text first so a bad value cannot be rounded into an apparently valid label.</p>
+</section>
+<section id="cell-4"><details><summary>Code cell 4 · execution 2</summary><pre>train_raw = pd.read_csv(TRAIN_PATH, dtype={&quot;target&quot;: &quot;string&quot;})
+test_raw = pd.read_csv(TEST_PATH, dtype={&quot;target&quot;: &quot;string&quot;})
+
+print(f&quot;Training rows: {len(train_raw):,}; columns: {train_raw.shape[1]}&quot;)
+print(f&quot;Test rows: {len(test_raw):,}; columns: {test_raw.shape[1]}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Training rows: 33,126; columns: 8
+Test rows: 10,982; columns: 5
+</pre></details></section>
+<section id="cell-5"><h2>Check missing information</h2>
+<p>The table lists only columns with missing values. <code>missing_count</code> tells us how many image records lack that field; <code>missing_percent</code> divides that count by all rows in that file. A blank table means no missing values were found.</p>
+<p>These tables show where cleaning is needed. A graph would add little here because we need the exact counts to check that the missing records are handled consistently.</p>
+</section>
+<section id="cell-6"><details><summary>Code cell 6 · execution 3</summary><pre>def missing_profile(frame: pd.DataFrame) -&gt; pd.DataFrame:
+    missing_count = frame.isna().sum()
+    return pd.DataFrame(
+        {
+            &quot;missing_count&quot;: missing_count,
+            &quot;missing_percent&quot;: (100 * missing_count / len(frame)).round(3),
+        }
+    ).query(&quot;missing_count &gt; 0&quot;)
+
+
+print(&quot;Training missingness:&quot;)
+print(missing_profile(train_raw).to_string())
+print(&quot;\nTest missingness:&quot;)
+print(missing_profile(test_raw).to_string())
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Training missingness:
+                               missing_count  missing_percent
+sex                                       65            0.196
+age_approx                                68            0.205
+anatom_site_general_challenge            527            1.591
+
+Test missingness:
+                               missing_count  missing_percent
+anatom_site_general_challenge            351            3.196
+</pre></details></section>
+<section id="cell-7"><h2>Clean the values without guessing</h2>
+<p>First, remove extra spaces and treat empty text as missing. Then fill missing sex and site with <code>unknown</code>. Keep approximate age as its recorded five-year bucket, such as <code>45</code>, and use <code>unknown</code> when it is missing. This keeps missing information visible instead of inventing an age from other patients. Later modelling notebooks may choose a numeric age representation within their training data.</p>
+<p>Known ages must be numeric, between 0 and 120, and in five-year steps. These are format checks for this dataset, not a claim that every recorded age is correct.</p>
+<p>Check the original target before converting it to an integer. Only exact <code>0</code> and <code>1</code> values are accepted. Converting <code>1.5</code> first would turn it into <code>1</code> and hide an incorrect label. Reading the target as text also prevents the CSV reader from rounding a value such as <code>1.000000000000000001</code> before the check.</p>
+</section>
+<section id="cell-8"><details><summary>Code cell 8 · execution 4</summary><pre>EXPECTED_SEX = {&quot;female&quot;, &quot;male&quot;, UNKNOWN_LABEL}
+EXPECTED_SITES = {
+    &quot;head/neck&quot;,
+    &quot;lower extremity&quot;,
+    &quot;oral/genital&quot;,
+    &quot;palms/soles&quot;,
+    &quot;torso&quot;,
+    &quot;upper extremity&quot;,
+    UNKNOWN_LABEL,
+}
+
+
+def strip_text_columns(frame: pd.DataFrame) -&gt; pd.DataFrame:
+    cleaned = frame.copy()
+    for column in cleaned.select_dtypes(include=[&quot;object&quot;, &quot;string&quot;]).columns:
+        values = cleaned[column].astype(&quot;string&quot;).str.strip()
+        cleaned[column] = values.mask(values.eq(&quot;&quot;), pd.NA)
+    return cleaned
+
+
+def clean_metadata(frame: pd.DataFrame) -&gt; pd.DataFrame:
+    cleaned = strip_text_columns(frame)
+
+    required_columns = {
+        &quot;image_name&quot;,
+        &quot;patient_id&quot;,
+        &quot;sex&quot;,
+        &quot;age_approx&quot;,
+        &quot;anatom_site_general_challenge&quot;,
+    }
+    missing_columns = required_columns - set(cleaned.columns)
+    if missing_columns:
+        raise ValueError(f&quot;Required columns are missing: {sorted(missing_columns)}&quot;)
+
+    for column in [&quot;sex&quot;, &quot;anatom_site_general_challenge&quot;]:
+        cleaned[column] = cleaned[column].fillna(UNKNOWN_LABEL)
+
+    age_numeric = pd.to_numeric(cleaned[&quot;age_approx&quot;], errors=&quot;coerce&quot;)
+    malformed_age = cleaned[&quot;age_approx&quot;].notna() &amp; age_numeric.isna()
+    if malformed_age.any():
+        bad_values = sorted(cleaned.loc[malformed_age, &quot;age_approx&quot;].unique())
+        raise ValueError(f&quot;Non-numeric age values found: {bad_values}&quot;)
+
+    known_age = age_numeric.dropna()
+    if not known_age.between(0, 120).all():
+        raise ValueError(&quot;age_approx contains values outside the expected 0-120 range.&quot;)
+    if not known_age.mod(5).eq(0).all():
+        raise ValueError(&quot;age_approx contains values outside the expected five-year buckets.&quot;)
+
+    cleaned[&quot;age_approx&quot;] = age_numeric.map(
+        lambda value: str(int(value)) if pd.notna(value) else UNKNOWN_LABEL
+    )
+
+    if &quot;target&quot; in cleaned.columns:
+        cleaned[&quot;target&quot;] = validate_binary_target(cleaned[&quot;target&quot;])
+
+    return cleaned
+
+
+train_clean = clean_metadata(train_raw)
+test_clean = clean_metadata(test_raw)
+</pre></details></section>
+<section id="cell-9"><h2>Check the cleaned records</h2>
+<p>The checks below confirm that row counts stay the same, image names are unique, patient identifiers are present, and the feature values use the expected labels. They also check that the target agrees with the benign/malignant description.</p>
+<p><code>All validation checks passed</code> means these checks found no problem. If a check fails, fix the source issue before using the outputs.</p>
+</section>
+<section id="cell-10"><details><summary>Code cell 10 · execution 5</summary><pre>def validate_common(frame: pd.DataFrame, source: pd.DataFrame, name: str) -&gt; None:
+    assert len(frame) == len(source), f&quot;{name}: row count changed during cleaning.&quot;
+    assert frame[&quot;image_name&quot;].notna().all(), f&quot;{name}: missing image_name.&quot;
+    assert frame[&quot;patient_id&quot;].notna().all(), f&quot;{name}: missing patient_id.&quot;
+    assert frame[&quot;image_name&quot;].is_unique, f&quot;{name}: duplicate image_name values.&quot;
+    assert set(frame[&quot;sex&quot;].unique()) &lt;= EXPECTED_SEX, f&quot;{name}: unexpected sex value.&quot;
+    assert set(frame[&quot;anatom_site_general_challenge&quot;].unique()) &lt;= EXPECTED_SITES, (
+        f&quot;{name}: unexpected anatomical-site value.&quot;
+    )
+    assert frame[MODEL_FEATURES].isna().sum().sum() == 0, (
+        f&quot;{name}: model features still contain missing values.&quot;
+    )
+
+
+validate_common(train_clean, train_raw, &quot;train&quot;)
+validate_common(test_clean, test_raw, &quot;test&quot;)
+
+assert set(train_clean[&quot;target&quot;].unique()) &lt;= {0, 1}, &quot;Unexpected target value.&quot;
+assert (
+    ((train_clean[&quot;target&quot;] == 1) &amp; (train_clean[&quot;benign_malignant&quot;] != &quot;malignant&quot;))
+    | ((train_clean[&quot;target&quot;] == 0) &amp; (train_clean[&quot;benign_malignant&quot;] != &quot;benign&quot;))
+).sum() == 0, &quot;target and benign_malignant disagree.&quot;
+
+print(&quot;All validation checks passed.&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>All validation checks passed.
+</pre></details></section>
+<section id="cell-11"><h3>Read the change table</h3>
+<p>Compare <code>missing_before</code> with <code>unknown_after</code>: missing information should remain visible as an unknown category. <code>missing_after</code> should be zero for the three model fields. Filling a missing value changes how we store it; it does not recover the information.</p>
+<p>Each row of this table describes one field in one file. Use it to check the cleaning rule, rather than to judge model quality.</p>
+</section>
+<section id="cell-12"><details><summary>Code cell 12 · execution 6</summary><pre>rows = []
+for dataset_name, source, cleaned in [
+    (&quot;train&quot;, train_raw, train_clean),
+    (&quot;test&quot;, test_raw, test_clean),
+]:
+    for column in MODEL_FEATURES:
+        rows.append(
+            {
+                &quot;dataset&quot;: dataset_name,
+                &quot;column&quot;: column,
+                &quot;missing_before&quot;: int(source[column].isna().sum()),
+                &quot;unknown_after&quot;: int(cleaned[column].eq(UNKNOWN_LABEL).sum()),
+                &quot;missing_after&quot;: int(cleaned[column].isna().sum()),
+            }
+        )
+
+cleaning_summary = pd.DataFrame(rows)
+print(cleaning_summary.to_string(index=False))
+</pre></details><details class="output"><summary>Saved text output</summary><pre>dataset                        column  missing_before  unknown_after  missing_after
+  train                           sex              65             65              0
+  train                    age_approx              68             68              0
+  train anatom_site_general_challenge             527            527              0
+   test                           sex               0              0              0
+   test                    age_approx               0              0              0
+   test anatom_site_general_challenge             351            351              0
+</pre></details></section>
+<section id="cell-13"><h2>Save the cleaned copies</h2>
+<p>The outputs go to <code>data/processed</code>. The original files remain available, so we can trace the cleaned records back to their source. Running this cell again writes the cleaned copies to the same output paths.</p>
+</section>
+<section id="cell-14"><details><summary>Code cell 14 · execution 7</summary><pre>PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+train_clean.to_csv(TRAIN_CLEAN_PATH, index=False)
+test_clean.to_csv(TEST_CLEAN_PATH, index=False)
+
+for path in [TRAIN_CLEAN_PATH, TEST_CLEAN_PATH]:
+    print(f&quot;Wrote: {path}&quot;)
+</pre></details><details class="output"><summary>Saved text output</summary><pre>Wrote: C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data\processed\train_clean.csv
+Wrote: C:\Users\thoma\Documents\GitHub\ADS2002-Melanoma\data\processed\test_clean.csv
+</pre></details></section>
+<section id="cell-15"><h2>Limitations</h2>
+<p>These checks can find missing fields, unexpected formats and some conflicting labels. They cannot confirm that the original age, sex, site or diagnosis was recorded correctly. An unknown category preserves a gap in the records, but cannot explain why the information is missing or remove any bias caused by that gap.</p>
+<p>Five-year age buckets lose detail within each bucket. The checks also do not inspect image contents, identify visually similar images, or establish how well a future model will work. No model is trained in this notebook, and the preparation checks do not provide a test-set performance result.</p>
+</section>
+<section id="cell-16"><h2>Summary</h2>
+<p>The saved output keeps 33,126 training rows and 10,982 test rows. In training, 65 sex values, 68 ages and 527 sites become <code>unknown</code>; in the test file, 351 sites become <code>unknown</code>. The saved validation checks pass.</p>
+<p>Retain this preparation method: it preserves rows, makes missing information explicit and stops on invalid labels. There is no model to retain at this stage. Next, open <a href="02_data_exploration.html">02 Data exploration</a> to study the cleaned training records and see why images from the same patient need to stay together during evaluation.</p>
+</section>

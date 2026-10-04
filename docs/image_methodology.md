@@ -1,13 +1,73 @@
-# Image modelling for d1
+# Image modelling for the Subset
+
+## Start with the question
+
+The image models learn patterns in lesion pixels, rather than age, sex or body
+location. The aim is to rank malignant images higher while preserving patient
+separation. Start with [Subset 09](../notebooks/Subset/09_image_b0_pilot.ipynb) for
+the basic EfficientNet-B0 pilot, then [10](../notebooks/Subset/10_image_architecture_comparison.ipynb)
+for architecture comparisons. [11](../notebooks/Subset/11_image_augmentation.ipynb)
+checks whether stronger training transformations are visually safe;
+[12](../notebooks/Subset/12_image_lighting.ipynb) records a deferred lighting
+experiment. [13](../notebooks/Subset/13_image_uncertainty.ipynb) asks whether
+variation in an existing model's predictions helps prioritise images for review.
+[14](../notebooks/Subset/14_image_nested_evaluation.ipynb) reports the completed
+bounded five-outer-fold B0 evaluation.
+
+These notebooks read saved checkpoints, predictions, training histories and run
+manifests. A checkpoint stores learned model parameters; a manifest records which
+data and settings produced them. Reports save tables and figures. Notebook 13
+runs inference, meaning prediction with an existing model, and saves a new
+directory for each run. See the [notebook index](../notebooks/README.md) for commands
+and status, and the [concept guide](../notebooks/concepts.md) for shared terms.
+
+**The completed pilot evidence is exploratory.** Every earlier image pilot uses one
+inner-validation patient split. Those patients were excluded from fitting, but
+their labels chose pilot settings and epochs. That makes the scores useful for
+development diagnostics, without giving an unbiased final performance estimate.
+Outer fold 0 and the separately reserved test are both excluded from those pilots.
+The new bounded B0 evaluation includes all five development outer folds, with
+selection repeated inside each outer training pool. Primary mean fold AP is
+0.1447 (95% conditional patient-bootstrap interval 0.1033–0.2225). This remains
+development OOF evidence after prior pilot adaptation. Full-dataset modelling,
+the larger multi-architecture
+outer search and fusion remain deferred. Historical
+`d1`/`d2` artifact names remain unchanged even though notebook folders are now
+`Subset` and `Full`.
+
+## Read the figures
+
+| Figure | What to compare | Interpretation and limit |
+|---|---|---|
+| Learning curves | Follow epoch (one training pass) horizontally and loss or AP vertically. Training and validation curves describe different patients. | Falling training loss with worsening validation results suggests overfitting. Higher AP is better; lower loss is better. Losses with different positive weights are different objectives and should not be compared as if identical. |
+| Precision–recall and ROC curves | In precision–recall, compare precision at the same malignant recall. In ROC, compare malignant recall at the same benign false-positive rate. | Curves nearer the top are preferable in PR, and top-left in ROC. AP is especially useful for rare malignant images. The PR prevalence line is the no-information reference for this split. These are ranking checks, not a chosen referral rule. |
+| Confusion matrices | Read actual and predicted labels from the axes; count malignant images predicted benign and benign images predicted malignant. | The raw cutoff is fixed at 0.5 for an exploratory example. High accuracy can coexist with many missed malignant images. |
+| Reliability plot | Compare mean score horizontally with observed malignant fraction vertically and the diagonal. Check bin counts. | Below the diagonal suggests overprediction; above suggests underprediction. Few malignant cases make bins noisy. These checks do not fit a calibrator or turn raw scores into validated probabilities. |
+| Quality-review image grids | Compare each transformed image with its original: lesion boundaries, pigment, texture and colours should remain plausible. | A sharper or more varied image is not automatically safer. Clipping or reflected lesion fragments block the stronger condition before training. |
+| Timing, memory and recipe comparisons | Compare matched, completed recipes, with their actual epochs and run status. | Faster or higher-scoring short pilots do not establish the final architecture. Deferred and incomplete conditions have no performance comparison. |
+| Uncertainty distributions and score scatter | Read standard deviation (SD) as spread across dropout passes or TTA views; compare spread with the underlying score. | Larger spread means more sensitivity to the chosen perturbation. It is not a probability of error. MC dropout and TTA measure different kinds of variation. |
+| Pass-count convergence | Compare means, SDs and rankings at 5, 10 and 20 passes with the 30-pass reference. | Smaller differences suggest stability within this run; 30 passes are not a proof of full convergence. |
+| Referral / retained-error curves | Move along the shared fraction set aside for review. Compare retained error and malignant images referred at the same fraction. | Lower retained error is useful only alongside who was removed; referring malignant images changes the retained case mix. Compare MC/TTA with ordinary score, entropy and random ranking. Referral is a simulation, without measured reviewer benefit. |
+| Paired-bootstrap differences | Read the named method minus comparator and its patient-bootstrap interval. | Lower retained error differences favour the first method; higher malignant-referral differences favour it. An interval crossing zero does not clearly resolve the difference. Predictions are held fixed, so training and pilot-selection variation are not covered. |
+
+Preprocessing prepares an image deterministically; augmentation varies fitting
+images to help generalisation. MC dropout switches on only trained dropout layers
+during repeated prediction. Test-time augmentation (TTA) predicts separate flipped
+views with dropout off. The details below explain the recorded experiments and
+reproducibility rules; later stages are explicitly marked as plans.
 
 ## Implemented workflow
 
-The main `05_image_model_d1.ipynb` now reports the completed EfficientNet-B0
+The main `notebooks/Subset/09_image_b0_pilot.ipynb` reports the completed EfficientNet-B0
 pilot from verified historical predictions and checkpoints. The shared Python
 trainer and `configs/image_model.yaml` preserve its declared preparation.
 It uses image pixels as predictors. Patient IDs identify validation groups;
-they are not model inputs. The WIP model and its uncertainty notebook remain
-historical experiments with separate outputs.
+they are not model inputs. The original three-epoch model is historical and
+is kept in `notebooks/archive/image_model_three_epoch_fold0.ipynb`.
+Its original uncertainty notebook is preserved as
+`notebooks/archive/image_uncertainty_three_epoch_fold0.ipynb`;
+the current `notebooks/Subset/13_image_uncertainty.ipynb` adapts uncertainty diagnostics
+to the shared checkpoint pipeline with separate run-specific outputs.
 
 The original pilot registers B0, the existing weak augmentation and unchanged
 preprocessing. The separate three-hour exploration adds DenseNet121 and
@@ -21,7 +81,7 @@ raise an error rather than silently substitute another procedure.
 The pilot holds out outer fold 0 completely. Inside the other four folds,
 three stratified patient-grouped inner folds are constructed. The first inner
 fold selects pilot epochs and settings. These are **inner validation scores**,
-not final OOF performance. No reserved test data or d2 data are used.
+not final OOF performance. No reserved test data or Full data are used.
 
 ## Current three-hour architecture exploration
 
@@ -29,14 +89,14 @@ The session limit includes implementation, tests, training and reporting.
 Reserve the final 15 minutes for inspected results. New training has a separate
 50-minute allowance and a watchdog; a paused trial remains incomplete.
 
-The main 05 notebook reports the archived B0 pilot using saved predictions,
+Notebook 09 reports the archived B0 pilot using saved predictions,
 histories and provenance. It includes actual ROC/precision-recall curves and
 F1, precision, recall/sensitivity, specificity and confusion matrices at the
 fixed raw threshold 0.5 (`score >= threshold`). These are exploratory reports.
 No threshold is fitted on validation labels. Undefined rates remain missing.
 Differently weighted training losses are plotted as separate objectives.
 
-`05e_image_architecture_comparison_d1.ipynb` inspects the separate
+`notebooks/Subset/10_image_architecture_comparison.ipynb` inspects the separate
 `architecture_pilot_3h_v1` run. It reuses the exact archived fitting/validation
 patients, weak transformations, whole-image 224-pixel bilinear preparation and
 ImageNet normalisation. Outer fold 0 remains excluded. DenseNet and ConvNeXt
@@ -103,8 +163,8 @@ figures, alongside six figures in the completed B0 reporting notebook.
 
 ## Two-hour controlled B0 augmentation experiment
 
-The new `05b_image_augmentation_d1.ipynb` uses a separate
-`b0_augmentation_12e_v1` run. Optional `05c_image_lighting_d1.ipynb` uses
+`notebooks/Subset/11_image_augmentation.ipynb` uses a separate
+`b0_augmentation_12e_v1` run. Optional `notebooks/Subset/12_image_lighting.ipynb` uses
 `b0_lighting_12e_v1` and references the exact fresh A control. Both notebooks
 read executed results by default; an explicit shared runner invocation is
 required for training. Neither contains a training loop.
@@ -205,9 +265,9 @@ CLAHE condition C was deferred because admission required a complete safe A/B
 pair. OpenCV was not installed; no corrected previews or C training were performed.
 Its separate notebook displays the exact A reference and the deferred status,
 without fabricated C results. Both new notebooks executed without cell errors;
-05b embeds eighteen PNGs and 05c embeds six A-reference PNGs.
+Notebook 11 embeds eighteen PNGs and notebook 12 embeds six A-reference PNGs.
 
-The 132-test suite passed with one optional real-OpenCV test skipped. A further
+At the original controlled-experiment step, the 132-test suite passed with one optional real-OpenCV test skipped. A further
 checkpoint prediction check changed all 1,370 excluded labels, including an
 invalid label, in memory: training identities and both A prediction files stayed
 exactly unchanged, with maximum score difference zero. Prediction-only execution
@@ -220,17 +280,100 @@ the current architecture notebook rather than its older receipt's notebook hash.
 ## Historical preservation and current checkpoints
 
 The original pilot source/configuration snapshot is archived under the separate
-reporting run. Its preservation receipt hashes the pilot, WIP notebooks and
+reporting run. Its preservation receipt hashes the pilot, historical notebooks and
 historical checkpoints. New B0 reporting lives in `b0_pilot_reporting_v2` and new
 architecture results in `architecture_pilot_3h_v1`. Original files are not
-rewritten. The new runner uses a workspace-local pretrained-weight cache under
+rewritten. The original uncertainty notebook was copied byte-for-byte to the
+clearly named historical archive before its active path was updated. Its saved
+prediction, metric and figure files remain historical results. Earlier receipts
+refer to the original notebook content, now retained in that archive. The new
+runner uses a workspace-local pretrained-weight cache under
 `models/image_pretrained` and validates pinned weight identities.
+
+Active notebooks now form the consecutive `notebooks/Subset/01`–`15` and
+`notebooks/Full/01`–`03` sequences listed in `notebooks/README.md`. The three-epoch
+model and uncertainty notebooks and legacy scratch work belong only to
+`notebooks/archive`. Read those archives for historical evidence; their old
+paths and settings are not instructions to rerun them in the current pipeline.
+Notebook relocation preserves the models, training histories and saved results.
+Historical receipts retain their original names and verify the corresponding
+archived content against the exact recorded hashes.
 
 Changing core source intentionally makes direct historical training resume
 incompatible. Historical reporting validates saved artifacts and recorded
 source identity without asserting that current code produced them. Do not edit
 old manifests to bypass a mismatch. A longer continuation requires a separate,
 audited state import in a later session.
+
+## Current checkpoint uncertainty diagnostics
+
+`notebooks/Subset/13_image_uncertainty.ipynb` uses existing checkpoints only. It selects a
+run, architecture and recipe explicitly, then loads the recorded highest-AP
+checkpoint through `image_model.load_model_checkpoint`. The default is the
+fresh weak/unchanged B0 control, condition A of `b0_augmentation_12e_v1`, recipe
+`lr3e5_sqrt`, best epoch 6. Supported DenseNet121 and ConvNeXt-Tiny recipes in
+`architecture_pilot_3h_v1` are alternatives requiring explicit selection. A
+pilot AP leader is not automatically the final model.
+
+Reconstruct ordered fitting and validation membership from the checkpoint's
+recorded run manifest and validate it against current data. Check image and
+patient identities, fitting/validation patient separation and exclusion of
+outer fold 0. The present inner-validation split contains 1,834 images from
+113 patients, including 33 malignant images; fitting used 3,660 images from
+225 patients. These diagnostics reuse labels that selected pilot epochs and
+settings. They are neither full OOF nor reserved-test evaluation.
+
+Ordinary inference restores the checkpoint's exact deterministic RGB decoding,
+whole-image bilinear resize, selected preprocessing and ImageNet normalisation.
+It checks repeatability and agreement with the saved deterministic scores before
+continuing. MC dropout repeats the same prepared images 30 times with recorded
+seeds. Only explicit dropout modules enter training mode; their trained rates
+are preserved. BatchNorm and stochastic depth remain in evaluation mode.
+Record per-image mean score and sample standard deviation, and compare 5, 10
+and 20 passes with the 30-pass reference. This checks within-run stability; it
+does not establish convergence beyond 30 passes or capture all uncertainty.
+
+TTA is a separate orientation-sensitivity experiment with dropout disabled.
+Apply identity, horizontal flip, vertical flip and both flips after exact
+deterministic preparation. These transformations preserve the entire prepared
+canvas without affine rotation, crops or reflection padding, avoiding the
+clipping and reflected lesion fragments seen in the stronger training profile.
+The identity view must reproduce ordinary deterministic scores. TTA SD and MC
+SD describe different perturbations and are not calibrated risk probabilities.
+
+Validate every raw score as finite and within [0, 1] before aggregation. Reject
+duplicate image/pass keys, missing or unexpected passes and incomplete image
+coverage. Save the raw deterministic, MC and TTA predictions and their summaries
+in a new run-specific directory under `results/image_uncertainty_runs`. Provenance
+identifies the checkpoint hash and best epoch, selected run/recipe, split and
+membership, preparation, seeds, inference settings and integrity checks. Check
+that checkpoints and training histories retain their original hashes.
+
+Evaluate ranking value using the same deterministic base scores and referral
+fractions for MC SD, TTA SD, ordinary high-score referral, predictive entropy
+and repeated seeded random referral. Report retained-set classification error
+at the fixed raw cutoff 0.5, retained Brier error and malignant images referred,
+with paired patient-bootstrap intervals for key differences. Resample whole
+patients so their images stay together. Intervals
+are conditional on the existing checkpoint and validation predictions; they do
+not account for training variation or pilot selection bias. Referral means
+setting images aside for review, not a correct diagnosis or observed reviewer
+benefit. Retained metrics also reflect the changing case mix.
+
+Reliability bins, log loss and Brier score describe the raw deterministic and
+repeated-mean score scales. Do not fit a calibrator or select a referral
+threshold using these pilot validation labels. Use the terms prediction score,
+MC-dropout variation and TTA sensitivity separately; no calibrated probability
+column is produced. Any eventual rule requires training-only selection and
+independent evaluation.
+
+The smoke check precedes full default notebook execution and exercises
+checkpoint compatibility, patient separation, deterministic repeatability,
+dropout activation, unchanged BatchNorm buffers and identity-TTA agreement.
+Dedicated tests also inject invalid scores, duplicate keys, missing passes and
+incomplete image coverage to verify rejection before aggregation.
+This workflow does not retrain models, implement
+fusion, evaluate outer fold 0 or open the reserved test.
 
 ## Training and checkpoint rules
 
@@ -290,6 +433,121 @@ If the provisional winner's best epoch is five or six, recommend extending
 compatible training to a 30-epoch cap. An earlier peak suggests that more epochs
 may offer little improvement on this split. Either observation remains
 exploratory; repeat validation on the other inner folds in the later stage.
+
+## Bounded five-hour B0 outer evaluation
+
+The new `b0_nested_5fold_5h_v1` run implements a narrower, declared procedure
+using the five existing development outer folds and three fresh patient-grouped
+inner folds inside each outer training pool. It keeps pretrained B0 V1,
+224-pixel whole-image preparation, weak augmentation, no added preprocessing,
+seed 42 and the existing training settings. It does not select architectures or
+transformation profiles from the earlier pilot leaderboards.
+
+### Completed raw evaluation
+
+All five raw outer folds completed on 6,864 images from 422 patients, including
+128 melanoma images. Primary unweighted mean fold AP is **0.1447**, with a
+95% conditional patient-bootstrap interval **0.1033–0.2225**. Mean fold ROC-AUC
+is **0.8408**. All 2,000 patient-bootstrap draws retained both outcomes in every
+fold. Pooled AP is secondary because scores from separate fits can differ in
+scale.
+
+The verification receipt reproduced predictions from all five saved refit
+checkpoints, with a maximum absolute difference of approximately `1.11e-16`,
+and confirmed 408 historical artifacts unchanged. Exact canonical coverage and
+independently recomputed fold metrics also passed. These checks establish
+reproducibility; they do not remove prior development adaptation. The AP
+interval holds fits and selections fixed, excluding retraining/selection
+variability and earlier pilot use. This is development OOF evidence, with the
+reserved test still required after decisions freeze. The separate calibration
+stage has also completed all five folds; its outcomes are reported below.
+
+For each outer fold:
+
+1. Screen all four B0 recipes (backbone LR 3e-5/1e-4 crossed with unweighted or
+   fitting-only square-root positive weighting) for six epochs on inner fold 0.
+2. Choose by best screening AP only after every screen finishes. Ties within
+   0.0001 favour unweighted loss, then lower learning rate.
+3. Confirm that selected recipe for twelve total epochs on all three inner
+   folds, continuing the compatible six-epoch first-fold checkpoint. Select
+   each split's highest-AP epoch; exact epoch ties retain the earlier epoch.
+4. Use the median of those three selected epochs as a fixed duration. Start a
+   fresh refit on every outer training patient without validation-based stopping.
+5. Predict the held-out outer images after refitting. Outer labels enter only
+   performance evaluation, never recipe selection, duration choice or fitting.
+
+The session clock persists 300 minutes from the recorded start, including
+implementation, with the final 20 minutes reserved for reporting. The supervisor
+enforces an absolute training cutoff. Recipe admission uses projected runtime;
+complete optimiser, scheduler, scaler, RNG and epoch histories permit compatible
+resumption. Restarting does not extend the allocation. An expired budget needs
+an explicitly allocated new session file; unfinished folds stay incomplete.
+
+```powershell
+.venv/Scripts/python.exe scripts/run_image_nested.py --audit-only
+.venv/Scripts/python.exe scripts/run_image_nested.py --resume
+```
+
+Notebook 14 reads saved files and never launches training. Finalisation requires
+exactly one raw prediction for every canonical image, matching patient, fold and
+target identities. The report shows fold AP and unweighted mean fold AP as
+primary, pooled AP as secondary, ROC-AUC, unweighted log loss, Brier, raw
+reliability and the declared raw cutoff 0.5. Patient-bootstrap intervals resample
+whole patients within each outer fold; any draw lacking both outcomes in a fold
+is rejected consistently across metrics. Saved valid/rejected counts make that
+conditioning visible. Matching metadata scores are compared only after receipt
+and exact coverage verification, with shared bootstrap draws.
+
+No calibration fit or tuned threshold is part of the raw run. The separate
+`b0_nested_calibration_5h_v1` stage completed after all five raw folds within the
+same persistent deadline. It
+generates three fresh fixed-duration inner refits per outer training pool,
+using that pool's selected recipe and median epoch count. Training-only OOF
+scores fit sigmoid recalibration on logits (`C=1`) and cutoffs achieving the
+academic 80%-recall training scenario. Failed or non-positive-slope calibration
+records the failure, preserves the raw run and leaves the calibration stage
+incomplete. Complete frozen maps and cutoffs are then
+applied to unchanged raw outer predictions. The raw run's status and artifacts
+remain independent; neither stage resets the session clock.
+
+All five calibration folds completed. The report compares raw/calibrated log
+loss, Brier and reliability, and reports actual
+outer recall, precision, F1, specificity and confusion counts. The training
+recall target does not guarantee 80% outer recall. Positive-slope calibration
+should preserve within-fold AP/ROC-AUC; numerical ties or clipped endpoints
+are checked if invariance fails. Pooled AP can change across fold score scales.
+
+The saved calibration report shows mean fold log loss falling from
+**0.089395 to 0.079082**, and Brier from **0.020886 to 0.017411**. Within-fold
+AP and ROC-AUC remained unchanged in every fold, preserving primary mean fold
+AP 0.1447. These gains describe held-out probability quality under the declared
+development procedure.
+
+The academic 80%-recall rule used training-only OOF scores to select one cutoff
+per outer fold. On the held-out outer images it flagged **106 of 128 melanoma
+images (82.81% recall)**, missing **22**, and flagged **2,578 benign images** while
+leaving **4,158 benign images** unflagged. Overall **2,684/6,864 images (39.10%)**
+were flagged, with **3.95% precision**, **61.73% specificity** and **F1 0.0754**.
+Raw and calibrated training-selected cutoffs produced identical decisions,
+consistent with the positive monotonic maps. The substantial flagged workload
+and low precision accompany the increased recall; this academic scenario has
+no clinical validation. Its bootstrap intervals hold the fitted maps and
+cutoffs fixed and retain the development/prior-adaptation limitations.
+
+Saved outputs can be independently recomputed without training:
+
+```powershell
+.venv/Scripts/python.exe scripts/finalize_image_nested.py
+.venv/Scripts/python.exe scripts/finalize_image_nested_calibration.py
+.venv/Scripts/python.exe scripts/execute_image_nested_notebook.py --timeout 600
+```
+
+No new MC/TTA uncertainty, fusion or reserved test is part of these stages.
+Bootstrap intervals condition on fitted models, calibration maps and selections,
+omitting retraining variability. Prior pilot adaptation to these development
+patients, including the archived fold-0 experiment, remains a limitation. The
+235-fit procedure below remains a separate deferred architecture/transformation
+search; the completed calibration stage is not evidence of its completion.
 
 ## Later controlled experiments
 
@@ -369,7 +627,7 @@ minimum 12 epochs before early stopping, patience seven and AP improvement
 threshold 0.001. Save the actual highest-AP epoch; the threshold controls
 patience only. A six-epoch B0 pilot does not rank these other families.
 
-## Later final nested selection procedure (not implemented)
+## Later multi-architecture nested selection procedure (not implemented)
 
 Freeze candidate sets, quality gates, budgets and rules before looking at outer
 results. Within **each** outer-training partition independently:
@@ -430,11 +688,12 @@ reason, package versions and resume states. Later preprocessing caches must be
 keyed by source image and procedure hashes.
 
 The shared checkpoint loader reconstructs supported models and deterministic
-preparation. Keep the WIP uncertainty notebook on its historical loader; do not
-feed it pilot scores or a new checkpoint whose fold or epoch semantics differ.
-The future uncertainty adapter activates only explicit dropout for MC while
-BatchNorm and stochastic depth remain in evaluation mode. Regenerate uncertainty
-and fusion outputs after model changes, with identity-TTA agreement checks.
+preparation. The current notebook 13 uncertainty workflow uses this loader and recorded
+inner membership; the archived three-epoch fold-0 notebook retains its historical
+loader for reference. The current adapter activates only explicit dropout for MC
+while BatchNorm and stochastic depth remain in evaluation mode. Regenerate
+uncertainty outputs after model changes, with identity-TTA agreement checks.
+Fusion remains a separate later stage.
 
 Test patient isolation, outer-label invariance, invalid/missing/corrupt images,
 exact duplicate content, deterministic preparation, frozen BatchNorm, correct
@@ -457,5 +716,6 @@ models. Its training-time source snapshot is preserved separately from this
 later inference setup.
 
 The final deployment model repeats the frozen selection procedure on all
-development patients before the reserved test is evaluated once. Fusion,
-uncertainty and reserved-test evaluation are not part of the first implementation.
+development patients before the reserved test is evaluated once. The current
+uncertainty diagnostics extend the pilot workflow; validated final uncertainty,
+fusion and reserved-test evaluation remain later work.

@@ -1,0 +1,61 @@
+{
+  "source_run": "b0_augmentation_12e_v1",
+  "architecture": "efficientnet_b0",
+  "recipe_id": "lr3e5_sqrt",
+  "condition_id": "A",
+  "evaluation_split": "inner_validation",
+  "evaluation_status": "exploratory_inner_validation_not_outer_oof",
+  "mc_passes": 30,
+  "inference_seed": 20261004,
+  "tta_views": [
+    "identity",
+    "hflip",
+    "vflip",
+    "hvflip"
+  ],
+  "referral_fractions": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "random_referral_seed": 17042,
+  "random_repeats": 100,
+  "bootstrap_seed": 20242,
+  "patient_bootstrap_replicates": 2000,
+  "bootstrap_interval": "paired patient-cluster percentile 95%; conditional on fitted predictions",
+  "classification_cutoff": 0.5,
+  "calibration_fitted": false,
+  "threshold_selected": false,
+  "reserved_test_loaded": false,
+  "outer_fold_predictions_generated": false,
+  "source_sha256": {
+    "src\\melanoma_detection\\image_uncertainty.py": "660cd4ee0b039dfdaa4ff79d4767506b364a0285f89837c7b78c873fd9d4f07c",
+    "src\\melanoma_detection\\image_uncertainty_evaluation.py": "efe2d7ff586700e4a8f652b1aa9c0d77e5c029107caa3c4d3be37d6ae23bd60b",
+    "src\\melanoma_detection\\image_model.py": "2ca3ae8edbdb14f344b1b834d0ba2bed277879ba45a62904ff2ea6fd4a13e2ab",
+    "src\\melanoma_detection\\image_transforms.py": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b"
+  },
+  "output_sha256": {
+    "descriptive_reliability.csv": "0915d89328350473e5430286a2992decd1cd7ad4aea5aedc38dc0a41be3da837",
+    "deterministic_predictions.csv": "8ea7c01d40f5824b2957d1d12fa11cbef1928695668c1736639a47da65a90c28",
+    "mc_convergence.csv": "4506fa476b68c2f4ebea55b61507d8bfe7d7a791fb98e77639f9e6d210420b09",
+    "mc_raw_predictions.csv": "05552d0fc9aa48dc77ac178cf3f877acf852e4e4ead93c597a5c6359f6b31458",
+    "paired_patient_bootstrap_differences.csv": "a0acdf17316180ce313c573ed67a743c6878c65cbbb7a927c3ac95c5c2faa634",
+    "prediction_quality.csv": "9b8bc940193f47bd728317bfa4fca3e3250aa22be1068ec2012254977ddf9f74",
+    "prediction_summary.csv": "92d6c0c8c833fdf038eee8b9bf6ca4e139b295e6cb8d40b8911830880d343b89",
+    "referral_rankings.csv": "3086f927d05c7d37c6409a7ca2aa7f0f8374c966a561d11d9d01f33acfcf68ab",
+    "tta_raw_predictions.csv": "cf920bf85294eb6a2ad44868eeff25f06d264b07a61aa8f0e43a67af0d4bce9d"
+  },
+  "analysis_packages": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.1",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  }
+}

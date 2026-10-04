@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><title>notebooks/Subset/14_fusion_model.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · notebooks/Subset/14_fusion_model.ipynb · code was not executed</div><section id="cell-0"><h1>14 — Combine image and metadata predictions</h1>
+<p><strong>Fusion</strong> means combining predictions from different information sources.
+Image models learn visual patterns; metadata models use recorded attributes
+such as age and lesion location. The question is whether their combined score
+improves on the stronger model alone, especially when they disagree.</p>
+<p>This follows <a href="08_metadata_robustness.html">metadata robustness</a>, the
+<a href="09_image_b0_pilot.html">image pilot</a> and
+<a href="13_image_uncertainty.html">uncertainty diagnostics</a>. The comparison needs
+predictions for matching images made without training on those patients.
+Full <strong>out-of-fold (OOF)</strong> predictions come from holding out each outer patient
+fold while fitting and choosing settings within the remaining folds. Current
+image results are inner-validation diagnostics and are not those complete inputs.</p>
+<h2>Current status</h2>
+<p>This placeholder contains no fusion code, tables or figures. A planned first
+experiment would combine the two scores with a mixing weight chosen inside
+training folds, then compare held-out performance with each model alone.
+Calibration would map scores to estimated probabilities using training-only
+data; raw score scales must be checked before combining them.</p>
+</section>
+<section id="cell-1"><h2>Limitations</h2>
+<p>No combined model has been fitted or evaluated, so this file provides no
+evidence of improvement and cannot choose a mixing weight or referral rule.
+Mismatched image coverage, incompatible score scales or predictions made on
+training patients would make the comparison misleading. These checks must pass
+before fitting the combination.</p>
+</section>
+<section id="cell-2"><h2>Summary</h2>
+<p>Fusion remains planned. First obtain matching patient-safe OOF inputs, choose
+any mixing weight within training folds, and compare held-out results with each
+model alone. This file has no findings or final model selection.</p>
+</section>

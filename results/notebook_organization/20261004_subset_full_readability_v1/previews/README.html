@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>README.md</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.banner{font-size:13px;color:#506075;border-bottom:1px solid #d5dce5;padding-bottom:12px}section{margin-bottom:20px}</style><div class="banner">Saved notebook reading preview · README.md · code was not executed</div><h1>Melanoma Detection</h1>
+<p>This project explores whether lesion images and their recorded age, sex and body
+location can help distinguish benign from malignant images. The notebooks show
+data preparation, model comparisons and checks of what those comparisons can
+establish. The work is exploratory; it does not establish a clinical screening tool.</p>
+<p>Start with the <a href="notebooks/README.html">notebook guide</a> for a reading route and the
+status of each step. <a href="notebooks/Subset">Subset</a> contains preparation and modelling
+on the smaller dataset; <a href="notebooks/Full">Full</a> contains preparation and exploration
+of the full collection. The <a href="notebooks/concepts.html">short concept guide</a> explains
+the metrics and validation terms used throughout.</p>
+<p>For method details, read the <a href="docs/metadata_methodology.html">metadata guide</a> or
+<a href="docs/image_methodology.html">image guide</a>. Current image experiments use an inner
+validation split: patients separate from fitting, whose labels helped choose
+pilot settings. They are development diagnostics. Fusion and the reserved final
+test remain planned.</p>
+<p><a href="notebooks/Subset/13_image_uncertainty.html">Image uncertainty</a> reads existing
+checkpoints; its default is the weak EfficientNet-B0 control. New inference outputs
+go to separate directories under <code>results/image_uncertainty_runs</code>.
+<a href="notebooks/archive/README.html">Historical notebook guides</a> explain the preserved
+original experiments. Renaming notebook folders leaves data, models, training
+histories and saved results unchanged; <code>_d1</code>/<code>_d2</code> in artifact names remain their
+original identifiers.</p>
+<p><a href="https://docs.google.com/document/d/1rMOSNjIrVSib8rnjD8M53RhmcC24fubRem6pFThek0M/edit?usp=sharing">Project notes</a></p>

@@ -7,25 +7,36 @@ def md(text): cells.append(nbf.v4.new_markdown_cell(text.strip() + "\n"))
 def code(text): cells.append(nbf.v4.new_code_cell(text.strip() + "\n"))
 
 md("""
-# 05 — Image model for d1: preserved six-epoch B0 pilot
+# 09 — Image model: the six-epoch B0 pilot
 
-Four EfficientNet-B0 recipes were compared on one inner patient split, excluding
-outer fold 0. This notebook reports saved best checkpoints. It **does not train,
-tune thresholds or fit calibration**. AP remains the primary metric. The recipe
-and epoch choices are exploratory, not a final outer evaluation.
+Can an image model rank melanoma images above benign images? EfficientNet-B0
+(B0) is a convolutional neural network: it learns image patterns such as edges,
+texture and colour. Its starting weights were learned on ImageNet, a large
+general-image dataset, before being adapted to this task.
 
-The historical WIP experiment and all original pilot outputs remain preserved.
-New figures and tables use `b0_pilot_reporting_v2`; architecture exploration is
-separate in `05e_image_architecture_comparison_d1`.
+Four training **recipes** (learning rate and class weighting) were compared.
+An **epoch** is one pass through the fitting data; a **checkpoint** stores the
+model's learned weights at an epoch. We report each recipe's saved checkpoint
+with the highest validation average precision (AP).
+
+This is an **inner-validation pilot**: patients held out from fitting guide early
+choices. Because those same labels helped choose recipes and epochs, these are
+exploratory results. Full out-of-fold (OOF) evaluation would test the complete
+selection process on independent outer folds; the reserved test comes last.
+Outer fold 0 and the reserved test are excluded here.
+
+This notebook reads saved results without training or fitting calibration.
+Original outputs are preserved; new reports use `b0_pilot_reporting_v2`.
+Continue with [architecture comparison](10_image_architecture_comparison.ipynb).
 """)
 md("""
-## Setup and historical verification
+## Setup and verification
 
-Verify archived source/configuration, preserved artifacts, development CSV,
-fitting/validation image hashes, exact patient memberships and independently
-recomputed metrics. Historical reporting uses recorded provenance, while
-training resume retains its current-source compatibility guard. No reserved
- test files are accessed. Use the project `.venv`.
+Use the project's `.venv` environment. The checks below verify saved source,
+settings, files and patient memberships, then independently recompute the
+reported metrics. File hashes act as fingerprints: a changed file fails the
+check. This protects the meaning of the historical results after code changes.
+No reserved-test files are loaded.
 """)
 code("""
 import json
@@ -56,12 +67,19 @@ display(pd.DataFrame([pilot["verification"]]))
 display(pd.DataFrame([pilot["manifest"]["compatibility"]["runtime"]["packages"]]))
 """)
 md("""
-## Patients and preparation
+## Patients and image preparation
 
-Patient groups stay together. Only RGB images enter the model; outer-excluded
-class labels do not enter this report. Whole-image 224×224 bilinear resizing,
-weak flips/±20° rotation, unchanged preprocessing and ImageNet normalisation
-remain the reference. Validation preparation is deterministic.
+Keep all images from one patient in the same partition, so a model cannot learn
+from a patient it later evaluates. The table distinguishes **fitting** patients,
+**inner-validation** patients, and **outer-excluded** patients whose labels are
+not used here.
+
+Only RGB images enter the model. Each whole image is resized to 224 × 224 pixels
+using bilinear interpolation. ImageNet normalisation rescales colour channels
+to the range expected by the pretrained network. During fitting, weak random
+flips and rotations add **augmentation**: varied views intended to discourage
+memorising an image's orientation. Validation uses the same preparation every
+time, without random augmentation.
 """)
 code("""
 partitions = {"fitting": pilot["fitting"], "inner_validation": pilot["validation"],
@@ -78,10 +96,12 @@ display(pd.DataFrame(config["candidates"]["pilot_recipes"]))
 display(pd.DataFrame([config["training"]]))
 """)
 md("""
-The fitting-only preview deliberately mixes labels. Existing rotation creates
-black corners and can remove peripheral pixels. Sampled central texture and
-pigmentation remain visible; this small check does not certify every lesion.
-Stronger augmentation and its broader quality review remain deferred.
+**Read the preview:** each row is one fitting image; the left column is the
+original and the next three columns are seeded weak variants. `target=1` means
+melanoma and `target=0` benign. Compare lesion edges, texture and colour across
+the row. Rotation can create black corners or remove peripheral pixels; an
+intact centre alone does not prove that the whole lesion is preserved. This
+deliberate label mix is a quality check, not a representative prevalence sample.
 """)
 code("""
 preview = plot_augmentation_preview(pilot["fitting"], config["model"])
@@ -89,12 +109,26 @@ save_figure(preview, figures_dir / "weak_augmentation_preview.png", dpi=130)
 plt.show()
 """)
 md("""
-## Exploratory probability and resource metrics
+## Prediction quality and computing cost
 
-Select each recipe's actual highest inner-validation AP checkpoint; exact ties
-retain the earlier epoch. All trials completed six epochs under the fixed
-30-epoch scheduler, including one classifier-only warmup. The maximum training
-budget differs from the selected epoch. Weighting uses fitting patients only.
+**AP** summarises precision (how many flagged images are malignant) as recall
+(how many malignant images are found) changes across score cutoffs. Higher is
+better; the malignant-image fraction is a useful chance-ranking reference.
+**ROC-AUC** measures ranking across both classes; higher is better and 0.5 is
+chance ranking. AP deserves attention because malignant images are rare.
+**Log loss** penalises confident wrong scores; **Brier score** averages squared
+score errors. Lower is better for both, but a low loss alone can hide poor
+melanoma detection in an imbalanced dataset.
+
+These outputs are prediction **scores**, not verified clinical probabilities.
+Class weighting gives malignant fitting examples more influence and can change
+the score scale. The constant fitting-prevalence row is a simple baseline.
+
+All four recipes ran six epochs, including one classifier-only warmup before
+adapting the whole network. The fixed learning-rate schedule spans 30 epochs;
+that schedule is distinct from the executed six-epoch budget and selected epoch.
+Exact AP ties retain the earlier checkpoint. The resource table reports measured
+epoch time and allocated GPU memory, excluding setup/download overhead.
 """)
 code("""
 metrics = metric_table(predictions, threshold=.5, epochs=epochs)
@@ -114,12 +148,20 @@ display(resources.style.format({"measured_training_minutes": "{:.2f}",
     "mean_epoch_seconds": "{:.2f}", "peak_allocated_GiB": "{:.2f}"}))
 """)
 md("""
-## Learning trajectories and selected epochs
+## Learning over epochs
 
-Hollow rings mark highest-AP epochs. The dotted vertical line separates warmup
-from fine-tuning. Validation log loss is unweighted for every recipe. Weighted
-and unweighted fitting losses use different objectives: their magnitudes are
-shown separately and must not rank weighted against unweighted models.
+**Read the first figure:** the horizontal axis is completed epoch; each line is
+one recipe. The upper panels show AP and ROC-AUC (higher is better); the lower
+panels show validation log loss and Brier (lower is better). Horizontal guides
+mark prevalence for AP and 0.5 for ROC-AUC. Hollow rings mark the epoch chosen
+by AP in every panel, rather than each panel's separate optimum. The dotted
+vertical line separates classifier warmup from whole-network fine-tuning.
+
+**Read the second figure:** epoch is horizontal and fitting binary cross-entropy
+(BCE), the training objective, is vertical. Falling loss shows a closer fit to
+training labels; improvement should also appear on validation. Panels separate
+weighted and unweighted objectives because their magnitudes are not comparable.
+A late AP peak motivates further checking, not proof that longer training helps.
 """)
 code("""
 learning = plot_learning_curves(history, pilot["validation"].target.mean(),
@@ -131,11 +173,19 @@ save_figure(losses, figures_dir / "training_loss_by_weight.png")
 plt.show()
 """)
 md("""
-## Actual ROC and precision–recall curves
+## ROC and precision–recall curves
 
-Curves use saved best-checkpoint scores on the same 1,834 images from 113
-patients. AP is average precision, not trapezoidal precision–recall area.
-Checkpoint and recipe selection reuse these patients; reports are exploratory.
+**Read the curves:** each line is a recipe's selected checkpoint on the same
+1,834 images from 113 patients. Moving along a line changes the score cutoff.
+The left panel plots false-positive rate (benign images flagged) horizontally
+against recall/sensitivity (malignant images found) vertically; curves closer
+to the upper left rank better than the chance diagonal. The right panel plots
+recall horizontally against precision vertically. Higher precision at the same
+recall is better; the horizontal guide shows malignant-image prevalence.
+
+AP summarises precision–recall ranking; it is not the trapezoidal area under
+the plotted steps. Neither curve selects a practical cutoff. These patients
+also helped select the checkpoints, so the comparison remains exploratory.
 """)
 code("""
 curves = plot_roc_precision_recall(predictions, epochs=epochs,
@@ -148,15 +198,22 @@ for identity, frame in predictions.items():
             table.to_csv(tables_dir / f"{identity.replace('/', '__')}_{name}.csv", index=False)
 """)
 md("""
-## Classification at the fixed raw threshold 0.5
+## Classification at the fixed score cutoff 0.5
 
-Flag an image when `base_probability >= 0.5`. This threshold is fixed, not tuned
-on validation labels. Report sensitivity/recall, specificity, precision, F1 and
-all confusion counts. Undefined denominators remain missing. F1 is
-`2TP / (2TP + FP + FN)` when the denominator is nonzero.
+An image is flagged when `base_probability >= 0.5`; this stored column contains
+an uncalibrated score despite its name. The cutoff is declared, not tuned here.
+Recall/sensitivity measures malignant images found; specificity measures benign
+images correctly left unflagged. Precision measures malignancy among flags;
+F1 balances precision and recall. Undefined ratios remain missing.
 
-The academic 80%-recall scenario is deferred until training-only OOF scores
-exist. Outer evaluation labels will never choose a threshold.
+**Read each confusion matrix:** rows are true class and columns predicted class.
+The diagonal contains correct decisions. Bottom left contains missed melanoma
+images (false negatives); top right contains benign images flagged (false
+positives). Cell text gives counts and percentages within each true-class row;
+darker blue means a larger row fraction. Compare both errors rather than the
+many correct benign images. A strong ranking score does not guarantee useful
+recall at this cutoff. The later 80%-recall scenario requires training-only OOF
+scores; outer evaluation labels must not choose a threshold.
 """)
 code("""
 classification_columns = ["pipeline_id", "selected_epoch", "threshold", "score_type", "TP", "FP", "TN", "FN",
@@ -172,11 +229,19 @@ display(Markdown("At threshold 0.5 the preferred weighted recipe detects 4 of 33
     "useful classification at this cutoff."))
 """)
 md("""
-## Raw-score calibration checks
+## Descriptive reliability of the scores
 
-Equal-count bins describe mean raw score against observed melanoma fraction;
-support counts are saved. Bins may share patients and contain few positives.
-These are raw-score checks, not calibration fitting or verified clinical risk.
+**Read the reliability panels:** each panel is a recipe. Similar scores are
+grouped into equal-count bins; horizontal position is the bin's mean score and
+vertical position is its observed melanoma fraction. The diagonal means score
+and frequency agree. Points below it indicate scores exceeding the observed
+frequency; points above it indicate the reverse. The shared axes cover the
+observed bin means, so check their range before comparing other plots.
+
+The table gives each bin's image, patient and malignant-image counts. Few
+malignant images and repeated images from a patient make the estimates noisy.
+This describes reliability; it does not fit a calibrator (a score-to-probability
+mapping) or establish accurate clinical probabilities.
 """)
 code("""
 reliability = plot_reliability_checks(run_dir)
@@ -190,17 +255,18 @@ display(bins[["recipe_id", "bin", "n_images", "n_malignant_images", "n_patients"
     {"mean_probability": "{:.4f}", "observed_rate": "{:.4f}"}))
 """)
 md("""
-## Interpretation and next stage
+## Interpretation and next steps
 
-The preferred B0 recipe has AP 0.1383 at epoch 6. Its late peak motivates longer
-validation, but this three-hour session prioritises architecture feasibility.
-B0 is the reference, not the predetermined winner. DenseNet121 and ConvNeXt-Tiny
-have their own learning-rate candidates and epoch choices.
+The preferred B0 recipe has AP 0.1383 at epoch 6. Its late peak supports checking
+duration on further patient splits; it does not establish an optimal duration
+or make B0 the final architecture. [Notebook 10](10_image_architecture_comparison.ipynb)
+compares other families. [Notebook 11](11_image_augmentation.ipynb) reports the
+later augmentation quality gate; [notebook 12](12_image_lighting.ipynb) explains
+why lighting correction was deferred. [Notebook 13](13_image_uncertainty.ipynb)
+contains current inference diagnostics.
 
-Longer three-fold validation, stronger augmentation, hair/lighting, Swin,
-calibration and final nested evaluation are deferred. Short trials cannot
-remove slower families or transformations globally. Uncertainty and fusion
-retain separate historical inputs; the reserved test stays outside development.
+Longer confirmation across three inner folds, calibration, full outer evaluation
+and any fusion remain later work. The reserved test stays outside development.
 """)
 code("""
 display(Markdown(summary["recommendation"]))
@@ -223,17 +289,18 @@ print("Original pilot artifacts: unchanged | outer evaluation: not performed | c
 md("""
 ## Limitations
 
-- One inner patient split and six training epochs provide early learning evidence.
-- Recipe and checkpoint selection reuse inner validation labels; results are not unbiased outer evaluation.
-- Raw threshold 0.5 is fixed and can have low melanoma recall. Tuned thresholds and calibration require training-only OOF scores.
-- Raw weighted/unweighted scores use different scales, and their fitting-loss magnitudes are not comparable.
-- Other architectures, transformations and final nested evaluation have separate stages; uncertainty, fusion and reserved-test evaluation remain separate.
+- One inner patient split and six epochs show early behaviour, not final performance.
+- Recipe and epoch choices reuse these validation labels, which can make results optimistic.
+- Class-weighted scores are uncalibrated; 0.5 is a reporting cutoff with potentially low recall.
+- Weighted/unweighted fitting losses have different scales and cannot rank recipes against each other.
+- A finite image preview cannot certify every lesion; full outer evaluation and the reserved test remain pending.
 """)
 md("""
 ## Summary
 
-The preserved pilot is the B0 reference. Its measured recommendation below is
-exploratory and does not determine another architecture's recipe or final model.
+The saved six-epoch experiment provides a verified B0 reference. Read AP alongside
+the fixed-cutoff errors, score reliability and computing cost. The observations
+below guide further experiments; they do not select the final architecture.
 """)
 code("""
 preferred = summary.get("selected_recipe")
@@ -250,6 +317,7 @@ notebook.metadata.language_info = {"name": "python"}
 nbf.validate(notebook)
 for index, cell in enumerate(cells):
     if cell.cell_type == "code": compile(cell.source, f"image_report_cell_{index}", "exec")
-destination = ROOT / "notebooks/05_image_model_d1.ipynb"
+destination = ROOT / "notebooks/Subset/09_image_b0_pilot.ipynb"
+destination.parent.mkdir(parents=True, exist_ok=True)
 nbf.write(notebook, destination)
 print(f"Created {destination} ({len(cells)} cells)")

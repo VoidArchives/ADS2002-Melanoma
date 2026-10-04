@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 import numpy as np
 import pandas as pd
@@ -23,6 +23,128 @@ def sha256(path):
         for block in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+UNCERTAINTY_ORIGINAL = "notebooks/05a_image_uncertainty_d1_wip.ipynb"
+UNCERTAINTY_ARCHIVE = "notebooks/archive/05a_image_uncertainty_d1_historical_three_epoch_fold0.ipynb"
+
+
+def workspace_relative_path(root, relative):
+    """Resolve a canonical repository path without escaping the workspace."""
+    if (not isinstance(relative, str) or not relative or "\\" in relative
+            or PurePosixPath(relative).is_absolute() or PureWindowsPath(relative).is_absolute()
+            or any(part in ("..", ".") or ":" in part for part in relative.split("/"))
+            or PurePosixPath(relative).as_posix() != relative):
+        raise ValueError(f"Invalid workspace-relative preservation path: {relative}")
+    root = Path(root).resolve()
+    path = (root / relative).resolve()
+    if not path.is_relative_to(root):
+        raise ValueError(f"Preservation path escapes workspace: {relative}")
+    return path
+
+
+def _valid_sha256(value):
+    return isinstance(value, str) and len(value) == 64 and all(char in "0123456789abcdef" for char in value)
+
+
+def _snapshot_path(root, relative, snapshot, category):
+    path = workspace_relative_path(root, snapshot)
+    parts = PurePosixPath(snapshot).parts
+    # Exact path suffixes bind snapshots to their original repository key.
+    expected_suffix = (category, *PurePosixPath(relative).parts)
+    if (parts[:2] != ("results", "notebook_organization") or len(parts) != 3 + len(expected_suffix)
+            or parts[3:] != expected_suffix):
+        raise ValueError(f"Snapshot is not the exact original path for {relative}.")
+    return path
+
+
+def notebook_rename_registry(root):
+    """Read and validate the explicit rename/snapshot registry, if present.
+
+    This registry never changes immutable historical receipts. Renamed files
+    and original snapshots must still match each receipt's ORIGINAL digest.
+    It authorises only exact old-to-new notebook keys and explicitly recorded
+    supporting-source paths; there is no search for a similarly named file.
+    """
+    registry_path = workspace_relative_path(root, "notebooks/filename_map.json")
+    if not registry_path.is_file():
+        return {"schema_version": 1, "renames": [], "authorized_source_snapshots": {}}
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise ValueError("Notebook filename registry cannot be read.") from error
+    if (not isinstance(registry, dict) or type(registry.get("schema_version")) is not int
+            or registry["schema_version"] != 1 or not isinstance(registry.get("renames"), list)):
+        raise ValueError("Notebook filename registry must use schema_version 1 and a renames list.")
+    old_paths, new_paths = set(), set()
+    for record in registry["renames"]:
+        if not isinstance(record, dict) or not {"old_path", "new_path", "original_sha256", "snapshot_path"}.issubset(record):
+            raise ValueError("Notebook filename registry has an incomplete rename record.")
+        old, new = record["old_path"], record["new_path"]
+        for relative in (old, new):
+            workspace_relative_path(root, relative)
+            if not relative.startswith("notebooks/") or not relative.endswith(".ipynb"):
+                raise ValueError("Notebook rename paths must be .ipynb files under notebooks/.")
+        if old in old_paths or new in new_paths:
+            raise ValueError("Notebook filename registry old and new paths must each be unique.")
+        old_paths.add(old)
+        new_paths.add(new)
+        if not _valid_sha256(record["original_sha256"]):
+            raise ValueError("Notebook rename record has an invalid original SHA-256.")
+        _snapshot_path(root, old, record["snapshot_path"], "originals")
+    sources = registry.get("authorized_source_snapshots", {})
+    if not isinstance(sources, dict):
+        raise ValueError("authorized_source_snapshots must be a mapping of exact source paths.")
+    for relative, record in sources.items():
+        workspace_relative_path(root, relative)
+        if (not relative.endswith((".py", ".md")) or not isinstance(record, dict)
+                or not {"snapshot_path", "original_sha256"}.issubset(record)
+                or not _valid_sha256(record["original_sha256"])):
+            raise ValueError("Authorised source snapshot has an invalid path, record or original SHA-256.")
+        _snapshot_path(root, relative, record["snapshot_path"], "original_sources")
+    return registry
+
+
+def _renamed_original(root, relative, expected, registry):
+    for record in registry["renames"]:
+        if record["old_path"] != relative:
+            continue
+        renamed = workspace_relative_path(root, record["new_path"])
+        if renamed.is_file() and sha256(renamed) == expected:
+            return renamed
+        if record["original_sha256"] == expected:
+            snapshot = _snapshot_path(root, relative, record["snapshot_path"], "originals")
+            if snapshot.is_file() and sha256(snapshot) == expected:
+                return snapshot
+    return None
+
+
+def preserved_artifact_path(root, relative, expected):
+    """Locate exact historical bytes after an explicitly registered relocation.
+
+    Try the original file, its exact renamed path, and the original snapshot
+    recorded for that old key. The earlier three-epoch/fold-0 uncertainty
+    notebook remains a named exception because its historical digest differs
+    from the later current-workflow notebook copied during organisation.
+    No output or receipt is changed and no mismatched snapshot is accepted.
+    """
+    path = workspace_relative_path(root, relative)
+    if not _valid_sha256(expected):
+        raise ValueError("Expected preservation SHA-256 is invalid.")
+    if path.is_file() and sha256(path) == expected:
+        return path
+    registry = notebook_rename_registry(root)
+    renamed = _renamed_original(root, relative, expected, registry)
+    if renamed is not None:
+        return renamed
+    if relative == UNCERTAINTY_ORIGINAL:
+        archive = workspace_relative_path(root, UNCERTAINTY_ARCHIVE)
+        if archive.is_file() and sha256(archive) == expected:
+            return archive
+        archive = _renamed_original(root, UNCERTAINTY_ARCHIVE, expected, registry)
+        if archive is not None:
+            return archive
+    raise ValueError(f"Preserved historical artifact changed: {relative}")
 
 
 def classification_metrics(target, probability, threshold=0.5):
@@ -83,8 +205,7 @@ def load_historical_pilot(project_root, *, verify_checkpoints=True, verify_image
         path = root / relative
         if not verify_checkpoints and path.suffix == ".pt":
             continue
-        if not path.is_file() or sha256(path) != expected:
-            raise ValueError(f"Preserved historical artifact changed: {relative}")
+        preserved_artifact_path(root, relative, expected)
     for relative, expected in receipt["archived_sources"].items():
         path = report_dir / "archive" / relative
         if not path.is_file() or sha256(path) != expected:

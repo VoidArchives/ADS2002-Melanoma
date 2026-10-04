@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "declared_utc": "2026-10-04T03:32:10.199778+00:00",
+  "config_sha256": "317a1b1c1192a5b9fd9ec0582c0e598dcec4dcb0b08f5c62ed8c1d6b213bb07d",
+  "reference_run_id": "b0_nested_5fold_5h_v1",
+  "existing_outer_prediction_folds": [],
+  "declared_before_outer_fold0_prediction": true
+}
