@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "run_id": "saved_oof_v2",
+  "created_at_utc": "2026-10-05T07:50:37.069209+00:00",
+  "request": {
+    "n_bootstrap": 2000,
+    "seed": 42,
+    "clean_image_run": null,
+    "clean_metadata_receipt": null,
+    "clean_calibration_run": null,
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1"
+  },
+  "input_sha256": {
+    "results/predictions/metadata_nn_oof_d1.csv": "7c84717d1cf77ad9acc2dc023e4c8918625fa7e556b387154fab0b221758a001",
+    "results/metrics/metadata_nn_run_config_d1.json": "f34a6fc6712e097aab964e0f35ddef92e4fbef23fab48bab705a2a5c54f83154",
+    "results/predictions/metadata_robustness_oof_d1.csv": "ecdc6d2c7a0d272ec3a9b6bac25eb2d9691ecade56624aa6882c2c5adca47ec0",
+    "results/metrics/metadata_robustness_run_config_d1.json": "88ee046dc1f432e41e9bd6dad18728e1e966d5fceae823d3a3bdd4ce063e3e2f",
+    "results/notebook_organization/20261004_subset_full_readability_v1/existing_results_before.json": "928f9010b906da9f4b8d611ca7586a17c0e68e21a8a018bf9b8620b6fc289643",
+    "results/metrics/metadata_nn_metrics_d1.csv": "33f5744722db45b9ce3d7b6e9e758f3d93cd8b0497f2e679da2b1ce3f4e57443",
+    "results/metrics/metadata_robustness_fold_metrics_d1.csv": "20ab63cc014f72b9af4f474cf481d12ad234922b8c090141f24eca83117e6f60",
+    "results/image_d1_runs/b0_nested_5fold_5h_v1/run_manifest.json": "34b565014688e822f279f3843fb43d0e4dfd9928257b0ed88350ba254cee4103",
+    "results/image_d1_runs/b0_nested_5fold_5h_v1/summary.json": "d0c7537e4cd3f53017ae675672f7691543b876ad398fea162e8348cee1074e6d",
+    "results/image_d1_runs/b0_nested_5fold_5h_v1/outer_oof_predictions.csv": "4c58c4f037dd3ca71e9db8c8962cfbc52bda2662bc3f04e39921a38baac92547",
+    "results/image_d1_runs/b0_nested_calibration_5h_v1/run_manifest.json": "303a997e4edd96806c8fbdf3edb609b2add5002f7fce6c8d019260c18face18a",
+    "results/image_d1_runs/b0_nested_calibration_5h_v1/summary.json": "7ccbafbbe365aea829f20ea3cf40f210f156926ced8f84335e285ffd11b8bad6",
+    "results/image_d1_runs/b0_nested_calibration_5h_v1/outer_oof_predictions.csv": "f8064a9f7a8de62fafdfd22bf75b871130de3d332e8a61b8f441ba83ec3aef7a",
+    "data/subset/processed/dedup_v1/dataset_manifest.json": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "data/subset/processed/train_folds.csv": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "src/melanoma_detection/dedup_sensitivity.py": "06b83e38c2dcb0de9f3d5800893c563a48bdc22cf9a3b6d8b14be1d6848e942f",
+    "scripts/run_dedup_sensitivity.py": "d0a147bf30c6df22a89d0354dc698bb700bc88fa21746957f41ecdd409d76492"
+  },
+  "dataset": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "artifact_sha256": {
+    "figures/paired_mean_fold_ap.png": "f3a6623879943b0f7c7073c3536f421f36d463006248344c8dd1df2dcc10a964",
+    "predictions/image_calibrated.csv": "4fcebb32b4590bbde040ad7671c700284e773556b9ac1215f5db7a90d5a573ce",
+    "predictions/image_raw.csv": "b9430acb017ee89aff5fa6e8fb8098a19b9732c056155c0568862ea8699df70b",
+    "predictions/metadata_nn.csv": "478ec5ec66daac925e76e8d9afd47e4a1b175c3eb23c373936d50b27f5318a9c",
+    "predictions/metadata_robustness.csv": "15d8733e69cd707c97868689a6a793bc9605a97ae2ea94ec96f69933ec290b6d",
+    "report.md": "79cedce8cfd7d344a929ccdfa3bc9b09475d2ca8756031d3caa85c4f5992bf97",
+    "summary.json": "4045ba7732458a0c44fed8beccb68ce9a1532f24f7d1b2ebf709b4cd9dd7a321",
+    "tables/bootstrap_intervals.csv": "8919d5813c024409dc1ef6c7f0b5ea497dd354ec010affa5adc1cfc711222dae",
+    "tables/frozen_calibration_cutoffs.csv": "92da5d61591ad30edceb1c22d286a506ed71bdb63aafc770c6c3f8ae85dd6acd",
+    "tables/metrics.csv": "8fab122fc1b96a1d85dc268dca3188331f255ce3742841e2e9d2649aa9b1c825",
+    "tables/paired_comparisons.csv": "ec6820b2f3a689d0f022bf5b9054f48b8e232b5c1a69be4a245160e915ea2e67",
+    "tables/subgroups.csv": "529011074a78c554c76f384891ee80e2ed643f738171a3e41527d3abd7609a3d"
+  },
+  "summary": {
+    "status": "complete",
+    "dataset": {
+      "variant": "dedup_v1",
+      "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+      "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+      "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+      "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+      "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+      "membership_sha256": {
+        "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+        "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+        "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+        "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+        "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+      },
+      "preserved_inner_memberships": {
+        "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+        "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+        "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+        "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+        "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+      }
+    },
+    "counts": {
+      "original": {
+        "n_images": 6864,
+        "n_patients": 422,
+        "n_malignant_images": 128,
+        "n_malignant_patients": 88
+      },
+      "retained": {
+        "n_images": 6706,
+        "n_patients": 422,
+        "n_malignant_images": 127,
+        "n_malignant_patients": 88
+      }
+    },
+    "primary_mean_fold_metrics": [
+      {
+        "population": "original",
+        "model": "b0_raw",
+        "average_precision": 0.1447163145823742,
+        "roc_auc": 0.8407829260435065,
+        "log_loss": 0.0893946182719142,
+        "brier": 0.020886132454057554
+      },
+      {
+        "population": "original",
+        "model": "metadata_nn_mean",
+        "average_precision": 0.05819267061408849,
+        "roc_auc": 0.6787967761755321,
+        "log_loss": 0.08895957675881888,
+        "brier": 0.018100789825100126
+      },
+      {
+        "population": "original",
+        "model": "spline_raw",
+        "average_precision": 0.06485509182918961,
+        "roc_auc": 0.662886175607619,
+        "log_loss": 0.08973744802145706,
+        "brier": 0.018137426603565543
+      },
+      {
+        "population": "retained",
+        "model": "b0_raw",
+        "average_precision": 0.1456368451110039,
+        "roc_auc": 0.839360671399621,
+        "log_loss": 0.09083804476410537,
+        "brier": 0.021232500177501328
+      },
+      {
+        "population": "retained",
+        "model": "metadata_nn_mean",
+        "average_precision": 0.05870810188061959,
+        "roc_auc": 0.6772425480013791,
+        "log_loss": 0.09022857220231735,
+        "brier": 0.01839131039379569
+      },
+      {
+        "population": "retained",
+        "model": "spline_raw",
+        "average_precision": 0.06526641651052748,
+        "roc_auc": 0.6613167346156661,
+        "log_loss": 0.0910285845106461,
+        "brier": 0.0184274348401319
+      }
+    ],
+    "bootstrap_valid": 2000,
+    "bootstrap_rejected_single_class": 0,
+    "training_started": false,
+    "reserved_test_loaded": false,
+    "limitation": "Filtered historical predictions check duplicate influence on evaluation weighting only. Duplicates still influenced historical training, preprocessing, recipe/epoch selection and calibration fitting. Models, maps and cutoffs stay fixed. Patient bootstrap intervals condition on saved fits and omit retraining/selection variability and earlier pilot adaptivity. These are development results, not reserved-test or clinical evidence.",
+    "original_metrics_reproduced": true,
+    "retained_scores_unchanged": true
+  },
+  "reserved_test_loaded": false,
+  "training_started": false
+}

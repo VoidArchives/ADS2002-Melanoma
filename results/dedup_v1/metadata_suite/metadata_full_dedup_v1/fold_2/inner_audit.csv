@@ -1,0 +1,4 @@
+outer_fold,inner_fold,fit_images,validation_images,fit_patients,validation_patients,fit_positive_images,validation_positive_images,patient_overlap,outer_patient_overlap
+2,0,3564,1814,226,109,67,34,0,0
+2,1,3602,1776,224,111,68,33,0,0
+2,2,3590,1788,220,115,67,34,0,0

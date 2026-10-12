@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "context": {
+    "condition": "original",
+    "outer_fold": 4,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "model": "spline",
+    "phase": "classical_inner",
+    "inner_fold": 2,
+    "candidate_index": 11,
+    "parameters": {
+      "classifier__C": 1.0,
+      "preprocessor__smooth_age__spline__degree": 3,
+      "preprocessor__smooth_age__spline__n_knots": 5
+    }
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/spline/candidate_11/inner_2/predictions.csv": "2c74080c74f2f79bd22d53c5ac36e5ce4fe28328996440d355d28ce3fce9bd95",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/spline/candidate_11/inner_2/result.json": "3a55f3302ea33bccf86b4936a359c4da2289f26048792f95b71a10728379def2"
+  }
+}

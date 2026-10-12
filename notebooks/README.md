@@ -1,10 +1,19 @@
 # Notebook workflows
 
+**Current v2 reporting contract.** Unweighted mean outer-fold **ROC-AUC** is the primary ranking summary; mean-fold AP, pooled metrics, log loss and Brier score remain supporting measures. Each fold has equal weight, and patient-bootstrap intervals resample whole patients within folds. A single selected inner split is exploratory and cannot supply a five-fold estimate. Scores describe individual images; patient grouping does not turn them into patient-level diagnoses.
+
+The metadata v2 experiment selects settings by inner ROC-AUC. Existing image recipes, checkpoints, durations and transformation-admission gates retain their historical AP-based rules. Reporting their saved ROC-AUC does not retrospectively make them ROC-selected. Calibration and recall cutoffs remain attached to their original procedures. All active report notebooks read saved artifacts; they start no training, image smoke or checkpoint inference and never open the reserved test. Final fitting and independent testing wait until the entire procedure is frozen.
+
+Presentation snapshots are preserved under `results/metadata_nn_tuning/v2/archive_before_update/`. New image figures/tables use `results/metadata_nn_tuning/v2/report_verification/image_reports/<condition>/<stage>/`; current metadata assessment tables and figures use the explicit v2 `roc_auc_grid36_v1` run's `report/` directory. v1 AP results and historical image outputs retain their original identities.
+
+
 Active workflows are separated by dataset directory and numbered consecutively:
 
 - `Subset/`: subset dataset under `data/subset`, notebooks 01–15, with the new
-  `14_image_nested_evaluation.ipynb` added before the existing fusion placeholder.
+  `14_image_nested_evaluation.ipynb` preceding the planned fusion stage.
 - `Full/`: full dataset under `data/raw` and `data/processed`, notebooks 01–03.
+- `Subset_dedup/`: the twelve clean reports using the frozen retained-development
+  manifest; stages 06/07 share a presentation template with `Subset`.
 - `archive/`: historical experiments, outside the active sequence.
 
 `Subset` was previously called d1; `Full` was d2. Existing data files, saved runs
@@ -29,9 +38,8 @@ average precision and calibration.
   in predictions and whether it helps prioritise images for review. The new
   14 image evaluation reads the bounded five-outer-fold B0 run and reports
   performance only after all folds complete.
-- **See what remains:** the existing 14 fusion and 15 final-evaluation notebooks
-  remain plans. They contain no fusion or reserved-test results; their filenames
-  are preserved.
+- **See what remains:** fusion and final evaluation remain planned stages. The
+  active folders contain no fusion or reserved-test results.
 
 “Executed” means outputs are saved, not that a method is a final model. Image
 pilots reuse one inner validation split, while metadata out-of-fold (OOF)
@@ -49,7 +57,7 @@ or modelling cells can write files, as described in each notebook.
 | [04 Dummy/logistic baseline](Subset/04_dummy_logistic_baseline.ipynb) | Establish simple prediction baselines | Executed; exploratory cutoff example |
 | [05 Metadata models](Subset/05_metadata_models.ipynb) | Compare metadata model families | Executed; development OOF comparisons |
 | [06 Metadata neural network](Subset/06_metadata_neural_network.ipynb) | Evaluate three predeclared NN runs | Executed; development OOF predictions |
-| [07 Metadata tuning](Subset/07_metadata_tuning.ipynb) | Check metadata hyperparameter choices | Executed; development experiment |
+| [07 Metadata tuning](Subset/07_metadata_tuning.ipynb) | Compare nested tuning across four metadata families, including NN | Executed; development experiment |
 | [08 Metadata robustness](Subset/08_metadata_robustness.ipynb) | Evaluate training-selected cutoffs, calibration and subgroups | Executed; reserved test untouched |
 | [09 Image B0 pilot](Subset/09_image_b0_pilot.ipynb) | Report four saved B0 recipes | Executed; inner-validation diagnostics |
 | [10 Image architecture comparison](Subset/10_image_architecture_comparison.ipynb) | Compare saved B0, DenseNet121 and ConvNeXt-Tiny pilots | Executed; exploratory inner split |
@@ -57,8 +65,8 @@ or modelling cells can write files, as described in each notebook.
 | [12 Image lighting](Subset/12_image_lighting.ipynb) | Record the optional CLAHE experiment | Deferred; displays the weak control |
 | [13 Image uncertainty](Subset/13_image_uncertainty.ipynb) | Compare dropout/TTA variation and referral baselines | Executed; exploratory inner-validation diagnostics |
 | [14 Image outer evaluation](Subset/14_image_nested_evaluation.ipynb) | Report five outer folds with independent B0 recipe and duration selection | Executed; raw and calibrated development OOF complete |
-| [14 Fusion model](Subset/14_fusion_model.ipynb) | Combine image and metadata predictions | Planned; no results |
-| [15 Final evaluation](Subset/15_final_evaluation.ipynb) | Evaluate the frozen workflow | Planned; reserved test unevaluated |
+| 14 Fusion model | Combine image and metadata predictions | Planned; no notebook or results |
+| [15 Deduplicated workflow](Subset/15_deduplicated_workflow.ipynb) | Review exact-copy sensitivity and saved clean experiments | Report-only; reserved test unevaluated |
 
 ## Full sequence
 
@@ -86,11 +94,14 @@ interpretation while the original notebooks remain unchanged.
 
 ## Metadata evaluation workflow (Subset)
 
-If regenerating metadata results, run `Subset/06_metadata_neural_network.ipynb`,
-then `Subset/08_metadata_robustness.ipynb`.
-The first notebook evaluates three predeclared NN runs. The second uses training-only
-cutoff and calibration selection, patient-bootstrap confidence intervals, subgroup
-checks and a frozen spline model fitted without opening the reserved test labels.
+The order is **05 metadata models → 06 fixed NN → 07 tuning including NN → 08
+robustness**, in both `Subset` and `Subset_dedup`. The [NN tuning protocol](../docs/metadata_nn_tuning.md)
+documents the explicit runner and frozen 36-setting search. Updated 06/07/08
+notebooks read completed artifacts and generate reports without fitting models.
+Stage 08 preserves historical training-only spline calibration and decision
+analyses, then adds separate tuned-NN comparisons. Those calibration maps and
+cutoffs do not transfer to the new network. Final all-development fitting and
+the reserved test remain separate later steps.
 
 See [the plain-language methodology guide](../docs/metadata_methodology.md) for why
 each step is needed, how it works and what its results can establish. The earlier
@@ -102,6 +113,7 @@ with the project environment, for example:
 
 ```powershell
 .venv/Scripts/python.exe -m jupyter execute --inplace --timeout=900 notebooks/Subset/06_metadata_neural_network.ipynb
+.venv/Scripts/python.exe -m jupyter execute --inplace --timeout=900 notebooks/Subset/07_metadata_tuning.ipynb
 .venv/Scripts/python.exe -m jupyter execute --inplace --timeout=900 notebooks/Subset/08_metadata_robustness.ipynb
 ```
 
@@ -160,7 +172,7 @@ unchanged deterministic preparation and seed 42. Every outer fold rebuilds
 three inner patient groups using only its outer training pool.
 
 All five raw folds completed on 6,864 images from 422 patients, including 128
-melanoma images. Primary mean fold AP is **0.1447**, with a 95% conditional
+melanoma images. Secondary mean fold AP is **0.1447**, with a 95% conditional
 patient-bootstrap interval **0.1033–0.2225**; mean fold ROC-AUC is **0.8408**.
 These remain development OOF results after earlier pilots, including archived
 fold 0. The interval conditions on saved fits and selections, excluding
@@ -192,8 +204,8 @@ read-only notebook:
 .venv/Scripts/python.exe scripts/execute_image_nested_notebook.py --timeout 600
 ```
 
-The report verifies exact canonical coverage, shows mean fold AP as primary and
-pooled AP as secondary, and uses 2,000 patient-bootstrap draws within outer folds.
+The report verifies exact canonical coverage, shows mean fold ROC-AUC as primary, with mean-fold AP and
+pooled metrics as secondary, and uses 2,000 patient-bootstrap draws within outer folds.
 It records valid/rejected draws, raw reliability, fixed-0.5 confusion counts and
 verified matched metadata comparisons when available. Intervals condition on
 the saved models and selections; earlier pilot use of this development dataset,
@@ -232,36 +244,37 @@ Existing historical notebooks and outputs remain preserved.
 ## Image uncertainty workflow (Subset)
 
 `Subset/13_image_uncertainty.ipynb` selects an existing run and recipe explicitly.
-Its default is condition A of `b0_augmentation_12e_v1`, recipe `lr3e5_sqrt`, using
-the recorded best checkpoint at epoch 6. Supported DenseNet121 and ConvNeXt-Tiny
-recipes from `architecture_pilot_3h_v1` can be selected explicitly; the notebook
+The report is pinned to `efficientnet_b0_lr3e5_sqrt_mc30_tta4_20261003T235530258956Z`,
+condition A of `b0_augmentation_12e_v1`, recipe `lr3e5_sqrt`, using
+the recorded best checkpoint at epoch 6. Historical DenseNet121 and ConvNeXt-Tiny
+diagnostics from `architecture_pilot_3h_v1` required separately authorised inference; the notebook
 does not promote the highest pilot AP to a final architecture choice.
 
-The notebook reconstructs the checkpoint's deterministic preparation and saved
-inner-validation membership, and checks that evaluation patients were absent
-from fitting. The current split has 1,834 images from 113 patients, including 33
+The report reads checkpoint/preparation provenance and saved
+inner-validation membership, and verifies that evaluation patients were absent
+from fitting without reconstructing a network. The current split has 1,834 images from 113 patients, including 33
 malignant images, and excludes outer fold 0. These are inner-validation
 diagnostics, not full OOF or final-test results.
 
-Run a short smoke check before the full default notebook:
+**Historical inference commands, retained for protocol traceability:** these smoke/inference commands are not needed for current reports and are outside the report-only refresh.
 
 ```powershell
 .venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke
 .venv/Scripts/python.exe scripts/execute_image_notebook.py --notebook Subset/13_image_uncertainty.ipynb
 ```
 
-Alternative smoke checks require an explicit run, architecture and recipe:
+Historical alternative smoke checks required an explicit run, architecture and recipe:
 
 ```powershell
 .venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke --run-id architecture_pilot_3h_v1 --architecture densenet121 --recipe-id low_none
 .venv/Scripts/python.exe scripts/run_image_uncertainty.py --smoke --run-id architecture_pilot_3h_v1 --architecture convnext_tiny --recipe-id low_none
 ```
 
-Set the matching `SOURCE_RUN`, `ARCHITECTURE` and `RECIPE_ID` in the notebook
-before full alternative inference. Architecture recipe slots are `low_none`,
+Those historical runs required matching `SOURCE_RUN`, `ARCHITECTURE` and `RECIPE_ID`
+for alternative inference. The current notebook is pinned to one completed uncertainty run. Architecture recipe slots are `low_none`,
 `low_sqrt`, `high_none` and `high_sqrt`.
 
-Each execution writes to a separate directory under
+The completed historical inference wrote to a separate directory under
 `results/image_uncertainty_runs`, with raw predictions, summaries, figures,
 checks and provenance. It uses 30 dropout passes with only explicit dropout
 active, and separate identity/horizontal/vertical/both-flip TTA views. The
@@ -276,3 +289,18 @@ The historical archive retains the original code, execution and result paths.
 Use it to read the old three-epoch fold-0 experiment. New inference does not
 rewrite its results, checkpoints or training histories, and does not train,
 implement fusion or evaluate the reserved test.
+
+
+## Read-only v2 presentation refresh
+
+Regenerate the editable reports from the verified snapshots without executing model code:
+
+```powershell
+.venv/Scripts/python.exe -B scripts/build_metadata_tuning_v2_notebooks.py --condition both --run-id roc_auc_grid36_v1
+.venv/Scripts/python.exe -B scripts/build_image_roc_reports.py
+.venv/Scripts/python.exe -B scripts/execute_metadata_roc_reports.py
+```
+
+The image builder owns original09–15 and clean09–12. Original13 reads the completed uncertainty run `efficientnet_b0_lr3e5_sqrt_mc30_tta4_20261003T235530258956Z`; saved MC/TTA scores, referral results and previews are inspected rather than recalculated. Execute reports only after the v2 experiment has complete verified receipts. The execution and acceptance stages create new receipts, previews and PNG exports under `results/metadata_nn_tuning/v2/report_verification/`. No historical image result, AP fitting source, dataset assignment or reserved-test file is changed.
+
+The preserved five-fold image procedure has primary mean-fold ROC-AUC **0.8408** on original development records (conditional 95% patient interval **0.7953–0.8747**) and **0.8308** on retained records (**0.7871–0.8651**). Secondary mean-fold AP is 0.1447 and 0.1316. These values come from the unchanged saved outer predictions and existing bootstrap artifacts. They assess the historical AP-selected image procedure; the new metadata search has a separate ROC selection identity.

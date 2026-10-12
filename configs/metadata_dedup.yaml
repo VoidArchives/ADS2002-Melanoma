@@ -1,0 +1,5 @@
+# Clean replication only: no reserved-test inputs or all-development final fit.
+dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+output_dir: results/dedup_v1/metadata
+spline_calibration: true
+target_recall: 0.8

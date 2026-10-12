@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "condition": "dedup_v1",
+  "run_id": "nn_grid36_v1",
+  "receipt_path": "results/dedup_v1/metadata_nn_tuning/v1/nn_grid36_v1/receipt.json",
+  "receipt_sha256": "e5415184d933003fd16ef9fb8c000cb027689b01f414eb70bc02edfca4109fd9"
+}

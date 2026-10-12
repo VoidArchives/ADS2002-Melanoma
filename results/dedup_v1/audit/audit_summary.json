@@ -1,0 +1,1101 @@
+{
+  "all_images_match_historical_source_and_pixel_hashes": true,
+  "coarse_hash_groups_with_distinct_pixels": [
+    [
+      "ISIC_1658978",
+      "ISIC_6550650",
+      "ISIC_8126172"
+    ],
+    [
+      "ISIC_2817214",
+      "ISIC_6018905"
+    ],
+    [
+      "ISIC_0240365",
+      "ISIC_9318508"
+    ],
+    [
+      "ISIC_1633078",
+      "ISIC_1726444"
+    ],
+    [
+      "ISIC_0229680",
+      "ISIC_0768514",
+      "ISIC_1579497"
+    ],
+    [
+      "ISIC_5984698",
+      "ISIC_6356861"
+    ],
+    [
+      "ISIC_3763008",
+      "ISIC_4649440"
+    ],
+    [
+      "ISIC_0465018",
+      "ISIC_2327808"
+    ],
+    [
+      "ISIC_2887033",
+      "ISIC_5194874"
+    ],
+    [
+      "ISIC_0160831",
+      "ISIC_6869128"
+    ],
+    [
+      "ISIC_2063937",
+      "ISIC_6099698"
+    ],
+    [
+      "ISIC_3802134",
+      "ISIC_5933341"
+    ],
+    [
+      "ISIC_4768702",
+      "ISIC_5266861"
+    ],
+    [
+      "ISIC_3645653",
+      "ISIC_9239632"
+    ],
+    [
+      "ISIC_2550938",
+      "ISIC_5312710"
+    ],
+    [
+      "ISIC_5357900",
+      "ISIC_7704533"
+    ],
+    [
+      "ISIC_9427591",
+      "ISIC_9480417"
+    ],
+    [
+      "ISIC_4362449",
+      "ISIC_7196249"
+    ],
+    [
+      "ISIC_3286285",
+      "ISIC_8906021"
+    ],
+    [
+      "ISIC_1511227",
+      "ISIC_2040393"
+    ],
+    [
+      "ISIC_8114321",
+      "ISIC_9375930"
+    ],
+    [
+      "ISIC_0760892",
+      "ISIC_1157007",
+      "ISIC_3738157"
+    ],
+    [
+      "ISIC_8142461",
+      "ISIC_9944803"
+    ],
+    [
+      "ISIC_1880716",
+      "ISIC_4087267"
+    ],
+    [
+      "ISIC_1549857",
+      "ISIC_7784881"
+    ],
+    [
+      "ISIC_5863672",
+      "ISIC_8689284"
+    ],
+    [
+      "ISIC_2653824",
+      "ISIC_3338703",
+      "ISIC_9498448"
+    ],
+    [
+      "ISIC_3809998",
+      "ISIC_4563766"
+    ],
+    [
+      "ISIC_7494625",
+      "ISIC_7920605"
+    ],
+    [
+      "ISIC_4467150",
+      "ISIC_6692344"
+    ],
+    [
+      "ISIC_4052659",
+      "ISIC_6807667"
+    ],
+    [
+      "ISIC_6009620",
+      "ISIC_6355353"
+    ],
+    [
+      "ISIC_4082303",
+      "ISIC_7484555"
+    ],
+    [
+      "ISIC_3292959",
+      "ISIC_5709170"
+    ],
+    [
+      "ISIC_5280199",
+      "ISIC_6868834"
+    ],
+    [
+      "ISIC_0557109",
+      "ISIC_5850633"
+    ],
+    [
+      "ISIC_6413346",
+      "ISIC_9079379"
+    ],
+    [
+      "ISIC_0690527",
+      "ISIC_4009870"
+    ],
+    [
+      "ISIC_5740310",
+      "ISIC_8767759"
+    ]
+  ],
+  "coarse_hash_rule": "8x8 grayscale average hash; review-only, never an exclusion rule",
+  "development_ids_only": true,
+  "duplicate_group_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "duplicate_groups": [
+    [
+      "ISIC_0087297",
+      "ISIC_4755972"
+    ],
+    [
+      "ISIC_0112097",
+      "ISIC_5934021"
+    ],
+    [
+      "ISIC_0148783",
+      "ISIC_7460560"
+    ],
+    [
+      "ISIC_0157530",
+      "ISIC_3986853"
+    ],
+    [
+      "ISIC_0196945",
+      "ISIC_8108340"
+    ],
+    [
+      "ISIC_0207209",
+      "ISIC_2961141"
+    ],
+    [
+      "ISIC_0213336",
+      "ISIC_7923858"
+    ],
+    [
+      "ISIC_0238002",
+      "ISIC_6602795"
+    ],
+    [
+      "ISIC_0308133",
+      "ISIC_7456073"
+    ],
+    [
+      "ISIC_0313653",
+      "ISIC_1661411"
+    ],
+    [
+      "ISIC_0316025",
+      "ISIC_0378118"
+    ],
+    [
+      "ISIC_0337921",
+      "ISIC_4364169"
+    ],
+    [
+      "ISIC_0363130",
+      "ISIC_2750577"
+    ],
+    [
+      "ISIC_0370932",
+      "ISIC_9391954"
+    ],
+    [
+      "ISIC_0401116",
+      "ISIC_0467724"
+    ],
+    [
+      "ISIC_0409276",
+      "ISIC_7861914"
+    ],
+    [
+      "ISIC_0481910",
+      "ISIC_5889146"
+    ],
+    [
+      "ISIC_0516613",
+      "ISIC_3452266"
+    ],
+    [
+      "ISIC_0523031",
+      "ISIC_3417128"
+    ],
+    [
+      "ISIC_0586680",
+      "ISIC_2828001"
+    ],
+    [
+      "ISIC_0658225",
+      "ISIC_6907218"
+    ],
+    [
+      "ISIC_0659540",
+      "ISIC_3301909"
+    ],
+    [
+      "ISIC_0680210",
+      "ISIC_7984646"
+    ],
+    [
+      "ISIC_0694559",
+      "ISIC_2210577"
+    ],
+    [
+      "ISIC_0720915",
+      "ISIC_9005542"
+    ],
+    [
+      "ISIC_0721819",
+      "ISIC_8317513"
+    ],
+    [
+      "ISIC_0754561",
+      "ISIC_8379578"
+    ],
+    [
+      "ISIC_0786170",
+      "ISIC_9551410"
+    ],
+    [
+      "ISIC_0856856",
+      "ISIC_2000346"
+    ],
+    [
+      "ISIC_0878793",
+      "ISIC_7160845"
+    ],
+    [
+      "ISIC_0884576",
+      "ISIC_9403292"
+    ],
+    [
+      "ISIC_0956562",
+      "ISIC_4528262"
+    ],
+    [
+      "ISIC_1003703",
+      "ISIC_8792040"
+    ],
+    [
+      "ISIC_1011754",
+      "ISIC_6892199"
+    ],
+    [
+      "ISIC_1104762",
+      "ISIC_6691662"
+    ],
+    [
+      "ISIC_1188141",
+      "ISIC_6351451"
+    ],
+    [
+      "ISIC_1300006",
+      "ISIC_9126974"
+    ],
+    [
+      "ISIC_1301591",
+      "ISIC_8645633"
+    ],
+    [
+      "ISIC_1302264",
+      "ISIC_1450273"
+    ],
+    [
+      "ISIC_1309015",
+      "ISIC_8170849"
+    ],
+    [
+      "ISIC_1312208",
+      "ISIC_2749059"
+    ],
+    [
+      "ISIC_1323471",
+      "ISIC_6140773"
+    ],
+    [
+      "ISIC_1350659",
+      "ISIC_8194371"
+    ],
+    [
+      "ISIC_1358757",
+      "ISIC_4608323"
+    ],
+    [
+      "ISIC_1370034",
+      "ISIC_8066993"
+    ],
+    [
+      "ISIC_1376528",
+      "ISIC_1976244"
+    ],
+    [
+      "ISIC_1388230",
+      "ISIC_7713545"
+    ],
+    [
+      "ISIC_1388984",
+      "ISIC_7343798"
+    ],
+    [
+      "ISIC_1486589",
+      "ISIC_5706192"
+    ],
+    [
+      "ISIC_1487601",
+      "ISIC_3728659"
+    ],
+    [
+      "ISIC_1548638",
+      "ISIC_5482648"
+    ],
+    [
+      "ISIC_1578998",
+      "ISIC_4139260"
+    ],
+    [
+      "ISIC_1594422",
+      "ISIC_2449313"
+    ],
+    [
+      "ISIC_1601244",
+      "ISIC_6373822"
+    ],
+    [
+      "ISIC_1617896",
+      "ISIC_3685955"
+    ],
+    [
+      "ISIC_1621479",
+      "ISIC_7472836"
+    ],
+    [
+      "ISIC_1664534",
+      "ISIC_4176335"
+    ],
+    [
+      "ISIC_1670106",
+      "ISIC_2467082"
+    ],
+    [
+      "ISIC_1687584",
+      "ISIC_6847965"
+    ],
+    [
+      "ISIC_1807638",
+      "ISIC_3221265"
+    ],
+    [
+      "ISIC_1830017",
+      "ISIC_2990155"
+    ],
+    [
+      "ISIC_1836352",
+      "ISIC_7165533"
+    ],
+    [
+      "ISIC_1944865",
+      "ISIC_5153482"
+    ],
+    [
+      "ISIC_1979109",
+      "ISIC_9933282"
+    ],
+    [
+      "ISIC_2074396",
+      "ISIC_8689583"
+    ],
+    [
+      "ISIC_2079121",
+      "ISIC_2934051"
+    ],
+    [
+      "ISIC_2081142",
+      "ISIC_3689759"
+    ],
+    [
+      "ISIC_2094324",
+      "ISIC_6223989"
+    ],
+    [
+      "ISIC_2157630",
+      "ISIC_3832239"
+    ],
+    [
+      "ISIC_2217550",
+      "ISIC_3024903"
+    ],
+    [
+      "ISIC_2275821",
+      "ISIC_6477752"
+    ],
+    [
+      "ISIC_2279329",
+      "ISIC_6046224"
+    ],
+    [
+      "ISIC_2365225",
+      "ISIC_8152273"
+    ],
+    [
+      "ISIC_2402717",
+      "ISIC_7517491"
+    ],
+    [
+      "ISIC_2476092",
+      "ISIC_3288311"
+    ],
+    [
+      "ISIC_2607827",
+      "ISIC_9967383"
+    ],
+    [
+      "ISIC_2636012",
+      "ISIC_9917477"
+    ],
+    [
+      "ISIC_2652786",
+      "ISIC_5163257"
+    ],
+    [
+      "ISIC_2718135",
+      "ISIC_9409255"
+    ],
+    [
+      "ISIC_2741583",
+      "ISIC_4261232"
+    ],
+    [
+      "ISIC_2746974",
+      "ISIC_6627237"
+    ],
+    [
+      "ISIC_2748736",
+      "ISIC_5481688"
+    ],
+    [
+      "ISIC_2754949",
+      "ISIC_5300278"
+    ],
+    [
+      "ISIC_2850155",
+      "ISIC_8546599"
+    ],
+    [
+      "ISIC_2896341",
+      "ISIC_7991946"
+    ],
+    [
+      "ISIC_2939330",
+      "ISIC_7844482"
+    ],
+    [
+      "ISIC_2986014",
+      "ISIC_8428997"
+    ],
+    [
+      "ISIC_3114110",
+      "ISIC_3375455"
+    ],
+    [
+      "ISIC_3218501",
+      "ISIC_7718526"
+    ],
+    [
+      "ISIC_3236964",
+      "ISIC_3562579"
+    ],
+    [
+      "ISIC_3289574",
+      "ISIC_3358528"
+    ],
+    [
+      "ISIC_3368733",
+      "ISIC_5299304"
+    ],
+    [
+      "ISIC_3397468",
+      "ISIC_4433244"
+    ],
+    [
+      "ISIC_3428694",
+      "ISIC_6374961"
+    ],
+    [
+      "ISIC_3523476",
+      "ISIC_8913110"
+    ],
+    [
+      "ISIC_3640401",
+      "ISIC_6091765"
+    ],
+    [
+      "ISIC_3761071",
+      "ISIC_9743052"
+    ],
+    [
+      "ISIC_3809013",
+      "ISIC_5089423"
+    ],
+    [
+      "ISIC_3844151",
+      "ISIC_4199686"
+    ],
+    [
+      "ISIC_3882374",
+      "ISIC_8722181"
+    ],
+    [
+      "ISIC_3915289",
+      "ISIC_8362891"
+    ],
+    [
+      "ISIC_3927991",
+      "ISIC_9104012"
+    ],
+    [
+      "ISIC_4064041",
+      "ISIC_8646115"
+    ],
+    [
+      "ISIC_4066013",
+      "ISIC_4256214"
+    ],
+    [
+      "ISIC_4242559",
+      "ISIC_7375608"
+    ],
+    [
+      "ISIC_4249243",
+      "ISIC_4690191"
+    ],
+    [
+      "ISIC_4327358",
+      "ISIC_8692556"
+    ],
+    [
+      "ISIC_4343836",
+      "ISIC_8747435"
+    ],
+    [
+      "ISIC_4389708",
+      "ISIC_6927916"
+    ],
+    [
+      "ISIC_4496665",
+      "ISIC_4941646"
+    ],
+    [
+      "ISIC_4509525",
+      "ISIC_9493030"
+    ],
+    [
+      "ISIC_4511841",
+      "ISIC_5920981"
+    ],
+    [
+      "ISIC_4639468",
+      "ISIC_9018781"
+    ],
+    [
+      "ISIC_4765961",
+      "ISIC_8829317"
+    ],
+    [
+      "ISIC_4794573",
+      "ISIC_6875825"
+    ],
+    [
+      "ISIC_4909229",
+      "ISIC_5614711"
+    ],
+    [
+      "ISIC_4978474",
+      "ISIC_8407448"
+    ],
+    [
+      "ISIC_5002041",
+      "ISIC_8629649"
+    ],
+    [
+      "ISIC_5010197",
+      "ISIC_8963367"
+    ],
+    [
+      "ISIC_5106545",
+      "ISIC_6784756"
+    ],
+    [
+      "ISIC_5133804",
+      "ISIC_9763829"
+    ],
+    [
+      "ISIC_5144150",
+      "ISIC_5520533"
+    ],
+    [
+      "ISIC_5176105",
+      "ISIC_5407936"
+    ],
+    [
+      "ISIC_5176419",
+      "ISIC_6003172"
+    ],
+    [
+      "ISIC_5254803",
+      "ISIC_5765481"
+    ],
+    [
+      "ISIC_5327000",
+      "ISIC_8559515"
+    ],
+    [
+      "ISIC_5361965",
+      "ISIC_6402957"
+    ],
+    [
+      "ISIC_5400342",
+      "ISIC_9067007"
+    ],
+    [
+      "ISIC_5440360",
+      "ISIC_8558194"
+    ],
+    [
+      "ISIC_5484086",
+      "ISIC_9910480"
+    ],
+    [
+      "ISIC_5497851",
+      "ISIC_7811060"
+    ],
+    [
+      "ISIC_5626944",
+      "ISIC_6254045"
+    ],
+    [
+      "ISIC_5644962",
+      "ISIC_8667588"
+    ],
+    [
+      "ISIC_5667469",
+      "ISIC_9279540"
+    ],
+    [
+      "ISIC_5723510",
+      "ISIC_7005347"
+    ],
+    [
+      "ISIC_5778330",
+      "ISIC_9854376"
+    ],
+    [
+      "ISIC_5892680",
+      "ISIC_8755969"
+    ],
+    [
+      "ISIC_6091609",
+      "ISIC_9417600"
+    ],
+    [
+      "ISIC_6270846",
+      "ISIC_7628257"
+    ],
+    [
+      "ISIC_6304412",
+      "ISIC_8586909"
+    ],
+    [
+      "ISIC_6619411",
+      "ISIC_7834330"
+    ],
+    [
+      "ISIC_6689310",
+      "ISIC_7528783"
+    ],
+    [
+      "ISIC_6696536",
+      "ISIC_6856100"
+    ],
+    [
+      "ISIC_6954577",
+      "ISIC_7986935"
+    ],
+    [
+      "ISIC_7356589",
+      "ISIC_9199965"
+    ],
+    [
+      "ISIC_7365445",
+      "ISIC_7791770"
+    ],
+    [
+      "ISIC_7445800",
+      "ISIC_7733258"
+    ],
+    [
+      "ISIC_7495157",
+      "ISIC_9106176"
+    ],
+    [
+      "ISIC_7607101",
+      "ISIC_7675261"
+    ],
+    [
+      "ISIC_7622520",
+      "ISIC_9207895"
+    ],
+    [
+      "ISIC_7677876",
+      "ISIC_8428562"
+    ],
+    [
+      "ISIC_7803010",
+      "ISIC_7941047"
+    ],
+    [
+      "ISIC_7928614",
+      "ISIC_9726957"
+    ],
+    [
+      "ISIC_8148300",
+      "ISIC_8369388"
+    ],
+    [
+      "ISIC_8343285",
+      "ISIC_8401104"
+    ],
+    [
+      "ISIC_8876993",
+      "ISIC_9053755"
+    ],
+    [
+      "ISIC_8889856",
+      "ISIC_9677697"
+    ],
+    [
+      "ISIC_8987085",
+      "ISIC_9751079"
+    ]
+  ],
+  "original_fold_counts": [
+    {
+      "benign_images": 1345,
+      "fold": 0,
+      "images": 1370,
+      "malignant_images": 25,
+      "malignant_patients": 17,
+      "patients": 84
+    },
+    {
+      "benign_images": 1346,
+      "fold": 1,
+      "images": 1372,
+      "malignant_images": 26,
+      "malignant_patients": 15,
+      "patients": 84
+    },
+    {
+      "benign_images": 1355,
+      "fold": 2,
+      "images": 1381,
+      "malignant_images": 26,
+      "malignant_patients": 21,
+      "patients": 87
+    },
+    {
+      "benign_images": 1346,
+      "fold": 3,
+      "images": 1371,
+      "malignant_images": 25,
+      "malignant_patients": 18,
+      "patients": 82
+    },
+    {
+      "benign_images": 1344,
+      "fold": 4,
+      "images": 1370,
+      "malignant_images": 26,
+      "malignant_patients": 17,
+      "patients": 85
+    }
+  ],
+  "original_images_sha256": "7727ccc0be0f6925004730e6f99bb14390e1c47877a0ad11448a0fc78996e075",
+  "original_profile": {
+    "images": 6864,
+    "malignant_images": 128,
+    "malignant_patients": 88,
+    "missing_age_images": 0,
+    "missing_site_images": 196,
+    "patient_image_count_max": 115,
+    "patient_image_count_min": 3,
+    "patients": 422,
+    "patients_with_age_span_at_least_15": 41,
+    "patients_with_multiple_recorded_ages": 204,
+    "top_ten_patients_image_fraction": 0.13476107226107226
+  },
+  "pixel_equality_confirmed_for_every_duplicate": true,
+  "quality_rules": {
+    "gradient_proxy": "mean absolute adjacent grayscale difference; review only",
+    "near_black_border_fraction": "fraction of 8px borders with all channels <=10",
+    "near_white_fraction": "fraction with all RGB channels >=245"
+  },
+  "reserved_test_loaded": false,
+  "retained_fold_counts": [
+    {
+      "benign_images": 1320,
+      "fold": 0,
+      "images": 1344,
+      "malignant_images": 24,
+      "malignant_patients": 17,
+      "patients": 84
+    },
+    {
+      "benign_images": 1340,
+      "fold": 1,
+      "images": 1366,
+      "malignant_images": 26,
+      "malignant_patients": 15,
+      "patients": 84
+    },
+    {
+      "benign_images": 1302,
+      "fold": 2,
+      "images": 1328,
+      "malignant_images": 26,
+      "malignant_patients": 21,
+      "patients": 87
+    },
+    {
+      "benign_images": 1346,
+      "fold": 3,
+      "images": 1371,
+      "malignant_images": 25,
+      "malignant_patients": 18,
+      "patients": 82
+    },
+    {
+      "benign_images": 1271,
+      "fold": 4,
+      "images": 1297,
+      "malignant_images": 26,
+      "malignant_patients": 17,
+      "patients": 85
+    }
+  ],
+  "retained_profile": {
+    "images": 6706,
+    "malignant_images": 127,
+    "malignant_patients": 88,
+    "missing_age_images": 0,
+    "missing_site_images": 195,
+    "patient_image_count_max": 115,
+    "patient_image_count_min": 3,
+    "patients": 422,
+    "patients_with_age_span_at_least_15": 41,
+    "patients_with_multiple_recorded_ages": 204,
+    "top_ten_patients_image_fraction": 0.12421711899791232
+  },
+  "retention_counts": {
+    "duplicate_groups": 158,
+    "excluded_benign": 157,
+    "excluded_malignant": 1,
+    "images": 6706,
+    "malignant_images": 127,
+    "malignant_patients": 88,
+    "original_images": 6864,
+    "patients": 422
+  },
+  "source_comparisons_match": true,
+  "status": "complete",
+  "training_started": false,
+  "weak_rotation_review": {
+    "angle_degrees": 20,
+    "changes_to_historical_transform": false,
+    "expand": false,
+    "fill": "black",
+    "interpretation": "black corners and potential edge clipping need review; images not excluded",
+    "resize": 224,
+    "rotation_interpolation": "nearest"
+  }
+}

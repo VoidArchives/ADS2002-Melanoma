@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "dedup_v1",
+  "selection_metric": "roc_auc",
+  "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+  "compatibility_sha256": "bf411c7ef51984b08fff0645d69cbca776adb8a55da14aa898a4e53a1410c027",
+  "context": {
+    "condition": "dedup_v1",
+    "outer_fold": 2,
+    "selection_metric": "roc_auc",
+    "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+    "model": "spline",
+    "stage": "classical_outer_tuned",
+    "inner_fold": -1,
+    "candidate_index": 0,
+    "parameters": {
+      "classifier__C": 0.1,
+      "preprocessor__smooth_age__spline__degree": 2,
+      "preprocessor__smooth_age__spline__n_knots": 3
+    },
+    "phase": "classical_tuned"
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_2/spline/selected/predictions.csv": "a1ee689e62985802230a46d4e56b44f727fba57d5edd7136a0d628024f60185b",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_2/spline/selected/model.joblib": "b5a2ff6acc6fbb35b9a0c466ef6ba6a9a300b292c7cd5a33d6021a176ad6aae6",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_2/spline/selected/result.json": "dc76b3d047ffc39dd072590561eda07662c34a504a03f0eee54c0afc5a041329"
+  }
+}

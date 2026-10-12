@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "context": {
+    "condition": "original",
+    "outer_fold": 0,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "model": "random_forest",
+    "phase": "classical_inner",
+    "inner_fold": 0,
+    "candidate_index": 9,
+    "parameters": {
+      "classifier__max_depth": null,
+      "classifier__max_features": "sqrt",
+      "classifier__min_samples_leaf": 15
+    }
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_0/random_forest/candidate_09/inner_0/predictions.csv": "bb7cc865ac2d0e4d656c2b34f906c1c5a7bfce235a399ebc6e080e516d33c89e",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_0/random_forest/candidate_09/inner_0/result.json": "ec0cb3a50391f441ca95da1de2741a32e780579cf324671b14164823df512704"
+  }
+}

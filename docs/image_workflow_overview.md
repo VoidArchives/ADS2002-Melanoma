@@ -1,5 +1,12 @@
 # Image modelling workflow overview
 
+**Current v2 reporting contract.** Unweighted mean outer-fold **ROC-AUC** is the primary ranking summary; mean-fold AP, pooled metrics, log loss and Brier score remain supporting measures. Each fold has equal weight, and patient-bootstrap intervals resample whole patients within folds. A single selected inner split is exploratory and cannot supply a five-fold estimate. Scores describe individual images; patient grouping does not turn them into patient-level diagnoses.
+
+The metadata v2 experiment selects settings by inner ROC-AUC. Existing image recipes, checkpoints, durations and transformation-admission gates retain their historical AP-based rules. Reporting their saved ROC-AUC does not retrospectively make them ROC-selected. Calibration and recall cutoffs remain attached to their original procedures. All active report notebooks read saved artifacts; they start no training, image smoke or checkpoint inference and never open the reserved test. Final fitting and independent testing wait until the entire procedure is frozen.
+
+Presentation snapshots are preserved under `results/metadata_nn_tuning/v2/archive_before_update/`. New image figures/tables use `results/metadata_nn_tuning/v2/report_verification/image_reports/<condition>/<stage>/`; current metadata assessment tables and figures use the explicit v2 `roc_auc_grid36_v1` run's `report/` directory. v1 AP results and historical image outputs retain their original identities.
+
+
 ## Workflow at a glance
 
 The objective is to use lesion pixels to rank malignant images above benign ones, then investigate whether variation in predictions helps prioritise review. The completed modelling uses **Subset** data. An image is the prediction unit; a patient is the unit used to separate training and evaluation.
@@ -202,7 +209,7 @@ The median best-AP epoch fixes a fresh refit duration on all outer training
 patients. Held-out outer labels are opened for scoring only after that refit.
 
 All five raw folds completed on 6,864 images from 422 patients, including 128
-melanoma images. Primary mean fold AP is **0.1447** (95% conditional
+melanoma images. Secondary mean fold AP is **0.1447** (95% conditional
 patient-bootstrap interval **0.1033–0.2225**); mean fold ROC-AUC is **0.8408**.
 These are development OOF results after earlier pilot use, including archived
 fold 0. The interval holds fitted models and selections fixed and excludes
@@ -219,7 +226,7 @@ Use the declared audit and resume commands:
 ```
 
 Final performance requires all five folds and exact canonical image coverage.
-Mean fold AP is primary; pooled AP is secondary because independently fitted
+Mean fold ROC-AUC is now primary; mean-fold AP and pooled metrics are secondary because independently fitted
 models can have different score scales. Patient-bootstrap intervals resample
 whole patients within each fold and record invalid single-class draws. The
 report adds raw reliability, fixed-0.5 confusion counts and verified paired
@@ -258,7 +265,7 @@ The [historical three-epoch B0 notebook](../notebooks/archive/image_model_three_
 
 The [historical uncertainty notebook](../notebooks/archive/image_uncertainty_three_epoch_fold0.ipynb) tried 30 dropout passes and eight augmented views. It demonstrated repeated inference, but lacked the current ordinary-score/random baselines and paired patient intervals. Those results remain archived. Their scores cannot be used as a controlled comparison with today's inner-validation results because the patients, training and inference procedures differ.
 
-The larger future search must declare and inspect safer transformations, then confirm each architecture's settings inside every outer training partition. Calibration and any recall/referral rule need training-only predictions and separate evaluation. [Fusion](../notebooks/Subset/14_fusion_model.ipynb) and [final evaluation](../notebooks/Subset/15_final_evaluation.ipynb) remain planned. Earlier metadata OOF and image inner-validation AP use different populations; the new bounded evaluation compares only verified matching OOF images.
+The larger future search must declare and inspect safer transformations, then confirm each architecture's settings inside every outer training partition. Calibration and any recall/referral rule need training-only predictions and separate evaluation. Fusion and final reserved-test evaluation remain planned outside the active report sequence. Earlier metadata OOF and image inner-validation AP use different populations; the new bounded evaluation compares only verified matching OOF images.
 
 ## Main findings and limitations
 
@@ -267,3 +274,18 @@ The completed work provides a reproducible image pipeline, several viable archit
 The principal limits are one repeatedly used selection split, only 33 validation malignant images, retained repeated views and uncertainty intervals conditional on an existing fit. Potential near duplicates, clinical label errors and unfamiliar image sources remain unresolved. A score of 0.7 is therefore a prediction score, not a validated 70% risk; an SD is procedure-specific variation, not an error probability.
 
 These results support further patient-safe confirmation. Bounded raw five-fold B0 evaluation and separate training-only calibration are complete and verified, with mean fold AP 0.1447 and improved probability quality. The larger architecture search, final model selection and reserved test remain deferred. The reserved test should be evaluated once after the modelling and decision procedure is fixed; simulated referral needs additional evidence before any claim about reviewer or clinical benefit.
+
+
+## Read-only v2 presentation refresh
+
+Regenerate the editable reports from the verified snapshots without executing model code:
+
+```powershell
+.venv/Scripts/python.exe -B scripts/build_metadata_tuning_v2_notebooks.py --condition both --run-id roc_auc_grid36_v1
+.venv/Scripts/python.exe -B scripts/build_image_roc_reports.py
+.venv/Scripts/python.exe -B scripts/execute_metadata_roc_reports.py
+```
+
+The image builder owns original09–15 and clean09–12. Original13 reads the completed uncertainty run `efficientnet_b0_lr3e5_sqrt_mc30_tta4_20261003T235530258956Z`; saved MC/TTA scores, referral results and previews are inspected rather than recalculated. Execute reports only after the v2 experiment has complete verified receipts. The execution and acceptance stages create new receipts, previews and PNG exports under `results/metadata_nn_tuning/v2/report_verification/`. No historical image result, AP fitting source, dataset assignment or reserved-test file is changed.
+
+The preserved five-fold image procedure has primary mean-fold ROC-AUC **0.8408** on original development records (conditional 95% patient interval **0.7953–0.8747**) and **0.8308** on retained records (**0.7871–0.8651**). Secondary mean-fold AP is 0.1447 and 0.1316. These values come from the unchanged saved outer predictions and existing bootstrap artifacts. They assess the historical AP-selected image procedure; the new metadata search has a separate ROC selection identity.

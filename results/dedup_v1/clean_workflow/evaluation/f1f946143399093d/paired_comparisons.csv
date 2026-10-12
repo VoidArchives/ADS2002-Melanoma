@@ -1,0 +1,25 @@
+comparison,aggregation,metric,difference,ci_lower,ci_upper,bootstrap_replicates,valid_replicates,rejected_single_class_replicates,seed,role
+b0_raw minus metadata_nn_mean,mean_fold,average_precision,0.07199935118757958,0.022864165831570915,0.1486460639680991,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,mean_fold,roc_auc,0.15410709326836447,0.09269697703773508,0.20780265392769523,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,mean_fold,log_loss,0.008946688663434399,-0.0014786568322239556,0.020973648068270668,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,mean_fold,brier,0.0012546751955126723,-0.0006683343489883413,0.003300782003339994,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,pooled,average_precision,0.06887863128633312,0.022009948997310045,0.1392686713358258,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,pooled,roc_auc,0.13222039105576922,0.0576910636736575,0.20117029500025507,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,pooled,log_loss,0.009246974026097962,-0.0013453743840302745,0.020456987516206216,2000,2000,0,42,predeclared development comparison
+b0_raw minus metadata_nn_mean,pooled,brier,0.0012632641579156771,-0.0006523724614070956,0.003241417352446191,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,mean_fold,average_precision,0.06672820767455172,0.010436633520251364,0.14580781266493753,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,mean_fold,roc_auc,0.17517015537096148,0.1058004747465086,0.23218414065020793,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,mean_fold,log_loss,0.008109759504338898,-0.0028793979649567843,0.020593252588056513,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,mean_fold,brier,0.001215280764771988,-0.0007223327439310394,0.0032707796238284027,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,pooled,average_precision,0.06734526853408611,0.01342189173974405,0.1389108165440994,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,pooled,roc_auc,0.15884710717589856,0.07361972668298314,0.2351815430237707,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,pooled,log_loss,0.008403783252470001,-0.002225896136421713,0.019933139676339872,2000,2000,0,42,predeclared development comparison
+b0_raw minus spline_raw,pooled,brier,0.0012225145773978735,-0.0007190821814185026,0.0032016134531536182,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,average_precision,-0.005271143513027869,-0.025521792453665138,0.007595448601726711,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,roc_auc,0.021063062102597008,-0.0056306926617938095,0.04132574536845578,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,log_loss,-0.0008369291590955008,-0.002220965763532795,0.000538841725349242,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,brier,-3.939443074068433e-05,-0.00018598102632300123,0.00011489799885564569,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,average_precision,-0.001533362752247018,-0.019437855298223877,0.0059994176792624405,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,roc_auc,0.026626716120129346,0.0037631587308312895,0.04889362895339751,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,log_loss,-0.0008431907736279609,-0.002236334966968012,0.0004982445591369249,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,brier,-4.074958051780361e-05,-0.00019076170266166788,0.00010835001021689937,2000,2000,0,42,predeclared development comparison

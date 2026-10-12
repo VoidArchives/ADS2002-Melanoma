@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "notebook": "notebooks/Subset/15_deduplicated_workflow.ipynb",
+  "html": null,
+  "code_cells": 13,
+  "error_outputs": 0,
+  "kernel_interpreter": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\.venv\\Scripts\\python.exe",
+  "training_started": false,
+  "reserved_test_loaded": false
+}

@@ -1,0 +1,8 @@
+{
+  "source": "src/melanoma_detection/dedup_workflow.py",
+  "source_sha256": "bf59d7ec3b9b2ab13e51ca3d9af2d5977f94ff4753db836b0493b49528e4a65e",
+  "snapshot": "results/metadata_nn_tuning/v1/archive_before_update/src/melanoma_detection/dedup_workflow.py",
+  "historical_receipt": "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/summary.json",
+  "historical_receipt_sha256": "a00f04aef0410b3dd49bc1bfd429be77b3d8d017b1685264100c147c2060b23f",
+  "provenance": "Reconstructed by reverting only the archive-aware source-verification edit; exact bytes verified against the unchanged historical evaluation receipt and pre-update preservation receipt."
+}

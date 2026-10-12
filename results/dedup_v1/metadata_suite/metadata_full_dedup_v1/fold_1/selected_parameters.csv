@@ -1,0 +1,4 @@
+outer_fold,model,inner_best_average_precision,best_candidate_index,best_parameters
+1,spline,0.06497969311726116,2,"{""classifier__C"": 0.1, ""preprocessor__smooth_age__spline__degree"": 2, ""preprocessor__smooth_age__spline__n_knots"": 5}"
+1,random_forest,0.06290642283664317,9,"{""classifier__max_depth"": null, ""classifier__max_features"": ""sqrt"", ""classifier__min_samples_leaf"": 15}"
+1,xgboost,0.054674378171759706,2,"{""classifier__learning_rate"": 0.03, ""classifier__max_depth"": 3, ""classifier__min_child_weight"": 1}"

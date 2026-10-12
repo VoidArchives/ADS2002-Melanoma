@@ -1,0 +1,43 @@
+{
+  "fold": 3,
+  "recipe": {
+    "id": "lr1e4_none",
+    "backbone_lr": 0.0001,
+    "loss_weight": "none"
+  },
+  "confirmation": [
+    {
+      "inner_fold": 0,
+      "best_epoch": 8,
+      "best_metrics": {
+        "average_precision": 0.16074664052706117,
+        "roc_auc": 0.7635251289311358,
+        "log_loss": 0.08985991810036302,
+        "brier": 0.016837475875955528
+      }
+    },
+    {
+      "inner_fold": 1,
+      "best_epoch": 9,
+      "best_metrics": {
+        "average_precision": 0.19475579226123488,
+        "roc_auc": 0.8133583450934498,
+        "log_loss": 0.09854169518204897,
+        "brier": 0.017375187884399332
+      }
+    },
+    {
+      "inner_fold": 2,
+      "best_epoch": 10,
+      "best_metrics": {
+        "average_precision": 0.14333545309782827,
+        "roc_auc": 0.8982287700711802,
+        "log_loss": 0.09283799196456882,
+        "brier": 0.022393143407411092
+      }
+    }
+  ],
+  "refit_epochs": 9,
+  "mean_inner_average_precision": 0.16627929529537477,
+  "selection_uses_outer_labels": false
+}

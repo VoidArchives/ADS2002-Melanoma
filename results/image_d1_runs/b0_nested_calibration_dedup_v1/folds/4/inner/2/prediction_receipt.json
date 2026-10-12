@@ -1,0 +1,8 @@
+{
+  "inner_fold": 2,
+  "fixed_epochs": 8,
+  "checkpoint_sha256": "6bd9ccb8e193d4b1074caaf12051c4b2a5ea04b9870d51dd7257acd40d155015",
+  "job_manifest_sha256": "36608ee03250e7548c226fd6a3f7d566dbefb3c6d0b53115c5cbefb37e9a46b7",
+  "history_sha256": "0310a51057640d05a902437f434e8a29c625d5520ccdcf09ec5b44b83b9ee9b4",
+  "predictions_sha256": "7a365dc68f7ca99d99ffa5ebfd4c8a04c03131971157939c98878f8919f23e17"
+}

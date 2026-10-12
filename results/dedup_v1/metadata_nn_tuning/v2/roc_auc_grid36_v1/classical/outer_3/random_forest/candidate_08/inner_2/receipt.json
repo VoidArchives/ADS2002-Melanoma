@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "dedup_v1",
+  "selection_metric": "roc_auc",
+  "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+  "compatibility_sha256": "bf411c7ef51984b08fff0645d69cbca776adb8a55da14aa898a4e53a1410c027",
+  "context": {
+    "condition": "dedup_v1",
+    "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+    "selection_metric": "roc_auc",
+    "outer_fold": 3,
+    "model": "random_forest",
+    "candidate_index": 8,
+    "parameters": {
+      "classifier__max_depth": null,
+      "classifier__max_features": "sqrt",
+      "classifier__min_samples_leaf": 5
+    },
+    "stage": "classical_inner",
+    "inner_fold": 2,
+    "phase": "classical_inner"
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_3/random_forest/candidate_08/inner_2/predictions.csv": "94ffa9e4286d3d4ff7ed009fc93f0bd6b29c0d622d9be10466f7d9973af3f3f9",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_3/random_forest/candidate_08/inner_2/result.json": "6a549b98389d04344a122be6af383e1c40e5a3d206a8c3380082a702c6e47131"
+  }
+}

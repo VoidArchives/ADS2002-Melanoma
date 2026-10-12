@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "context": {
+    "condition": "original",
+    "outer_fold": 2,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "model": "xgboost",
+    "phase": "classical_inner",
+    "inner_fold": 2,
+    "candidate_index": 0,
+    "parameters": {
+      "classifier__learning_rate": 0.03,
+      "classifier__max_depth": 2,
+      "classifier__min_child_weight": 1
+    }
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_2/xgboost/candidate_00/inner_2/predictions.csv": "988b6d8439972265987e0673fad7be4e4eba88e7fc92c0be555f15cdb59debe4",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_2/xgboost/candidate_00/inner_2/result.json": "80b9185bafb64349a90d4e8b70a17cbb4de6d29fefd3b3c87009ec6315fafaac"
+  }
+}

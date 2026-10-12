@@ -1,0 +1,32 @@
+{
+  "gradient_proxy": [
+    "ISIC_6436649",
+    "ISIC_2509358",
+    "ISIC_9390275",
+    "ISIC_7429736",
+    "ISIC_1869829",
+    "ISIC_4539674",
+    "ISIC_6795622",
+    "ISIC_3957034"
+  ],
+  "near_black_border_fraction": [
+    "ISIC_2327808",
+    "ISIC_0727016",
+    "ISIC_5873438",
+    "ISIC_3972165",
+    "ISIC_4213876",
+    "ISIC_9319548",
+    "ISIC_0156460",
+    "ISIC_9060313"
+  ],
+  "near_white_fraction": [
+    "ISIC_6504118",
+    "ISIC_9193776",
+    "ISIC_4814024",
+    "ISIC_9646599",
+    "ISIC_0574880",
+    "ISIC_1570468",
+    "ISIC_4563766",
+    "ISIC_5832440"
+  ]
+}

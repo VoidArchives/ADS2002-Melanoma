@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "tests_passed": 90,
+  "suites": {
+    "metadata_and_new_protocol_reporting": 58,
+    "matched_reporting": 5,
+    "notebook_integrity": 5,
+    "metadata_archive": 3,
+    "clean_notebook_generator": 5,
+    "clean_workflow_provenance": 14
+  },
+  "frozen_training_source_hashes_match": true,
+  "outer_labels_cannot_change_inner_selection": "passed on two synthetic recipes, all three inner folds and all three prescribed seeds",
+  "report_precision_and_coverage_refresh": "11 report and 5 generator checks passed"
+}

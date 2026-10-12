@@ -1,0 +1,16 @@
+outer_fold,inner_fold,fit_images,validation_images,fit_patients,validation_patients,fit_positive_images,validation_positive_images,patient_overlap,outer_patient_overlap,condition,provenance
+0,0,3528,1834,225,113,70,33,0,0,dedup_v1,reused_clean_classical
+0,1,3658,1704,227,111,68,35,0,0,dedup_v1,reused_clean_classical
+0,2,3538,1824,224,114,68,35,0,0,dedup_v1,reused_clean_classical
+1,0,3528,1812,225,113,66,35,0,0,dedup_v1,reused_clean_classical
+1,1,3634,1706,225,113,69,32,0,0,dedup_v1,reused_clean_classical
+1,2,3518,1822,226,112,67,34,0,0,dedup_v1,reused_clean_classical
+2,0,3564,1814,226,109,67,34,0,0,dedup_v1,reused_clean_classical
+2,1,3602,1776,224,111,68,33,0,0,dedup_v1,reused_clean_classical
+2,2,3590,1788,220,115,67,34,0,0,dedup_v1,reused_clean_classical
+3,0,3532,1803,226,114,68,34,0,0,dedup_v1,reused_clean_classical
+3,1,3587,1748,227,113,69,33,0,0,dedup_v1,reused_clean_classical
+3,2,3551,1784,227,113,67,35,0,0,dedup_v1,reused_clean_classical
+4,0,3593,1816,224,113,69,32,0,0,dedup_v1,reused_clean_classical
+4,1,3601,1808,225,112,66,35,0,0,dedup_v1,reused_clean_classical
+4,2,3624,1785,225,112,67,34,0,0,dedup_v1,reused_clean_classical

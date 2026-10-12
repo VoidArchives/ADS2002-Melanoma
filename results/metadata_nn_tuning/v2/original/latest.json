@@ -1,0 +1,11 @@
+{
+  "experiment_version": 2,
+  "run_id": "roc_auc_grid36_v1",
+  "condition": "original",
+  "selection_metric": "roc_auc",
+  "status": "complete",
+  "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+  "completion_receipt_sha256": "6bdade8cee97534f7e329e3458fdbfdf480d4c38c54bc23cebce2f50e15804bc",
+  "independent_verification_sha256": "ebb55a4d4a8e8e548f96aad01beb1eeba7d4dc1d446f6d821dcd8de749db218c",
+  "publication_source_sha256": "5fd1988c9f5e7f26f2a9d549f3d6acbd79bc4eef8aba991bb6076b2e8855a263"
+}

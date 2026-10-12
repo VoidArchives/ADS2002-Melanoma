@@ -1,0 +1,1029 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "verified_utc": "2026-10-11T15:24:40.197301+00:00",
+  "condition_checked": "both",
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "notebooks_modified": false,
+  "checks": {
+    "static": "complete",
+    "all_execution": "complete",
+    "selected_execution": "complete",
+    "manual_visual_inspection": "complete"
+  },
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "status": "complete",
+      "sha256": "3bd6f2f43a4c5c1dbc96e2bd5fa06dedc994f1c5e872a21d5fa7ff6630f2951d",
+      "code_cells": 9,
+      "executed_code_cells": 9,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "05_metadata_models.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        },
+        {
+          "cell": 18,
+          "destination": "07_metadata_tuning.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 18,
+          "destination": "08_metadata_robustness.ipynb",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Compare a small metadata network: Subset data"
+        ],
+        [
+          2,
+          "Setup and data"
+        ],
+        [
+          3,
+          "1. Check the inputs in the saved experiment"
+        ],
+        [
+          2,
+          "How the network is trained"
+        ],
+        [
+          3,
+          "Use a small network for tabular information"
+        ],
+        [
+          3,
+          "Choose training length without scoring patients"
+        ],
+        [
+          3,
+          "Repeat a fixed procedure three times"
+        ],
+        [
+          3,
+          "2. Review the prescribed runs on five patient-held-out folds"
+        ],
+        [
+          3,
+          "3. Read the performance and variation comparison"
+        ],
+        [
+          3,
+          "Read the recorded training duration and histories"
+        ],
+        [
+          3,
+          "4. Read predictions and run settings"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ]
+      ],
+      "markdown_words": 1323,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "status": "complete",
+      "sha256": "3a31bbdf05d9add2376fb7194ef5129a19e5dfbd0e227c5c94a402fe2264b891",
+      "code_cells": 13,
+      "executed_code_cells": 13,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "05_metadata_models.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "06_metadata_neural_network.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Tune metadata models with separate patient checks: Subset data"
+        ],
+        [
+          2,
+          "Context and methods"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          3,
+          "1. Set paths and imports"
+        ],
+        [
+          3,
+          "2. Load and check the development data"
+        ],
+        [
+          3,
+          "Check the preserved inner patient groups"
+        ],
+        [
+          3,
+          "3. Define the model pipelines"
+        ],
+        [
+          3,
+          "Explain the neural-network settings being searched"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "4. Train the fixed models and run the setting searches"
+        ],
+        [
+          3,
+          "5. Check how often the same settings are selected"
+        ],
+        [
+          3,
+          "Read selection margins and training duration"
+        ],
+        [
+          3,
+          "6. Compare the held-out results"
+        ],
+        [
+          3,
+          "7. Read the score comparison charts"
+        ],
+        [
+          3,
+          "8. Read the ROC and precision-recall curves"
+        ],
+        [
+          3,
+          "9. Collect the observed changes"
+        ],
+        [
+          3,
+          "Interpret paired differences on the primary measure"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ]
+      ],
+      "markdown_words": 2147,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "status": "complete",
+      "sha256": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+      "code_cells": 10,
+      "executed_code_cells": 10,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "07_metadata_tuning.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "06_metadata_neural_network.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        },
+        {
+          "cell": 22,
+          "destination": "09_image_b0_pilot.ipynb",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Check metadata uncertainty, cutoffs and calibration: Subset data"
+        ],
+        [
+          2,
+          "Context and methods"
+        ],
+        [
+          3,
+          "Separate choosing a rule from assessing it"
+        ],
+        [
+          3,
+          "Read performance and uncertainty together"
+        ],
+        [
+          3,
+          "1. Set up the run"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          3,
+          "2. Check inputs and match images"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "3. Select calibration and cutoffs using training patients"
+        ],
+        [
+          3,
+          "4. Read the patient-based comparison intervals"
+        ],
+        [
+          3,
+          "5. Read calibration and score distributions"
+        ],
+        [
+          3,
+          "6. Assess the cutoff trade-off on outer patients"
+        ],
+        [
+          3,
+          "7. Read the age, sex and site checks"
+        ],
+        [
+          3,
+          "7. Record the final-fit boundary"
+        ],
+        [
+          3,
+          "9. Check the results together"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ],
+        [
+          2,
+          "Additional experiment: tuned metadata neural network"
+        ]
+      ],
+      "markdown_words": 1797,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+      "status": "complete",
+      "sha256": "4bf6875f60570f5dc9518a701d65c98a2e9b9e32d49a055c524c22e1e82d5040",
+      "code_cells": 11,
+      "executed_code_cells": 11,
+      "saved_errors": [],
+      "local_links": [],
+      "headings": [
+        [
+          1,
+          "14 \u2014 Image model: five outer folds"
+        ],
+        [
+          2,
+          "tl;dr"
+        ],
+        [
+          2,
+          "Context & Methods"
+        ],
+        [
+          3,
+          "Key Assumptions"
+        ],
+        [
+          3,
+          "Recorded recipe and refit duration by outer fold"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "Ranking and fold variation"
+        ],
+        [
+          3,
+          "Raw probabilities and the declared 0.5 cutoff"
+        ],
+        [
+          3,
+          "Optional training-only calibration and the 80%-recall scenario"
+        ],
+        [
+          3,
+          "Matched metadata comparison"
+        ],
+        [
+          2,
+          "Takeaways"
+        ],
+        [
+          2,
+          "Additional experiment: tuned metadata neural network"
+        ]
+      ],
+      "markdown_words": 1231,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "status": "complete",
+      "sha256": "897d147604dc5c4c7789291e9075f349e3a8c09cf9ab6ec3f1d19a04198c5802",
+      "code_cells": 9,
+      "executed_code_cells": 9,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "05_metadata_models.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        },
+        {
+          "cell": 18,
+          "destination": "07_metadata_tuning.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 18,
+          "destination": "08_metadata_robustness.ipynb",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Compare a small metadata network: Subset data"
+        ],
+        [
+          2,
+          "Setup and data"
+        ],
+        [
+          3,
+          "1. Check the inputs in the saved experiment"
+        ],
+        [
+          2,
+          "How the network is trained"
+        ],
+        [
+          3,
+          "Use a small network for tabular information"
+        ],
+        [
+          3,
+          "Choose training length without scoring patients"
+        ],
+        [
+          3,
+          "Repeat a fixed procedure three times"
+        ],
+        [
+          3,
+          "2. Review the prescribed runs on five patient-held-out folds"
+        ],
+        [
+          3,
+          "3. Read the performance and variation comparison"
+        ],
+        [
+          3,
+          "Read the recorded training duration and histories"
+        ],
+        [
+          3,
+          "4. Read predictions and run settings"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ]
+      ],
+      "markdown_words": 1327,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "status": "complete",
+      "sha256": "500f9456f295438b1ce1509e19c7519dafc3e7b699366aeaae4c83d6c088d6ec",
+      "code_cells": 13,
+      "executed_code_cells": 13,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "05_metadata_models.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "06_metadata_neural_network.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Tune metadata models with separate patient checks: Subset data"
+        ],
+        [
+          2,
+          "Context and methods"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          3,
+          "1. Set paths and imports"
+        ],
+        [
+          3,
+          "2. Load and check the development data"
+        ],
+        [
+          3,
+          "Check the preserved inner patient groups"
+        ],
+        [
+          3,
+          "3. Define the model pipelines"
+        ],
+        [
+          3,
+          "Explain the neural-network settings being searched"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "4. Train the fixed models and run the setting searches"
+        ],
+        [
+          3,
+          "5. Check how often the same settings are selected"
+        ],
+        [
+          3,
+          "Read selection margins and training duration"
+        ],
+        [
+          3,
+          "6. Compare the held-out results"
+        ],
+        [
+          3,
+          "7. Read the score comparison charts"
+        ],
+        [
+          3,
+          "8. Read the ROC and precision-recall curves"
+        ],
+        [
+          3,
+          "9. Collect the observed changes"
+        ],
+        [
+          3,
+          "Interpret paired differences on the primary measure"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ]
+      ],
+      "markdown_words": 2154,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "status": "complete",
+      "sha256": "021b732a1c53020cbbc7c613e80551a4001ad8a6ca5d4d50c3d87abcf4d8c197",
+      "code_cells": 17,
+      "executed_code_cells": 17,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "07_metadata_tuning.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "06_metadata_neural_network.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../Subset/08_metadata_robustness.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 22,
+          "destination": "09_image_modelling.ipynb",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "Check metadata uncertainty, cutoffs and calibration: Subset data"
+        ],
+        [
+          2,
+          "Context and methods"
+        ],
+        [
+          3,
+          "Separate choosing a rule from assessing it"
+        ],
+        [
+          3,
+          "Read performance and uncertainty together"
+        ],
+        [
+          3,
+          "1. Set up the run"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          3,
+          "2. Check inputs and match images"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "3. Verify calibration and cutoffs selected using training patients"
+        ],
+        [
+          3,
+          "4. Read the patient-based comparison intervals"
+        ],
+        [
+          3,
+          "5. Read calibration and score distributions"
+        ],
+        [
+          3,
+          "6. Assess the cutoff trade-off on outer patients"
+        ],
+        [
+          3,
+          "7. Read the age, sex and site checks"
+        ],
+        [
+          3,
+          "8. Prepare the retained model for later final fitting and testing"
+        ],
+        [
+          3,
+          "9. Check the results together"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ],
+        [
+          2,
+          "Additional deduplicated-workflow diagnostics"
+        ],
+        [
+          3,
+          "Added diagnostic: 3. Compare probability error and equal-patient weighting"
+        ],
+        [
+          3,
+          "Added diagnostic: 5. Assess frozen cutoffs on outer patients"
+        ],
+        [
+          3,
+          "Added diagnostic: 6. Read detection and review-workload intervals"
+        ],
+        [
+          3,
+          "Added diagnostic: 7. Check age, sex, site and site availability with support"
+        ],
+        [
+          2,
+          "Additional experiment: tuned metadata neural network"
+        ]
+      ],
+      "markdown_words": 2419,
+      "errors": []
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "status": "complete",
+      "sha256": "cca5eb44e30370bad8fd94aec193b827b490175a8ee576bdeeb17810be03c023",
+      "code_cells": 37,
+      "executed_code_cells": 37,
+      "saved_errors": [],
+      "local_links": [
+        {
+          "cell": 1,
+          "destination": "07_metadata_tuning.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "06_metadata_neural_network.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../concepts.md",
+          "exists": true
+        },
+        {
+          "cell": 1,
+          "destination": "../Subset/08_metadata_robustness.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 22,
+          "destination": "09_image_modelling.ipynb",
+          "exists": true
+        },
+        {
+          "cell": 36,
+          "destination": "../Subset/14_image_nested_evaluation.ipynb",
+          "exists": true
+        }
+      ],
+      "headings": [
+        [
+          1,
+          "12 \u2014 Combined clean evaluation: metadata uncertainty, cutoffs and calibration: Subset data"
+        ],
+        [
+          2,
+          "Context and methods"
+        ],
+        [
+          3,
+          "Separate choosing a rule from assessing it"
+        ],
+        [
+          3,
+          "Read performance and uncertainty together"
+        ],
+        [
+          3,
+          "1. Set up the run"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          3,
+          "2. Check inputs and match images"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "3. Verify calibration and cutoffs selected using training patients"
+        ],
+        [
+          3,
+          "4. Read the patient-based comparison intervals"
+        ],
+        [
+          3,
+          "5. Read calibration and score distributions"
+        ],
+        [
+          3,
+          "6. Assess the cutoff trade-off on outer patients"
+        ],
+        [
+          3,
+          "7. Read the age, sex and site checks"
+        ],
+        [
+          3,
+          "8. Prepare the retained model for later final fitting and testing"
+        ],
+        [
+          3,
+          "9. Check the results together"
+        ],
+        [
+          2,
+          "Limitations"
+        ],
+        [
+          2,
+          "Summary"
+        ],
+        [
+          2,
+          "Additional deduplicated-workflow diagnostics"
+        ],
+        [
+          3,
+          "Added diagnostic: 3. Compare probability error and equal-patient weighting"
+        ],
+        [
+          3,
+          "Added diagnostic: 5. Assess frozen cutoffs on outer patients"
+        ],
+        [
+          3,
+          "Added diagnostic: 6. Read detection and review-workload intervals"
+        ],
+        [
+          3,
+          "Added diagnostic: 7. Check age, sex, site and site availability with support"
+        ],
+        [
+          2,
+          "Continue with the matching clean image evaluation"
+        ],
+        [
+          1,
+          "Clean image model: five preserved outer folds"
+        ],
+        [
+          2,
+          "tl;dr"
+        ],
+        [
+          2,
+          "Context & Methods"
+        ],
+        [
+          3,
+          "Key Assumptions"
+        ],
+        [
+          3,
+          "Recorded recipe and refit duration by outer fold"
+        ],
+        [
+          2,
+          "Data"
+        ],
+        [
+          2,
+          "Results"
+        ],
+        [
+          3,
+          "Ranking and fold variation"
+        ],
+        [
+          3,
+          "Raw probabilities and the declared 0.5 cutoff"
+        ],
+        [
+          3,
+          "Optional training-only calibration and the 80%-recall scenario"
+        ],
+        [
+          3,
+          "Matched metadata comparison"
+        ],
+        [
+          2,
+          "Takeaways"
+        ],
+        [
+          2,
+          "Combined evaluation extensions"
+        ],
+        [
+          3,
+          "1. Establish completion and provenance before comparing"
+        ],
+        [
+          3,
+          "2. State the estimands and predeclared comparisons"
+        ],
+        [
+          3,
+          "3. Read fold variation and pooled curves"
+        ],
+        [
+          3,
+          "4. Use paired whole-patient intervals"
+        ],
+        [
+          3,
+          "5. Separate patient weighting from patient-level prediction"
+        ],
+        [
+          3,
+          "6. Assess probabilities and training-only decision workload"
+        ],
+        [
+          3,
+          "7. Inspect subgroup support before performance"
+        ],
+        [
+          3,
+          "8. Keep tuning, pilots and uncertainty in their proper roles"
+        ],
+        [
+          3,
+          "9. Explain what duplicate sensitivity proves"
+        ],
+        [
+          3,
+          "10. Check reproducibility and hand off"
+        ],
+        [
+          2,
+          "Additional experiment: tuned metadata neural network"
+        ]
+      ],
+      "markdown_words": 4386,
+      "errors": []
+    }
+  ],
+  "templates": [
+    {
+      "stage": "06",
+      "status": "complete",
+      "archive": "results/metadata_nn_tuning/v1/archive_before_update/notebooks/Subset/06_metadata_neural_network.ipynb",
+      "archive_sha256": "50a60e97b1fe66ac5986a93e0fc904cc2e13528162164247484d04cd36d3b239",
+      "markdown_word_ratios": {
+        "notebooks/Subset/06_metadata_neural_network.ipynb": 1.1259574468085107,
+        "notebooks/Subset_dedup/06_metadata_neural_network.ipynb": 1.1293617021276596
+      },
+      "heading_adaptations": {
+        "before training": "in the saved experiment",
+        "Train the prescribed runs": "Review the prescribed runs",
+        "Save predictions and run settings": "Read predictions and run settings"
+      },
+      "errors": []
+    },
+    {
+      "stage": "07",
+      "status": "complete",
+      "archive": "results/metadata_nn_tuning/v1/archive_before_update/notebooks/Subset/07_metadata_tuning.ipynb",
+      "archive_sha256": "591d52c3b0bf36a296092f6b6cf6cab169131a3a7de260bd095373c1ad9837c6",
+      "markdown_word_ratios": {
+        "notebooks/Subset/07_metadata_tuning.ipynb": 1.765625,
+        "notebooks/Subset_dedup/07_metadata_tuning.ipynb": 1.7713815789473684
+      },
+      "heading_adaptations": {
+        "before training": "in the saved experiment",
+        "Train the prescribed runs": "Review the prescribed runs",
+        "Save predictions and run settings": "Read predictions and run settings"
+      },
+      "errors": []
+    }
+  ],
+  "plot_specification": {
+    "status": "complete",
+    "data": "artificial style-validation rows only",
+    "saved_runs_loaded": false,
+    "errors": []
+  },
+  "execution": {
+    "status": "complete",
+    "selected_status": "complete",
+    "receipt": "results/metadata_nn_tuning/v1/report_verification/execution_receipt.json",
+    "receipt_sha256": "467098a17d4db44bf6eb06130d8446602ad5acca2a4e24afa35063851c958375",
+    "recorded_status": "complete",
+    "notebooks": [
+      {
+        "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+        "status": "complete",
+        "errors": []
+      },
+      {
+        "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+        "status": "complete",
+        "errors": []
+      }
+    ],
+    "errors": []
+  },
+  "manual_visual_inspection": {
+    "status": "complete",
+    "receipt": "results/metadata_nn_tuning/v1/report_verification/visual_inspection_receipt.json",
+    "receipt_sha256": "b47a7d0868a5965c224bcd4118242635a796da8942d8b60880443e54ed8089e2",
+    "errors": []
+  }
+}

@@ -22,7 +22,8 @@ def relocated_code_source(source, renames):
 def verify_recorded_notebook_code(root, current_path, recorded_path, expected_hash):
     """Accept exact current code or the narrowly recorded path substitutions.
 
-    Previous prediction manifests remain unchanged. For an older run, the
+    Previous prediction manifests remain unchanged. Explicitly archived
+    metadata reports bind to their verified pre-tuning source. For an older run, the
     snapshot must reproduce its recorded code hash, and every current code cell
     must match that snapshot with only declared filename substitutions. Any
     computational change still rejects the stale predictions.
@@ -31,7 +32,9 @@ def verify_recorded_notebook_code(root, current_path, recorded_path, expected_ha
     current_path = (root / current_path).resolve()
     if not current_path.is_relative_to(root / "notebooks"):
         raise ValueError("Notebook path is outside the notebook directory.")
-    current = json.loads(current_path.read_text(encoding="utf-8"))
+    from .metadata_source_archive import historical_notebook_path
+    preserved = historical_notebook_path(root, current_path.relative_to(root).as_posix())
+    current = json.loads(preserved.read_text(encoding="utf-8"))
     if code_sha256(current) == expected_hash:
         return "exact_current_code"
     registry = json.loads((root / "notebooks/filename_map.json").read_text(encoding="utf-8"))

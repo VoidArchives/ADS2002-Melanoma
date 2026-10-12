@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "original",
+  "selection_metric": "roc_auc",
+  "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+  "compatibility_sha256": "6fcf21b74207791a3ca9f9b834d4e87153798bd0350e241ec0e4952fa6395ead",
+  "context": {
+    "condition": "original",
+    "outer_fold": 4,
+    "selection_metric": "roc_auc",
+    "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+    "recipe_id": "r01",
+    "recipe_order": 1,
+    "hidden_units": 8,
+    "learning_rate": 0.0003,
+    "dropout": 0.0,
+    "model": "nn",
+    "stage": "nn_outer_tuned",
+    "inner_fold": -1,
+    "base_seed": 242,
+    "training_seed": 246,
+    "stop_group": 2,
+    "phase": "stopping"
+  },
+  "csv_names": [
+    "history"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/stopping/history.csv": "3e0571a39ee4bb6cddeda6bc15c21f03cf8dd77d650a6faae9357f8a30eda02d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/stopping/result.json": "f6995f9759021c81379bc652724e492ea4cf30187b83cba19f3265e9e72f9049"
+  }
+}

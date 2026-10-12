@@ -1,0 +1,1258 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-12T01:00:48.334441+00:00",
+  "method": "Direct tools.view_image inspection of every current exported PNG, followed by pairwise composition/prose review and current-byte fingerprinting",
+  "notebooks_reviewed": 10,
+  "figures_reviewed": 63,
+  "result": "pass",
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "final_model_fitted": false,
+  "execution_receipt": "results/metadata_nn_tuning/v2/report_verification/execution_receipt.json",
+  "execution_receipt_sha256": "040e58a5160b1b3b09e848320d99eab808e588dcaca90ab2e39a4c2165a078e3",
+  "figures": [
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline_cell10_0.png",
+      "sha256": "af87220250c6f440e4607ddf04ad831d65c65a2ca54a9ee447cb9386a819a346",
+      "notebook": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "role": "Supporting pooled baseline ROC/PR curves",
+      "dimensions": [
+        1145,
+        510
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline_cell14_1.png",
+      "sha256": "5be97ab505f1e4bc894d57ac14d569e6e0da2e1c6a1bd4384549ba2a7f600e6f",
+      "notebook": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "role": "Historical exploratory baseline confusion matrices",
+      "dimensions": [
+        1039,
+        475
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_1.png",
+      "sha256": "2eec7412c425adf55ee26d63bcf1380f07ec4ca457766b9102201161b1bd73aa",
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "role": "Primary mean-fold ROC-AUC and secondary AP bars",
+      "dimensions": [
+        1304,
+        509
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_2.png",
+      "sha256": "a75c4ee22068d30a0a8ba2f26532626a7366ad90aecb4679551e6cb325c0c164",
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "role": "Supporting pooled ROC-AUC/AP bars",
+      "dimensions": [
+        1304,
+        509
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_4.png",
+      "sha256": "758137fef5a02e82b8f65d1dbaa8307b0f3165951609954beaa267891aceba94",
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "role": "Fixed-seed and stopping-group ROC-AUC variation",
+      "dimensions": [
+        1304,
+        560
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell13_1.png",
+      "sha256": "b57cdf992d297d23fdaca707960e8f01bd3c2e59de26a8a0c5fbf9aca8093c68",
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "role": "Training-only fixed-NN duration choices",
+      "dimensions": [
+        1304,
+        560
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell13_2.png",
+      "sha256": "ba1ee26a6b315c52a34b46bcdcd57e731cd9e905b2131ec993866fd8db023b44",
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "role": "Fixed-NN stopping and refit histories",
+      "dimensions": [
+        1423,
+        2121
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell20_0.png",
+      "sha256": "e2b71e53c311710d927f7c34fa910f116fffe942e476e5e995b70363a1f2b7fc",
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "role": "Supporting four-model ROC/PR grid",
+      "dimensions": [
+        1330,
+        1737
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell22_2.png",
+      "sha256": "5b45f810fb6d74db73c25f8566642efb38533c17dd9fff12f2cf587886062f17",
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "role": "Historical AP feature ablation",
+      "dimensions": [
+        2249,
+        1319
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell25_1.png",
+      "sha256": "dec20e37b59c867adf08054b03df27406db576444ca3ff43c74efedec6d147fd",
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "role": "Historical observed and fitted age illustration",
+      "dimensions": [
+        2373,
+        1295
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell33_1.png",
+      "sha256": "04452591ad45eb771a2e4fc5142d84e2e93b1810afb88c5dea640aaea62304c0",
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "role": "Historical exploratory five-model confusions",
+      "dimensions": [
+        3931,
+        2276
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell9_1.png",
+      "sha256": "3ad38bbb879f3b888d2db90b75d1722b0208883824b158f6d530b6a6e59578ee",
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "role": "Historical AP patient intervals; original pooled versus clean mean-fold aggregation is explicitly labelled",
+      "dimensions": [
+        1428,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell11_0.png",
+      "sha256": "8287089dcaf104ba7d898a2215c2cf78d1e1503da7d76272f33d1ad800c7bc69",
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "role": "Historical raw/recalibrated reliability and score distributions",
+      "dimensions": [
+        1428,
+        582
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell15_1.png",
+      "sha256": "71ea49dcd2b97eb260aecb194094c20289edc7c5645c5289af4cea7b29ac38e1",
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "role": "Historical subgroup AP and sparse-group support",
+      "dimensions": [
+        1830,
+        688
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell23_2.png",
+      "sha256": "c0d6887186bde17fe9d255022e2703ec184659ca89ad5dc7e6a14d2e03084931",
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "role": "Current primary ROC-AUC paired patient intervals",
+      "dimensions": [
+        1249,
+        504
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell23_3.png",
+      "sha256": "4b0e2b8957da23bfe6904363f9e2cb3d8e2fe63d16796ffdca104b4d516006ef",
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "role": "Current secondary AP paired patient intervals",
+      "dimensions": [
+        1248,
+        504
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell10_0.png",
+      "sha256": "758f3a8817d9f0cd7bc0ea2e14955307845d6743339e0ed0b908ebdf11676ec9",
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "role": "Supporting pooled baseline ROC/PR curves",
+      "dimensions": [
+        1145,
+        510
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell14_1.png",
+      "sha256": "e2acef2f390f972936c54d1fada6060e69b1354ae7e78134d24c4cdf507811ef",
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "role": "Historical exploratory baseline confusion matrices",
+      "dimensions": [
+        1039,
+        475
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell21_2.png",
+      "sha256": "6e50ff44a34c23b17257849d52b40bcda0b9aab2e4caf5f1c685cf765241346d",
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "role": "Labelled clean-only logistic association diagnostic",
+      "dimensions": [
+        1061,
+        611
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell20_0.png",
+      "sha256": "a353449a763f790af9da1b1f84bdff5199fc4106a8e132fa16a44f69054e4257",
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "role": "Supporting four-model ROC/PR grid",
+      "dimensions": [
+        1330,
+        1737
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell22_3.png",
+      "sha256": "27097cc4f58220fb195e71fbcc708cf14c70f3cda5bd78b07091d18f7753656a",
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "role": "Historical clean AP feature ablation",
+      "dimensions": [
+        2249,
+        1319
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell25_1.png",
+      "sha256": "6a8d59ceb3c3d9fc6d8c62764387246f0f6840002b9aac07e585e90669fe43da",
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "role": "Historical observed and fitted age illustration",
+      "dimensions": [
+        2373,
+        1295
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell33_1.png",
+      "sha256": "c4df6a791582394afc01ee317049a934fec1cffb97e2eed7dfd6635f5c948df8",
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "role": "Historical exploratory five-model confusions",
+      "dimensions": [
+        3931,
+        2276
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell41_2.png",
+      "sha256": "fd2664f484239a68f3ef663a1dc997edcea21a708aa78347b1578d2e99c47c01",
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "role": "Labelled clean-only tree-importance diagnostic",
+      "dimensions": [
+        2841,
+        1107
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_1.png",
+      "sha256": "8554505c11a818628d800f97f5b05431ec173f0da81425cfc7a2d9a61f76c6ee",
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "role": "Primary mean-fold ROC-AUC and secondary AP bars",
+      "dimensions": [
+        1304,
+        509
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_2.png",
+      "sha256": "7b3d7c38e754c7868e569dcac2e1a3d55b0892a6398ff280ed60e4dd8e53916c",
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "role": "Supporting pooled ROC-AUC/AP bars",
+      "dimensions": [
+        1304,
+        509
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_4.png",
+      "sha256": "0edaf5923f09033bc92488fc0de64f60222d376b65c97e052289b549e5a52e7a",
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "role": "Fixed-seed and stopping-group ROC-AUC variation",
+      "dimensions": [
+        1304,
+        560
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell13_1.png",
+      "sha256": "d8eee57e6caafc2055b6a92cb3d97fb2677860b70992e35322c5e20c1693bfb0",
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "role": "Training-only fixed-NN duration choices",
+      "dimensions": [
+        1304,
+        560
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell13_2.png",
+      "sha256": "ecd552407498fdbae8806c9ccdb6fc569bbce3454a19cdb6e9cde95da847235a",
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "role": "Fixed-NN stopping and refit histories",
+      "dimensions": [
+        1424,
+        2121
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell12_0.png",
+      "sha256": "20f4f596e24d8c021f34332aa279bed1e82b1fc6c146feff98d64cc8a46168ea",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "All180 inner-ROC candidate cells on a common within-condition scale",
+      "dimensions": [
+        1342,
+        1969
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell14_4.png",
+      "sha256": "9326f0370e0d427f8f9c89d1ff25694d738d86263e20ee32964d791de32a0489",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Training-only selected-setting frequencies",
+      "dimensions": [
+        1390,
+        475
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell14_5.png",
+      "sha256": "814943c3e7bb3f146e030346897ec91e4c49f38b9e5ad938ca7579e932ef6958",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Inner-ROC selection margins",
+      "dimensions": [
+        1040,
+        470
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell16_1.png",
+      "sha256": "baed5ed4656f8c44db03dcf104ba8fb9e1313f2e8ce5494e07ff9aef65133237",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Training-only tuned-NN duration choices",
+      "dimensions": [
+        1090,
+        470
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell18_2.png",
+      "sha256": "64f4fe41fdf4bad9c85770a1d1602c5a2ca24e043e4aa12dc0867f06faa5038b",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Matched-fold primary ROC-AUC gains",
+      "dimensions": [
+        1190,
+        887
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell18_3.png",
+      "sha256": "b4eae1194354e70daedb276be798fd2de50169ec4d26967715524b480f550607",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Matched-fold secondary AP gains",
+      "dimensions": [
+        1190,
+        887
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_0.png",
+      "sha256": "907f5863a7fd6a13dd4adb89459edd499f6a84ce2d084fc9da2fc9647185f50f",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Primary mean-fold ROC-AUC fixed/tuned bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_1.png",
+      "sha256": "9575c9505d3a2907df1d0486f397adab1f34537ae80ec5845229fe8299b87421",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Secondary mean-fold AP fixed/tuned bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_2.png",
+      "sha256": "aaf076095467863122e8a8f2c7ffefa05b692a6b09c8498b606e97779d9877f8",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Supporting pooled ROC-AUC bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_3.png",
+      "sha256": "b769462e468c312be91773a26e31d14ac4c44cb3c2e142db093c0cff9c8aa972",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Supporting pooled AP bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell22_0.png",
+      "sha256": "97b24bb33b15fc8b6701dc269e573b9eaa652ff25214ea4aa3754053f117e01e",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Supporting four-family pooled ROC/PR curves",
+      "dimensions": [
+        1390,
+        1741
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell26_2.png",
+      "sha256": "15b76a7c28b68dd06ebfbbd8f1eabc8d2a03773177bf4487d03d96733c6b2476",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Conditional paired patient intervals on primary mean-fold ROC-AUC",
+      "dimensions": [
+        1040,
+        420
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell26_3.png",
+      "sha256": "4ef1ec445c465cd115c72e6546f812e1cb7ac3cfa53ec0a8daca5344e447f8bc",
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "role": "Conditional paired patient intervals on secondary mean-fold AP",
+      "dimensions": [
+        1040,
+        420
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell12_0.png",
+      "sha256": "8e76c9cf6c71e12f5891f343113cb924379107e02715b0a3cc5af5fd0cd9bf3d",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "All180 inner-ROC candidate cells on a common within-condition scale",
+      "dimensions": [
+        1342,
+        1969
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell14_4.png",
+      "sha256": "74367e2dc3dd1155a28e8d79354086bcfd09bf8c32bf53e5db478f0fe9f12c69",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Training-only selected-setting frequencies",
+      "dimensions": [
+        1390,
+        475
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell14_5.png",
+      "sha256": "5900c3dd7b0c9f2db2b2040516be9d7e565654d47f4be848659bac8fa19c4520",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Inner-ROC selection margins",
+      "dimensions": [
+        1040,
+        470
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell16_1.png",
+      "sha256": "1c3981a012415a797ddb529eae23e24f37de4b8f202155e1e4f9236db2b36579",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Training-only tuned-NN duration choices",
+      "dimensions": [
+        1090,
+        470
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell18_2.png",
+      "sha256": "46aedfa4c175f930dc1e033a2622f5c35cc83f87d9133eb308ed9e008b6b6fb0",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Matched-fold primary ROC-AUC gains",
+      "dimensions": [
+        1190,
+        887
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell18_3.png",
+      "sha256": "4219a19437b5aff0e1cefdbbb53ba8494e2a12b26335fbd2f8623f682751b084",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Matched-fold secondary AP gains",
+      "dimensions": [
+        1190,
+        887
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_0.png",
+      "sha256": "44551afa2dbfda2fe8be5e56d65953abb0f139ebbf4b8775fe3f43a4e76ebb80",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Primary mean-fold ROC-AUC fixed/tuned bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_1.png",
+      "sha256": "e68c72773978cb0ec241e4a08c0209317733973fcb9b01cb4cb4db4cfa7f6ebb",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Secondary mean-fold AP fixed/tuned bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_2.png",
+      "sha256": "c755161e051db0b1d72bae0e5cabf869a80a5b54eaae7858e3a6f8cad93ac323",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Supporting pooled ROC-AUC bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_3.png",
+      "sha256": "fbe34b26d7e9c27a8ea7f16e3fd49c7f35ccd984b4af626a493b219d54ee47b0",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Supporting pooled AP bars",
+      "dimensions": [
+        1040,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell22_0.png",
+      "sha256": "672a958fd50ce99cc7aa5657899757aa217f96e2299a9c04bd1bd08020995c7c",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Supporting four-family pooled ROC/PR curves",
+      "dimensions": [
+        1390,
+        1741
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell26_2.png",
+      "sha256": "698c2e01d209144ffae5eb162c41632239b8abbfba65f43dc58526ee300f3b97",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Conditional paired patient intervals on primary mean-fold ROC-AUC",
+      "dimensions": [
+        1041,
+        420
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell26_3.png",
+      "sha256": "569d7a164bbf7dc85244f7052926b3c5763a01f680ee8e65e4662aa236db9506",
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "role": "Conditional paired patient intervals on secondary mean-fold AP",
+      "dimensions": [
+        1040,
+        420
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell9_1.png",
+      "sha256": "62b24ceeaf2f442598e573e4b71c7ac581fabd6f9b5c73abf769325167eace69",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Historical AP patient intervals; original pooled versus clean mean-fold aggregation is explicitly labelled",
+      "dimensions": [
+        1428,
+        570
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell11_0.png",
+      "sha256": "e7f35cf642a4fdda693b928a4147a76262a33700038d1f317f1570b879f59646",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Historical raw/recalibrated reliability and score distributions",
+      "dimensions": [
+        1428,
+        582
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell15_1.png",
+      "sha256": "dcdb4330497ebbd674b559eb666bfb97ebfc79093540dfb756525a889731c956",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Historical subgroup AP and sparse-group support",
+      "dimensions": [
+        1848,
+        688
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell29_2.png",
+      "sha256": "425724122e3c0aa958bddb2c95e6ff8dc206d3756e23c3ed0894720aef4bd8f0",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Labelled clean-only training-selected confusion diagnostic",
+      "dimensions": [
+        1145,
+        517
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell31_0.png",
+      "sha256": "68992956a2e4bdf435c2a2bd09af53fd2a8962f4a7aceb0cb3a7607587fbe363",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Labelled clean-only detection and review-workload intervals",
+      "dimensions": [
+        1523,
+        589
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell33_1.png",
+      "sha256": "2f86512258369a0e4f1ab46d713a4a244c2be137d0f174077cab6ceb5d3935bf",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Labelled clean-only subgroup and site-availability support",
+      "dimensions": [
+        2173,
+        733
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell35_2.png",
+      "sha256": "346f26e9c4228a81f11c668a02a704df7b3fc93ee0b183c9a3e770b7229c3886",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Current primary ROC-AUC paired patient intervals",
+      "dimensions": [
+        1248,
+        504
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    },
+    {
+      "path": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell35_3.png",
+      "sha256": "9b00710383430e654d41fe39888855c155c3e3fbecd0745ed4064adf458db8b5",
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "role": "Current secondary AP paired patient intervals",
+      "dimensions": [
+        1248,
+        504
+      ],
+      "direct_visual_inspection": true,
+      "result": "pass",
+      "colours_and_markers_preserved": true,
+      "fonts_and_composition_preserved": true,
+      "clipped_labels": false,
+      "misleading_metric_label": false
+    }
+  ],
+  "notebooks": [
+    {
+      "path": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "condition": "original",
+      "stage": "04",
+      "sha256": "2a0e0f69871b22c17851e89b4ed6d72e7fcc4f6660204ce86d93bd1e61c1f520",
+      "errors": 0,
+      "figures": 2,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline.html",
+      "html_sha256": "df3c10b07e9096bb5da5cda4e682edaef551ec364b0e1b764a655a99c7ea89ed",
+      "pre_roc_archive_sha256": "2f7ec36a2c73f5091049ef5eb5af8c9ae5f52013ea72dc46d79013d8195dd0e7",
+      "pre_roc_markdown_words": 1062,
+      "current_markdown_words": 1290,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Original grey prevalence reference and blue logistic curves; two-panel curves/confusions; clean association addition uses baseline blue."
+    },
+    {
+      "path": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "condition": "original",
+      "stage": "06",
+      "sha256": "25434a3da25898e61eb3d4479d9bbd27fb291742826e88d9f2a35fe9b405e37c",
+      "errors": 0,
+      "figures": 5,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network.html",
+      "html_sha256": "425feaed81c5082c00c7a1fc759c282395fdf3330f69c6f87c25f0f18e352148",
+      "pre_roc_archive_sha256": "3bd6f2f43a4c5c1dbc96e2bd5fa06dedc994f1c5e872a21d5fa7ff6630f2951d",
+      "pre_roc_markdown_words": 1360,
+      "current_markdown_words": 1438,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Blue spline, three orange seeds and charcoal equal mean; ROC left/AP right, five bars, identical fonts, margins, marker conventions and five-row stopping/refit histories."
+    },
+    {
+      "path": "notebooks/Subset/05_metadata_models.ipynb",
+      "condition": "original",
+      "stage": "05",
+      "sha256": "c782e0e9276874b3378094801b88ff31cdc996a5dcb3e8a48cfa18a1c05c6bc7",
+      "errors": 0,
+      "figures": 4,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models.html",
+      "html_sha256": "22496e3c8a8ff5c0d7014a00d6be54a7079945571471f8eeef3b9b34374fdb57",
+      "pre_roc_archive_sha256": "5ea1be4a71c8184a0c5b59c5da8a89313eb9b251c667f81559e959e5d2c03ab9",
+      "pre_roc_markdown_words": 2231,
+      "current_markdown_words": 2506,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Four original model-colour rows: blue logistic, gold spline, olive forest, orange XGBoost; square ROC and wide0\u201330%PR panels. Historical ablation, observed-age rings/gold age line and confusion composition preserved; added tree diagnostic is explicitly labelled."
+    },
+    {
+      "path": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "condition": "original",
+      "stage": "08",
+      "sha256": "452941c58aa4bb6eac110a6544a42cdfc2872af8536e2156055bddd67114f3e6",
+      "errors": 0,
+      "figures": 5,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness.html",
+      "html_sha256": "047f854c271524a818e33277f48df729a922a2b58eb4594a1ba5a8ffd4628c11",
+      "pre_roc_archive_sha256": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+      "pre_roc_markdown_words": 1852,
+      "current_markdown_words": 2095,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Original raw-blue circles and recalibrated-gold squares, matched reliability/distribution panels and subgroup support; current paired contrasts use gold squares/intervals. Clean-only diagnostic panels are explicitly labelled.",
+      "archived_heading_levels_match_exactly": true
+    },
+    {
+      "path": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "condition": "dedup_v1",
+      "stage": "04",
+      "sha256": "3b1145a0d069d8abe1094decb43bd0847ec1c46ca96d1ceca56085378e5a8648",
+      "errors": 0,
+      "figures": 3,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines.html",
+      "html_sha256": "94e7581a0bee45f77441feb23368f23557693075dc71b7d78e5618e46193cbd7",
+      "pre_roc_archive_sha256": "b4f5948a33842af99bde2138bc5eb9953927f1bdce110dd6b07597931df79d29",
+      "pre_roc_markdown_words": 1344,
+      "current_markdown_words": 1616,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Original grey prevalence reference and blue logistic curves; two-panel curves/confusions; clean association addition uses baseline blue."
+    },
+    {
+      "path": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "condition": "dedup_v1",
+      "stage": "05",
+      "sha256": "ea05f67c72fa3eede567c42fd92cf794b86f9f3255a19dec680f6ec5bb7feb1e",
+      "errors": 0,
+      "figures": 5,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models.html",
+      "html_sha256": "81c6478344d525c432865a665ca55b39f6bf54866b5307dc1a0595ef32c4dd6d",
+      "pre_roc_archive_sha256": "9949b25c6d8a9b7b635569d8baa1470b48f1e0b728414bd906a1492a6ea4f7f1",
+      "pre_roc_markdown_words": 2592,
+      "current_markdown_words": 2933,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Four original model-colour rows: blue logistic, gold spline, olive forest, orange XGBoost; square ROC and wide0\u201330%PR panels. Historical ablation, observed-age rings/gold age line and confusion composition preserved; added tree diagnostic is explicitly labelled."
+    },
+    {
+      "path": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "condition": "dedup_v1",
+      "stage": "06",
+      "sha256": "e42932337b4f3d6f2c6c1800cf959c43cd87383eaf25fa436b836aa617d9b913",
+      "errors": 0,
+      "figures": 5,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network.html",
+      "html_sha256": "23fce7573058800ed81f1ccb698d62efc3c32698405aa030ce723b8245ccc021",
+      "pre_roc_archive_sha256": "897d147604dc5c4c7789291e9075f349e3a8c09cf9ab6ec3f1d19a04198c5802",
+      "pre_roc_markdown_words": 1360,
+      "current_markdown_words": 1438,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Blue spline, three orange seeds and charcoal equal mean; ROC left/AP right, five bars, identical fonts, margins, marker conventions and five-row stopping/refit histories."
+    },
+    {
+      "path": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "condition": "dedup_v1",
+      "stage": "07",
+      "sha256": "677f94c2e5f94dc7ad245905a1174b824edd7620f4db22974810b2bea67a2f24",
+      "errors": 0,
+      "figures": 13,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning.html",
+      "html_sha256": "f6f1f4052931f7d34082ca57f0caefcaecce1cc6c8e594c356aef3e433640441",
+      "pre_roc_archive_sha256": "500f9456f295438b1ce1509e19c7519dafc3e7b699366aeaae4c83d6c088d6ec",
+      "pre_roc_markdown_words": 2210,
+      "current_markdown_words": 2298,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Fixed blue dashed/circles and tuned gold solid/squares; four-family separate score bars, four-row ROC/PR grid, shared title clearance y=1.002; all36recipes retained for each outer fold; additions use same gold/charcoal conventions."
+    },
+    {
+      "path": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "condition": "original",
+      "stage": "07",
+      "sha256": "68ae9e8c389479e03cbd8c5567787e72a9bf9a7665f4ad9a6ea6590cc63f1e97",
+      "errors": 0,
+      "figures": 13,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning.html",
+      "html_sha256": "523faf53975ab64f2d13c7651ae23bf3ae82dd9447bf9409b12747f7bda347a9",
+      "pre_roc_archive_sha256": "3a31bbdf05d9add2376fb7194ef5129a19e5dfbd0e227c5c94a402fe2264b891",
+      "pre_roc_markdown_words": 2202,
+      "current_markdown_words": 2298,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Fixed blue dashed/circles and tuned gold solid/squares; four-family separate score bars, four-row ROC/PR grid, shared title clearance y=1.002; all36recipes retained for each outer fold; additions use same gold/charcoal conventions."
+    },
+    {
+      "path": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "condition": "dedup_v1",
+      "stage": "08",
+      "sha256": "768a6afc009d14f970aa45b5135484048ad4f8b1bb360ec79ab9bd624ff55f02",
+      "errors": 0,
+      "figures": 8,
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness.html",
+      "html_sha256": "a0b9dedd6615b21c2641bfccdb15bc2b25fb280d6546a0769b4a5a32a2c46e04",
+      "pre_roc_archive_sha256": "021b732a1c53020cbbc7c613e80551a4001ad8a6ca5d4d50c3d87abcf4d8c197",
+      "pre_roc_markdown_words": 2518,
+      "current_markdown_words": 2762,
+      "explanatory_depth_retained": true,
+      "primary_role": "Current model comparisons use mean-fold ROC-AUC; labelled historical AP diagnostics remain supporting.",
+      "plot_style_review": "Original raw-blue circles and recalibrated-gold squares, matched reliability/distribution panels and subgroup support; current paired contrasts use gold squares/intervals. Clean-only diagnostic panels are explicitly labelled.",
+      "archived_heading_levels_match_exactly": true
+    }
+  ],
+  "paired_reviews": [
+    {
+      "stage": "04",
+      "result": "pass",
+      "common_heading_text_and_hierarchy_match": true,
+      "colours_fonts_plot_composition_match": true,
+      "data_specific_differences": "Numerical annotations, score curves, counts, training duration, axis limits and heatmap scale endpoints reflect each verified dataset.",
+      "declared_scope_differences": "Clean-only association diagnostic retained as an addition."
+    },
+    {
+      "stage": "05",
+      "result": "pass",
+      "common_heading_text_and_hierarchy_match": true,
+      "colours_fonts_plot_composition_match": true,
+      "data_specific_differences": "Numerical annotations, score curves, counts, training duration, axis limits and heatmap scale endpoints reflect each verified dataset.",
+      "declared_scope_differences": "Clean-only tree-importance diagnostic retained; age/ablation examples explicitly historical."
+    },
+    {
+      "stage": "06",
+      "result": "pass",
+      "common_heading_text_and_hierarchy_match": true,
+      "colours_fonts_plot_composition_match": true,
+      "data_specific_differences": "Numerical annotations, score curves, counts, training duration, axis limits and heatmap scale endpoints reflect each verified dataset.",
+      "declared_scope_differences": "No composition or experiment-scope difference between conditions; fixed three-seed procedure retained."
+    },
+    {
+      "stage": "07",
+      "result": "pass",
+      "common_heading_text_and_hierarchy_match": true,
+      "colours_fonts_plot_composition_match": true,
+      "data_specific_differences": "Numerical annotations, score curves, counts, training duration, axis limits and heatmap scale endpoints reflect each verified dataset.",
+      "declared_scope_differences": "SharedROC-selectedv2 experiment and36recipe/three-seed search; earlierAP selections remain historical."
+    },
+    {
+      "stage": "08",
+      "result": "pass",
+      "common_heading_text_and_hierarchy_match": true,
+      "colours_fonts_plot_composition_match": true,
+      "data_specific_differences": "Numerical annotations, score curves, counts, training duration, axis limits and heatmap scale endpoints reflect each verified dataset.",
+      "declared_scope_differences": "Historical original intervals use pooled AP and clean intervals use mean-fold AP, explicitly labelled; currentv2 ROC/AP paired comparisons are symmetric. Clean-only decision/workload/site-availability additions retained."
+    }
+  ],
+  "resolved_findings": [
+    "Corrected the report-only outer_fold dispatch and gain-plot field; synthetic dispatch regression passes.",
+    "Corrected metric-priority prose without relabelling historical AP values as ROC-AUC; exact prepatch snapshots and unchanged-code/output hashes retained in metadata_markdown_priority_patch.json.",
+    "Restored original07 curve-grid title clearance y=1.002; original07 selectively rerun and final exports inspected.",
+    "Guard blocked a late clean08 legacy table-writer import before historical mutation; strictv2 writer binding corrected in cells4/24, archived and tested, then executed successfully.",
+    "Restored both stage08 additionalexperiment headings from level3toarchivedlevel2; onlyMarkdownchanged, strict HTML/execution-hash refresh passed and all63figure hashes remained unchanged."
+  ],
+  "substantive_prose_review": {
+    "result": "pass",
+    "metric_priority": "Mean outer-fold ROC-AUC primary; mean-fold AP/probability errors secondary; pooled results supporting.",
+    "historical_examples": "AP-era figures, age illustrations, numerical examples and calibration/cutoffs are explicitly historical; their AP numbers retain AP labels.",
+    "evaluation_boundary": "No automatic candidate replacement, final all-development fit or reserved-test evaluation; conditional patient intervals do not establish equivalence or dependable superiority.",
+    "training_and_tuning": "Originalteaching sections,36setting rationale,three-seed averaging,nested selection,training-only BCE stopping,andfit reuse/resume/rescoring distinctions retained.",
+    "aggregation_scope": "Historical08pooled-versus-mean-fold difference remains explicitly declared; newv2 assessment matches conditions."
+  },
+  "final_reporting_tests": {
+    "command": ".venv/Scripts/python.exe -B -m unittest tests.test_metadata_tuning_v2_reporting -q",
+    "tests": 10,
+    "result": "pass",
+    "elapsed_seconds": 12.004
+  },
+  "heading_level_restoration": {
+    "result": "pass",
+    "scope": "Stage08 appendix restored as a peerlevel2section in both conditions; shared assessment remains level3 where nested elsewhere.",
+    "patch_receipt": "results/metadata_nn_tuning/v2/report_verification/repairs/robustness_heading_patch.json",
+    "code_outputs_metadata_unchanged": true,
+    "all63figure_hashes_unchanged": true,
+    "original_and_clean_archived_heading_level_sequences_match_exactly": true
+  }
+}

@@ -1,0 +1,13 @@
+pipeline_id,family,recipe_slot,status,completed_epochs,selected_epoch,backbone_lr,loss_weight,matched_comparison
+efficientnet_b0/low_none,efficientnet_b0,low_none,complete,6,5,,,True
+efficientnet_b0/low_sqrt,efficientnet_b0,low_sqrt,complete,6,6,,,True
+efficientnet_b0/high_none,efficientnet_b0,high_none,complete,6,4,,,True
+efficientnet_b0/high_sqrt,efficientnet_b0,high_sqrt,complete,6,6,,,True
+densenet121/low_none,densenet121,low_none,complete,6,2,3e-05,none,True
+convnext_tiny/low_none,convnext_tiny,low_none,complete,6,6,1e-05,none,True
+densenet121/low_sqrt,densenet121,low_sqrt,complete,6,6,3e-05,sqrt_ratio,True
+convnext_tiny/low_sqrt,convnext_tiny,low_sqrt,complete,6,6,1e-05,sqrt_ratio,True
+densenet121/high_none,densenet121,high_none,complete,6,4,0.0001,none,True
+convnext_tiny/high_none,convnext_tiny,high_none,complete,6,6,3e-05,none,True
+densenet121/high_sqrt,densenet121,high_sqrt,complete,6,3,0.0001,sqrt_ratio,True
+convnext_tiny/high_sqrt,convnext_tiny,high_sqrt,complete,6,6,3e-05,sqrt_ratio,True

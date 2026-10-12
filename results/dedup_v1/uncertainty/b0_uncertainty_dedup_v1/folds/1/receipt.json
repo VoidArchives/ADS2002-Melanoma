@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "deterministic_predictions.csv": "7162d5e09a37d90e45cf70111a117c1c7b63ffd6b5d84639603d876d64f2a35e",
+    "inference_checks.json": "8d9691fafb69b0ba8a403343d2624d7384a7e3d040ba38d9cb5159c2b8bb7019",
+    "inference_provenance.json": "9896a2ab2d7bf5f68a605498be71d2da408940de8bd07a2ec0c3959131bee6c4",
+    "mc_raw_predictions.csv": "2949c7ceb652e87ff65050c77a7629c48972fabac4fc038e409b00e948673e90",
+    "prediction_summary.csv": "26befb40228e9ed1e77d8bda6c8809ae8bbe0bbc9d2764c14cb613416f672944",
+    "tta_raw_predictions.csv": "e749e377d11317fb955bae57fd4d4d3ce7d526af8b92acf776f0e9ff328cb4e2"
+  },
+  "identity_sha256": "ffefb4a48307e263467d867145781a9fcf1a55f7b11239a9d07e54c1498d647b",
+  "images": 1366,
+  "outer_fold": 1,
+  "status": "complete"
+}

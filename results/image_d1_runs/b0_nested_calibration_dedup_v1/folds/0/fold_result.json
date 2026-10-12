@@ -1,0 +1,41 @@
+{
+  "fold": 0,
+  "status": "complete",
+  "selected_recipe": "lr1e4_none",
+  "fixed_epochs": 11,
+  "slope": 0.2850124900097465,
+  "intercept": -1.3062525664325317,
+  "raw_threshold": 5.587932173511945e-05,
+  "calibrated_threshold": 0.016347960737592954,
+  "training_oof_sha256": "e762065547e029fb7ab7f1ceca3824d0cca7de15cb81a059411e88a72234a42c",
+  "training_selection_sha256": "dd59b678d52b82d284d3108121a73cec1bb1d21be019570497233c229c17ceae",
+  "calibrator_sha256": "cb13c5a9bf7a55787bc98180778efd3dcf7c6498d77d97d589c5d76c96a804a0",
+  "predictions_sha256": "9e0ae3006a8eb39d25ee02c6ec30d0166fed7078c231b4d60421429faa70a4dd",
+  "reference_outer_predictions_sha256": "38df43fa3447ede9c758d0f18484241ab84989a47bd9f347a6cce0d81ad35e0b",
+  "inner_refits": [
+    {
+      "inner_fold": 0,
+      "fixed_epochs": 11,
+      "checkpoint_sha256": "0edc62d0edc58a19cbc386eaf83a78377c27bad78bdceb6914c9e22de6ee38cb",
+      "job_manifest_sha256": "9cb6421706edec42ed773ead6e1a2e554565cebc7015d74c49db3768c29a1164",
+      "history_sha256": "cdaec863e03faef6af1f75568d8afe6443298854c2690d6809b2e61bfbbb9bcb",
+      "predictions_sha256": "7950d18ade96aba4da8322270404a5d8d8b3eafacd1a320dcd1a80b6c2f6025e"
+    },
+    {
+      "inner_fold": 1,
+      "fixed_epochs": 11,
+      "checkpoint_sha256": "5f73a0b05fda1e2babbd84450f99abbd083d394e296716125063e090b3c9f80a",
+      "job_manifest_sha256": "db59adce11099def7500ddebc044e3e0657e9545d1386ecf495cd71b59111b73",
+      "history_sha256": "1c6d38b757ed2207cfd89ce144b5b46551668b680a777bf4c00eefec48929d21",
+      "predictions_sha256": "66669567c1d87132b53fb55bf1e94c962486025dd29c5a2b54d447b53feb4974"
+    },
+    {
+      "inner_fold": 2,
+      "fixed_epochs": 11,
+      "checkpoint_sha256": "a78437e1fc0ab14011cda19789b66e30f185cde4a919b17a71d49c9763449437",
+      "job_manifest_sha256": "5e655ede8708f360683791811ed4b700d741acb9f197c62c0b090385bff003b7",
+      "history_sha256": "52fff3074bc0e130ee64588e9609c9657c74be5357283b77cce53f3c975d6a2d",
+      "predictions_sha256": "52f195ef00cd090259e63fafcdd1239d0815273884702ac325d1ba4b1c3a205a"
+    }
+  ]
+}

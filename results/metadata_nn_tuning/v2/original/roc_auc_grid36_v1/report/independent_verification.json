@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "experiment_version": 2,
+  "selection_metric": "roc_auc",
+  "condition": "original",
+  "verified_utc": "2026-10-12T00:06:00.411278+00:00",
+  "verification_source_sha256": "8028a03c1f097ab24fef41b2f82e3919389ef47e79b1299c75b3682e77d0e610",
+  "independently_reconstructed_inner_scores": 1170,
+  "counts": {
+    "executed_fits": 43,
+    "external_reused_fits": 3917,
+    "resumed_fits": 0,
+    "executed_this_invocation": 43,
+    "rescoring_operations": 1170
+  },
+  "oof_rows": 6864,
+  "patients": 422,
+  "outer_folds": 5,
+  "test_set_loaded": false,
+  "final_model_fitted": false,
+  "completion_receipt_sha256": "6bdade8cee97534f7e329e3458fdbfdf480d4c38c54bc23cebce2f50e15804bc"
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "run_id": "b0_nested_calibration_dedup_v1",
+  "reference_run_id": "b0_nested_dedup_v1",
+  "protocol": "fixed_duration_training_oof_sigmoid_v1",
+  "status": "complete",
+  "folds": [
+    {
+      "fold": 0,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "fixed_epochs": 11,
+      "slope": 0.2850124900097465,
+      "intercept": -1.3062525664325317,
+      "raw_threshold": 5.587932173511945e-05,
+      "calibrated_threshold": 0.016347960737592954,
+      "training_oof_sha256": "e762065547e029fb7ab7f1ceca3824d0cca7de15cb81a059411e88a72234a42c",
+      "training_selection_sha256": "dd59b678d52b82d284d3108121a73cec1bb1d21be019570497233c229c17ceae",
+      "calibrator_sha256": "cb13c5a9bf7a55787bc98180778efd3dcf7c6498d77d97d589c5d76c96a804a0",
+      "predictions_sha256": "9e0ae3006a8eb39d25ee02c6ec30d0166fed7078c231b4d60421429faa70a4dd",
+      "reference_outer_predictions_sha256": "38df43fa3447ede9c758d0f18484241ab84989a47bd9f347a6cce0d81ad35e0b",
+      "inner_refits": [
+        {
+          "inner_fold": 0,
+          "fixed_epochs": 11,
+          "checkpoint_sha256": "0edc62d0edc58a19cbc386eaf83a78377c27bad78bdceb6914c9e22de6ee38cb",
+          "job_manifest_sha256": "9cb6421706edec42ed773ead6e1a2e554565cebc7015d74c49db3768c29a1164",
+          "history_sha256": "cdaec863e03faef6af1f75568d8afe6443298854c2690d6809b2e61bfbbb9bcb",
+          "predictions_sha256": "7950d18ade96aba4da8322270404a5d8d8b3eafacd1a320dcd1a80b6c2f6025e"
+        },
+        {
+          "inner_fold": 1,
+          "fixed_epochs": 11,
+          "checkpoint_sha256": "5f73a0b05fda1e2babbd84450f99abbd083d394e296716125063e090b3c9f80a",
+          "job_manifest_sha256": "db59adce11099def7500ddebc044e3e0657e9545d1386ecf495cd71b59111b73",
+          "history_sha256": "1c6d38b757ed2207cfd89ce144b5b46551668b680a777bf4c00eefec48929d21",
+          "predictions_sha256": "66669567c1d87132b53fb55bf1e94c962486025dd29c5a2b54d447b53feb4974"
+        },
+        {
+          "inner_fold": 2,
+          "fixed_epochs": 11,
+          "checkpoint_sha256": "a78437e1fc0ab14011cda19789b66e30f185cde4a919b17a71d49c9763449437",
+          "job_manifest_sha256": "5e655ede8708f360683791811ed4b700d741acb9f197c62c0b090385bff003b7",
+          "history_sha256": "52fff3074bc0e130ee64588e9609c9657c74be5357283b77cce53f3c975d6a2d",
+          "predictions_sha256": "52f195ef00cd090259e63fafcdd1239d0815273884702ac325d1ba4b1c3a205a"
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "fixed_epochs": 9,
+      "slope": 0.46058728511895297,
+      "intercept": -1.207015253758434,
+      "raw_threshold": 0.0021040886640548706,
+      "calibrated_threshold": 0.01720760313644275,
+      "training_oof_sha256": "9c8e5e850a36b707e64f627f2b4b4843c2ac82803176d2ffab7a4dba92e33810",
+      "training_selection_sha256": "8db849c1ba9e19ac8c8bd928c28cfc523ed6393c10565260165f8a56fa2f13c5",
+      "calibrator_sha256": "4fd1f5dc7245558cb89039f14fcd27273fd9490edbffe6316b950d0886637d07",
+      "predictions_sha256": "509f5567a64a0783cc5d78ea962a0c1bf2abe9493cea5c3aac86497a947a27ad",
+      "reference_outer_predictions_sha256": "a4b4dfac05e61ef34f3fe9ff21358b7e27da5ebb4762cb3718bca48f234b35e5",
+      "inner_refits": [
+        {
+          "inner_fold": 0,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "5e2359b06c3bf0697c1374cc94d012472f18fc45b82c91e538bdf1b4a2f4cb03",
+          "job_manifest_sha256": "1cbb1cf58176df8e9e2b47ae86b68175e6d5e0a94bc56a6da137f033212adc4a",
+          "history_sha256": "d71bfeb4d5910f5a5251434a34b373ed29926ba761f26ac4528f0f852126141b",
+          "predictions_sha256": "0b74fc08f45db97a011b37c1eb204799ffa593ff74a93d2ef5360a2e26a7d663"
+        },
+        {
+          "inner_fold": 1,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "d1ed6565803a2d0a9ac245852fe4b9a16563295ca688b0d8253e45dd34de5a32",
+          "job_manifest_sha256": "338751a11185730f848cd25463f544e8620017542d799b41e5f323d012ce1050",
+          "history_sha256": "8a965f3ba74680eeed321b98b9e77174c06cf2a10440875200b7c083eb8bc61e",
+          "predictions_sha256": "e3fb5af46279ec4dfa1894c193d9b75a68f41e0d7c6cbc605e207dd1b90e6521"
+        },
+        {
+          "inner_fold": 2,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "07736c51778f7fae3cd595028e9754f6874463a8552ff97a0faebcc110fd4f29",
+          "job_manifest_sha256": "95c2e6e0a8cd0a43841a92f64d7d0224f01f12f6304cc34ed2f132a4cf28b455",
+          "history_sha256": "18791c2b4fbf826dcb7281bb4f926ea8e2c327eba42224609c430daa996d4267",
+          "predictions_sha256": "613bb0ea715081d9d1ec6495c16e8154b69d441aa16b6b5a406d7847cb0d8748"
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "fixed_epochs": 4,
+      "slope": 0.6678784284875808,
+      "intercept": -0.7482753651928444,
+      "raw_threshold": 0.0062211863696575165,
+      "calibrated_threshold": 0.01572284664551817,
+      "training_oof_sha256": "46685cc96b5e49ada994000d09ac6a085ba8f4d7101b841b2edb634171892961",
+      "training_selection_sha256": "6f50fcb29e5277c75da94e169248c3064c14772b6c9743fa2051c1d8f434cd56",
+      "calibrator_sha256": "f47573c78fa56e53eb0eed1e0c9f9d3f21fdce7c0c0f1e416f3ada059faa58d4",
+      "predictions_sha256": "a5b70088ac4f0934f6c7f752626367f37fa240193b8a4697eeb2516017876742",
+      "reference_outer_predictions_sha256": "f55afd1f6a42de832bee01b23e685a23bc80bb4ea00b6690e2335bb6b88696f8",
+      "inner_refits": [
+        {
+          "inner_fold": 0,
+          "fixed_epochs": 4,
+          "checkpoint_sha256": "32f467ac4873ffb0a424ff565f1d40e5b3e5a25e84669f4905d573544985903b",
+          "job_manifest_sha256": "bc180932f2498a011e804c91a2999890ced772da638dd511f59a5757ae54d396",
+          "history_sha256": "6fce8beded4e2eb44864bd53335abfd9ecfbf257955458409eb4cf876661d3fc",
+          "predictions_sha256": "9c0fcbe625217961fbfa2717cf49be671411c53ae3e8b93a419cdb5fea7177ae"
+        },
+        {
+          "inner_fold": 1,
+          "fixed_epochs": 4,
+          "checkpoint_sha256": "ab53280e69bb2bc44783dd194fab112734dd28dce8b09143be94355b719e1857",
+          "job_manifest_sha256": "b9bee17f66a5e24c829732072300d827a54698eafe29004af5b722b0fbc7a1d6",
+          "history_sha256": "b2748805ea3b97f893f5216cced3e83051bbab04ea5de19b4bb96052b3cff459",
+          "predictions_sha256": "a318d0082ce25b0b40a22b785472763f7f6349cdb1702f647451e5b730faa01a"
+        },
+        {
+          "inner_fold": 2,
+          "fixed_epochs": 4,
+          "checkpoint_sha256": "363ccbda920766ecd2eca6f7fcfcf83c94402893aba35207160b71c21ebf7bd6",
+          "job_manifest_sha256": "3e3caa152ff8a71533b9e86765764600b316770e998ca91f6fe6511cd57cf51b",
+          "history_sha256": "35161d0fc7212a2ebe0e76ae23816f92b674f748ff00ab20a1e69075a67be45c",
+          "predictions_sha256": "a7f9bf89b5c64a62cb447c2118b77d846b7a7c3a38f258e1f00d0c66a7d8e83d"
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "fixed_epochs": 9,
+      "slope": 0.40108728755460943,
+      "intercept": -1.4961063738056783,
+      "raw_threshold": 0.0019558214116841555,
+      "calibrated_threshold": 0.01804139154337432,
+      "training_oof_sha256": "59ffb1f092e0f836027806141a26ec776efeab7c80fe97106cb2a8a100f9d675",
+      "training_selection_sha256": "2add37006470cf980e4077eede0a712635a67fdb52ed50075828e9149bb149e4",
+      "calibrator_sha256": "c89ee8dd6d4fb87e4a66dce342978318600a0b513d2b8486ee77600346f3b977",
+      "predictions_sha256": "1d2ad355d257ebee2aa8cbb1887088c4b627a62bd8db55f18e9ae2ef03b2999f",
+      "reference_outer_predictions_sha256": "953f484f82935bbc77e945b88219e16db22db95d5616930c84c20fece32d45ef",
+      "inner_refits": [
+        {
+          "inner_fold": 0,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "6d3d4e5e810dfb97cbe2d0e528a38c5f71ab7d6a948e3cc4af8ead1dd5e56305",
+          "job_manifest_sha256": "50b1b50fc522c261f66881a64a0c5bb8e82b0b8d310b2b0aba8fe9f2b6c60c60",
+          "history_sha256": "18ea5520953e73a5d65a42b7d94c59bb99be2caac06367164d3fb39941f470e5",
+          "predictions_sha256": "43e494146c0849bb1fe498229e4fcdfaa8ef3f8068b1e84d60c0566d4a353e23"
+        },
+        {
+          "inner_fold": 1,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "a30c108338d0681e9be7fa364c4b3c049e1ca38ee58a927f476b9921213363ae",
+          "job_manifest_sha256": "ac526ec449db637029227bcfd7adafb847fbc8f4e69d6c29d32f061577a4258e",
+          "history_sha256": "7119a8c0b1d9d61ea30b0ea9483b0fdd5125c9ef1fd660c577bf394d892dbffb",
+          "predictions_sha256": "e2fe9b124ef09176efcc1f7571c2de1360528e56eb8ba3cce38839659c4bbe45"
+        },
+        {
+          "inner_fold": 2,
+          "fixed_epochs": 9,
+          "checkpoint_sha256": "e73c48372e1d3103425d862da5df5c1966963207095c9438397d86a0eec3f81e",
+          "job_manifest_sha256": "052b085d34da8bbfd364621ab42226be0523cf4a863423d0ba3ae79e46c16ed7",
+          "history_sha256": "7f0981e17b30b7ec65a43a98e799df269024784f2e7917ab13d8506cf56b9c09",
+          "predictions_sha256": "176caded79693c8fefbf15556ff999a2f32c252f7162c252753ac7d6fbf7dc56"
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "status": "complete",
+      "selected_recipe": "lr1e4_none",
+      "fixed_epochs": 8,
+      "slope": 0.31713476599154805,
+      "intercept": -1.5068451012069288,
+      "raw_threshold": 0.00022755634563509375,
+      "calibrated_threshold": 0.015263119092126654,
+      "training_oof_sha256": "ce1af65e5d3a3d8907344cdf47abe59c9b3004b0bdc06b5fe6579d0e3c05b5d4",
+      "training_selection_sha256": "e535ca9bb5ebc90124ac63ddf38b4dbd6365b7630e412bec2707d3925b6e0288",
+      "calibrator_sha256": "81ae90500f369c79b61ebe76d66bf406a5028d82fbae67b5a7d59c1165ecaadc",
+      "predictions_sha256": "db98ac1c7de7924cd3ccbf0b0deb849d979dbf9874e81166622fe1ea4b4a9025",
+      "reference_outer_predictions_sha256": "e075de82803ec4560fa1d6e44284f73effd47629f6b53e6efcd570f60b1afe64",
+      "inner_refits": [
+        {
+          "inner_fold": 0,
+          "fixed_epochs": 8,
+          "checkpoint_sha256": "bb806831a8a77bbd5f59f8b12258bfa7b3dafe814fff376775119a53723f7824",
+          "job_manifest_sha256": "aff50d9d80d1981408a2a37c61d326d8263c74e62e9d503eb080ad7cfe272127",
+          "history_sha256": "090dfe871124655e1859d8b576ec7942e7392ad48ecfb69fa96bfb437f77f93b",
+          "predictions_sha256": "a58a23ec164a94f19eff148a6734922072733ab4a9de8bae5cbf43ddb673cfdb"
+        },
+        {
+          "inner_fold": 1,
+          "fixed_epochs": 8,
+          "checkpoint_sha256": "8cc4091b3aabf62c4c080a3814bffa2d5c8e0d6ed589387dd8f4a7541540c44b",
+          "job_manifest_sha256": "ad4067c14d5da6263a839e505d38e8101f752fa38c558dfc203632eee00abc79",
+          "history_sha256": "d861a8c9664a3149a11a6e141325377b982360ac07a4f02201cbf3bb6f01ee8b",
+          "predictions_sha256": "64c1717086df3b011ccd284f6d63a4bd91457c6441ce1d743b147767e67ef181"
+        },
+        {
+          "inner_fold": 2,
+          "fixed_epochs": 8,
+          "checkpoint_sha256": "6bd9ccb8e193d4b1074caaf12051c4b2a5ea04b9870d51dd7257acd40d155015",
+          "job_manifest_sha256": "36608ee03250e7548c226fd6a3f7d566dbefb3c6d0b53115c5cbefb37e9a46b7",
+          "history_sha256": "0310a51057640d05a902437f434e8a29c625d5520ccdcf09ec5b44b83b9ee9b4",
+          "predictions_sha256": "7a365dc68f7ca99d99ffa5ebfd4c8a04c03131971157939c98878f8919f23e17"
+        }
+      ]
+    }
+  ],
+  "completed_outer_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "calibration_fitted": true,
+  "threshold_fitted": true,
+  "test_set_loaded": false,
+  "stopping_reason": null,
+  "qualification": "Development folds influenced earlier pilots, including an archived fold-0 prototype. OOF estimates this declared bounded procedure, not untouched final-test generalisation.",
+  "updated_utc": "2026-10-05T12:01:27.372668+00:00",
+  "outer_oof_predictions_sha256": "84c4be6d06fb8a591e2d2816ea7d7c563ef2d3545ebc5aec11568b53fff47ced",
+  "n_images": 6706,
+  "n_patients": 422,
+  "pooled_raw_metrics": {
+    "average_precision": 0.11655431263482104,
+    "roc_auc": 0.8016810826143312,
+    "log_loss": 0.09935308214113615,
+    "brier": 0.01963355345122638
+  },
+  "pooled_calibrated_metrics": {
+    "average_precision": 0.10983932485519618,
+    "roc_auc": 0.7731651532614511,
+    "log_loss": 0.08449680757833461,
+    "brier": 0.017974735494281534
+  },
+  "evaluation": {
+    "schema_version": 1,
+    "status": "complete_five_fold_calibration_evaluation",
+    "n_images": 6706,
+    "n_patients": 422,
+    "outer_folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "mean_fold_metrics": {
+      "calibrated": {
+        "average_precision": 0.1315697185959312,
+        "roc_auc": 0.8308007809467753,
+        "log_loss": 0.08450109552963851,
+        "brier": 0.01798295892313902
+      },
+      "raw": {
+        "average_precision": 0.1315697185959312,
+        "roc_auc": 0.8308007809467753,
+        "log_loss": 0.09911577730320412,
+        "brier": 0.01963708498942305
+      }
+    },
+    "mean_fold_ap_invariant": true,
+    "fold_roc_auc_invariant": true,
+    "ranking_interpretation": "Positive-slope logistic calibration is monotonic within each fold. AP/ROC-AUC should remain unchanged except for numerical ties or clipped endpoints. Pooled AP can change because fold scales change.",
+    "ranking_warning": null,
+    "training_selected_decisions_identical": true,
+    "decision_warning": null,
+    "training_target_recall": 0.8,
+    "threshold_interpretation": "The 80% target is used only on training-only OOF scores. Actual held-out recall can be lower or higher. This is an academic scenario, without clinical validation.",
+    "threshold_metrics_pooled": [
+      {
+        "fold": "pooled",
+        "model": "raw",
+        "n_images": 6706,
+        "n_patients": 422,
+        "n_positive": 127,
+        "training_target_recall": 0.8,
+        "threshold": null,
+        "threshold_scope": "fixed per outer fold from training-only OOF scores",
+        "TP": 102,
+        "FP": 3019,
+        "TN": 3560,
+        "FN": 25,
+        "sensitivity": 0.8031496062992126,
+        "specificity": 0.5411156710746314,
+        "precision": 0.03268183274591477,
+        "flagged_fraction": 0.46540411571726814,
+        "recall": 0.8031496062992126,
+        "f1": 0.06280788177339902
+      },
+      {
+        "fold": "pooled",
+        "model": "calibrated",
+        "n_images": 6706,
+        "n_patients": 422,
+        "n_positive": 127,
+        "training_target_recall": 0.8,
+        "threshold": null,
+        "threshold_scope": "fixed per outer fold from training-only OOF scores",
+        "TP": 102,
+        "FP": 3019,
+        "TN": 3560,
+        "FN": 25,
+        "sensitivity": 0.8031496062992126,
+        "specificity": 0.5411156710746314,
+        "precision": 0.03268183274591477,
+        "flagged_fraction": 0.46540411571726814,
+        "recall": 0.8031496062992126,
+        "f1": 0.06280788177339902
+      }
+    ],
+    "bootstrap_replicates": 2000,
+    "valid_bootstrap_replicates": 2000,
+    "rejected_single_class_bootstrap_replicates": 0,
+    "bootstrap_method": "95% percentile patient-cluster bootstrap, resampling patients within each outer fold. All images of a sampled patient stay together. Single-class draws in any fold are excluded from all metrics and comparisons. Intervals are conditional on these fitted models, selected recipes, fixed folds and observed fold memberships; no retraining or recipe reselection is performed. They omit training variability and prior pilot adaptivity. Calibration maps and thresholds are also held fixed.",
+    "development_caveat": "Development OOF evidence after earlier architecture, augmentation and recipe pilots; fold 0 also has archived exploratory results. Independent outer prediction within this run does not erase earlier adaptation to this development dataset. The locked test remains necessary after decisions are frozen.",
+    "reserved_test_loaded": false,
+    "metadata_comparison": "Use the separate raw-reference matched metadata report; no comparator is selected using these calibrated outer results.",
+    "evaluation_artifact_sha256": {
+      "evaluation/metrics_summary.json": "33a474cb3143583d171429279d9f872476c5bbd1377bf96cc2ae53b839a180e6",
+      "evaluation/probability_metrics_by_fold.csv": "2aa6092f89a3b556a1f39f3b209b561f9e4bed309aae435465fed01799c491be",
+      "evaluation/ranking_invariance_by_fold.csv": "1d11c92819b65fef45902a7f44329af8f426578332d72066b58396a8de8d6b2c",
+      "evaluation/bootstrap_intervals.csv": "99439e8a432b219c1eb334a39d475662607dc52e679eaa90cc80269f0453b894",
+      "evaluation/paired_calibration_differences.csv": "27deab6a7a5e8467505bdc857f05ea59ee9881e0333513a044e53f33380c8ddc",
+      "evaluation/threshold_scenario_by_fold.csv": "a6dcb95e5295ac4d68b1cd3ec45f52150bf1821e5c0c7bc4438896fd133f7e03",
+      "evaluation/threshold_scenario_pooled.csv": "4817231419b8cc2d8d7eee3b335fe1bb2d899a50b39349b2096df636e151d0e3",
+      "evaluation/reliability_bins.csv": "05fc83ae9105719f96fb8bd8d48ae2eaed659f9ea7cc4ab0b480eb0a8077132e",
+      "figures/raw_vs_calibrated_reliability.png": "23a61c22af300242ae449df06d4348769cda6bd18a7b8eaea9f035545971ab81",
+      "figures/training_selected_threshold_counts.png": "6468fec5e3987248cfb5e6cf030e5c427b58334dd4b7bd236244e1eb76e43827"
+    }
+  }
+}

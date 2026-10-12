@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "experiment_version": 2,
+  "selection_metric": "roc_auc",
+  "executed_fits_this_check": 0,
+  "fitting_entrypoints_disabled": true,
+  "completion_receipts_unchanged": {
+    "original": "6bdade8cee97534f7e329e3458fdbfdf480d4c38c54bc23cebce2f50e15804bc",
+    "dedup_v1": "290648dae4db8a65f621e7228df4c554c6c59565ff90e5f752028ddf3f1a1fd2"
+  },
+  "source_sha256": "57476fbeb04497c7b2178b6af9ed108f8491e65e93954031f7f14fe10ecb7c70",
+  "test_set_loaded": false,
+  "final_model_fitted": false
+}

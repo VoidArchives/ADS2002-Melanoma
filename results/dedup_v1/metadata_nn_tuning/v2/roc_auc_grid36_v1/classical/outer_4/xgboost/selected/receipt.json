@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "dedup_v1",
+  "selection_metric": "roc_auc",
+  "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+  "compatibility_sha256": "bf411c7ef51984b08fff0645d69cbca776adb8a55da14aa898a4e53a1410c027",
+  "context": {
+    "condition": "dedup_v1",
+    "outer_fold": 4,
+    "selection_metric": "roc_auc",
+    "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+    "model": "xgboost",
+    "stage": "classical_outer_tuned",
+    "inner_fold": -1,
+    "candidate_index": 8,
+    "parameters": {
+      "classifier__learning_rate": 0.1,
+      "classifier__max_depth": 2,
+      "classifier__min_child_weight": 1
+    },
+    "phase": "classical_tuned"
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/predictions.csv": "cae8909b085170ed7cca819a009e4d2c97645dfc90b1b0d7efd8735bdeca4b40",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/model.joblib": "2954fe0c564d2454388fbf3b50a307229b3d811f24406261ccbc7af6680ba9e7",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/result.json": "1c627b92d6a98cfe82d163ee2b003926550a3641ad8c76526f161eb2f9f20c2c"
+  }
+}

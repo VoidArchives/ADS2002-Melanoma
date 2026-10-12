@@ -1,0 +1,23 @@
+schema_version: 1
+run:
+  run_id: b0_uncertainty_dedup_v1
+  source_run_id: b0_nested_dedup_v1
+  dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+  output_dir: results/dedup_v1/uncertainty
+inference:
+  mc_passes: 30
+  batch_size: 64
+  amp: false
+  seed: 20261004
+  tta_passes: [identity, hflip, vflip, hvflip]
+  deterministic_tolerance: 0.000001
+evaluation:
+  referral_fractions: [0.0, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5]
+  primary_referral_fraction: 0.2
+  referral_seed: 17042
+  bootstrap_seed: 20242
+  bootstrap_replicates: 2000
+  random_repeats: 100
+  score_source: base
+  classification_cutoff: 0.5
+  reserved_test_allowed: false

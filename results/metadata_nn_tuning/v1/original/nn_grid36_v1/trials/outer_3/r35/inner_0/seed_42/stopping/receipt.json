@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "9f496eab7ca4ed5c104f564d10e94e6e090f9c84346e33e3b1dbe3948bc91ec6",
+  "context": {
+    "condition": "original",
+    "outer_fold": 3,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "recipe_id": "r35",
+    "recipe_order": 35,
+    "hidden_units": 64,
+    "learning_rate": 0.003,
+    "dropout": 0.4,
+    "stage": "nn_inner",
+    "inner_fold": 0,
+    "base_seed": 42,
+    "training_seed": 45,
+    "stop_group": 1,
+    "phase": "stopping"
+  },
+  "csv_names": [
+    "history"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r35/inner_0/seed_42/stopping/history.csv": "90e937a9aea3f7b626be795dca80ed67029d397ed6b9e2b9c9baf1e236e11985",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r35/inner_0/seed_42/stopping/result.json": "7ea0b6c8cc1a2c475353a90b39cda81d0ae9de5b3b15b462dbe3c5e7792ae79c"
+  }
+}

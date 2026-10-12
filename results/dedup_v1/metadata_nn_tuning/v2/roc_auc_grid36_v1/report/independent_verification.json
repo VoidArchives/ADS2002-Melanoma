@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "experiment_version": 2,
+  "selection_metric": "roc_auc",
+  "condition": "dedup_v1",
+  "verified_utc": "2026-10-12T00:09:32.686875+00:00",
+  "verification_source_sha256": "8028a03c1f097ab24fef41b2f82e3919389ef47e79b1299c75b3682e77d0e610",
+  "independently_reconstructed_inner_scores": 1170,
+  "counts": {
+    "executed_fits": 662,
+    "external_reused_fits": 3298,
+    "resumed_fits": 0,
+    "executed_this_invocation": 662,
+    "rescoring_operations": 1170
+  },
+  "oof_rows": 6706,
+  "patients": 422,
+  "outer_folds": 5,
+  "test_set_loaded": false,
+  "final_model_fitted": false,
+  "completion_receipt_sha256": "290648dae4db8a65f621e7228df4c554c6c59565ff90e5f752028ddf3f1a1fd2"
+}

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from melanoma_detection.image_evaluation import sha256
 from melanoma_detection.image_nested_reporting import (
-    build_evaluation, fold_metric_table, load_matched_metadata, validate_outer_predictions,
+    build_evaluation, fold_metric_table, load_matched_metadata, validate_outer_predictions, load_run_development,
 )
 
 
@@ -56,7 +56,7 @@ def finalize(project_root, run_id="b0_nested_5fold_5h_v1", *, include_metadata=T
     top_folds_path = run_dir / "fold_metrics.csv"
     if sha256(top_folds_path) != summary.get("fold_metrics_sha256"):
         raise ValueError("Runner fold-metric hash changed or is missing.")
-    expected = pd.read_csv(development_path)
+    expected = load_run_development(root, manifest)
     predictions = validate_outer_predictions(pd.read_csv(predictions_path), expected)
     if "run_id" in predictions and not predictions.run_id.eq(run_id).all():
         raise ValueError("Prediction run_id does not match the completed run.")
@@ -73,12 +73,17 @@ def finalize(project_root, run_id="b0_nested_5fold_5h_v1", *, include_metadata=T
     comparator_provenance = {}
     if include_metadata:
         try:
-            comparators = load_matched_metadata(root, expected)
+            metadata_receipt = config["run"].get("metadata_comparator_receipt", "results/metrics/metadata_nn_run_config_d1.json")
+            comparators = load_matched_metadata(root, expected, receipt_path=metadata_receipt,
+                                               dataset_identity=manifest.get("dataset_identity"))
         except (ValueError, OSError, KeyError, TypeError) as error:
+            if manifest.get("dataset_identity") is not None:
+                raise ValueError("Deduplicated reporting requires its matching metadata comparators.") from error
             comparator_status = f"unavailable: {type(error).__name__}: {error}"
         else:
-            comparator_status = "verified exact canonical coverage, saved input/prediction hashes and notebook code"
-            metadata_receipt = root / "results/metrics/metadata_nn_run_config_d1.json"
+            comparator_status = "verified exact dataset coverage, saved input/prediction hashes and " + (
+                "saved source hashes" if manifest.get("dataset_identity") is not None else "notebook code")
+            metadata_receipt = root / metadata_receipt
             receipt = json.loads(metadata_receipt.read_text(encoding="utf-8"))
             comparator_provenance = {"receipt_path": metadata_receipt.relative_to(root).as_posix(),
                                     "receipt_sha256": sha256(metadata_receipt),

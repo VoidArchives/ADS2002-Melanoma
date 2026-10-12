@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "identity": {
+    "oof_sha256": "d1e2752cdc922e9a7f04fae664930114a6bd1bb6ed086a446e9392d7f6f49111",
+    "bootstrap_repetitions": 2000,
+    "seed": 42,
+    "evaluation_source_sha256": "54187efcc6cc0c9f3780f801e455576faf3fa51bfac741f3beff4c9858985e92"
+  },
+  "output_sha256": {
+    "metrics.csv": "da3e7a591449bb7271cacfd3611800f062580d9690b3645acffbb6f0f3b21eae",
+    "absolute_intervals.csv": "e67d7972a1feea3a2021b7a5c7d9cd65ce28f31848ce4bf790d641e4265b95bc",
+    "paired_comparisons.csv": "6b22e1f118339bd3751587352e95bf9171ff7740a803a0450d0685912cb443e3",
+    "reliability.csv": "b922b7c05116111fc38e96f38248ffe44e1ae644ee7304b2e2af0d7299fd363c"
+  },
+  "interpretation": "Additional development experiment; conditional patient bootstrap of saved OOF predictions, without retraining. No final-model replacement or reserved-test evaluation."
+}

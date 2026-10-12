@@ -1,0 +1,434 @@
+{
+  "revision": 4,
+  "experiment_version": 2,
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset_dedup/01_data_cleaning.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/01_data_cleaning.ipynb",
+          "template_source_path": "notebooks/Subset/01_data_cleaning.ipynb",
+          "sha256": "d996d49049303f473705d65c5d0f8223f2b3f8e73b728fed249faf7c8adcdaba",
+          "code_cells": 7,
+          "markdown_characters": 4384,
+          "markdown_words": 692
+        }
+      ],
+      "code_cells": 12,
+      "markdown_characters": 10969,
+      "markdown_words": 1638,
+      "original_markdown_words": 692,
+      "mapped_original_markdown_words": 692,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": null,
+      "primary_metric": null,
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Schema, missingness, label/category/age checks, source agreement; exact-copy ledger and image-quality review",
+      "adaptation": "Development IDs only; read frozen cleaning artifacts instead of rewriting source; no test source loaded"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/02_clean_data_eda.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/02_data_exploration.ipynb",
+          "template_source_path": "notebooks/Subset/02_data_exploration.ipynb",
+          "sha256": "9ac8f44821312ccb993c1d0f4cfa2487c2206efcce65a357e4468f5aa8c81b94",
+          "code_cells": 10,
+          "markdown_characters": 7401,
+          "markdown_words": 1160
+        }
+      ],
+      "code_cells": 11,
+      "markdown_characters": 10322,
+      "markdown_words": 1576,
+      "original_markdown_words": 1160,
+      "mapped_original_markdown_words": 1160,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": null,
+      "primary_metric": null,
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Image/patient class balance, images per patient, sex/age/site share and malignancy-rate panels; diagnoses",
+      "adaptation": "Regenerate all figures on retained records; patients counted within each category as in the original"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/03_patient_fold_verification.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/03_patient_splitting.ipynb",
+          "template_source_path": "notebooks/Subset/03_patient_splitting.ipynb",
+          "sha256": "4e116995a50485d0433842ea55594fba4b141cf98e8018f67cdd74f862583e5b",
+          "code_cells": 8,
+          "markdown_characters": 5315,
+          "markdown_words": 837
+        }
+      ],
+      "code_cells": 12,
+      "markdown_characters": 11673,
+      "markdown_words": 1750,
+      "original_markdown_words": 837,
+      "mapped_original_markdown_words": 837,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": null,
+      "primary_metric": null,
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Fold support table and malignancy-rate figure; outer/inner separation; malignant-patient support",
+      "adaptation": "Verify existing patient folds instead of running a splitter; original test-ID check omitted under no-test-access instruction"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+          "sha256": "2f7ec36a2c73f5091049ef5eb5af8c9ae5f52013ea72dc46d79013d8195dd0e7",
+          "code_cells": 7,
+          "markdown_characters": 6700,
+          "markdown_words": 1062
+        }
+      ],
+      "code_cells": 11,
+      "markdown_characters": 10648,
+      "markdown_words": 1616,
+      "original_markdown_words": 1344,
+      "mapped_original_markdown_words": 1062,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": true,
+      "methods_and_figures": "Dummy/categorical protocols, primary mean-fold ROC-AUC, secondary AP/error metrics, supporting ROC/PR; historical confusion, cutoff diagnostics and coefficients",
+      "adaptation": "Verified versioned baseline inputs; historical OOF-selected cutoff explicitly exploratory; no fitting in report cells",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+        "sha256": "b4f5948a33842af99bde2138bc5eb9953927f1bdce110dd6b07597931df79d29",
+        "markdown_words": 1344
+      },
+      "historical_diagnostic_qualification": "Preserved clean AP-era outputs, labelled historical supporting evidence"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/05_metadata_models.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/05_metadata_models.ipynb",
+          "sha256": "5ea1be4a71c8184a0c5b59c5da8a89313eb9b251c667f81559e959e5d2c03ab9",
+          "code_cells": 13,
+          "markdown_characters": 14085,
+          "markdown_words": 2231
+        }
+      ],
+      "code_cells": 17,
+      "markdown_characters": 18980,
+      "markdown_words": 2933,
+      "original_markdown_words": 2592,
+      "mapped_original_markdown_words": 2231,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": true,
+      "methods_and_figures": "Five-model ROC-AUC-first ranking/curves, fold variability; historical nonlinear age profiles, seven feature sets, coefficients/importances",
+      "adaptation": "Current fixed-family probabilities are versioned; saved historical ablation/age outputs are labelled supporting and never recreated by all-development fitting",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/05_metadata_models.ipynb",
+        "sha256": "9949b25c6d8a9b7b635569d8baa1470b48f1e0b728414bd906a1492a6ea4f7f1",
+        "markdown_words": 2592
+      },
+      "historical_diagnostic_qualification": "Preserved clean AP-era outputs, labelled historical supporting evidence"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/06_metadata_neural_network.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/06_metadata_neural_network.ipynb",
+          "sha256": "3bd6f2f43a4c5c1dbc96e2bd5fa06dedc994f1c5e872a21d5fa7ff6630f2951d",
+          "code_cells": 9,
+          "markdown_characters": 9002,
+          "markdown_words": 1360
+        }
+      ],
+      "code_cells": 9,
+      "markdown_characters": 9526,
+      "markdown_words": 1438,
+      "original_markdown_words": 1360,
+      "mapped_original_markdown_words": 1360,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Fixed NN architecture/preprocessing/stopping, histories/epochs, three-seed stability, equal mean, ROC-AUC/AP panels with primary mean-fold ROC-AUC and supporting pooled views",
+      "adaptation": "Shared pre-ROC original/clean report template; verified existing fixed fits; no best-seed selection",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+        "sha256": "897d147604dc5c4c7789291e9075f349e3a8c09cf9ab6ec3f1d19a04198c5802",
+        "markdown_words": 1360
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/07_metadata_tuning.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/07_metadata_tuning.ipynb",
+          "sha256": "3a31bbdf05d9add2376fb7194ef5129a19e5dfbd0e227c5c94a402fe2264b891",
+          "code_cells": 13,
+          "markdown_characters": 14149,
+          "markdown_words": 2202
+        }
+      ],
+      "code_cells": 13,
+      "markdown_characters": 14750,
+      "markdown_words": 2298,
+      "original_markdown_words": 2210,
+      "mapped_original_markdown_words": 2202,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Four-family nested grids, 36 NN recipes, patient support, candidates/margins, selected settings and parameter frequencies, duration, blue/gold bars, four-row ROC/PR and per-fold gains",
+      "adaptation": "Version-2 inner ROC-AUC selection separate from outer ROC-AUC evaluation; historical AP-selected version preserved; reuse, resume and rescoring counters distinguished",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+        "sha256": "500f9456f295438b1ce1509e19c7519dafc3e7b699366aeaae4c83d6c088d6ec",
+        "markdown_words": 2210
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/08_metadata_robustness.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/08_metadata_robustness.ipynb",
+          "sha256": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+          "code_cells": 10,
+          "markdown_characters": 12372,
+          "markdown_words": 1852
+        }
+      ],
+      "code_cells": 17,
+      "markdown_characters": 18634,
+      "markdown_words": 2762,
+      "original_markdown_words": 2518,
+      "mapped_original_markdown_words": 1852,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Paired patient intervals, reliability/distributions, Brier/log loss, historical training-only decisions, subgroup support; new tuned/fixed NN and spline contrasts",
+      "adaptation": "2,000 within-fold patient draws; historical spline calibration/cutoffs do not apply to tuned NN; no final fit",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+        "sha256": "021b732a1c53020cbbc7c613e80551a4001ad8a6ca5d4d50c3d87abcf4d8c197",
+        "markdown_words": 2518
+      },
+      "historical_diagnostic_qualification": "Preserved clean AP-era outputs, labelled historical supporting evidence"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/09_image_modelling.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/09_image_b0_pilot.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/09_image_b0_pilot.ipynb",
+          "sha256": "0f17306fc70c7e331dabca67371046c7bd63c3c3138080c320c72dad7b9b9dc2",
+          "code_cells": 10,
+          "markdown_characters": 9033,
+          "markdown_words": 1334
+        },
+        {
+          "path": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "sha256": "4bf6875f60570f5dc9518a701d65c98a2e9b9e32d49a055c524c22e1e82d5040",
+          "code_cells": 11,
+          "markdown_characters": 8430,
+          "markdown_words": 1263
+        }
+      ],
+      "code_cells": 20,
+      "markdown_characters": 21152,
+      "markdown_words": 3135,
+      "original_markdown_words": 2407,
+      "mapped_original_markdown_words": 2597,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Image preparation/weak previews, recipes/nested protocol, histories/cost, ROC-first OOF ranking/curves/confusion/reliability and calibration",
+      "adaptation": "Five clean outer folds replace the original one-split pilot as primary evidence; historical AP-based image selection unchanged",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/09_image_modelling.ipynb",
+        "sha256": "6024eb8e1e6f09caaf5b642b88d71f3c4c71ca060a1c63e4bcefd53899f6de83",
+        "markdown_words": 3021
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/10_bounded_image_pilots.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/10_image_architecture_comparison.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/10_image_architecture_comparison.ipynb",
+          "sha256": "f4e9de684bc45412e19325e25da3500544c143aab88454deb7d5804b30eda7f1",
+          "code_cells": 8,
+          "markdown_characters": 8625,
+          "markdown_words": 1260
+        },
+        {
+          "path": "notebooks/Subset/11_image_augmentation.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/11_image_augmentation.ipynb",
+          "sha256": "78d39d226273e4f405c78596c044d3e6cf04ec66787095b0d90befb8cebe310d",
+          "code_cells": 7,
+          "markdown_characters": 9781,
+          "markdown_words": 1449
+        },
+        {
+          "path": "notebooks/Subset/12_image_lighting.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/12_image_lighting.ipynb",
+          "sha256": "a5dced7a41a8ff8399edb07de145af7bc9343e0a62856c0420c44d5e8de18c06",
+          "code_cells": 7,
+          "markdown_characters": 9478,
+          "markdown_words": 1398
+        }
+      ],
+      "code_cells": 22,
+      "markdown_characters": 36463,
+      "markdown_words": 5321,
+      "original_markdown_words": 4107,
+      "mapped_original_markdown_words": 4107,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Three-inner-fold duration curves, 12/24 endpoint vs selected-epoch results, matched challenger curves/intervals/cost",
+      "adaptation": "Bounded B0 and ConvNeXt pilots only; DenseNet, stronger augmentation and CLAHE remain deferred, not losing conditions",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/10_bounded_image_pilots.ipynb",
+        "sha256": "1f1d3a26616404cd4f78bbf11c50120f7ae4332e002e420a59d4eeef42769595",
+        "markdown_words": 5205
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/11_image_uncertainty.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/13_image_uncertainty.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/13_image_uncertainty.ipynb",
+          "sha256": "5e5ece0a44d4454a78a823115f926ecef240f9e637428b5d05501627fcb5af74",
+          "code_cells": 15,
+          "markdown_characters": 13781,
+          "markdown_words": 2031
+        }
+      ],
+      "code_cells": 15,
+      "markdown_characters": 17087,
+      "markdown_words": 2508,
+      "original_markdown_words": 2031,
+      "mapped_original_markdown_words": 2031,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "MC/TTA views, provenance/pass coverage, convergence, distributions/scatter/entropy, ROC-first ranking/reliability/referral and intervals",
+      "adaptation": "Read matching saved five-fold uncertainty artifacts; frozen base scores for referral; no new image inference during report execution",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/11_image_uncertainty.ipynb",
+        "sha256": "1b90bf5ea66e78b32d046c7a68587edfb183be61476096ebae788d45db122588",
+        "markdown_words": 2394
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/08_metadata_robustness.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/08_metadata_robustness.ipynb",
+          "sha256": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+          "code_cells": 10,
+          "markdown_characters": 12372,
+          "markdown_words": 1852
+        },
+        {
+          "path": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "template_source_path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "sha256": "4bf6875f60570f5dc9518a701d65c98a2e9b9e32d49a055c524c22e1e82d5040",
+          "code_cells": 11,
+          "markdown_characters": 8430,
+          "markdown_words": 1263
+        }
+      ],
+      "code_cells": 37,
+      "markdown_characters": 33916,
+      "markdown_words": 5018,
+      "original_markdown_words": 2751,
+      "mapped_original_markdown_words": 3115,
+      "preceding_template_markdown_words": null,
+      "presentation_template_source_path": null,
+      "presentation_template_sha256": null,
+      "presentation_template": "original_markdown_and_cell_order",
+      "experiment_version": 2,
+      "primary_metric": "mean_fold_roc_auc",
+      "historical_source_outputs_used": false,
+      "methods_and_figures": "Completion, ROC-first mean-fold/pooled ranking and curves, paired intervals, equal-patient weights, decisions/subgroups and conclusions; separate v2 tuned-NN versus fixed NN and fixed/tuned spline appendix",
+      "adaptation": "Clean models are main comparison; historical image/fixed-metadata contrasts and duplicate-sensitivity appendix retained; current ROC-selected metadata and historical AP-selected image procedures distinguished; no reserved-test claim",
+      "preceding_clean_report": {
+        "path": "results/metadata_nn_tuning/v2/archive_before_update/notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+        "sha256": "cca5eb44e30370bad8fd94aec193b827b490175a8ee576bdeeb17810be03c023",
+        "markdown_words": 4557
+      },
+      "historical_diagnostic_qualification": "Current ROC-AUC reports; historical AP selection boundaries explicitly retained"
+    }
+  ],
+  "source_outputs_used": true,
+  "historical_output_stages": [
+    "04",
+    "05"
+  ],
+  "training_started": false,
+  "image_inference_started": false,
+  "reserved_test_loaded": false,
+  "interpretation": "Verified pre-ROC presentation snapshots adapted to ROC-first clean evidence; historical diagnostic outputs remain separately labelled; counts complement content and visual review.",
+  "pre_roc_archive_receipt": {
+    "path": "results/metadata_nn_tuning/v2/archive_before_update/snapshot_receipt.json",
+    "sha256": "33240864efa1cf7f990c4bb9a4185ff279b54f97e3f9e0ce107ed9d5190f0c62",
+    "status": "complete",
+    "notebook_snapshots": 21,
+    "source_snapshots": 110
+  },
+  "notebook_generation_performed": false,
+  "notebook_sources_and_outputs_unchanged": true
+}

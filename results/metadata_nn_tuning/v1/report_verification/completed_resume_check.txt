@@ -1,0 +1,22 @@
+Verified completed original metadata tuning; no fits repeated.
+Verified completed dedup_v1 metadata tuning; no fits repeated.
+{
+  "original": {
+    "status": "complete",
+    "rows": 6864,
+    "patients": 422,
+    "positive_images": 128,
+    "executed_fits": 3960,
+    "reused_fits": 0,
+    "oof_path": "results/metadata_nn_tuning/v1/original/nn_grid36_v1/oof.csv"
+  },
+  "dedup_v1": {
+    "status": "complete",
+    "rows": 6706,
+    "patients": 422,
+    "positive_images": 127,
+    "executed_fits": 3270,
+    "reused_fits": 690,
+    "oof_path": "results/dedup_v1/metadata_nn_tuning/v1/nn_grid36_v1/oof.csv"
+  }
+}

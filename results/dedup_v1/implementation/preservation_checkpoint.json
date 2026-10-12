@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "recorded_at_unix": 1791187774.5716996,
+  "original_artifacts_verified": 8143,
+  "audited_sources_verified": 10,
+  "reserved_test_loaded": false,
+  "training_still_running": true
+}

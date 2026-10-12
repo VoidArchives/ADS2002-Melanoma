@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "context": {
+    "condition": "original",
+    "outer_fold": 4,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "model": "spline",
+    "phase": "classical_fixed",
+    "inner_fold": -1
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/spline/fixed/predictions.csv": "31ad97bc07754209cd5512fbd7891fce93d6980cdcdbf1a31a9afec9ce4fc9f2",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/spline/fixed/model.joblib": "2b7fd9b03b01c595f1b6e5b0dd5a0813d7e795a6e8e646a88a0e13a91d17624a",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/spline/fixed/result.json": "d6c867cac6776c2a750c736fb7ea54eec8b4e45938247300716185496d8f0679"
+  }
+}

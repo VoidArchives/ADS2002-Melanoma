@@ -1,0 +1,4 @@
+outer_fold,model,inner_best_average_precision,best_candidate_index,best_parameters
+3,spline,0.06053996740122818,3,"{""classifier__C"": 0.1, ""preprocessor__smooth_age__spline__degree"": 3, ""preprocessor__smooth_age__spline__n_knots"": 3}"
+3,random_forest,0.0429143469795249,1,"{""classifier__max_depth"": 4, ""classifier__max_features"": ""sqrt"", ""classifier__min_samples_leaf"": 15}"
+3,xgboost,0.03972200160727601,1,"{""classifier__learning_rate"": 0.03, ""classifier__max_depth"": 2, ""classifier__min_child_weight"": 5}"

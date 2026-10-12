@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "context": {
+    "condition": "original",
+    "outer_fold": 4,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "model": "xgboost",
+    "phase": "classical_fixed",
+    "inner_fold": -1
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/xgboost/fixed/predictions.csv": "e01337c22d05e8b139f0859e2ce06c804a857cba0b8c514956c536226985e3e7",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/xgboost/fixed/model.joblib": "0e3f5d1aaf75f85e8e1d800e6e415b3513feca99e5dbf5c645369b4acdfe079b",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/classical/outer_4/xgboost/fixed/result.json": "20c0dc243869c325543dded83ea062b0c522045acc5109e85dc7cc39ce32593a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "conditions": {
+    "original": {
+      "receipt_sha256": "93be6547c13e88205a61ebc849adcb3bd0db520fcf4f2313d60f1d9e650af7ca",
+      "status": "complete",
+      "executed_fits": 3960,
+      "reused_fits": 0,
+      "neural_tuning_fits": 3270,
+      "fixed_neural_fits": 30,
+      "classical_fits": 660
+    },
+    "dedup_v1": {
+      "receipt_sha256": "e5415184d933003fd16ef9fb8c000cb027689b01f414eb70bc02edfca4109fd9",
+      "status": "complete",
+      "executed_fits": 3270,
+      "reused_fits": 690,
+      "neural_tuning_fits": 3270,
+      "fixed_neural_fits": 0,
+      "classical_fits": 0
+    }
+  },
+  "stdout": "completed_resume_check.txt",
+  "verified_complete_no_fits_repeated": true
+}

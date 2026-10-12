@@ -1,0 +1,6 @@
+fold,images_before,malignant_images_before,patients_before,images_after,malignant_images_after,patients_after,excluded_images,excluded_malignant
+0,1370,25,84,1344,24,84,26,1
+1,1372,26,84,1366,26,84,6,0
+2,1381,26,87,1328,26,87,53,0
+3,1371,25,82,1371,25,82,0,0
+4,1370,26,85,1297,26,85,73,0

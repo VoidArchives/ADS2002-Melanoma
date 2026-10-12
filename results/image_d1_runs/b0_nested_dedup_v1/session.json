@@ -1,0 +1,14 @@
+{
+  "run_id": "b0_nested_dedup_v1",
+  "budget": {
+    "session_minutes": 300,
+    "reporting_reserve_minutes": 20,
+    "initial_epoch_seconds": 70,
+    "epoch_safety_factor": 1.25
+  },
+  "started_utc": "2026-10-05T07:44:16.275398+00:00",
+  "session_deadline_utc": "2026-10-05T12:44:16.275398+00:00",
+  "training_cutoff_utc": "2026-10-05T12:24:16.275398+00:00",
+  "status": "training_finished",
+  "last_exit_utc": "2026-10-05T11:01:57.198234+00:00"
+}

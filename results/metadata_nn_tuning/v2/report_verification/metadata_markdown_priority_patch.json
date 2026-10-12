@@ -1,0 +1,231 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-12T00:15:12.087536+00:00",
+  "scope": "Markdown-only metric-priority corrections",
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "before_sha256": "b0d2c9256d082d5a02ec7b92576b6b28477c0327bd86909d02c086ca37b0ee20",
+      "after_sha256": "2a0e0f69871b22c17851e89b4ed6d72e7fcc4f6660204ce86d93bd1e61c1f520",
+      "changed_markdown_cells": [
+        5,
+        17
+      ],
+      "code_and_outputs_sha256": "85330d40ca2410c99116dfc86124396ad6b4ef979815639c3ec427e7d97b4a3b",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 1290,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "before_snapshot_sha256": "b0d2c9256d082d5a02ec7b92576b6b28477c0327bd86909d02c086ca37b0ee20",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "85330d40ca2410c99116dfc86124396ad6b4ef979815639c3ec427e7d97b4a3b",
+      "after_code_and_outputs_sha256": "85330d40ca2410c99116dfc86124396ad6b4ef979815639c3ec427e7d97b4a3b",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "before_sha256": "0f79a0cb645a851ef16243f723903878af02d72304924d65ae272961d06e0a07",
+      "after_sha256": "c782e0e9276874b3378094801b88ff31cdc996a5dcb3e8a48cfa18a1c05c6bc7",
+      "changed_markdown_cells": [
+        1,
+        12,
+        37
+      ],
+      "code_and_outputs_sha256": "6374da1e5191938db9e66b0201a38ff97750b02cad1cfe0107c5cb02a4960d59",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2506,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset/05_metadata_models.ipynb",
+      "before_snapshot_sha256": "0f79a0cb645a851ef16243f723903878af02d72304924d65ae272961d06e0a07",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "6374da1e5191938db9e66b0201a38ff97750b02cad1cfe0107c5cb02a4960d59",
+      "after_code_and_outputs_sha256": "6374da1e5191938db9e66b0201a38ff97750b02cad1cfe0107c5cb02a4960d59",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "before_sha256": "abb2871bb703a7242bb16350395834a6e4114414788f71d8165bd4b113426b34",
+      "after_sha256": "25434a3da25898e61eb3d4479d9bbd27fb291742826e88d9f2a35fe9b405e37c",
+      "changed_markdown_cells": [
+        1,
+        11
+      ],
+      "code_and_outputs_sha256": "f8919e1942d2bbed9aac9cca6396bf435110684719248eed25e99d47315fe68a",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 1438,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset/06_metadata_neural_network.ipynb",
+      "before_snapshot_sha256": "abb2871bb703a7242bb16350395834a6e4114414788f71d8165bd4b113426b34",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "f8919e1942d2bbed9aac9cca6396bf435110684719248eed25e99d47315fe68a",
+      "after_code_and_outputs_sha256": "f8919e1942d2bbed9aac9cca6396bf435110684719248eed25e99d47315fe68a",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "before_sha256": "0ae4bafd07b85adec7daeb958298918428acb211a6d66dcb930a5598a47bbc27",
+      "after_sha256": "1afd2099adca0671397593601604020cbd78a33fb74951e05b9d90fe252e2ba0",
+      "changed_markdown_cells": [
+        2,
+        14,
+        18,
+        26
+      ],
+      "code_and_outputs_sha256": "7ff0218f9b82056d911d50d70bcaff9e32bc25ebceec93fc4787e4291617f153",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2298,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset/07_metadata_tuning.ipynb",
+      "before_snapshot_sha256": "0ae4bafd07b85adec7daeb958298918428acb211a6d66dcb930a5598a47bbc27",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "7ff0218f9b82056d911d50d70bcaff9e32bc25ebceec93fc4787e4291617f153",
+      "after_code_and_outputs_sha256": "7ff0218f9b82056d911d50d70bcaff9e32bc25ebceec93fc4787e4291617f153",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "before_sha256": "e7e2bec3ed14891820643606f5cda19804257c344cfe207e4f24e043d2082661",
+      "after_sha256": "e605967215310fc170c227c09cca7154a52093c21cad81148d90cf46a20fb034",
+      "changed_markdown_cells": [
+        2,
+        7,
+        17
+      ],
+      "code_and_outputs_sha256": "ffbad7732de267d536c20816ba4c37526590219afc31261143c5e59c38107d6c",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2095,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset/08_metadata_robustness.ipynb",
+      "before_snapshot_sha256": "e7e2bec3ed14891820643606f5cda19804257c344cfe207e4f24e043d2082661",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "ffbad7732de267d536c20816ba4c37526590219afc31261143c5e59c38107d6c",
+      "after_code_and_outputs_sha256": "ffbad7732de267d536c20816ba4c37526590219afc31261143c5e59c38107d6c",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "before_sha256": "1257373b90ec24aad2eb274f1e75b91a94fc7e78e73af6c815866bb06deee6e2",
+      "after_sha256": "0b7a61765fdad8912aaadb9754136df6069473ad69613ad8334089c6b889f437",
+      "changed_markdown_cells": [
+        1,
+        17
+      ],
+      "code_and_outputs_sha256": "d913203628ec4b0e5fcbe794797a4b3d13fa18669d8d9939f0eda872754bb963",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 1616,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "before_snapshot_sha256": "1257373b90ec24aad2eb274f1e75b91a94fc7e78e73af6c815866bb06deee6e2",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "d913203628ec4b0e5fcbe794797a4b3d13fa18669d8d9939f0eda872754bb963",
+      "after_code_and_outputs_sha256": "d913203628ec4b0e5fcbe794797a4b3d13fa18669d8d9939f0eda872754bb963",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "before_sha256": "375fd6808c4d7b4617fe6734e95eabe144948baee32171e348178408f38e3eb4",
+      "after_sha256": "4e76a1a73e732eec738c1325708cbb7956d21803b748f16d40400d33aa89337a",
+      "changed_markdown_cells": [
+        1,
+        16,
+        24,
+        37
+      ],
+      "code_and_outputs_sha256": "51a38148bc897a15ade5a409dd34029ac0cd5fda6e5bbf9e12f62d7c0049ac24",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2933,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "before_snapshot_sha256": "375fd6808c4d7b4617fe6734e95eabe144948baee32171e348178408f38e3eb4",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "51a38148bc897a15ade5a409dd34029ac0cd5fda6e5bbf9e12f62d7c0049ac24",
+      "after_code_and_outputs_sha256": "51a38148bc897a15ade5a409dd34029ac0cd5fda6e5bbf9e12f62d7c0049ac24",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "before_sha256": "42b2d2de8cb0b18b09550d3cf4a56b070c825a2e5c73331ba978af55b57b65ee",
+      "after_sha256": "b69e96966a4ba7d26c1badb5a10da9c5d9afbde928d1a2f459280208adce241f",
+      "changed_markdown_cells": [
+        1,
+        11
+      ],
+      "code_and_outputs_sha256": "3612619517b7e709f2cda451498531c780ca8fc1129c950ed2e436e1ca2679e5",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 1438,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "before_snapshot_sha256": "42b2d2de8cb0b18b09550d3cf4a56b070c825a2e5c73331ba978af55b57b65ee",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "3612619517b7e709f2cda451498531c780ca8fc1129c950ed2e436e1ca2679e5",
+      "after_code_and_outputs_sha256": "3612619517b7e709f2cda451498531c780ca8fc1129c950ed2e436e1ca2679e5",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "before_sha256": "18c32e7ffc5183fbc63d4db56909af8b064779d2c1c543f4e12cbe39f0909eb7",
+      "after_sha256": "43f72d6c8b6dd1b6e756169e7b2ce1cb414e31b45b89c925b46a60fe27e83dc2",
+      "changed_markdown_cells": [
+        2,
+        14,
+        18,
+        26
+      ],
+      "code_and_outputs_sha256": "693f5b8867d4f3c85ba0ff68699c36b0251fdea4a5808a7311ac67a15803ef10",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2298,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "before_snapshot_sha256": "18c32e7ffc5183fbc63d4db56909af8b064779d2c1c543f4e12cbe39f0909eb7",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "693f5b8867d4f3c85ba0ff68699c36b0251fdea4a5808a7311ac67a15803ef10",
+      "after_code_and_outputs_sha256": "693f5b8867d4f3c85ba0ff68699c36b0251fdea4a5808a7311ac67a15803ef10",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "before_sha256": "5c290b7fc244c211d7192cfdb84ae7c0da6530ff459217288ce71b0a94af21cb",
+      "after_sha256": "74ac452a6d0fdd3b342325f0bf00bf60399d36d981be15a921dcfb28f4df77e6",
+      "changed_markdown_cells": [
+        2,
+        9,
+        17,
+        19,
+        22
+      ],
+      "code_and_outputs_sha256": "763655b878fbebfcadf8e7c890b808f8742fe289d2988d3afb18918721bec86e",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": false,
+      "markdown_words": 2762,
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/prose_review/before_patch/notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "before_snapshot_sha256": "5c290b7fc244c211d7192cfdb84ae7c0da6530ff459217288ce71b0a94af21cb",
+      "snapshot_reconstructed_and_exact_hash_verified": true,
+      "before_code_and_outputs_sha256": "763655b878fbebfcadf8e7c890b808f8742fe289d2988d3afb18918721bec86e",
+      "after_code_and_outputs_sha256": "763655b878fbebfcadf8e7c890b808f8742fe289d2988d3afb18918721bec86e",
+      "non_markdown_json_content_unchanged": true,
+      "serialization_newlines_normalized": true
+    }
+  ],
+  "heading_alignment": "Common core headings match the originals; labelled clean diagnostics are additional scope."
+}

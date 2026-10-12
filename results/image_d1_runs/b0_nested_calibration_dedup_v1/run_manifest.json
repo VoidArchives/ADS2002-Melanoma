@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "run_id": "b0_nested_calibration_dedup_v1",
+  "reference_run_id": "b0_nested_dedup_v1",
+  "protocol": "fixed_duration_training_oof_sigmoid_v1",
+  "compatibility_sha256": "8d2232fa8ebe376b4208c6e5f2c40504bf5180f7f8e0e51ae1d3d8e71b2c911c",
+  "compatibility": {
+    "protocol": "fixed_duration_training_oof_sigmoid_v1",
+    "config": {
+      "schema_version": 1,
+      "run": {
+        "run_id": "b0_nested_calibration_dedup_v1",
+        "output_dir": "results/image_d1_runs",
+        "reference_run_id": "b0_nested_dedup_v1",
+        "reference_config": "configs/image_nested_dedup.yaml",
+        "reference_session": "results/image_d1_runs/b0_nested_dedup_v1/session.json"
+      },
+      "calibration": {
+        "protocol": "fixed_duration_training_oof_sigmoid_v1",
+        "outer_folds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "inner_folds": 3,
+        "duration_source": "median_three_inner_best_epochs",
+        "method": "regularised_sigmoid_on_logits",
+        "C": 1.0,
+        "logit_clip": 1e-07,
+        "reject_nonpositive_slope": true,
+        "target_recall": 0.8,
+        "threshold_source": "training_only_fixed_duration_oof",
+        "threshold_scores": [
+          "raw",
+          "calibrated"
+        ],
+        "failure_policy": "preserve_raw_and_do_not_promote_calibrated",
+        "threshold_purpose": "academic_recall_scenario"
+      },
+      "budget": {
+        "source": "reference_session_only",
+        "allow_deadline_extension": false
+      },
+      "evaluation": {
+        "reserved_test_allowed": false,
+        "complete_outer_folds_required": 5,
+        "bootstrap_replicates": 2000
+      }
+    },
+    "source_sha256": {
+      "src/melanoma_detection/image_nested_calibration.py": "874d3c4821bd3bf37eee2ab1de8c60210a73b9665119797ed65c575e8e1632ab",
+      "src/melanoma_detection/image_nested.py": "3d76b70871604706a89909edb6f70eef0b01ceae12d5751d533d6f1360291186",
+      "src/melanoma_detection/image_model.py": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+      "src/melanoma_detection/image_transforms.py": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+      "src/melanoma_detection/image_pilot.py": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+      "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+      "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+      "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9"
+    },
+    "runtime": {
+      "python": "3.14.6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "torch": "2.14.0+cu130",
+        "torchvision": "0.29.0+cu130",
+        "numpy": "2.5.2",
+        "pandas": "3.0.5",
+        "scikit-learn": "1.9.0",
+        "Pillow": "12.3.0",
+        "PyYAML": "6.0.3"
+      },
+      "cuda_runtime": "13.0",
+      "cudnn": 92400
+    },
+    "reference_run_compatibility_sha256": "1eac0575f6dc4b0d1efed47000a2a850cfa4a804b97eab43a9bd804f53e1d5ea"
+  },
+  "config": {
+    "schema_version": 1,
+    "run": {
+      "run_id": "b0_nested_calibration_dedup_v1",
+      "output_dir": "results/image_d1_runs",
+      "reference_run_id": "b0_nested_dedup_v1",
+      "reference_config": "configs/image_nested_dedup.yaml",
+      "reference_session": "results/image_d1_runs/b0_nested_dedup_v1/session.json"
+    },
+    "calibration": {
+      "protocol": "fixed_duration_training_oof_sigmoid_v1",
+      "outer_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inner_folds": 3,
+      "duration_source": "median_three_inner_best_epochs",
+      "method": "regularised_sigmoid_on_logits",
+      "C": 1.0,
+      "logit_clip": 1e-07,
+      "reject_nonpositive_slope": true,
+      "target_recall": 0.8,
+      "threshold_source": "training_only_fixed_duration_oof",
+      "threshold_scores": [
+        "raw",
+        "calibrated"
+      ],
+      "failure_policy": "preserve_raw_and_do_not_promote_calibrated",
+      "threshold_purpose": "academic_recall_scenario"
+    },
+    "budget": {
+      "source": "reference_session_only",
+      "allow_deadline_extension": false
+    },
+    "evaluation": {
+      "reserved_test_allowed": false,
+      "complete_outer_folds_required": 5,
+      "bootstrap_replicates": 2000
+    }
+  },
+  "source_sha256": {
+    "src/melanoma_detection/image_nested_calibration.py": "874d3c4821bd3bf37eee2ab1de8c60210a73b9665119797ed65c575e8e1632ab",
+    "src/melanoma_detection/image_nested.py": "3d76b70871604706a89909edb6f70eef0b01ceae12d5751d533d6f1360291186",
+    "src/melanoma_detection/image_model.py": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+    "src/melanoma_detection/image_transforms.py": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+    "src/melanoma_detection/image_pilot.py": "355e3d71a6697442c00df26849950595af528f1033c249cff46994b7da3a1874",
+    "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9"
+  },
+  "protocol_declaration_sha256": "d1937882a4642ff866e7ba677f3dabc3a66b06f59d9d929fc7d4535b65caf9d4",
+  "development_csv": "data/subset/processed/train_folds.csv",
+  "development_csv_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+  "reference_session": "results/image_d1_runs/b0_nested_dedup_v1/session.json",
+  "test_set_loaded": false,
+  "qualification": "Development folds influenced earlier pilots, including an archived fold-0 prototype. OOF estimates this declared bounded procedure, not untouched final-test generalisation.",
+  "evaluation_status": "development_outer_oof_training_only_recalibration",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  }
+}

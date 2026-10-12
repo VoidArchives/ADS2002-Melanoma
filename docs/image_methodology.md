@@ -1,5 +1,12 @@
 # Image modelling for the Subset
 
+**Current v2 reporting contract.** Unweighted mean outer-fold **ROC-AUC** is the primary ranking summary; mean-fold AP, pooled metrics, log loss and Brier score remain supporting measures. Each fold has equal weight, and patient-bootstrap intervals resample whole patients within folds. A single selected inner split is exploratory and cannot supply a five-fold estimate. Scores describe individual images; patient grouping does not turn them into patient-level diagnoses.
+
+The metadata v2 experiment selects settings by inner ROC-AUC. Existing image recipes, checkpoints, durations and transformation-admission gates retain their historical AP-based rules. Reporting their saved ROC-AUC does not retrospectively make them ROC-selected. Calibration and recall cutoffs remain attached to their original procedures. All active report notebooks read saved artifacts; they start no training, image smoke or checkpoint inference and never open the reserved test. Final fitting and independent testing wait until the entire procedure is frozen.
+
+Presentation snapshots are preserved under `results/metadata_nn_tuning/v2/archive_before_update/`. New image figures/tables use `results/metadata_nn_tuning/v2/report_verification/image_reports/<condition>/<stage>/`; current metadata assessment tables and figures use the explicit v2 `roc_auc_grid36_v1` run's `report/` directory. v1 AP results and historical image outputs retain their original identities.
+
+
 ## Start with the question
 
 The image models learn patterns in lesion pixels, rather than age, sex or body
@@ -17,8 +24,8 @@ bounded five-outer-fold B0 evaluation.
 These notebooks read saved checkpoints, predictions, training histories and run
 manifests. A checkpoint stores learned model parameters; a manifest records which
 data and settings produced them. Reports save tables and figures. Notebook 13
-runs inference, meaning prediction with an existing model, and saves a new
-directory for each run. See the [notebook index](../notebooks/README.md) for commands
+reads the completed, explicitly pinned uncertainty run without instantiating a network or rerunning inference.
+Its saved pass-level scores, smoke receipt, patient identities and figures remain unchanged. See the [notebook index](../notebooks/README.md) for commands
 and status, and the [concept guide](../notebooks/concepts.md) for shared terms.
 
 **The completed pilot evidence is exploratory.** Every earlier image pilot uses one
@@ -27,7 +34,7 @@ their labels chose pilot settings and epochs. That makes the scores useful for
 development diagnostics, without giving an unbiased final performance estimate.
 Outer fold 0 and the separately reserved test are both excluded from those pilots.
 The new bounded B0 evaluation includes all five development outer folds, with
-selection repeated inside each outer training pool. Primary mean fold AP is
+selection repeated inside each outer training pool. Secondary mean fold AP is
 0.1447 (95% conditional patient-bootstrap interval 0.1033–0.2225). This remains
 development OOF evidence after prior pilot adaptation. Full-dataset modelling,
 the larger multi-architecture
@@ -490,8 +497,8 @@ an explicitly allocated new session file; unfinished folds stay incomplete.
 
 Notebook 14 reads saved files and never launches training. Finalisation requires
 exactly one raw prediction for every canonical image, matching patient, fold and
-target identities. The report shows fold AP and unweighted mean fold AP as
-primary, pooled AP as secondary, ROC-AUC, unweighted log loss, Brier, raw
+target identities. The current report shows fold ROC-AUC and unweighted mean fold ROC-AUC as
+primary, with mean-fold AP, pooled metrics, unweighted log loss, Brier, raw
 reliability and the declared raw cutoff 0.5. Patient-bootstrap intervals resample
 whole patients within each outer fold; any draw lacking both outcomes in a fold
 is rejected consistently across metrics. Saved valid/rejected counts make that
@@ -519,8 +526,8 @@ are checked if invariance fails. Pooled AP can change across fold score scales.
 
 The saved calibration report shows mean fold log loss falling from
 **0.089395 to 0.079082**, and Brier from **0.020886 to 0.017411**. Within-fold
-AP and ROC-AUC remained unchanged in every fold, preserving primary mean fold
-AP 0.1447. These gains describe held-out probability quality under the declared
+AP and ROC-AUC remained unchanged in every fold, preserving mean fold
+ROC-AUC 0.8408 and secondary mean fold AP 0.1447. These gains describe held-out probability quality under the declared
 development procedure.
 
 The academic 80%-recall rule used training-only OOF scores to select one cutoff
@@ -719,3 +726,18 @@ The final deployment model repeats the frozen selection procedure on all
 development patients before the reserved test is evaluated once. The current
 uncertainty diagnostics extend the pilot workflow; validated final uncertainty,
 fusion and reserved-test evaluation remain later work.
+
+
+## Read-only v2 presentation refresh
+
+Regenerate the editable reports from the verified snapshots without executing model code:
+
+```powershell
+.venv/Scripts/python.exe -B scripts/build_metadata_tuning_v2_notebooks.py --condition both --run-id roc_auc_grid36_v1
+.venv/Scripts/python.exe -B scripts/build_image_roc_reports.py
+.venv/Scripts/python.exe -B scripts/execute_metadata_roc_reports.py
+```
+
+The image builder owns original09–15 and clean09–12. Original13 reads the completed uncertainty run `efficientnet_b0_lr3e5_sqrt_mc30_tta4_20261003T235530258956Z`; saved MC/TTA scores, referral results and previews are inspected rather than recalculated. Execute reports only after the v2 experiment has complete verified receipts. The execution and acceptance stages create new receipts, previews and PNG exports under `results/metadata_nn_tuning/v2/report_verification/`. No historical image result, AP fitting source, dataset assignment or reserved-test file is changed.
+
+The preserved five-fold image procedure has primary mean-fold ROC-AUC **0.8408** on original development records (conditional 95% patient interval **0.7953–0.8747**) and **0.8308** on retained records (**0.7871–0.8651**). Secondary mean-fold AP is 0.1447 and 0.1316. These values come from the unchanged saved outer predictions and existing bootstrap artifacts. They assess the historical AP-selected image procedure; the new metadata search has a separate ROC selection identity.

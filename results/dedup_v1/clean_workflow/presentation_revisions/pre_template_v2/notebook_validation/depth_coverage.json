@@ -1,0 +1,213 @@
+{
+  "revision": 2,
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset_dedup/01_data_cleaning.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/01_data_cleaning.ipynb",
+          "sha256": "d996d49049303f473705d65c5d0f8223f2b3f8e73b728fed249faf7c8adcdaba",
+          "code_cells": 7,
+          "markdown_characters": 4384
+        }
+      ],
+      "code_cells": 9,
+      "markdown_characters": 3934,
+      "methods_and_figures": "Schema, missingness, label/category/age checks, source agreement; exact-copy ledger and image-quality review",
+      "adaptation": "Development IDs only; read frozen cleaning artifacts instead of rewriting source; no test source loaded"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/02_clean_data_eda.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/02_data_exploration.ipynb",
+          "sha256": "9ac8f44821312ccb993c1d0f4cfa2487c2206efcce65a357e4468f5aa8c81b94",
+          "code_cells": 10,
+          "markdown_characters": 7401
+        }
+      ],
+      "code_cells": 9,
+      "markdown_characters": 3850,
+      "methods_and_figures": "Image/patient class balance, images per patient, sex/age/site share and malignancy-rate panels; diagnoses",
+      "adaptation": "Regenerate all figures on retained records; patients counted within each category as in the original"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/03_patient_fold_verification.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/03_patient_splitting.ipynb",
+          "sha256": "4e116995a50485d0433842ea55594fba4b141cf98e8018f67cdd74f862583e5b",
+          "code_cells": 8,
+          "markdown_characters": 5315
+        }
+      ],
+      "code_cells": 7,
+      "markdown_characters": 3143,
+      "methods_and_figures": "Fold support table and malignancy-rate figure; outer/inner separation; malignant-patient support",
+      "adaptation": "Verify existing patient folds instead of running a splitter; original test-ID check omitted under no-test-access instruction"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+          "sha256": "2f7ec36a2c73f5091049ef5eb5af8c9ae5f52013ea72dc46d79013d8195dd0e7",
+          "code_cells": 7,
+          "markdown_characters": 6700
+        }
+      ],
+      "code_cells": 8,
+      "markdown_characters": 3736,
+      "methods_and_figures": "Dummy/categorical/spline protocols, fold and pooled AP/AUC, ROC/PR, confusion, cutoff diagnostics and coefficients",
+      "adaptation": "Mean-fold ranking primary; OOF-selected cutoff explicitly exploratory"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/05_metadata_models.ipynb",
+          "sha256": "5ea1be4a71c8184a0c5b59c5da8a89313eb9b251c667f81559e959e5d2c03ab9",
+          "code_cells": 13,
+          "markdown_characters": 14085
+        }
+      ],
+      "code_cells": 10,
+      "markdown_characters": 4250,
+      "methods_and_figures": "Five-model ranking/curves, fold variability, nonlinear age profiles, seven feature sets, coefficients/importances",
+      "adaptation": "Clean fit artifacts only; ablation/model expansion secondary"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/06_metadata_neural_network.ipynb",
+          "sha256": "50a60e97b1fe66ac5986a93e0fc904cc2e13528162164247484d04cd36d3b239",
+          "code_cells": 7,
+          "markdown_characters": 7823
+        }
+      ],
+      "code_cells": 8,
+      "markdown_characters": 3867,
+      "methods_and_figures": "NN architecture/preprocessing/stopping, histories/epochs, three-seed stability, equal mean, ROC/PR and disagreement",
+      "adaptation": "Preserved stopping patients; fresh clean refits; no best-seed selection"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/07_metadata_tuning.ipynb",
+          "sha256": "591d52c3b0bf36a296092f6b6cf6cab169131a3a7de260bd095373c1ad9837c6",
+          "code_cells": 9,
+          "markdown_characters": 7729
+        }
+      ],
+      "code_cells": 8,
+      "markdown_characters": 3534,
+      "methods_and_figures": "Nested grids and membership support, all candidates, parameter frequencies, tuned/fixed bars and ROC/PR, per-fold gains",
+      "adaptation": "Reconstruct original 42+outer memberships before filtering; selected inner scores distinct from outer evaluation"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/08_metadata_robustness.ipynb",
+          "sha256": "7294bf429bb4e47adc3d674c5eda3804c28340a1ff9f3e20046104a5ff5b807e",
+          "code_cells": 9,
+          "markdown_characters": 11037
+        }
+      ],
+      "code_cells": 9,
+      "markdown_characters": 4372,
+      "methods_and_figures": "Paired patient intervals, reliability and score distribution, Brier/log loss, training-only decisions, subgroup support",
+      "adaptation": "Bootstrap within outer folds; no final all-development fit; undefined subgroup metrics missing"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/09_image_modelling.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/09_image_b0_pilot.ipynb",
+          "sha256": "0f17306fc70c7e331dabca67371046c7bd63c3c3138080c320c72dad7b9b9dc2",
+          "code_cells": 10,
+          "markdown_characters": 9033
+        },
+        {
+          "path": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "sha256": "44e3c0c4a694af061ca6b576177d48e69c5be3bef08fbc5f8c8c66bd05828cb1",
+          "code_cells": 10,
+          "markdown_characters": 7127
+        }
+      ],
+      "code_cells": 9,
+      "markdown_characters": 4819,
+      "methods_and_figures": "Image preparation/weak previews, recipes/nested protocol, histories/cost, OOF ranking/curves/confusion/reliability and calibration",
+      "adaptation": "Five clean outer folds replace the original one-split pilot as primary evidence; results pending until verified"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/10_bounded_image_pilots.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/10_image_architecture_comparison.ipynb",
+          "sha256": "f4e9de684bc45412e19325e25da3500544c143aab88454deb7d5804b30eda7f1",
+          "code_cells": 8,
+          "markdown_characters": 8625
+        },
+        {
+          "path": "notebooks/Subset/11_image_augmentation.ipynb",
+          "sha256": "78d39d226273e4f405c78596c044d3e6cf04ec66787095b0d90befb8cebe310d",
+          "code_cells": 7,
+          "markdown_characters": 9781
+        },
+        {
+          "path": "notebooks/Subset/12_image_lighting.ipynb",
+          "sha256": "a5dced7a41a8ff8399edb07de145af7bc9343e0a62856c0420c44d5e8de18c06",
+          "code_cells": 7,
+          "markdown_characters": 9478
+        }
+      ],
+      "code_cells": 10,
+      "markdown_characters": 5167,
+      "methods_and_figures": "Three-inner-fold duration curves, 12/24 endpoint vs selected-epoch results, matched challenger curves/intervals/cost",
+      "adaptation": "Bounded B0 and ConvNeXt pilots only; DenseNet, stronger augmentation and CLAHE remain deferred, not losing conditions"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/11_image_uncertainty.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/13_image_uncertainty.ipynb",
+          "sha256": "5e5ece0a44d4454a78a823115f926ecef240f9e637428b5d05501627fcb5af74",
+          "code_cells": 15,
+          "markdown_characters": 13781
+        }
+      ],
+      "code_cells": 12,
+      "markdown_characters": 5923,
+      "methods_and_figures": "MC/TTA views, provenance/pass coverage, convergence, distributions/scatter/entropy, ranking/reliability/referral and intervals",
+      "adaptation": "Inference from matching five clean held-out checkpoints; frozen base scores for referral; full inference pending until ready"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "original_sources": [
+        {
+          "path": "notebooks/Subset/08_metadata_robustness.ipynb",
+          "sha256": "7294bf429bb4e47adc3d674c5eda3804c28340a1ff9f3e20046104a5ff5b807e",
+          "code_cells": 9,
+          "markdown_characters": 11037
+        },
+        {
+          "path": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+          "sha256": "44e3c0c4a694af061ca6b576177d48e69c5be3bef08fbc5f8c8c66bd05828cb1",
+          "code_cells": 10,
+          "markdown_characters": 7127
+        }
+      ],
+      "code_cells": 11,
+      "markdown_characters": 5647,
+      "methods_and_figures": "Completion, mean-fold/pooled ranking and curves, paired intervals, equal-patient weights, decisions/subgroups and conclusions",
+      "adaptation": "Clean models are main comparison; historical duplicate-sensitivity appendix retained; no reserved-test claim"
+    }
+  ],
+  "source_outputs_used": false,
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "interpretation": "Substantive methods and figure correspondence; counts are inventory, not quality scores."
+}

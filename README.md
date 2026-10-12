@@ -19,12 +19,23 @@ reports the completed bounded B0 workflow across all five outer folds. Each oute
 training pool repeats recipe selection across an inner patient split and confirms
 duration across three inner folds before refitting. This run has a persistent
 five-hour session budget, including implementation and a 20-minute reporting
-reserve. Its notebook reads saved results. Mean fold AP is **0.1447** (95%
-conditional patient-bootstrap interval **0.1033–0.2225**); mean fold ROC-AUC is
-**0.8408**. These are development OOF results after earlier pilot use of the
+reserve. Its notebook reads saved results. Mean fold ROC-AUC is **0.8408**;
+secondary mean fold AP is **0.1447** (95% conditional patient-bootstrap interval
+**0.1033–0.2225**). Image recipes and durations remain historically AP-selected.
+These are development OOF results after earlier pilot use of the
 dataset. The interval holds the fitted models and selections fixed; it excludes
 retraining variability and prior pilot adaptation. Fusion and the reserved final
 test remain planned.
+
+The original and [deduplicated metadata workflows](notebooks/Subset_dedup/README.md)
+keep stages **05 models → 06 fixed NN → 07 tuning including NN → 08 robustness**.
+Their shared [ROC-AUC-first protocol](docs/metadata_roc_auc_workflow.md) specifies the frozen
+36-setting, three-seed search and patient-safe ROC-AUC selection. Mean outer-fold
+ROC-AUC is primary; AP, log loss and Brier are secondary, with pooled scores supporting.
+The [completed AP-selected experiment](docs/metadata_nn_tuning.md) remains unchanged historical evidence. Training runs through
+an explicit resumable CLI; the updated notebooks read verified versioned results.
+Historical notebooks and outputs are preserved, and deduplicated evidence remains
+the main clean-data comparison.
 
 Audit or resume the new run with the project environment:
 
@@ -43,9 +54,7 @@ within-fold AP/ROC-AUC. The training-selected 80%-recall scenario achieved
 These are development results for an academic scenario; the reserved test remains
 unopened. No new MC uncertainty run is part of either stage.
 
-[Image uncertainty](notebooks/Subset/13_image_uncertainty.ipynb) reads existing
-checkpoints; its default is the weak EfficientNet-B0 control. New inference outputs
-go to separate directories under `results/image_uncertainty_runs`.
+[Image uncertainty](notebooks/Subset/13_image_uncertainty.ipynb) reads the pinned existing saved inference run and figures. Report execution starts no inference; its evaluation scope and historical AP selection remain explicit. New report outputs are separate v2 artifacts.
 [Historical notebook guides](notebooks/archive/README.md) explain the preserved
 original experiments. Renaming notebook folders leaves data, models, training
 histories and saved results unchanged; `_d1`/`_d2` in artifact names remain their

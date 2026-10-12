@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "experiment_version": 2,
+  "selection_metric": "roc_auc",
+  "conditions": {
+    "original": {
+      "executed_fits": 43,
+      "external_reused_fits": 3917,
+      "resumed_fits": 0,
+      "executed_this_invocation": 43,
+      "rescoring_operations": 1170
+    },
+    "dedup_v1": {
+      "executed_fits": 662,
+      "external_reused_fits": 3298,
+      "resumed_fits": 0,
+      "executed_this_invocation": 662,
+      "rescoring_operations": 1170
+    }
+  },
+  "original_baseline_executed_fits": 5,
+  "dummy_fits": 0,
+  "total_executed_fits": 710,
+  "externally_reused_core_fits": 7215,
+  "rescoring_operations": 2340,
+  "core_completion_sha256": {
+    "original": "6bdade8cee97534f7e329e3458fdbfdf480d4c38c54bc23cebce2f50e15804bc",
+    "dedup_v1": "290648dae4db8a65f621e7228df4c554c6c59565ff90e5f752028ddf3f1a1fd2"
+  },
+  "baseline_receipt_sha256": "c94dcf99c149ddaf88e94a09a3596afd39a7f48b2e6eb6b14ce94c01f3397165",
+  "source_sha256": "9c0068f0a8e7a99b94b95202f21f8784efb2a2c1e274b4b377bd9d33d7924c84",
+  "final_model_fitted": false,
+  "test_set_loaded": false
+}

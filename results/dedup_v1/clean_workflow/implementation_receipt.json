@@ -1,0 +1,22 @@
+{
+  "status": "notebook_depth_revision_complete_image_work_running",
+  "notebooks": 12,
+  "code_cells": 110,
+  "notebook_errors": 0,
+  "rendered_figures": 52,
+  "affected_tests_passed": 75,
+  "metadata_new_fits": 695,
+  "preservation": {
+    "status": "complete",
+    "historical_artifacts_verified": 8143,
+    "historical_notebooks_verified": 24,
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "reserved_test_loaded": false
+  },
+  "reserved_test_loaded": false,
+  "depth_revision": 2,
+  "notebook_count": 12,
+  "current_revision_tests_passed": 25,
+  "method_coverage": "notebooks/Subset_dedup/METHOD_COVERAGE.md",
+  "updated_utc": "2026-10-05T10:44:16.422368+00:00"
+}

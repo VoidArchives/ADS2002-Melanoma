@@ -1,0 +1,81 @@
+{
+  "status": "partial",
+  "comparison_complete": false,
+  "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "input_sha256": {
+    "results/dedup_v1/metadata/comparator_receipt.json": "88e74dc199675052be1c79065033cb2269de1f2e1f87cd49f4c9c583726e351e",
+    "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/summary.json": "d4df5f21cfabf2d1ecea167a6ab1f3b225a80315d572dce1d4806701f051d1fd",
+    "results/dedup_v1/metadata/metadata_calibrated_oof.csv": "891ed049a8542ebc0f8260ea0218ffe17cae092696e720c4119552467f3327b2"
+  },
+  "artifact_sha256": {
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/bootstrap_intervals.csv": "e4b4064320e367ad042efb9d97a2fb846148a0bf14926c866ee4d679869366de",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/core_model_comparison.png": "0b6463094d8e998c93e99280bc0028e7db78aa0dd3a04007e168ed57d055f213",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/fixed_cutoff_05.csv": "186c1b665bd0d58d67daa976d024025a8eb31d3645b51b2249eb5a848469fd2e",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/metrics.csv": "998e00000b9316983acc03d59ee3a92c6cfbe97ce369b0c9f6ee01dd288dfd1e",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/model_comparison.csv": "1d7f4215df2306e022e03e609cd5b5d70eea6e6d67e52b1565bc0becb7174820",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/paired_comparisons.csv": "486e604159a7b7bc71dff375d4c83bffb5f7abc2f97a3eafd0925d4eb1d9581e",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/subgroups.csv": "7248a52b585dc65811c93a278b2c4efcb835d51a5f3a9600307d08ffbd1aaaf2",
+    "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21/training_only_cutoff_metrics.csv": "e0051d6512e7c37a039d3f57e2d10517cfb249b64f66743885a411176bfcaa89"
+  },
+  "source_sha256": {
+    "src/melanoma_detection/dedup_workflow.py": "54c7a25c8571021d7878d2f67c4b17d304b7726fec364e10397d55ca26dd5ff0"
+  },
+  "stages": {
+    "metadata_core": "complete",
+    "metadata_suite": "complete",
+    "image_raw": "incomplete",
+    "image_calibration": "not_started"
+  },
+  "model_names": [
+    "metadata_nn_mean",
+    "spline_raw",
+    "nn_seed_42",
+    "nn_seed_142",
+    "nn_seed_242",
+    "dummy",
+    "categorical_logistic",
+    "random_forest",
+    "xgboost",
+    "ablation_sex",
+    "ablation_age",
+    "ablation_site",
+    "ablation_sex_age",
+    "ablation_sex_site",
+    "ablation_age_site",
+    "spline_tuned",
+    "random_forest_tuned",
+    "xgboost_tuned",
+    "spline_calibrated",
+    "ablation_all_features"
+  ],
+  "rows": 6706,
+  "primary_metric": "unweighted mean-fold AP; ROC-AUC also reported",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "output_directory": "results/dedup_v1/clean_workflow/evaluation/0e7597cd349dbc21",
+  "reserved_test_loaded": false,
+  "limitation": "Development OOF; intervals condition on fitted models and omit training/selection variability. Secondary model/ablation comparisons are exploratory. No reserved-test evidence.",
+  "image_conclusion": "Pending complete clean image and calibration predictions."
+}

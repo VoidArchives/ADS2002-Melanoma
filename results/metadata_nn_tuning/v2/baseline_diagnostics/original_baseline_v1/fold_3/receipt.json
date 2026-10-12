@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "compatibility_sha256": "911965fc125a47f0116b8a5f415ce495e5d0689c36972e87b426efa4fcb24dd5",
+  "outer_fold": 3,
+  "audit": {
+    "outer_fold": 3,
+    "fitting_images": 5493,
+    "heldout_images": 1371,
+    "fitting_patients": 340,
+    "heldout_patients": 82,
+    "patient_overlap": 0,
+    "preprocessing_fitted_on": "outer-training records only",
+    "fits": 1
+  },
+  "output_sha256": {
+    "predictions.csv": "023d1cbbbd3ae1806dae021e9f4197e3a2e3a718b36c77003f0ea19cad88aa56",
+    "roles.csv": "1fc164700ddf8e492d9509fe09e16e878e18786dc5580913002cdb290acff671",
+    "model.joblib": "7c631751334bfdd3f8b82392412e6f399987fb2b1495acdad4eaac1c434c16a3"
+  }
+}

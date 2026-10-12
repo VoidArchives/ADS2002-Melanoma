@@ -1,0 +1,96 @@
+{
+  "status": "complete",
+  "dataset": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "counts": {
+    "original": {
+      "n_images": 6864,
+      "n_patients": 422,
+      "n_malignant_images": 128,
+      "n_malignant_patients": 88
+    },
+    "retained": {
+      "n_images": 6706,
+      "n_patients": 422,
+      "n_malignant_images": 127,
+      "n_malignant_patients": 88
+    }
+  },
+  "primary_mean_fold_metrics": [
+    {
+      "population": "original",
+      "model": "b0_raw",
+      "average_precision": 0.1447163145823742,
+      "roc_auc": 0.8407829260435065,
+      "log_loss": 0.0893946182719142,
+      "brier": 0.020886132454057554
+    },
+    {
+      "population": "original",
+      "model": "metadata_nn_mean",
+      "average_precision": 0.05819267061408849,
+      "roc_auc": 0.6787967761755321,
+      "log_loss": 0.08895957675881888,
+      "brier": 0.018100789825100126
+    },
+    {
+      "population": "original",
+      "model": "spline_raw",
+      "average_precision": 0.06485509182918961,
+      "roc_auc": 0.662886175607619,
+      "log_loss": 0.08973744802145706,
+      "brier": 0.018137426603565543
+    },
+    {
+      "population": "retained",
+      "model": "b0_raw",
+      "average_precision": 0.1456368451110039,
+      "roc_auc": 0.839360671399621,
+      "log_loss": 0.09083804476410537,
+      "brier": 0.021232500177501328
+    },
+    {
+      "population": "retained",
+      "model": "metadata_nn_mean",
+      "average_precision": 0.05870810188061959,
+      "roc_auc": 0.6772425480013791,
+      "log_loss": 0.09022857220231735,
+      "brier": 0.01839131039379569
+    },
+    {
+      "population": "retained",
+      "model": "spline_raw",
+      "average_precision": 0.06526641651052748,
+      "roc_auc": 0.6613167346156661,
+      "log_loss": 0.0910285845106461,
+      "brier": 0.0184274348401319
+    }
+  ],
+  "bootstrap_valid": 2000,
+  "bootstrap_rejected_single_class": 0,
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "limitation": "Filtered historical predictions check duplicate influence on evaluation weighting only. Duplicates still influenced historical training, preprocessing, recipe/epoch selection and calibration fitting. Models, maps and cutoffs stay fixed. Patient bootstrap intervals condition on saved fits and omit retraining/selection variability and earlier pilot adaptivity. These are development results, not reserved-test or clinical evidence.",
+  "original_metrics_reproduced": true,
+  "retained_scores_unchanged": true
+}

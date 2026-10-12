@@ -1,0 +1,108 @@
+{
+  "checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_dedup_v1\\folds\\4\\refit\\latest.pt",
+  "checkpoint_sha256": "41a81707d039ff2b2e2540e6210cd8f638cbf3cf418b3932bbfa33b5985180ff",
+  "dataset_identity": {
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    },
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "variant": "dedup_v1"
+  },
+  "environment": {
+    "cuda_version": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "evaluation_status": "deduplicated_development_outer_oof_descriptive_uncertainty",
+  "inference": {
+    "amp": false,
+    "base_seed": 20261004,
+    "batch_size": 64,
+    "batchnorm": "evaluation_mode_buffers_unchanged",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "deterministic_algorithms": true,
+    "mc_dropout": "explicit_dropout_only_at_trained_rate",
+    "mc_passes": 30,
+    "mc_seeds": [
+      20261004,
+      20261005,
+      20261006,
+      20261007,
+      20261008,
+      20261009,
+      20261010,
+      20261011,
+      20261012,
+      20261013,
+      20261014,
+      20261015,
+      20261016,
+      20261017,
+      20261018,
+      20261019,
+      20261020,
+      20261021,
+      20261022,
+      20261023,
+      20261024,
+      20261025,
+      20261026,
+      20261027,
+      20261028,
+      20261029,
+      20261030,
+      20261031,
+      20261032,
+      20261033
+    ],
+    "model_state_sha256_before_and_after": "b0fea2910127c900050dabc22552572a09aed90d1ba7082c512af78c1590d765",
+    "prepared_cache_device": "cpu",
+    "prepared_cache_dtype": "float32",
+    "score": "sigmoid_of_one_logit_uncalibrated_prediction_score",
+    "stochastic_depth": "evaluation_mode",
+    "tta_application": "after_exact_deterministic_preparation",
+    "tta_dropout": false,
+    "tta_geometry": "whole_image_tensor_flips_no_crop_padding_rotation_or_interpolation",
+    "tta_passes": [
+      "identity",
+      "hflip",
+      "vflip",
+      "hvflip"
+    ],
+    "tta_seed": 20261004,
+    "tta_stochastic": false
+  },
+  "outer_fold": 4,
+  "real_labels_supplied_to_inference": false,
+  "reserved_test_loaded": false,
+  "saved_prediction_microbatch": 64,
+  "source_run_id": "b0_nested_dedup_v1",
+  "trained_dropout_layers": [
+    {
+      "name": "classifier.0",
+      "p": 0.2
+    }
+  ]
+}

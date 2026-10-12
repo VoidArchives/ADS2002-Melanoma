@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "original",
+  "selection_metric": "roc_auc",
+  "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+  "compatibility_sha256": "1a217f19daed0af64ec1ff3db3a08789028e8a099a31f845244c058f4d4e2cbd",
+  "context": {
+    "condition": "original",
+    "outer_fold": 3,
+    "selection_metric": "roc_auc",
+    "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+    "model": "spline",
+    "stage": "classical_outer_tuned",
+    "inner_fold": -1,
+    "candidate_index": 0,
+    "parameters": {
+      "classifier__C": 0.1,
+      "preprocessor__smooth_age__spline__degree": 2,
+      "preprocessor__smooth_age__spline__n_knots": 3
+    },
+    "phase": "classical_tuned"
+  },
+  "csv_names": [
+    "predictions"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/predictions.csv": "395e66459a8bc7a2ef2a01e507a799923219c9752c896456b578655bcfddfa77",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/model.joblib": "479c20b89755c26abace5ece7b2f8051664227e9da66e935c2f0041119c20580",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/result.json": "dcea18e0f7968ee545abc4b3eefb38b2f7e99fe03878e0e102e54c7b46f55077"
+  }
+}

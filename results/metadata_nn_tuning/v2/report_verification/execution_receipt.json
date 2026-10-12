@@ -1,0 +1,401 @@
+{
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "kernel_interpreter": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\.venv\\Scripts\\python.exe",
+  "historical_preservation": {
+    "historical_files_checked": 31655,
+    "archived_notebooks_checked": 21,
+    "archived_sources_checked": 110,
+    "ap_fitting_dependencies_unchanged": true
+  },
+  "status": "complete",
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/04_dummy_logistic_baseline.ipynb",
+      "sha256": "2a0e0f69871b22c17851e89b4ed6d72e7fcc4f6660204ce86d93bd1e61c1f520",
+      "errors": 0,
+      "code_cells": 8,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline_cell10_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline_cell14_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/04_dummy_logistic_baseline.html"
+    },
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "sha256": "25434a3da25898e61eb3d4479d9bbd27fb291742826e88d9f2a35fe9b405e37c",
+      "errors": 0,
+      "code_cells": 9,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell11_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell13_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network_cell13_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/06_metadata_neural_network.html"
+    },
+    {
+      "notebook": "notebooks/Subset/05_metadata_models.ipynb",
+      "sha256": "c782e0e9276874b3378094801b88ff31cdc996a5dcb3e8a48cfa18a1c05c6bc7",
+      "errors": 0,
+      "code_cells": 14,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell20_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell22_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell25_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models_cell33_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/05_metadata_models.html"
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "sha256": "452941c58aa4bb6eac110a6544a42cdfc2872af8536e2156055bddd67114f3e6",
+      "errors": 0,
+      "code_cells": 10,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell9_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell11_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell15_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell23_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness_cell23_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/08_metadata_robustness.html"
+    },
+    {
+      "notebook": "notebooks/Subset/09_image_b0_pilot.ipynb",
+      "sha256": "7a7f4328971a95e2c3105f570bad787ca722317ce16d87dd0b5e8ae829d2d39d",
+      "errors": 0,
+      "code_cells": 10,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell6_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell10_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell10_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell12_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell14_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot_cell16_0.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/09_image_b0_pilot.html"
+    },
+    {
+      "notebook": "notebooks/Subset/10_image_architecture_comparison.ipynb",
+      "sha256": "b971ce4e531251f25aceb7f860837e6a7f003627215af37f3a5cc4555a5c92f9",
+      "errors": 0,
+      "code_cells": 8,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell5_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell7_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell9_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell9_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell9_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell9_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell9_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_7.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_8.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_10.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison_cell11_11.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/10_image_architecture_comparison.html"
+    },
+    {
+      "notebook": "notebooks/Subset/11_image_augmentation.ipynb",
+      "sha256": "2b4e0d4a4c0f7fd47001454b6a42c88d9f51850b545a3001fb8045477de75c00",
+      "errors": 0,
+      "code_cells": 7,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_6.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_7.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_8.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_9.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_10.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_11.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_12.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_13.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_14.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_15.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell5_16.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_6.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation_cell7_7.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/11_image_augmentation.html"
+    },
+    {
+      "notebook": "notebooks/Subset/12_image_lighting.ipynb",
+      "sha256": "aff2a5e4db450fcc9a85f507dc08fe50c5d6e356c151b9ff942e6fa2dd446a12",
+      "errors": 0,
+      "code_cells": 7,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_6.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting_cell7_7.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/12_image_lighting.html"
+    },
+    {
+      "notebook": "notebooks/Subset/13_image_uncertainty.ipynb",
+      "sha256": "55c6126ae9fc93aab21d6ba8bfb9d5bb042bef41c0d6a414d6b9e43e2b8c1af7",
+      "errors": 0,
+      "code_cells": 15,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell8_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell14_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell16_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell18_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell21_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty_cell24_0.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/13_image_uncertainty.html"
+    },
+    {
+      "notebook": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+      "sha256": "3176798314a1297fdfdc4cccc9ae041f17cef3d54be29e5c3da1e579624c6093",
+      "errors": 0,
+      "code_cells": 11,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell9_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell9_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell11_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell13_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell14_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell20_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation_cell20_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/14_image_nested_evaluation.html"
+    },
+    {
+      "notebook": "notebooks/Subset/15_deduplicated_workflow.ipynb",
+      "sha256": "512fb3fe6f675b3556dffca90126f46d5967eb7b844bb13f1a45a29697696268",
+      "errors": 0,
+      "code_cells": 13,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow_cell7_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow_cell8_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow_cell8_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow_cell12_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow_cell14_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/15_deduplicated_workflow.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "sha256": "3b1145a0d069d8abe1094decb43bd0847ec1c46ca96d1ceca56085378e5a8648",
+      "errors": 0,
+      "code_cells": 11,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell10_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell14_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines_cell21_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/04_metadata_baselines.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "sha256": "ea05f67c72fa3eede567c42fd92cf794b86f9f3255a19dec680f6ec5bb7feb1e",
+      "errors": 0,
+      "code_cells": 17,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell20_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell22_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell25_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell33_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models_cell41_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/05_metadata_models.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "sha256": "e42932337b4f3d6f2c6c1800cf959c43cd87383eaf25fa436b836aa617d9b913",
+      "errors": 0,
+      "code_cells": 9,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell11_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell13_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network_cell13_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/06_metadata_neural_network.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "sha256": "677f94c2e5f94dc7ad245905a1174b824edd7620f4db22974810b2bea67a2f24",
+      "errors": 0,
+      "code_cells": 13,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell12_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell14_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell14_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell16_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell18_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell18_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell20_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell22_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell26_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning_cell26_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/07_metadata_tuning.html"
+    },
+    {
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "sha256": "68ae9e8c389479e03cbd8c5567787e72a9bf9a7665f4ad9a6ea6590cc63f1e97",
+      "errors": 0,
+      "code_cells": 13,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell12_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell14_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell14_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell16_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell18_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell18_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell20_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell22_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell26_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning_cell26_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset/07_metadata_tuning.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "sha256": "768a6afc009d14f970aa45b5135484048ad4f8b1bb360ec79ab9bd624ff55f02",
+      "errors": 0,
+      "code_cells": 17,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell9_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell11_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell15_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell29_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell31_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell33_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell35_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness_cell35_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/08_metadata_robustness.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/09_image_modelling.ipynb",
+      "sha256": "7d42f6ad0d498ddb7894f2fcaa2495d5ff26d98a5031c25ed4477fa600ebd430",
+      "errors": 0,
+      "code_cells": 20,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell6_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell10_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell10_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell12_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell14_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell16_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell16_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell31_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell31_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell33_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell33_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell35_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell35_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell38_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling_cell38_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/09_image_modelling.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/10_bounded_image_pilots.ipynb",
+      "sha256": "3c6462378d240306c2e716b1c1a27081a09ec01c4a77a157e69c2558f649a420",
+      "errors": 0,
+      "code_cells": 22,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/10_bounded_image_pilots_cell5_0.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/10_bounded_image_pilots.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/11_image_uncertainty.ipynb",
+      "sha256": "1c1ac5e8b5681790bfe398c3634131df54068e9452a790d8fa34b3b25167ab34",
+      "errors": 0,
+      "code_cells": 15,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell8_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell14_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell16_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell16_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell18_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell18_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell21_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty_cell24_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/11_image_uncertainty.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "sha256": "da84f528991918c417716c1aa062f472dfe99cda0fb511f7372e032852fa00ce",
+      "errors": 0,
+      "code_cells": 37,
+      "figures": [
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell9_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell11_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell15_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell29_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell31_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell33_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell44_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell44_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell46_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell46_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell48_3.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell48_5.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell51_0.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell51_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell58_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell60_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell60_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell62_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell64_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell66_4.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell68_1.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell76_2.png",
+        "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation_cell76_3.png"
+      ],
+      "html": "results/metadata_nn_tuning/v2/report_verification/Subset_dedup/12_combined_evaluation.html"
+    }
+  ],
+  "completed_utc": "2026-10-12T00:42:05.026321+00:00",
+  "visual_inspection": "pending side-by-side review",
+  "verified_markdown_only_refreshes": [
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "before_sha256": "4da58722441216f7dffd4d691bfe5ee6298ac3a642978c0bf0c372618b09a5d7",
+      "after_sha256": "452941c58aa4bb6eac110a6544a42cdfc2872af8536e2156055bddd67114f3e6",
+      "code_and_outputs_unchanged": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "before_sha256": "4996fa2a161ea0b4a2dc3628c8eb29e64f5d9a158b8fdec10c51fd12ed4fda3e",
+      "after_sha256": "768a6afc009d14f970aa45b5135484048ad4f8b1bb360ec79ab9bd624ff55f02",
+      "code_and_outputs_unchanged": true
+    }
+  ],
+  "markdown_patch_receipts": {
+    "repairs/robustness_heading_patch.json": "f783814ee14eff078480eb891d6f47b17f52998c719e46952926b3abb1ceec5b"
+  },
+  "markdown_refresh_source_sha256": "8fd42db696cec0c023ce786c0ccb92e157bf9f1d57380fb4809e48c2006215bc"
+}

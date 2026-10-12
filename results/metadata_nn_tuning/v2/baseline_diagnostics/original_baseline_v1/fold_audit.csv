@@ -1,0 +1,6 @@
+outer_fold,fitting_images,heldout_images,fitting_patients,heldout_patients,patient_overlap,preprocessing_fitted_on,fits
+0,5494,1370,338,84,0,outer-training records only,1
+1,5492,1372,338,84,0,outer-training records only,1
+2,5483,1381,335,87,0,outer-training records only,1
+3,5493,1371,340,82,0,outer-training records only,1
+4,5494,1370,337,85,0,outer-training records only,1

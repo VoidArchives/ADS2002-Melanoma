@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "declared_utc": "2026-10-05T07:38:55.120763+00:00",
+  "config_path": "configs/image_nested_calibration_dedup.yaml",
+  "config_sha256": "e99efd528603021b639a51a4a31beb954caec5863d5fcf5675993a5604f93025",
+  "reference_run_id": "b0_nested_dedup_v1",
+  "existing_outer_prediction_folds": [],
+  "declared_before_outer_fold0_prediction": true
+}

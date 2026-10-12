@@ -1,0 +1,5 @@
+# Only clean development records; reserved test and final full-data fit remain locked.
+run_id: metadata_full_dedup_v1
+dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+reuse_receipt: results/dedup_v1/metadata/comparator_receipt.json
+threads: 4

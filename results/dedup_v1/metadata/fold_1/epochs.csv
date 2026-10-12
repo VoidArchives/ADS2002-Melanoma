@@ -1,0 +1,4 @@
+base_seed,outer_fold,training_seed,stop_fold,selected_epochs,stop_log_loss,attempted_stopping_epochs,outer_train_patients,score_patients,epoch_fit_patients,epoch_stop_patients,encoded_input_width
+42,1,43,2,59,0.09107524156570435,71,338,84,251,87,10
+142,1,143,3,26,0.08799058943986893,38,338,84,256,82,10
+242,1,243,4,12,0.0956558883190155,24,338,84,253,85,10

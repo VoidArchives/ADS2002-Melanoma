@@ -1,0 +1,145 @@
+{
+  "architecture_policy": {
+    "architecture": "efficientnet_b0",
+    "centre_crop": false,
+    "dropout": 0.2,
+    "head_lr_parameters": "new_output_linear_only",
+    "image_size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "native_pretrained_preparation": {
+      "crop_size": [
+        224
+      ],
+      "interpolation": "bicubic",
+      "resize_size": [
+        256
+      ]
+    },
+    "native_stochastic_depth_retained": true,
+    "normalisation_policy": "batchnorm_statistics_and_affines_frozen",
+    "output_head": "dropout_then_one_logit_linear",
+    "preparation": "whole_image_bilinear_resize_imagenet_normalisation",
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "transformation_profile": {
+      "augmentation": {
+        "parameters": {
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": [
+            -20.0,
+            20.0
+          ],
+          "rotation_fill": 0,
+          "rotation_interpolation": "nearest",
+          "vertical_flip_probability": 0.5
+        },
+        "version": "weak_v1"
+      },
+      "centre_crop": false,
+      "image_size": 224,
+      "normalisation_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalisation_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "order": [
+        "RGB_decode",
+        "whole_image_bilinear_resize",
+        "deterministic_preprocessing",
+        "training_only_stochastic_augmentation",
+        "tensor_conversion",
+        "ImageNet_normalisation"
+      ],
+      "preprocessing": {
+        "parameters": {},
+        "version": "none_v1"
+      },
+      "resize_antialias": true,
+      "resize_interpolation": "bilinear"
+    },
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "compatibility_hash": "6b9b39fb24c484d57cce2cee156853ad0f641866373a7ffdb14f035002f029f5",
+  "environment": {
+    "cuda_version": "13.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "fitting": "b5b99b83df96fcd503bd4311025935802ff8e0aa45433f2c44e96c11a9770391",
+  "initial_model_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "initial_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "manifest": {
+    "fold_compatibility_sha256": "ffd5aba83006415d02d62656c0ef4fb7f1830ffafd4c5461b60289dc85e20fa7",
+    "inner_fold": 1,
+    "outer_fold": 4,
+    "protocol": "bounded_b0_screen_confirm_v1",
+    "purpose": "inner_screen_and_confirmation",
+    "recipe": {
+      "backbone_lr": 0.0001,
+      "id": "lr1e4_none",
+      "loss_weight": "none"
+    },
+    "run_id": "b0_nested_dedup_v1",
+    "schema_version": 1
+  },
+  "microbatch": 64,
+  "model_factory": "efficientnet_b0",
+  "positive_weight": 1.0,
+  "preprocessing_environment": {
+    "opencv": "not_used"
+  },
+  "pretrained_identity": {
+    "file_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "kind": "torchvision",
+    "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+    "weight_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "recipe": {
+    "backbone_lr": 0.0001,
+    "id": "lr1e4_none",
+    "loss_weight": "none"
+  },
+  "source_sha256": "92d461a9553df392d0072c0a413ef951021375bbda0e2b5a85b15e11f4f209c0",
+  "spec": {
+    "architecture": "efficientnet_b0",
+    "augmentation": "weak",
+    "dropout": 0.2,
+    "image_size": 224,
+    "preprocessing": "none",
+    "weights": "IMAGENET1K_V1"
+  },
+  "stopping_reason": "complete",
+  "training": {
+    "amp": true,
+    "effective_batch": 64,
+    "gradient_clip": 1.0,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "min_lr_factor": 0.1,
+    "min_microbatch": 4,
+    "num_workers": 0,
+    "schedule_epochs": 30,
+    "seed": 42,
+    "warmup_epochs": 1,
+    "weight_decay": 0.0001
+  },
+  "transformation_source_sha256": "0c04c4c0ac364b0b72972d7467cded3265e8710fac37e08c9976508b3f2fd60b",
+  "validation": "b8e30a5ce84c8c698683891c34b731a4a068e15fb683abca5a1aabeee44e3e46"
+}

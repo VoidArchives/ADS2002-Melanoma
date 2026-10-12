@@ -1,0 +1,9 @@
+comparison,aggregation,metric,difference,ci_lower,ci_upper,bootstrap_replicates,valid_replicates,rejected_single_class_replicates,seed
+calibrated minus raw,mean_fold,average_precision,0.0,0.0,0.0,2000,2000,0,42
+calibrated minus raw,mean_fold,roc_auc,0.0,0.0,0.0,2000,2000,0,42
+calibrated minus raw,mean_fold,log_loss,-0.014614681773565605,-0.023493815952950317,-0.007044127364813214,2000,2000,0,42
+calibrated minus raw,mean_fold,brier,-0.0016541260662840292,-0.00312481276029794,-0.0004122378321866812,2000,2000,0,42
+calibrated minus raw,pooled,average_precision,-0.006714987779624856,-0.023382564273285354,0.006100766959640898,2000,2000,0,42
+calibrated minus raw,pooled,roc_auc,-0.028515929352880165,-0.046838632861837114,-0.01187437798488901,2000,2000,0,42
+calibrated minus raw,pooled,log_loss,-0.014856274562802085,-0.02344078498558045,-0.007231135182805655,2000,2000,0,42
+calibrated minus raw,pooled,brier,-0.0016588179569448497,-0.003053927851084764,-0.000419492105938024,2000,2000,0,42

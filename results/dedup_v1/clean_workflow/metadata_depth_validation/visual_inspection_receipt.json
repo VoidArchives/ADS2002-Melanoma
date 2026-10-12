@@ -1,0 +1,21 @@
+{
+  "status": "representative_visual_checks_passed",
+  "scope": "Four specialist figures reviewed; all38 metadata sections executed separately from notebook kernels.",
+  "reviewed_figures": {
+    "results/dedup_v1/clean_workflow/metadata_depth_validation/05_metadata_models_metadata_nonlinear_age_profiles.png": "a389df692adcdd84a2a526113bd3b5e6f62ff6b0c796832b135fa93b8836942e",
+    "results/dedup_v1/clean_workflow/metadata_depth_validation/06_metadata_neural_network_nn_fifteen_stopping_trajectories.png": "aef84c4010bfdaffd6caa82b75c57f28d6f63e9e75d4e041a2bc058f01f0da91",
+    "results/dedup_v1/clean_workflow/metadata_depth_validation/08_metadata_robustness_metadata_reliability_and_score_distributions.png": "4c39c079e4d5c93b8c1bced0e9f8c5b2a69c3436009d8b7befdb34b5c962fc51",
+    "results/dedup_v1/clean_workflow/metadata_depth_validation/08_metadata_robustness_metadata_subgroup_support_and_intervals.png": "942f5410ff1ddb34ac337d76fd7c022e3c87b030a5ae7400dd72f6ecfb7758ed"
+  },
+  "module_sha256": "3c397b5557e543430d061844b863bef693edef1c238c2e0c865491f8d3d96aa1",
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "subgroup_bootstrap_repetitions": 2000,
+  "checks": [
+    "Axis meanings and legends match saved diagnostics",
+    "Nonlinear age shows five-fit range and conditional profiles",
+    "All15 NN histories have fitting/stopping distinctions and selected epochs",
+    "Reliability bins include patient intervals and source counts",
+    "Unknown-site sparse support and undefined palm/sole AP are explicit"
+  ]
+}

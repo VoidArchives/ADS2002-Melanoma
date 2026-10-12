@@ -1,0 +1,87 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>deduplicated: 06_metadata_neural_network.ipynb</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#243041;margin:0 auto;padding:28px;max-width:1050px}h1{font-size:30px;line-height:1.25}h2{font-size:24px;margin-top:38px}h3{font-size:19px;margin-top:24px}a{color:#155eac}p,li{max-width:86ch}table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}th,td{padding:8px 12px;border:1px solid #d5dce5;text-align:left}img{max-width:100%;height:auto}pre{font:13px/1.45 Consolas,monospace;overflow:auto;background:#f3f5f8;padding:14px}code{font-size:.9em}details{margin:18px 0}.output{margin:14px 0;overflow:auto}.error{color:#9f1239}section{margin-bottom:20px}</style></head><body><p>Saved notebook reading preview · deduplicated: 06_metadata_neural_network.ipynb · rendering executes no cells</p><section id="cell-0"><h1>Compare a small metadata network: deduplicated Subset data</h1>
+<p>Can a small neural network improve on the spline using age, sex and anatomical site, the metadata recorded alongside each image? We also check how repeated training changes the result.</p>
+<p><a href="05_metadata_models.ipynb">05_metadata_models.ipynb</a> supplies the fixed spline reference. Both methods use the same patient folds, meaning groups of patients, and are checked on people excluded from their own training.</p>
+<p>The verified outputs below compare the fixed three-network average with the spline and report every prescribed seed. Primary mean-fold AP and secondary pooled scores are distinguished explicitly. The computed findings, rather than historical numbers in prose, determine the observed comparison. The network reads no image pixels.</p>
+<p>For metric definitions, see the <a href="../concepts.md">short concept guide</a>.</p>
+<p><strong>Scope and preservation:</strong> this notebook uses the complete archived original as its section and visual template. Numerical findings are computed from the explicitly identified versioned run. The original experiments remain archived; no reserved-test labels or final all-development fit are used here.</p>
+</section>
+<section id="cell-1"><h2>Setup and data</h2>
+<p>Use the frozen deduplicated development manifest with the project Python kernel. The notebook finds the project root from its current folder. The reserved test is not loaded.</p>
+<p>Before these runs, fix one hidden layer with 32 units, 20% dropout, training settings, seeds 42, 142 and 242, and equal averaging. A seed makes random choices repeatable. Report every run and their average rather than selecting the highest score.</p>
+<p>The reused patient folds have guided earlier comparisons, so these remain development results.</p>
+</section>
+<section id="cell-2"><details><summary>Code cell 3</summary><pre>from pathlib import Path
+import sys
+import matplotlib.pyplot as plt
+from IPython.display import Markdown, display
+
+PROJECT_ROOT = next(path for path in [Path.cwd(), *Path.cwd().parents]
+                    if (path / &quot;src&quot; / &quot;melanoma_detection&quot;).exists())
+if str(PROJECT_ROOT / &quot;src&quot;) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT / &quot;src&quot;))
+from melanoma_detection.metadata_nn_tuning_reporting import (
+    load_tuning, render_section, plot_nn_comparison, plot_tuning_bars, plot_tuning_curves)
+plt.rcdefaults()
+plt.rcParams.update({'font.size': 11, 'axes.spines.top': False, 'axes.spines.right': False, 'figure.dpi': 120})
+ORIGINAL_EXPORT_DPI = 150
+NN_COMPARISON_COLORS = ['#2563EB', '#D97706', '#D97706', '#D97706', '#303030']
+report = load_tuning(PROJECT_ROOT, 'dedup_v1', run_id=None)
+report[&quot;export_dpi&quot;] = ORIGINAL_EXPORT_DPI
+display(Markdown(&quot;**Saved-results report:** &quot; + report[&quot;status&quot;] +
+                 &quot;. Executing cells verifies and presents artifacts; training runs separately.&quot;))
+</pre></details></section>
+<section id="cell-3"><h3>1. Check the inputs in the saved experiment</h3>
+<p>Validate target text before conversion: only exact labels 0 (benign) and 1 (malignant) are accepted. Otherwise rounding or integer conversion could hide a bad value such as <code>1.5</code>. Each image must occur once, every patient must stay in one fold, and each fold must contain both classes.</p>
+<p>Missing age is filled with the training median. Missing sex or site gets a fixed <code>Missing</code> label. Category columns are learned separately within training, keeping evaluation patients outside preprocessing.</p>
+</section>
+<section id="cell-4"><details><summary>Code cell 5</summary><pre>render_section(report, 'inputs')</pre></details></section>
+<section id="cell-5"><h2>How the network is trained</h2>
+<h3>Use a small network for tabular information</h3>
+<p>Turn age, sex and site into numerical inputs. Age uses the training median for missing values and training-based scaling. One-hot encoding gives each category a yes/no column. These are a short list of numbers, rather than image pixels, so the network learns from scratch.</p>
+<p>Its hidden layer has 32 units, each combining the inputs with learned weights. ReLU keeps positive activations and replaces negative ones with zero, allowing flexible relationships. The final sigmoid maps the output to [0,1]. This is a probability estimate; calibration, agreement with observed rates, still needs checking.</p>
+<p>Dropout masks 20% of hidden activations during training and is disabled when predicting. Weight decay discourages large weights. These limit overfitting, learning details that fail on new patients. With 422 patients and only 127 malignant images, a small fixed network is a cautious comparison, rather than a claim of the best design.</p>
+<h3>Choose training length without scoring patients</h3>
+<p>An epoch is one pass through training records. Binary cross-entropy measures probability error; smaller is better.</p>
+<p>For each outer fold and run:</p>
+<ol>
+<li>Set aside the outer patients for scoring.</li>
+<li>Use one of the four remaining folds to choose the best epoch. Fit preprocessing and the network on the other three.</li>
+<li>Start fresh with the same seed, refit preprocessing on all four training folds, and train for that epoch count.</li>
+<li>Predict the outer fold once. Repeat until each image has one held-out prediction per run, called out-of-fold (OOF) prediction.</li>
+</ol>
+<p>The stopping fold follows <code>(outer fold + 1 + run index) % 5</code>. Stop after 12 epochs without meaningful improvement once 10 epochs have been attempted, or at 100 epochs. The selected best earlier epoch can be below 10. Outer labels never choose it.</p>
+<h3>Repeat a fixed procedure three times</h3>
+<p>Initial weights, batch order and dropout are random. The stopping group also changes across runs, so their spread reflects both choices together. All runs reuse the same patients: their standard deviation describes training variation, not a confidence interval for new-patient performance. Keep every run and their equal average. Training gives malignant cases no extra loss weight.</p>
+</section>
+<section id="cell-6"><details><summary>Code cell 7</summary><pre>render_section(report, 'nn_procedure')</pre></details></section>
+<section id="cell-7"><details><summary>Code cell 8</summary><pre>display(Markdown(&quot;Training functions are kept in the separate runner. This report reads completed results only.&quot;))</pre></details></section>
+<section id="cell-8"><h3>2. Review the prescribed runs on five patient-held-out folds</h3>
+<p>The checks below explicitly enforce patient separation and exactly one prediction per image per run. Preprocessing is fitted again whenever the training patients change. The spline reference is fitted once per outer fold because its fixed procedure is deterministic and does not change across network seeds.</p>
+<p>This cell verifies and reads saved experiment outputs. Training is performed separately by the versioned runner; executing this report starts no fits.</p>
+</section>
+<section id="cell-9"><details><summary>Code cell 10</summary><pre>render_section(report, 'nn_runs')</pre></details></section>
+<section id="cell-10"><h3>3. Read the performance and variation comparison</h3>
+<p>The primary score averages the five outer-fold scores equally. A separate secondary chart pools all held-out predictions; these aggregations can differ because cross-fold score scales and malignant-image counts differ. Average precision (AP), the primary measure, rewards concentrating malignant images near the top of the ranking. ROC-AUC measures how often a malignant image scores above a benign one; 0.5 is chance. Higher is better for both. Brier score measures squared probability error; lower is better, but a small value alone does not establish accurate risks.</p>
+<p>In the charts, the horizontal axis lists models and runs: blue spline, orange individual networks, dark-grey average. The vertical axis is AP on the left and ROC-AUC on the right. The dashed AP line is the malignant-image share; annotations give exact scores. No sampling uncertainty bars are shown.</p>
+<p>The variation table describes the three individual runs, whose seed and stopping fold both change. Compare their spread and average with the spline. A higher ROC-AUC does not by itself overturn the comparison on AP, the chosen primary measure. Read the computed findings below.</p>
+</section>
+<section id="cell-11"><details><summary>Code cell 12</summary><pre>render_section(report, 'nn_metrics')</pre></details></section>
+<section id="cell-12"><h3>Read the recorded training duration and histories</h3>
+<p>The epoch choices are made on training-only stopping groups. Orange marks show the individual fixed-NN runs; charcoal shows their median. Loss curves, when recorded, show fit and stopping probability error. They describe optimization, not performance on the outer patients.</p>
+</section>
+<section id="cell-13"><details><summary>Code cell 14</summary><pre>render_section(report, 'nn_epochs')</pre></details></section>
+<section id="cell-14"><h3>4. Read predictions and run settings</h3>
+<p>Save one row per image so later checks compare identical patients. SHA-256 fingerprints identify the exact input, prediction and executable-code bytes; markdown and saved outputs do not affect the code fingerprint. Settings record preprocessing, network design, training and package versions. Fingerprints support traceability, rather than proving correctness.</p>
+<p>These are development outputs. Reports read hash-verified versioned predictions and settings and write presentation copies only inside the new run&#39;s <code>report/</code> directory. Historical <code>d1</code> results and the previous notebook are preserved in the archive.</p>
+</section>
+<section id="cell-15"><details><summary>Code cell 16</summary><pre>render_section(report, 'run_settings')</pre></details></section>
+<section id="cell-16"><h2>Limitations</h2>
+<p>This stage compares one prescribed small architecture. Stage 07 separately searches hidden-layer size, learning rate and dropout through nested patient checks; even that bounded search cannot identify the best possible network design. Three fits check sensitivity to a few training choices. Because both the seed and stopping fold change together, their spread cannot isolate the effect of either choice.</p>
+<p>All runs reuse the same patients. They are not three independent datasets, and the variability table is not a sampling confidence interval. This notebook does not establish calibrated probabilities or reliable performance across demographic groups; those checks belong in notebook 08.</p>
+<p>The patient folds have guided earlier comparisons. Keeping outer patients outside fitting and epoch selection prevents direct leakage, but repeated model choices based on these folds can still make the chosen method look optimistic. Metadata also contains no lesion appearance. The reserved test is not used to evaluate these models, and performance on another hospital&#39;s patients or clinical safety is not established.</p>
+</section>
+<section id="cell-17"><h2>Summary</h2>
+<p>The computed summary below reports both aggregations and the observed NN-minus-spline difference. Keep all prescribed seeds and their equal average in view: choosing the best individual run after seeing its score could favour a lucky result. Paired uncertainty and the simpler model&#39;s practical advantages remain relevant alongside the ranking scores.</p>
+<p>Next, <a href="07_metadata_tuning.ipynb">07_metadata_tuning.ipynb</a> checks model settings and <a href="08_metadata_robustness.ipynb">08_metadata_robustness.ipynb</a> adds patient-based intervals, calibration and subgroup checks. Freeze the complete method before final testing.</p>
+</section>
+<section id="cell-18"><details><summary>Code cell 19</summary><pre>render_section(report, 'nn_summary')</pre></details></section></body></html>

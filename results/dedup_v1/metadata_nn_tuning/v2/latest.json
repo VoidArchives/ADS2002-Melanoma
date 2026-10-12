@@ -1,0 +1,11 @@
+{
+  "experiment_version": 2,
+  "run_id": "roc_auc_grid36_v1",
+  "condition": "dedup_v1",
+  "selection_metric": "roc_auc",
+  "status": "complete",
+  "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+  "completion_receipt_sha256": "290648dae4db8a65f621e7228df4c554c6c59565ff90e5f752028ddf3f1a1fd2",
+  "independent_verification_sha256": "f4a0f92306d944e629c6fb885fffddacccf72db761086bff080acface148095d",
+  "publication_source_sha256": "5fd1988c9f5e7f26f2a9d549f3d6acbd79bc4eef8aba991bb6076b2e8855a263"
+}

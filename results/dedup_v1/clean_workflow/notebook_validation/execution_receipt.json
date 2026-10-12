@@ -1,0 +1,234 @@
+{
+  "presentation_revision": 3,
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "kernel_interpreter": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\.venv\\Scripts\\python.exe",
+  "markdown_only_edits_after_execution": [
+    "08_metadata_robustness.ipynb"
+  ],
+  "markdown_edit_code_unchanged": true,
+  "status": "complete",
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset_dedup/01_data_cleaning.ipynb",
+      "sha256": "d61155107dcb254a47ce424089607488a27dc5b7b1bd21f0002dd94a80e7f551",
+      "code_cells": 12,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/01_data_cleaning_cell18_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/01_data_cleaning_cell24_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/01_data_cleaning_cell24_4.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/01_data_cleaning_cell24_6.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/01_data_cleaning_cell24_8.png"
+      ],
+      "original_markdown_words": 692,
+      "adapted_markdown_words": 1638,
+      "executed_code_sha256": "856567ce1299766b2117b9a85f57a3c1ce40e5e9935202645b5616c19c4ad8ae"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/02_clean_data_eda.ipynb",
+      "sha256": "8212adb61be15db5766d2606de742ce2e60a903c391b3ccf3498978d0fa4a634",
+      "code_cells": 11,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/02_clean_data_eda_cell12_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/02_clean_data_eda_cell14_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/02_clean_data_eda_cell18_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/02_clean_data_eda_cell18_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/02_clean_data_eda_cell18_2.png"
+      ],
+      "original_markdown_words": 1160,
+      "adapted_markdown_words": 1576,
+      "executed_code_sha256": "f8fb1366f48d6c6e9cf4c53582686af3caca2d279ef6b56d78975d5450c699a1"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/03_patient_fold_verification.ipynb",
+      "sha256": "27e429c238a892ec9a9ea8a3e269c810267caecf63c86c2979a9f9d38db5d560",
+      "executed_code_sha256": "b0a41f5bafc5fe1e54538f5fa4d603e235d7e1357192802259fa78f791fa0025",
+      "code_cells": 12,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/03_patient_fold_verification_cell11_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/03_patient_fold_verification_cell13_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/03_patient_fold_verification_cell19_1.png"
+      ],
+      "original_markdown_words": 837,
+      "adapted_markdown_words": 1750
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/04_metadata_baselines.ipynb",
+      "sha256": "b4f5948a33842af99bde2138bc5eb9953927f1bdce110dd6b07597931df79d29",
+      "code_cells": 10,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/04_metadata_baselines_cell10_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/04_metadata_baselines_cell14_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/04_metadata_baselines_cell21_1.png"
+      ],
+      "original_markdown_words": 1062,
+      "adapted_markdown_words": 1344,
+      "executed_code_sha256": "fc26824c0525a5e9dcf9ea91ab88e2c1b3493bd4f5dc2b8605c54bdc418bd406"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/05_metadata_models.ipynb",
+      "sha256": "9949b25c6d8a9b7b635569d8baa1470b48f1e0b728414bd906a1492a6ea4f7f1",
+      "code_cells": 16,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/05_metadata_models_cell20_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/05_metadata_models_cell22_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/05_metadata_models_cell25_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/05_metadata_models_cell33_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/05_metadata_models_cell41_1.png"
+      ],
+      "original_markdown_words": 2231,
+      "adapted_markdown_words": 2592,
+      "executed_code_sha256": "f365cdc02ba1f425b7eb3bad6005e0e182afa5a4c4f55bb7a483f7e87fdebba1"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "sha256": "bc951e3dc1cdeb2e00a01a7895d1ea77e14160dac5114fc26a34f475661e56e2",
+      "code_cells": 12,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/06_metadata_neural_network_cell11_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/06_metadata_neural_network_cell19_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/06_metadata_neural_network_cell21_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/06_metadata_neural_network_cell23_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/06_metadata_neural_network_cell25_0.png"
+      ],
+      "original_markdown_words": 1215,
+      "adapted_markdown_words": 1741,
+      "executed_code_sha256": "cf539c590f6b26c01af1c0c0555a148c3ed43db900e1deec4f1d077470571719"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "sha256": "60658939ba325fe030d00b1b783c9e947b49135af4275dcf76f416d99a001d0b",
+      "code_cells": 13,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell15_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell15_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell17_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell25_3.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell27_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/07_metadata_tuning_cell29_1.png"
+      ],
+      "original_markdown_words": 1247,
+      "adapted_markdown_words": 1690,
+      "executed_code_sha256": "12626b6a9037b702ed3da03f5c205133f4eac6435a3fab9b7f70a369989554ad"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "sha256": "43a3c3baed5ae0d7d69e473cd83dace505a7609dca0a05fce9b7cbe5672d1545",
+      "code_cells": 16,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell9_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell11_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell15_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell29_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell31_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/08_metadata_robustness_cell33_1.png"
+      ],
+      "original_markdown_words": 1678,
+      "adapted_markdown_words": 2299,
+      "executed_code_sha256": "cf939fb752032a0d83560beca7a91256451eb19aad986e97fa21dbb92fc27fd1"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/09_image_modelling.ipynb",
+      "sha256": "6024eb8e1e6f09caaf5b642b88d71f3c4c71ca060a1c63e4bcefd53899f6de83",
+      "code_cells": 20,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell6_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell10_3.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell10_4.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell12_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell14_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell16_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell16_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell31_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell31_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell33_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell33_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell35_3.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell35_5.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell38_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/09_image_modelling_cell38_1.png"
+      ],
+      "original_markdown_words": 2407,
+      "adapted_markdown_words": 3021,
+      "executed_code_sha256": "644770aa17a8c83be663634bad4110f90bbc33d4c9b51f5f724b1649332fc483"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/10_bounded_image_pilots.ipynb",
+      "sha256": "1f1d3a26616404cd4f78bbf11c50120f7ae4332e002e420a59d4eeef42769595",
+      "code_cells": 22,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/10_bounded_image_pilots_cell5_0.png"
+      ],
+      "original_markdown_words": 4107,
+      "adapted_markdown_words": 5205,
+      "executed_code_sha256": "c3a3981584dd196ff2e50e679db029e2f35126999a23bbf5c005db997e84b7f2"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/11_image_uncertainty.ipynb",
+      "sha256": "1b90bf5ea66e78b32d046c7a68587edfb183be61476096ebae788d45db122588",
+      "code_cells": 15,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell8_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell14_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell16_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell16_3.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell18_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell18_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell21_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/11_image_uncertainty_cell24_1.png"
+      ],
+      "original_markdown_words": 2031,
+      "adapted_markdown_words": 2394,
+      "executed_code_sha256": "9c5fd9989322b2da050093d91a327e7b4900c2fc69f646e50dc14c2e7d639670"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "sha256": "2a419cbacca827875a0efc95204d40f409a670b39d446f0520f5e6de125ecdc6",
+      "executed_code_sha256": "0995c359a22238af20a66b20f6482fae5e7175d09ac75726c4949dd8a7b8aaf5",
+      "code_cells": 36,
+      "errors": 0,
+      "figures": [
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell9_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell11_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell15_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell29_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell31_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell33_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell44_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell44_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell46_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell46_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell48_3.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell48_5.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell51_0.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell51_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell58_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell60_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell60_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell62_2.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell64_1.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell66_4.png",
+        "results/dedup_v1/clean_workflow/notebook_validation/rendered_template_v3/12_combined_evaluation_cell68_1.png"
+      ],
+      "original_markdown_words": 2751,
+      "adapted_markdown_words": 4337
+    }
+  ],
+  "notebook_count": 12,
+  "completed_utc": "2026-10-11T10:57:48.973787+00:00",
+  "executed_in_this_refresh": [
+    "12_combined_evaluation.ipynb"
+  ],
+  "visual_inspection": "complete: see visual_inspection_receipt.json"
+}

@@ -1,0 +1,67 @@
+schema_version: 1
+run:
+  run_id: b0_nested_dedup_v1
+  mode: nested_b0
+  folds_csv: data/subset/processed/train_folds.csv
+  image_dir: data/subset/train
+  output_dir: results/image_d1_runs
+  dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+  metadata_comparator_receipt: results/dedup_v1/metadata/comparator_receipt.json
+model:
+  architecture: efficientnet_b0
+  weights: IMAGENET1K_V1
+  image_size: 224
+  dropout: 0.2
+  augmentation: weak
+  preprocessing: none
+training:
+  microbatch: 64
+  effective_batch: 64
+  min_microbatch: 4
+  head_lr: 0.001
+  weight_decay: 0.0001
+  warmup_epochs: 1
+  schedule_epochs: 30
+  min_lr_factor: 0.1
+  gradient_clip: 1.0
+  amp: true
+  num_workers: 0
+  seed: 42
+selection:
+  protocol: bounded_b0_screen_confirm_v1
+  outer_folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  inner_folds: 3
+  screening_inner_fold: 0
+  screening_epochs: 6
+  confirmation_epochs: 12
+  ap_tie_tolerance: 0.0001
+  duration_rule: median_inner_best_epoch
+  recipes:
+  - id: lr3e5_none
+    backbone_lr: 3.0e-05
+    loss_weight: none
+  - id: lr1e4_none
+    backbone_lr: 0.0001
+    loss_weight: none
+  - id: lr3e5_sqrt
+    backbone_lr: 3.0e-05
+    loss_weight: sqrt_ratio
+  - id: lr1e4_sqrt
+    backbone_lr: 0.0001
+    loss_weight: sqrt_ratio
+budget:
+  session_minutes: 300
+  reporting_reserve_minutes: 20
+  initial_epoch_seconds: 70
+  epoch_safety_factor: 1.25
+evaluation:
+  bootstrap_replicates: 2000
+  classification_threshold: 0.5
+  calibration: deferred_training_only_fixed_duration_oof
+  threshold_selection: deferred_training_only_fixed_duration_oof
+  reserved_test_allowed: false

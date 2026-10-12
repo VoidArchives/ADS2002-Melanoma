@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "reviewed_utc": "2026-10-11T15:22:47.297262+00:00",
+  "reviewer": "restore_data_templates",
+  "read_only": true,
+  "notebook_sha256": {
+    "notebooks/Subset/08_metadata_robustness.ipynb": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+    "notebooks/Subset/14_image_nested_evaluation.ipynb": "4bf6875f60570f5dc9518a701d65c98a2e9b9e32d49a055c524c22e1e82d5040",
+    "notebooks/Subset_dedup/08_metadata_robustness.ipynb": "021b732a1c53020cbbc7c613e80551a4001ad8a6ca5d4d50c3d87abcf4d8c197",
+    "notebooks/Subset_dedup/12_combined_evaluation.ipynb": "cca5eb44e30370bad8fd94aec193b827b490175a8ee576bdeeb17810be03c023"
+  },
+  "figures": [
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell9_1.png",
+      "sha256": "3ad38bbb879f3b888d2db90b75d1722b0208883824b158f6d530b6a6e59578ee",
+      "pixel_size": [
+        1428,
+        570
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Two-panel historical fixed-model bootstrap composition retained; blue estimates, gold paired differences, dashed zero and labels visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell11_0.png",
+      "sha256": "8287089dcaf104ba7d898a2215c2cf78d1e1503da7d76272f33d1ad800c7bc69",
+      "pixel_size": [
+        1428,
+        582
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Two-panel calibration and score histogram retain blue/gold colours, markers, legends and full labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell15_1.png",
+      "sha256": "71ea49dcd2b97eb260aecb194094c20289edc7c5645c5289af4cea7b29ac38e1",
+      "pixel_size": [
+        1830,
+        688
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Three-panel age/sex/site composition, blue intervals, sparse-group crosses and undefined AP labels readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell23_2.png",
+      "sha256": "eb1c062e2af8d79575e05e3408ca737d1b525a099bb297e76145a2fad3b4ff06",
+      "pixel_size": [
+        1248,
+        504
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Added NN paired intervals use original08 typography, gold squares/lines, dotted zero; all labels within canvas."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell9_1.png",
+      "sha256": "7970544da8e25a59b6c7f7637631934358c07d486608d2efb8e397741c65a3cc",
+      "pixel_size": [
+        1280,
+        720
+      ],
+      "dpi": [
+        159.9946,
+        159.9946
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Historical fold AP figure is byte-identical to saved original; fold colours and annotations fully visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell9_2.png",
+      "sha256": "f53a26ed03241a00e4b5b6dc05af488a728f9ef6b648a0c180fa4848662bbf2e",
+      "pixel_size": [
+        1920,
+        752
+      ],
+      "dpi": [
+        159.9946,
+        159.9946
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Historical PR/ROC pair is byte-identical to saved original; full legends and axis labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell11_1.png",
+      "sha256": "001e5f0222c93d45b24f837b62d09160c15f764dc42ecaa810b5faad29bc74d1",
+      "pixel_size": [
+        1760,
+        720
+      ],
+      "dpi": [
+        159.9946,
+        159.9946
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Historical reliability/histogram pair is byte-identical to saved original; blue reliability and counts visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell13_5.png",
+      "sha256": "1eb3240fc08d88c46fced0d1bf4a1577f21fdc86665953813d784b47ffd4b2d5",
+      "pixel_size": [
+        1760,
+        752
+      ],
+      "dpi": [
+        159.9946,
+        159.9946
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Historical raw/calibrated reliability pair is byte-identical to saved original; blue/gold series and counts fully visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell14_3.png",
+      "sha256": "2bece18c8fdabf7c3ac91cfeb814268958602e95ec1a568689897341ba8534c2",
+      "pixel_size": [
+        1440,
+        720
+      ],
+      "dpi": [
+        159.9946,
+        159.9946
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Historical 80-percent scenario confusion panels are byte-identical to saved original; blue scale and contrast-aware counts readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell20_2.png",
+      "sha256": "eb1c062e2af8d79575e05e3408ca737d1b525a099bb297e76145a2fad3b4ff06",
+      "pixel_size": [
+        1248,
+        504
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Added NN paired intervals match original08 appendix typography, gold style, size and 120 dpi."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell9_1.png",
+      "sha256": "62b24ceeaf2f442598e573e4b71c7ac581fabd6f9b5c73abf769325167eace69",
+      "pixel_size": [
+        1428,
+        570
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Two-panel bootstrap retains original blue/gold composition, explicitly labels primary mean-fold AP. Right-axis ticks are denser because the clean interval is narrower, but fully shown."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell11_0.png",
+      "sha256": "e7f35cf642a4fdda693b928a4147a76262a33700038d1f317f1570b879f59646",
+      "pixel_size": [
+        1428,
+        582
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Two-panel calibration/histogram matches original composition and palette with clean numerical values; legends and annotations readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell15_1.png",
+      "sha256": "dcdb4330497ebbd674b559eb666bfb97ebfc79093540dfb756525a889731c956",
+      "pixel_size": [
+        1848,
+        688
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Three-panel subgroup composition matches original; no interval truncation or text clipping observed."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell29_2.png",
+      "sha256": "425724122e3c0aa958bddb2c95e6ff8dc206d3756e23c3ed0894720aef4bd8f0",
+      "pixel_size": [
+        1145,
+        517
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Supplementary confusion panels use consistent Blues scale and contrast-aware counts/within-class percentages; titles and labels readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell31_0.png",
+      "sha256": "68992956a2e4bdf435c2a2bd09af53fd2a8962f4a7aceb0cb3a7607587fbe363",
+      "pixel_size": [
+        1523,
+        589
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Supplementary recall/workload intervals use fixed blue and recalibrated gold, with full text and target line."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell33_1.png",
+      "sha256": "2f86512258369a0e4f1ab46d713a4a244c2be137d0f174077cab6ceb5d3935bf",
+      "pixel_size": [
+        2173,
+        733
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Supplementary four-panel support diagnostics use the original subgroup typography, blue intervals, sparse crosses and wrapped counts; no text clipping."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell35_2.png",
+      "sha256": "32a66a8a31208c6c79dfdeb68a46c0d5e8ddba9c27f725b1463c59d3c207f1e0",
+      "pixel_size": [
+        1248,
+        504
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Added NN paired intervals match original08 and original14 appendices: gold squares/lines, 1248 by 504, 120 dpi and full labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell9_1.png",
+      "sha256": "62b24ceeaf2f442598e573e4b71c7ac581fabd6f9b5c73abf769325167eace69",
+      "pixel_size": [
+        1428,
+        570
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata bootstrap matches clean08 exactly: original blue/gold two-panel composition, mean-fold AP and paired interval labels fully shown."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell11_0.png",
+      "sha256": "e7f35cf642a4fdda693b928a4147a76262a33700038d1f317f1570b879f59646",
+      "pixel_size": [
+        1428,
+        582
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata calibration/histogram matches clean08 exactly; blue/gold meanings, legends, labels and clean numerics readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell15_1.png",
+      "sha256": "dcdb4330497ebbd674b559eb666bfb97ebfc79093540dfb756525a889731c956",
+      "pixel_size": [
+        1848,
+        688
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata age/sex/site checks match clean08 exactly; sparse crosses, undefined AP, positive-patient labels and all interval endpoints shown."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell29_2.png",
+      "sha256": "425724122e3c0aa958bddb2c95e6ff8dc206d3756e23c3ed0894720aef4bd8f0",
+      "pixel_size": [
+        1145,
+        517
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata decision confusion panels match clean08 exactly; class percentages and contrast-aware blue-scale text legible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell31_0.png",
+      "sha256": "68992956a2e4bdf435c2a2bd09af53fd2a8962f4a7aceb0cb3a7607587fbe363",
+      "pixel_size": [
+        1523,
+        589
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata recall/workload intervals match clean08 exactly; training target line, blue/gold methods and full labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell33_1.png",
+      "sha256": "2f86512258369a0e4f1ab46d713a4a244c2be137d0f174077cab6ceb5d3935bf",
+      "pixel_size": [
+        2173,
+        733
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Metadata supplementary four-panel subgroup support plot matches clean08 exactly; wrapped patient counts and undefined metrics readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell44_1.png",
+      "sha256": "32094a98764081dfe1d4ff168347f9bfa29aece8800a4ba76bcc8d566669eb56",
+      "pixel_size": [
+        1453,
+        577
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Image PR/ROC panels preserve original14 fold palette and solid/dashed fold lines, black secondary pooled curve and gray baseline. Full legends and labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell44_2.png",
+      "sha256": "ec72dd4b9adf4c375337a356a2f1e52c192095a21810fb09ef238998af878210",
+      "pixel_size": [
+        973,
+        553
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Image fold AP scatter preserves original14 five fold colours, numeric labels, gray prevalence crosses and blue dashed mean; no clipping."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell46_1.png",
+      "sha256": "06b80404175f21dd795b2884b07ac55fc7c105cd6aa6b96801b1691817fe629f",
+      "pixel_size": [
+        1333,
+        553
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Image reliability/histogram pair preserves original14 blue styling, gray dashed ideal line, ten-bin counts and all labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell46_2.png",
+      "sha256": "51e188a0b3be60abc9eb17f6760fbbcc499dd4cdb72bde512a61cd346c3224dd",
+      "pixel_size": [
+        539,
+        481
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Added raw-cutoff confusion panel clearly labels descriptive score >=0.5; counts and true-class percentages readable on consistent Blues scale."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell48_3.png",
+      "sha256": "8cb73a72e45deb9378df8dbcc8c906bfdd67f611aa6389df4fd75224651cce66",
+      "pixel_size": [
+        1333,
+        577
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Image raw/calibrated reliability pair preserves original14 blue/orange-gold colour meanings, fixed-bin counts and gray dashed ideal agreement; labels full."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell48_5.png",
+      "sha256": "18952b2d3a88f36d3967fdeb76957fc0a928ec85dbded399195a80e454d2813a",
+      "pixel_size": [
+        1093,
+        553
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Image training-selected 80-percent-recall scenario preserves original14 two-panel Blues composition, raw/calibrated labels and count contrast; clean recall80.3% clearly shown."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell51_0.png",
+      "sha256": "723dc81c25b394aeb3527b8811f4f33e209f96f7bdfedba47ab381c44813bfe9",
+      "pixel_size": [
+        1573,
+        674
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Matched fixed-model ROC/PR pair identifies same6706 images/422patients and secondary pooled curves; stable image blue, spline bright blue dashed and fixed NN charcoal; legends below both panels fully visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell51_1.png",
+      "sha256": "a8999f0a6b0813718aa9d5d2ec5a23dba57f0ba0942847a6e020bbdf2e2dccf8",
+      "pixel_size": [
+        1333,
+        541
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Matched fixed-model reliability pair identifies descriptive equal-count bins, full/enlarged range and uncalibrated scores; consistent line colours/styles and complete text."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell58_1.png",
+      "sha256": "a2185d35ad076479692040104cb1d80530dc3f5d29d62dc1169ead6725859776",
+      "pixel_size": [
+        1453,
+        493
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Combined primary mean-fold AP/ROC bars distinguish raw B0, fixed three-seed NN and fixed spline, using established model colours; long rotated labels remain fully within canvas."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell60_1.png",
+      "sha256": "6d1192f01355f522394fe83b73ffcbd5cbec79bf32c6ac785ce4a2971fc8170d",
+      "pixel_size": [
+        1453,
+        553
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Combined ROC/PR clearly labels pooled secondary interpretation; model colours and line styles consistent with51_0, all legend entries full."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell60_2.png",
+      "sha256": "270fb139a47bf62b44dd8f137bf8b4b0f1d6d425d1620751282460a567e42f8f",
+      "pixel_size": [
+        1453,
+        493
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Combined fold AP/ROC pair uses identical model colours/line styles and preserved outer-fold labels; legends visible without hiding the distinct fold trend."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell62_2.png",
+      "sha256": "9efcc18c25e00a8cf2d85a39d2fecb097cc3d2f67513479fde926d288273dee9",
+      "pixel_size": [
+        1630,
+        493
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Combined paired mean-fold AP/ROC interval panels show A-minus-B labels and dashed zero; long labels fully shown and all endpoints visible."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell64_1.png",
+      "sha256": "6d4248cecd4caecf38a381e3b0e19d1a59649ae026d0f58bb0ca8ae725583f9a",
+      "pixel_size": [
+        1093,
+        493
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Additional equal-patient/image weighting bars are explicitly labelled two predeclared weightings; blue/gold meanings and long model labels readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell66_4.png",
+      "sha256": "af9e0e231f42c8678495c21a2356d72a24b4f6acac6219afac261c7efcb147a1",
+      "pixel_size": [
+        1573,
+        493
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Combined training-only recall/workload horizontal bars identify fixed/calibrated procedures, use blue recall and gold workload; full labels and axes."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell68_1.png",
+      "sha256": "2874bedcca2773017a79d28caa0a83bf4ce2b3171fd7ada9cc0f0138a0d2c75e",
+      "pixel_size": [
+        1573,
+        553
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Additional site-availability AP/ROC checks clearly label descriptive interpretation; known/unknown and all model labels readable, established colours/styles retained."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell76_2.png",
+      "sha256": "32a66a8a31208c6c79dfdeb68a46c0d5e8ddba9c27f725b1463c59d3c207f1e0",
+      "pixel_size": [
+        1248,
+        504
+      ],
+      "dpi": [
+        119.9896,
+        119.9896
+      ],
+      "review_method": "direct view_image inspection",
+      "result": "passed",
+      "notes": "Added tuned NN interval appendix is byte-identical to clean08 appendix, with gold squares/lines, original08 typography,1248x504 size and120dpi; all labels full."
+    }
+  ],
+  "palette_composition_text": "passed: all39 available original08/original14/clean08/clean12 PNGs directly inspected",
+  "original_template_comparison": {
+    "original08": "Archived source checked: 120 dpi, font10, 1x2 bootstrap/calibration and 1x3 subgroup, blue #2563EB/#1E3A8A and gold #C58A00/#7C5E10. Clean composition retained.",
+    "original14": "All five main rendered PNGs byte-identical to saved historical raw/calibration figures. Main figures retain160 dpi; new NN appendix uses original08 120 dpi."
+  },
+  "scope_labels": {
+    "combined_extensions": "Explicitly identified in clean12 as beyond original templates; primary mean-fold metrics and secondary pooled/patient-weighted/subgroup views distinguished.",
+    "nn_extension": "All four notebooks explicitly identify additional tuned metadata NN experiment, prior-development caveat, conditional bootstrap uncertainty, and no transfer of fixed-model calibration/cutoffs.",
+    "final_test_boundary": "Historical vs deferred final fit and untouched reserved test explained."
+  },
+  "reported_clarity_issue": "Resolved by parent: clean08/12 opening now distinguishes current four-family tuning/current fixed NN reporting from preserved historical clean fixed artifacts.",
+  "execution_receipt": {
+    "path": "results/metadata_nn_tuning/v1/report_verification/execution_receipt.json",
+    "sha256": "467098a17d4db44bf6eb06130d8446602ad5acca2a4e24afa35063851c958375",
+    "status": "complete",
+    "reviewed_notebooks_errors": 0,
+    "training_started": false,
+    "reserved_test_loaded": false,
+    "annotation": "Execution receipt updated to record completed visual review; reviewed notebook and figure hashes remain unchanged."
+  },
+  "appendix_style_verification": {
+    "original08_to_original14_byte_identical": true,
+    "clean08_to_clean12_byte_identical": true,
+    "all_four_appendix_pixel_size": [
+      1248,
+      504
+    ],
+    "all_four_appendix_dpi_approximately": 120,
+    "palette": "#C58A00 gold lines and square estimates; #64748B dotted zero",
+    "typography": "original08 font10 and120dpi wrapper confirmed by shared composition and byte-identical within-cohort PNG pairs"
+  },
+  "completion": {
+    "reviewed_notebooks": 4,
+    "reviewed_figures": 39,
+    "clean12_reviewed_figures": 22,
+    "all_figures_inspected": true,
+    "no_clipped_titles_or_labels": true,
+    "scope_changes_explicitly_labelled": true,
+    "numerical_sources_not_changed_by_reviewer": true,
+    "open_issues": []
+  }
+}

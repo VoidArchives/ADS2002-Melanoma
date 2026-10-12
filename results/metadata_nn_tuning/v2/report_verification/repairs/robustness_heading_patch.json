@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-12T00:58:35.304512+00:00",
+  "scope": "Stage08 level-2 robustness appendix restoration; Markdown-only",
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/repairs/Subset_08_before_robustness_heading.ipynb",
+      "before_sha256": "4da58722441216f7dffd4d691bfe5ee6298ac3a642978c0bf0c372618b09a5d7",
+      "after_sha256": "452941c58aa4bb6eac110a6544a42cdfc2872af8536e2156055bddd67114f3e6",
+      "changed_markdown_cells": [
+        23
+      ],
+      "before_code_and_outputs_sha256": "c44f7a8021bb88995fd8364ba9b8ebf02a473db1fcae4d89a9766f5f98c5851c",
+      "after_code_and_outputs_sha256": "c44f7a8021bb88995fd8364ba9b8ebf02a473db1fcae4d89a9766f5f98c5851c",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": true
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/repairs/Subset_dedup_08_before_robustness_heading.ipynb",
+      "before_sha256": "4996fa2a161ea0b4a2dc3628c8eb29e64f5d9a158b8fdec10c51fd12ed4fda3e",
+      "after_sha256": "768a6afc009d14f970aa45b5135484048ad4f8b1bb360ec79ab9bd624ff55f02",
+      "changed_markdown_cells": [
+        35
+      ],
+      "before_code_and_outputs_sha256": "794612bde658d1be5926de4b2e0879a9b497e59846ea16b2c559f9715f25452c",
+      "after_code_and_outputs_sha256": "794612bde658d1be5926de4b2e0879a9b497e59846ea16b2c559f9715f25452c",
+      "code_and_outputs_unchanged": true,
+      "metadata_and_non_source_fields_unchanged": true,
+      "non_markdown_bytes_unchanged": true
+    }
+  ]
+}

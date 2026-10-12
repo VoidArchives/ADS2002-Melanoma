@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "comparison_complete": true,
+  "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "input_sha256": {
+    "results/dedup_v1/metadata/comparator_receipt.json": "88e74dc199675052be1c79065033cb2269de1f2e1f87cd49f4c9c583726e351e",
+    "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/summary.json": "d4df5f21cfabf2d1ecea167a6ab1f3b225a80315d572dce1d4806701f051d1fd",
+    "results/image_d1_runs/b0_nested_dedup_v1/outer_oof_predictions.csv": "58d858251bc514ad310b5986372b379eb634ebaec8e56b86d9341630f744487b",
+    "results/dedup_v1/metadata/metadata_calibrated_oof.csv": "891ed049a8542ebc0f8260ea0218ffe17cae092696e720c4119552467f3327b2",
+    "results/image_d1_runs/b0_nested_calibration_dedup_v1/outer_oof_predictions.csv": "84c4be6d06fb8a591e2d2816ea7d7c563ef2d3545ebc5aec11568b53fff47ced",
+    "results/image_d1_runs/b0_nested_calibration_dedup_v1/summary.json": "78261b4924f651ed504e594a36e8c82a0534e8856461d3b672acc249aa92abae"
+  },
+  "artifact_sha256": {
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/bootstrap_intervals.csv": "7ea75c86e3edea3c9d36389554f7e56c71f18c08572539e22056d8e64a5f7878",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/core_model_comparison.png": "a0f12d0d056b03f6c2d1416e943f7471788aec0ec123c05077b6ea19d4df6530",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/fixed_cutoff_05.csv": "df0daeb538bc12dd020254c36617a3bf6ded1d264406a37545a8a7a8b0280812",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/metrics.csv": "faf3c8b817370e22789bb0b9058db6f571a48f4b6a5de0f15cfc4df2eef5a209",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/model_comparison.csv": "b9c2fc31f376d25d3cd724385752d09e888b6e716a008a2ae08a9a9bab41ea40",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/paired_comparisons.csv": "343e75e952102a91c4a7c89eefb846c51771852eeb83ff764e1ef8a83a4bcd73",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/subgroups.csv": "b08cf45b30814dfc55c4cc7ef1fd2a12940f4b64b62e0c6aa2644f2d3c7e2ea0",
+    "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d/training_only_cutoff_metrics.csv": "51400a373ab7b1f005a15c2b305ca739b635beb7e1853a9145563481a6d7f057"
+  },
+  "source_sha256": {
+    "src/melanoma_detection/dedup_workflow.py": "bf59d7ec3b9b2ab13e51ca3d9af2d5977f94ff4753db836b0493b49528e4a65e"
+  },
+  "stages": {
+    "metadata_core": "complete",
+    "metadata_suite": "complete",
+    "image_raw": "complete",
+    "image_calibration": "complete"
+  },
+  "model_names": [
+    "metadata_nn_mean",
+    "spline_raw",
+    "nn_seed_42",
+    "nn_seed_142",
+    "nn_seed_242",
+    "dummy",
+    "categorical_logistic",
+    "random_forest",
+    "xgboost",
+    "ablation_sex",
+    "ablation_age",
+    "ablation_site",
+    "ablation_sex_age",
+    "ablation_sex_site",
+    "ablation_age_site",
+    "spline_tuned",
+    "random_forest_tuned",
+    "xgboost_tuned",
+    "spline_calibrated",
+    "ablation_all_features",
+    "b0_raw"
+  ],
+  "rows": 6706,
+  "primary_metric": "unweighted mean-fold AP; ROC-AUC also reported",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "output_directory": "results/dedup_v1/clean_workflow/evaluation/f1f946143399093d",
+  "reserved_test_loaded": false,
+  "limitation": "Development OOF; intervals condition on fitted models and omit training/selection variability. Secondary model/ablation comparisons are exploratory. No reserved-test evidence.",
+  "image_conclusion": "Clean B0 has the highest mean-fold AP among the three predeclared comparators (0.1316). Both paired AP intervals exclude zero in its favour. This supports reviewing B0 as the ranking choice on these development patients. Secondary tuned models and inner pilots do not automatically change the selected procedure. No reserved-test or clinical claim follows."
+}

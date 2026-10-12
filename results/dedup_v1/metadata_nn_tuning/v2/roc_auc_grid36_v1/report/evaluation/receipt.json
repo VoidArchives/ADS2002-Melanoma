@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "identity": {
+    "oof_sha256": "59a6062c13af61e637a4b5bd43f233a9b99bfe6d81d34e202fdb88eeb4dd58e0",
+    "bootstrap_repetitions": 2000,
+    "seed": 42,
+    "experiment_version": 2,
+    "selection_metric": "roc_auc",
+    "primary_metric": "roc_auc",
+    "evaluation_source_sha256": "564c7a0d04840440d0b36ffde72bcfba7821f5cf592af51d6c1eee58906e168f"
+  },
+  "output_sha256": {
+    "metrics.csv": "280222b911d5bc1ee4e771353c8e51376d7ac778e236161b50694f1115976433",
+    "absolute_intervals.csv": "33aac9df404adfaa65c1e8722bc05cb9d40964251f3153b39517f867610846c4",
+    "paired_comparisons.csv": "1079731f96a93793bc0047e1158bdff6f86883626bd681f3af3481b05263d9fc",
+    "reliability.csv": "93598b18fdc536e94e54a72e42a243d383109356ce80b626714bf327dc468e99"
+  },
+  "interpretation": "Additional ROC-AUC-selected development experiment after earlier results were examined; conditional patient bootstrap of saved OOF predictions, without retraining. No final-model replacement or reserved-test evaluation."
+}

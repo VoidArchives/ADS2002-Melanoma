@@ -1,0 +1,54 @@
+[
+  {
+    "backbone_lr": 0.0001,
+    "effective_batch": 64,
+    "epoch": 1,
+    "epoch_seconds": 21.99819009998464,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "peak_memory_bytes": 458011136,
+    "peak_reserved_memory_bytes": 4150263808,
+    "skipped_optimizer_updates": 7,
+    "successful_optimizer_updates": 50,
+    "train_loss": 0.22645879010177472
+  },
+  {
+    "backbone_lr": 0.0001,
+    "effective_batch": 64,
+    "epoch": 2,
+    "epoch_seconds": 29.92426259999047,
+    "head_lr": 0.001,
+    "microbatch": 64,
+    "peak_memory_bytes": 3023719936,
+    "peak_reserved_memory_bytes": 4150263808,
+    "skipped_optimizer_updates": 0,
+    "successful_optimizer_updates": 57,
+    "train_loss": 0.08531661057452378
+  },
+  {
+    "backbone_lr": 9.971704944519594e-05,
+    "effective_batch": 64,
+    "epoch": 3,
+    "epoch_seconds": 26.882156000006944,
+    "head_lr": 0.0009971704944519593,
+    "microbatch": 64,
+    "peak_memory_bytes": 3023719936,
+    "peak_reserved_memory_bytes": 4150263808,
+    "skipped_optimizer_updates": 0,
+    "successful_optimizer_updates": 57,
+    "train_loss": 0.08133076086264003
+  },
+  {
+    "backbone_lr": 9.887175604818206e-05,
+    "effective_batch": 64,
+    "epoch": 4,
+    "epoch_seconds": 25.025661399995442,
+    "head_lr": 0.0009887175604818205,
+    "microbatch": 64,
+    "peak_memory_bytes": 3023719936,
+    "peak_reserved_memory_bytes": 4150263808,
+    "skipped_optimizer_updates": 0,
+    "successful_optimizer_updates": 57,
+    "train_loss": 0.0769954867208133
+  }
+]

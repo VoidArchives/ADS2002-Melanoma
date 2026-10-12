@@ -1,0 +1,2 @@
+threshold,score_type,decision_rule,TP,FP,TN,FN,sensitivity,specificity,precision,flagged_fraction,recall,f1
+0.5,raw_base_probability,score >= threshold,9,32,6547,118,0.07086614173228346,0.9951360389116887,0.21951219512195122,0.006113927825827617,0.07086614173228346,0.10714285714285714

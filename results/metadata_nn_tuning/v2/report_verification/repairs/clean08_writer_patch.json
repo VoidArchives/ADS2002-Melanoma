@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-12T00:33:31.083166+00:00",
+  "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+  "before_sha256": "74ac452a6d0fdd3b342325f0bf00bf60399d36d981be15a921dcfb28f4df77e6",
+  "after_sha256": "0c9824c3e2c688e3156868147d52b4bf398e866c6f7ff655ec6789def6496e32",
+  "before_snapshot": "results/metadata_nn_tuning/v2/report_verification/repairs/clean08_before_v2_writer.ipynb",
+  "changed_code_cells": [
+    4,
+    24
+  ],
+  "outputs_unchanged": true,
+  "markdown_and_metadata_unchanged": true,
+  "historical_write_blocked_before_mutation": true,
+  "writer": "melanoma_detection.metadata_roc_historical.save_metadata_table",
+  "training_started": false,
+  "reserved_test_loaded": false
+}

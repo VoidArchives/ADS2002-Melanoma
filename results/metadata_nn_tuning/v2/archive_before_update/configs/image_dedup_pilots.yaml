@@ -1,0 +1,32 @@
+schema_version: 1
+run:
+  dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+  raw_run_id: b0_nested_dedup_v1
+  calibration_run_id: b0_nested_calibration_dedup_v1
+  raw_config: configs/image_nested_dedup.yaml
+  challenger_weights_cache: models/image_pretrained
+duration:
+  run_id: b0_duration_dedup_v1
+  session_minutes: 90
+challenger:
+  run_id: convnext_duration_dedup_v1
+  session_minutes: 120
+  microbatch: 16
+  recipes:
+    - {id: low_none, backbone_lr: 0.00001, loss_weight: none}
+    - {id: low_sqrt, backbone_lr: 0.00001, loss_weight: sqrt_ratio}
+    - {id: high_none, backbone_lr: 0.00003, loss_weight: none}
+    - {id: high_sqrt, backbone_lr: 0.00003, loss_weight: sqrt_ratio}
+protocol:
+  outer_training_fold: 0
+  inner_folds: [0, 1, 2]
+  endpoints: [12, 24]
+  screening_epochs: 6
+  schedule_epochs: 30
+  bootstrap_replicates: 2000
+  bootstrap_seed: 42
+  reporting_reserve_minutes: 10
+  initial_epoch_seconds: 70
+  epoch_safety_factor: 1.25
+  reserved_test_allowed: false
+  outer_predictions_allowed: false

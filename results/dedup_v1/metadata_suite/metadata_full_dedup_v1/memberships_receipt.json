@@ -1,0 +1,22 @@
+{
+  "compatibility_sha256": "764a0bf22b45a8bd654119eaa9a15200e53c60096b1d442a8347ed5dec32b965",
+  "status": "reconstructed_and_frozen",
+  "historical_membership_receipt_available": false,
+  "reconstruction_source": "data/subset/processed/train_folds.csv",
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.1",
+    "joblib": "1.5.3"
+  },
+  "original_row_order_used": true,
+  "split_on_retained_rows": false,
+  "seed_rule": "42 + outer_fold",
+  "output_sha256": {
+    "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/inner_memberships_original.csv": "22b4f00bf7647727f080a30d76c28e8c384f55f42f7cd95d9450af828b2d471f",
+    "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/inner_memberships_retained.csv": "4d26e6576658f89f92fa19231c00778172264c3d6d1e67772d72f03113b5485a",
+    "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/inner_patient_memberships.csv": "74b01374c338e5612cb730d253a4952031e8f33e317634a8493ec9679a152709"
+  }
+}

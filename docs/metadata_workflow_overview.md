@@ -1,5 +1,7 @@
 # Metadata modelling workflow
 
+The active original and clean reports now use [mean outer-fold ROC-AUC first](metadata_roc_auc_workflow.md), with mean-fold AP, log loss and Brier secondary and pooled summaries supporting. The new four-family v2 tuning experiment selects settings by inner-fold ROC-AUC. The numerical examples below describe **historical original procedures**, including AP-selected tuning, saved ablations, age illustrations, calibration and thresholds; they are retained for explanatory detail rather than relabelled as new ROC-selected findings. Read active stages07/08 and the v2 guide for current model-choice evidence. Report refreshes read saved artifacts and perform no new image inference, calibration transfer or final fit.
+
 The objective is to predict whether **one lesion image is malignant** using age, sex and anatomical site, the information recorded alongside the image. This branch does not examine image pixels. A patient may contribute several images, so predictions concern images while splitting and uncertainty calculations keep patients together.
 
 The completed workflow is:

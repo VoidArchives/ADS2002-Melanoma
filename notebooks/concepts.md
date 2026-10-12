@@ -1,5 +1,12 @@
 # Concepts used in the notebooks
 
+**Current v2 reporting contract.** Unweighted mean outer-fold **ROC-AUC** is the primary ranking summary; mean-fold AP, pooled metrics, log loss and Brier score remain supporting measures. Each fold has equal weight, and patient-bootstrap intervals resample whole patients within folds. A single selected inner split is exploratory and cannot supply a five-fold estimate. Scores describe individual images; patient grouping does not turn them into patient-level diagnoses.
+
+The metadata v2 experiment selects settings by inner ROC-AUC. Existing image recipes, checkpoints, durations and transformation-admission gates retain their historical AP-based rules. Reporting their saved ROC-AUC does not retrospectively make them ROC-selected. Calibration and recall cutoffs remain attached to their original procedures. All active report notebooks read saved artifacts; they start no training, image smoke or checkpoint inference and never open the reserved test. Final fitting and independent testing wait until the entire procedure is frozen.
+
+Presentation snapshots are preserved under `results/metadata_nn_tuning/v2/archive_before_update/`. New image figures/tables use `results/metadata_nn_tuning/v2/report_verification/image_reports/<condition>/<stage>/`; current metadata assessment tables and figures use the explicit v2 `roc_auc_grid36_v1` run's `report/` directory. v1 AP results and historical image outputs retain their original identities.
+
+
 Use this page when a term is unfamiliar. Each notebook explains the terms needed
 for its own task; you can read its explanation first and return here for context.
 
@@ -56,3 +63,10 @@ be wrong, and a larger SD does not mean a larger melanoma risk.
 **Coverage** is the fraction retained by the model. Compare referral rankings at
 the same fraction using the same underlying scores. Lower error in the retained
 group does not measure what happens to referred images or prove that review helps.
+
+
+## Selection, reporting and freezing
+
+**Selection metric** chooses a procedure using inner-training validation groups. **Reporting metric** assesses its saved predictions on outer-held-out patients. They need not be identical: the preserved image procedure used AP for its epochs, while the current reports lead with ROC-AUC. Changing a displayed metric does not change historical training. The new metadata experiment explicitly uses ROC-AUC for its inner search; network duration still uses stopping binary cross-entropy loss.
+
+**Freeze the procedure** means record the duplicate policy, patient splits, features, preprocessing, search grid and objective, seed averaging, stopping/refit rules, calibration and decision cutoff before final testing. Fit the chosen procedure using development data, then evaluate the reserved test once. If a rule changes after that result is seen, the test has entered development. No current notebook performs that final fit or test.

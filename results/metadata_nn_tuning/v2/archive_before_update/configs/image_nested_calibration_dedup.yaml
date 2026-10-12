@@ -1,0 +1,35 @@
+schema_version: 1
+run:
+  run_id: b0_nested_calibration_dedup_v1
+  output_dir: results/image_d1_runs
+  reference_run_id: b0_nested_dedup_v1
+  reference_config: configs/image_nested_dedup.yaml
+  reference_session: results/image_d1_runs/b0_nested_dedup_v1/session.json
+calibration:
+  protocol: fixed_duration_training_oof_sigmoid_v1
+  outer_folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  inner_folds: 3
+  duration_source: median_three_inner_best_epochs
+  method: regularised_sigmoid_on_logits
+  C: 1.0
+  logit_clip: 1.0e-07
+  reject_nonpositive_slope: true
+  target_recall: 0.8
+  threshold_source: training_only_fixed_duration_oof
+  threshold_scores:
+  - raw
+  - calibrated
+  failure_policy: preserve_raw_and_do_not_promote_calibrated
+  threshold_purpose: academic_recall_scenario
+budget:
+  source: reference_session_only
+  allow_deadline_extension: false
+evaluation:
+  reserved_test_allowed: false
+  complete_outer_folds_required: 5
+  bootstrap_replicates: 2000

@@ -1,0 +1,17 @@
+{
+  "completed_stages": [
+    "development_audit",
+    "saved_sensitivity",
+    "metadata",
+    "raw_b0",
+    "raw_reporting",
+    "image_calibration",
+    "calibration_reporting"
+  ],
+  "phase": "clean_three_condition",
+  "status": "incomplete",
+  "updated_utc": "2026-10-05T12:01:40.582886+00:00",
+  "test_set_loaded": false,
+  "exit_code": 1,
+  "error": "RuntimeError: clean_three_condition stopped with code 1; queue will not advance."
+}

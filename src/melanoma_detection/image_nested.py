@@ -100,15 +100,29 @@ def load_config(path):
     return config
 
 
-def prepare_outer(frame, config, fold, image_audit):
+def prepare_outer(frame, config, fold, image_audit, *, preserved_memberships=None, dataset_identity=None):
     """Construct this fold's training identity without any held-out outcomes."""
     if fold not in range(5):
         raise ValueError("Outer fold must be 0 through 4.")
     pool = frame.loc[frame.fold != fold].copy().reset_index(drop=True)
     outer = frame.loc[frame.fold == fold].copy().reset_index(drop=True)
     pool["inner_fold"] = -1
-    splitter = StratifiedGroupKFold(n_splits=3, shuffle=True, random_state=config["training"]["seed"])
-    for inner_fold, (fit_index, valid_index) in enumerate(splitter.split(pool, pool.target, pool.patient_id)):
+    if preserved_memberships is not None:
+        required = ["image_name", "patient_id", "fold", "target"]
+        expected = pool[required].sort_values("image_name").reset_index(drop=True)
+        recorded = preserved_memberships[required].sort_values("image_name").reset_index(drop=True)
+        pd.testing.assert_frame_equal(expected, recorded, check_dtype=False)
+        if not preserved_memberships.image_name.is_unique:
+            raise ValueError("Preserved inner memberships contain duplicate image IDs.")
+        pool["inner_fold"] = pool.image_name.map(preserved_memberships.set_index("image_name").inner_fold)
+        if pool.inner_fold.isna().any() or set(pool.inner_fold) != {0, 1, 2}:
+            raise ValueError("Preserved inner memberships do not cover the training pool.")
+        splits = [(pool.index[pool.inner_fold.ne(inner)].to_numpy(), pool.index[pool.inner_fold.eq(inner)].to_numpy())
+                  for inner in range(3)]
+    else:
+        splitter = StratifiedGroupKFold(n_splits=3, shuffle=True, random_state=config["training"]["seed"])
+        splits = splitter.split(pool, pool.target, pool.patient_id)
+    for inner_fold, (fit_index, valid_index) in enumerate(splits):
         fit, validation = pool.iloc[fit_index], pool.iloc[valid_index]
         if fit.target.nunique() != 2 or validation.target.nunique() != 2:
             raise ValueError(f"Outer {fold}/inner {inner_fold} requires both classes.")
@@ -132,6 +146,9 @@ def prepare_outer(frame, config, fold, image_audit):
                 "training_pool_memberships": pilot._memberships(pool),
                 "training_pool_images": [row for row in image_audit["rows"] if row["image_id"] in ids],
                 "source_sha256": sources, "runtime": pilot._runtime_identity()}
+    if dataset_identity is not None:
+        sources["src/melanoma_detection/development_dataset.py"] = file_sha256(Path(__file__).with_name("development_dataset.py"))
+        identity["dataset_identity"] = copy.deepcopy(dataset_identity)
     manifest = {"schema_version": 1, "run_id": config["run"]["run_id"], "protocol": PROTOCOL,
                 "outer_fold": fold, "compatibility_sha256": _hash_json(identity), "compatibility": identity,
                 "held_out_memberships": pilot._memberships(outer, targets=False)}
@@ -152,15 +169,24 @@ def prepare_nested(project_root, config, *, audit_images=True):
         headers = next(csv.reader(handle))
     if len(set(headers)) != len(headers):
         raise ValueError("Duplicate CSV columns.")
-    frame = pilot._validate_fold_frame(pd.read_csv(csv_path, usecols=["image_name", "patient_id", "target", "fold"],
-                                                 dtype=str), 0)
+    dataset_identity = None
+    memberships = {}
+    if run.get("dataset_manifest"):
+        from .development_dataset import load_development_dataset, load_preserved_inner_memberships
+        variant, dataset_identity = load_development_dataset(root, run["dataset_manifest"])
+        frame = pilot._validate_fold_frame(variant[["image_name", "patient_id", "target", "fold"]], 0)
+        memberships = {fold: load_preserved_inner_memberships(root, dataset_identity, fold) for fold in range(5)}
+    else:
+        frame = pilot._validate_fold_frame(pd.read_csv(csv_path, usecols=["image_name", "patient_id", "target", "fold"],
+                                                     dtype=str), 0)
     if not frame.groupby("fold").target.nunique().eq(2).all():
         raise ValueError("Every outer fold requires both classes.")
     frame["image_path"] = frame.image_name.map(lambda name: image_dir / f"{name}.jpg")
     # Image-content auditing cannot depend on any held-out outcomes. Training
     # duplicate-label conflicts are checked separately inside prepare_outer.
     audit = pilot._audit_images(frame.assign(target=0), decode=audit_images)
-    folds = {fold: prepare_outer(frame, config, fold, audit) for fold in range(5)}
+    folds = {fold: prepare_outer(frame, config, fold, audit, preserved_memberships=memberships.get(fold),
+                                dataset_identity=dataset_identity) for fold in range(5)}
     identity = {"config": copy.deepcopy(config), "fold_identities": {
         str(fold): prepared["fold_manifest"]["compatibility_sha256"] for fold, prepared in folds.items()},
         "images_audited": audit_images}
@@ -171,6 +197,8 @@ def prepare_nested(project_root, config, *, audit_images=True):
                 "evaluation_status": "development_outer_oof",
                 "scope": "B0 recipe screening and duration confirmation; architecture and transformation selection excluded",
                 "qualification": "Development folds influenced earlier pilots, including an archived fold-0 prototype. OOF estimates this declared bounded procedure, not untouched final-test generalisation."}
+    if dataset_identity is not None:
+        manifest["dataset_identity"] = dataset_identity
     return {"root": root, "config": config, "frame": frame, "folds": folds, "image_audit": audit,
             "audit": audit, "run_dir": output / run["run_id"], "manifest": manifest}
 

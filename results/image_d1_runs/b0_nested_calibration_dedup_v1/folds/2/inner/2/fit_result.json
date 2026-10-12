@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "best_epoch": null,
+  "best_metrics": null,
+  "initial_model_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "initial_state_sha256": "322a8f6bdb68d53ae444975c525389e9d75ade0e7b73e33502a6b25927d2fcc1",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.2316964660523598,
+      "head_lr": 0.001,
+      "backbone_lr": 0.0001,
+      "epoch_seconds": 21.706087099999422,
+      "peak_memory_bytes": 458011136,
+      "peak_reserved_memory_bytes": 4150263808,
+      "microbatch": 64,
+      "skipped_optimizer_updates": 7,
+      "successful_optimizer_updates": 50,
+      "effective_batch": 64
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.0862156547547978,
+      "head_lr": 0.001,
+      "backbone_lr": 0.0001,
+      "epoch_seconds": 29.310367900005076,
+      "peak_memory_bytes": 3023719936,
+      "peak_reserved_memory_bytes": 4150263808,
+      "microbatch": 64,
+      "skipped_optimizer_updates": 0,
+      "successful_optimizer_updates": 57,
+      "effective_batch": 64
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.07520816260503317,
+      "head_lr": 0.0009971704944519593,
+      "backbone_lr": 9.971704944519594e-05,
+      "epoch_seconds": 26.490060099982657,
+      "peak_memory_bytes": 3023719936,
+      "peak_reserved_memory_bytes": 4150263808,
+      "microbatch": 64,
+      "skipped_optimizer_updates": 0,
+      "successful_optimizer_updates": 57,
+      "effective_batch": 64
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.0790457411257921,
+      "head_lr": 0.0009887175604818205,
+      "backbone_lr": 9.887175604818206e-05,
+      "epoch_seconds": 25.017451400024584,
+      "peak_memory_bytes": 3023719936,
+      "peak_reserved_memory_bytes": 4150263808,
+      "microbatch": 64,
+      "skipped_optimizer_updates": 0,
+      "successful_optimizer_updates": 57,
+      "effective_batch": 64
+    }
+  ],
+  "latest_checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_calibration_dedup_v1\\folds\\2\\inner\\2\\latest.pt",
+  "best_checkpoint": null,
+  "microbatch": 64,
+  "elapsed_seconds": 104.01904569999897,
+  "final_checkpoint": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\results\\image_d1_runs\\b0_nested_calibration_dedup_v1\\folds\\2\\inner\\2\\latest.pt",
+  "final_epoch": 4,
+  "completed_epochs": 4,
+  "training_purpose": "fixed_duration_refit"
+}

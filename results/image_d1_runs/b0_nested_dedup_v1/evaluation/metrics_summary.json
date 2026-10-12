@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "complete_five_fold_evaluation",
+  "n_images": 6706,
+  "n_patients": 422,
+  "n_positive": 127,
+  "prevalence": 0.018938264240978227,
+  "outer_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "primary_metric": "unweighted mean outer-fold average precision",
+  "primary_mean_fold_average_precision": 0.1315697185959312,
+  "primary_mean_fold_ap_ci95": [
+    0.09469695967093554,
+    0.21885437153214715
+  ],
+  "mean_fold_metrics": {
+    "average_precision": 0.1315697185959312,
+    "roc_auc": 0.8308007809467753,
+    "log_loss": 0.09911577730320412,
+    "brier": 0.01963708498942305
+  },
+  "fold_metric_standard_deviation": {
+    "average_precision": 0.041567624888402786,
+    "roc_auc": 0.04257173805071062,
+    "log_loss": 0.022348870610296848,
+    "brier": 0.001649914508393447
+  },
+  "pooled_metrics_secondary": {
+    "average_precision": 0.11655431263482104,
+    "roc_auc": 0.8016810826143312,
+    "log_loss": 0.09935308214113671,
+    "brier": 0.01963355345122638
+  },
+  "raw_threshold_05": {
+    "threshold": 0.5,
+    "score_type": "raw_base_probability",
+    "decision_rule": "score >= threshold",
+    "TP": 9,
+    "FP": 32,
+    "TN": 6547,
+    "FN": 118,
+    "sensitivity": 0.07086614173228346,
+    "specificity": 0.9951360389116887,
+    "precision": 0.21951219512195122,
+    "flagged_fraction": 0.006113927825827617,
+    "recall": 0.07086614173228346,
+    "f1": 0.10714285714285714
+  },
+  "bootstrap_replicates": 2000,
+  "valid_bootstrap_replicates": 2000,
+  "rejected_single_class_bootstrap_replicates": 0,
+  "bootstrap_seed": 42,
+  "bootstrap_method": "95% percentile patient-cluster bootstrap, resampling patients within each outer fold. All images of a sampled patient stay together. Single-class draws in any fold are excluded from all metrics and comparisons. Intervals are conditional on these fitted models, selected recipes, fixed folds and observed fold memberships; no retraining or recipe reselection is performed. They omit training variability and prior pilot adaptivity.",
+  "development_caveat": "Development OOF evidence after earlier architecture, augmentation and recipe pilots; fold 0 also has archived exploratory results. Independent outer prediction within this run does not erase earlier adaptation to this development dataset. The locked test remains necessary after decisions are frozen.",
+  "score_interpretation": "Raw sigmoid scores; class weighting can distort probability scale. No fitted calibration or tuned decision cutoff.",
+  "pooled_caveat": "Pooled AP mixes scores from independently fitted models; mean fold AP is primary because fold score scales may differ.",
+  "comparator_models": [
+    "metadata_mlp_mean",
+    "metadata_spline_raw"
+  ],
+  "reserved_test_loaded": false
+}

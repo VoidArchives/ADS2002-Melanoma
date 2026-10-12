@@ -1,0 +1,77 @@
+{
+  "status": "complete",
+  "condition": "original",
+  "run_id": "nn_grid36_v1",
+  "validation": "In-memory mutations of copies of actual completed artifacts; saved run artifacts were not changed",
+  "checks_passed": 9,
+  "checks": [
+    {
+      "mutation": "candidate hidden_units",
+      "change": "First candidate hidden_units changed from 32 to 16",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "candidate recipe_order",
+      "change": "First candidate recipe_order changed from 0 to 99",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "candidate selected flag",
+      "change": "First candidate selected flag changed from False to True",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "selected parameter",
+      "change": "Outer-fold 0 selected dropout changed from 0.0 to 0.4",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "selection margin",
+      "change": "Outer-fold 0 selection_margin changed to 1",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "fit total",
+      "change": "First fit-log fits counter changed from 1 to 2",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "NN repeated/missing seed phase",
+      "change": "First fit-log base_seed changed from 42 to 142, duplicating a seed-phase and omitting another",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "membership identity",
+      "change": "First inner-membership patient_id changed to wrong_patient",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    },
+    {
+      "mutation": "wrong inner assessment group",
+      "change": "Compared outer-fold 0 inner-group 0 identity rows against saved inner-group 1 identities",
+      "expected": "ValueError rejection",
+      "observed": "ValueError rejection",
+      "passed": true
+    }
+  ],
+  "created_utc": "2026-10-11T14:34:49.092234+00:00",
+  "verifier_source_sha256": "dd661fbdaefb18025d238ac3c4f2f1dae02d2fbee6bfc9581b0d4ad08ec35e3c",
+  "completed_run_receipt_sha256": "93be6547c13e88205a61ebc849adcb3bd0db520fcf4f2313d60f1d9e650af7ca",
+  "training_started": false,
+  "reserved_test_loaded": false
+}

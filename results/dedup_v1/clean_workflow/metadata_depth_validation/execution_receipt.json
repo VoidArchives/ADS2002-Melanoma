@@ -1,0 +1,32 @@
+[
+  {
+    "notebook": "04_metadata_baselines.ipynb",
+    "sections": 7,
+    "figures": 5,
+    "training": false
+  },
+  {
+    "notebook": "05_metadata_models.ipynb",
+    "sections": 9,
+    "figures": 7,
+    "training": false
+  },
+  {
+    "notebook": "06_metadata_neural_network.ipynb",
+    "sections": 7,
+    "figures": 5,
+    "training": false
+  },
+  {
+    "notebook": "07_metadata_tuning.ipynb",
+    "sections": 7,
+    "figures": 5,
+    "training": false
+  },
+  {
+    "notebook": "08_metadata_robustness.ipynb",
+    "sections": 8,
+    "figures": 5,
+    "training": false
+  }
+]

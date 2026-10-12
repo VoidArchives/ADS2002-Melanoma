@@ -1,0 +1,6 @@
+{
+  "selected_epochs": 19,
+  "stop_log_loss": 0.09490122646093369,
+  "attempted_stopping_epochs": 31,
+  "elapsed_seconds": 0.22636460000649095
+}

@@ -1,0 +1,32 @@
+{
+  "dataset_identity": {
+    "variant": "original",
+    "dataset_manifest": null,
+    "dataset_manifest_sha256": null,
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "837d008754872706f5ac4be9b1402bee7913d1ba95c4e010d26757c0389594d7",
+    "dataset_identity": "fe16b01d7297a18fbcac27bfd4e4f30f27799a7a59b1612c126b97ffdf85435f",
+    "membership_sha256": {},
+    "preserved_inner_memberships": {}
+  },
+  "specification": {
+    "features": [
+      "age_approx",
+      "sex",
+      "anatom_site_general_challenge"
+    ],
+    "encoding": "age, sex and site as strings; train-only one-hot",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "random_state": 42,
+    "dummy": "outer-training malignant prevalence",
+    "outer_folds": 5
+  },
+  "source_sha256": {
+    "src/melanoma_detection/metadata_roc_baselines.py": "25b0000889ea99add58b36dc408261c558b2c72078dc995e392beb8c3e8f50eb",
+    "src/melanoma_detection/dedup_metadata_suite.py": "76c84796c22917f2963af3cc79271d9aa229035dd2a4a2bf124a6af8c744c6f4"
+  },
+  "historical_protocol_sha256": "2f7ec36a2c73f5091049ef5eb5af8c9ae5f52013ea72dc46d79013d8195dd0e7",
+  "compatibility_sha256": "911965fc125a47f0116b8a5f415ce495e5d0689c36972e87b426efa4fcb24dd5"
+}

@@ -1,0 +1,49 @@
+schema_version: 1
+run:
+  run_id: architecture_pilot_3h_v1
+  mode: architecture_pilot
+  output_dir: results/image_d1_runs
+  pilot_config: configs/image_model.yaml
+  reference_run: results/image_d1_runs/b0_pilot_v1
+  session_file: results/image_d1_runs/architecture_pilot_3h_v1/session.json
+  weights_cache: models/image_pretrained
+model:
+  weights: IMAGENET1K_V1
+  image_size: 224
+  dropout: 0.2
+  augmentation: weak
+  preprocessing: none
+  interpolation: bilinear
+training:
+  effective_batch: 64
+  min_microbatch: 4
+  head_lr: 0.001
+  weight_decay: 0.0001
+  warmup_epochs: 1
+  schedule_epochs: 30
+  min_lr_factor: 0.1
+  gradient_clip: 1.0
+  amp: true
+  num_workers: 0
+  seed: 42
+pilot:
+  epochs: 6
+  budget_minutes: 50
+  initial_epoch_reserve_seconds: 180
+  checkpoint_reserve_seconds: 30
+  ap_tie_tolerance: 0.0001
+families:
+  densenet121:
+    microbatch: 32
+    backbone_lr: [0.00003, 0.0001]
+  convnext_tiny:
+    microbatch: 16
+    backbone_lr: [0.00001, 0.00003]
+recipe_order: [low_none, low_sqrt, high_none, high_sqrt]
+evaluation:
+  status: exploratory_inner_validation_not_outer_oof
+  classification_threshold: 0.5
+  calibration_fitting: deferred_training_only_oof
+  tuned_thresholds: deferred_training_only_oof
+  outer_predictions_allowed: false
+  reserved_test_allowed: false

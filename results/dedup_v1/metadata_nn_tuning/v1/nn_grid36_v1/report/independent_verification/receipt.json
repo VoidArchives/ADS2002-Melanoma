@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "condition": "dedup_v1",
+  "candidate_ensembles_checked": 540,
+  "candidates_checked": 180,
+  "outer_predictions": 6706,
+  "outer_folds": 5,
+  "patients": 422,
+  "executed_fits": 3270,
+  "reused_fits": 690,
+  "fit_log_checks": {
+    "totals": {
+      "fits": 3270,
+      "reused_fits": 690,
+      "executed_this_invocation": 3270
+    },
+    "nn_stage_phases": {
+      "nn_inner": {
+        "stopping": 1620,
+        "refit": 1620
+      },
+      "nn_outer_tuned": {
+        "stopping": 15,
+        "refit": 15
+      }
+    },
+    "classical_or_reused_phases": {
+      "reused_fixed_nn": 30,
+      "reused_classical": 660
+    }
+  },
+  "inner_prediction_memberships_checked": 1620,
+  "ensemble_scoring": "AP after equal probability averaging, with unweighted inner-fold mean",
+  "selection_and_training_source_checks": "passed",
+  "reserved_test_loaded": false,
+  "recomputed_scores_sha256": "657a247f12f29b0eb72a9b5dfe38f508fd3a8aa5ab8870a4fc3eb9d75f789680"
+}

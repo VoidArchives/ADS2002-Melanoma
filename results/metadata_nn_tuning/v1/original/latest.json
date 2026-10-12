@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "condition": "original",
+  "run_id": "nn_grid36_v1",
+  "receipt_path": "results/metadata_nn_tuning/v1/original/nn_grid36_v1/receipt.json",
+  "receipt_sha256": "93be6547c13e88205a61ebc849adcb3bd0db520fcf4f2313d60f1d9e650af7ca"
+}

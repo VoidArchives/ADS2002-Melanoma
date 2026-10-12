@@ -1,0 +1,21 @@
+model,cutoff,role,n_flagged,TP,FP,TN,FN,sensitivity,specificity,precision,flagged_fraction
+metadata_nn_mean,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+spline_raw,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_42,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_142,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_242,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+dummy,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+categorical_logistic,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+random_forest,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+xgboost,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_age,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_site,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex_age,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex_site,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_age_site,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+spline_tuned,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+random_forest_tuned,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+xgboost_tuned,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+spline_calibrated,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0
+ablation_all_features,0.5,fixed descriptive diagnostic,0,0,0,6579,127,0.0,1.0,,0.0

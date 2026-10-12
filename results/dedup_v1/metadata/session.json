@@ -1,0 +1,105 @@
+{
+  "created_at_utc": "2026-10-05T07:44:06.572435+00:00",
+  "compatibility_sha256": "da31ab577785789e201061923c8abce12db9ba44574874736b0bf9051b89cf64",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "specification": {
+    "neural_network": {
+      "base_seeds": [
+        42,
+        142,
+        242
+      ],
+      "hidden_units": 32,
+      "dropout": 0.2,
+      "max_epochs": 100,
+      "min_epochs": 10,
+      "patience": 12,
+      "minimum_improvement": 1e-05,
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "loss": "unweighted BCEWithLogitsLoss",
+      "device": "CPU",
+      "threads": 4,
+      "training_seed_rule": "base_seed + outer_fold",
+      "stop_fold_rule": "(outer_fold + 1 + run_index) % 5",
+      "ensemble": "equal mean of all three prescribed seeds",
+      "epoch_selection": "minimum stopping-fold BCE within patient-disjoint outer training pool",
+      "refit": "new preprocessor, network, optimiser and scheduler-free fixed epoch fit",
+      "features": [
+        "age_approx",
+        "sex",
+        "anatom_site_general_challenge"
+      ]
+    },
+    "spline": {
+      "model": "fixed_spline_logistic",
+      "features": [
+        "age_approx",
+        "sex",
+        "anatom_site_general_challenge"
+      ],
+      "age_knots": 4,
+      "age_degree": 3,
+      "age_knot_placement": "quantile",
+      "logistic_C": 1.0,
+      "class_weight": null,
+      "seed": 42,
+      "primary_probability": "raw",
+      "threshold_rule": "highest cutoff attaining training OOF recall",
+      "target_recall": 0.8,
+      "threshold_purpose": "academic sensitivity scenario; not a clinical target",
+      "calibration_comparator": "logistic recalibration of training-only OOF logits, C=1.0",
+      "metric_unit": "image/lesion",
+      "validation_and_bootstrap_unit": "patient"
+    },
+    "spline_calibration": true,
+    "target_recall": 0.8,
+    "patient_membership_source": {
+      "path": "data/subset/processed/train_folds.csv",
+      "sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+      "neural_stopping": "Original outer-fold assignments; stop_fold=(outer_fold+1+run_index)%5; retained mask only",
+      "spline_inner_calibration": "Four remaining original outer folds; retained mask only",
+      "splitters_rerun": false
+    }
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "torch": "2.14.0+cu130",
+    "joblib": "1.5.3"
+  },
+  "config_sha256": "7dc6f15fc924b531252c138066da480974d24d307c8124e959b6328b7b570c7f",
+  "source_sha256": {
+    "src/melanoma_detection/dedup_metadata.py": "80c3fab1be9c6430f07c377cec15522505aec0dd1076eecb2efa70962673dfbb",
+    "src/melanoma_detection/development_dataset.py": "9ba76d675b7366f23847dd5f6ee9dfe27e04a2f3d95cd8e38ebbcd85d22f8c89",
+    "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "scripts/run_dedup_metadata.py": "e1633b78a117484f09627f7b67fb7522baee0913b79b28de3f298325a346ae5a",
+    "notebooks/Subset/06_metadata_neural_network.ipynb": "50a60e97b1fe66ac5986a93e0fc904cc2e13528162164247484d04cd36d3b239"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "condition": "original",
+  "dataset_identity": {
+    "variant": "original",
+    "dataset_manifest": null,
+    "dataset_manifest_sha256": null,
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "837d008754872706f5ac4be9b1402bee7913d1ba95c4e010d26757c0389594d7",
+    "dataset_identity": "fe16b01d7297a18fbcac27bfd4e4f30f27799a7a59b1612c126b97ffdf85435f",
+    "membership_sha256": {},
+    "preserved_inner_memberships": {}
+  },
+  "compatibility_sha256": "911965fc125a47f0116b8a5f415ce495e5d0689c36972e87b426efa4fcb24dd5",
+  "specification": {
+    "features": [
+      "age_approx",
+      "sex",
+      "anatom_site_general_challenge"
+    ],
+    "encoding": "age, sex and site as strings; train-only one-hot",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "random_state": 42,
+    "dummy": "outer-training malignant prevalence",
+    "outer_folds": 5
+  },
+  "source_sha256": {
+    "src/melanoma_detection/metadata_roc_baselines.py": "25b0000889ea99add58b36dc408261c558b2c72078dc995e392beb8c3e8f50eb",
+    "src/melanoma_detection/dedup_metadata_suite.py": "76c84796c22917f2963af3cc79271d9aa229035dd2a4a2bf124a6af8c744c6f4"
+  },
+  "historical_protocol_sha256": "2f7ec36a2c73f5091049ef5eb5af8c9ae5f52013ea72dc46d79013d8195dd0e7",
+  "executed_fits": 5,
+  "executed_fits_this_invocation": 5,
+  "reused_fits": 0,
+  "dummy_fits": 0,
+  "rows": 6864,
+  "patients": 422,
+  "reserved_test_loaded": false,
+  "final_model_fitted": false,
+  "output_sha256": {
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_audit.csv": "e46c0c12b688ff0192d6520aa563dc0862a1ee74eb467288003f6a2f4751bd96",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/metrics.csv": "339c07796b5e0c8ead998139c8ac19de7926333c57bd85d1409ed75d25c2b833",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/oof.csv": "ccc7ed89526a94fa3b3287682704b13fe98975729aac16544e5bbe13c7cdfed6",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/roles.csv": "fe1d6170cc584d3f7991fd69eb05824caa6a024cf676d7bd51cd2c4946f3ae96",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/session.json": "93e85cb96f2311ae229b9b259f08fbbc4c0cbb9dd5b7ada00c65b9e7278049a6",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_0/model.joblib": "a28aef381b37305cdc632da4aee626b0f21cc51e5fcb2f78f54e3d13c6c69649",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_0/predictions.csv": "c45a0f2d63daf3557e1b6253674b8ab2a04ffeafd33f30df64f0a174e5e2463b",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_0/roles.csv": "2ca952b924165154ef29ab63a60f42253046cc1fcdb375763ec1c6837a275948",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_1/model.joblib": "aadaedfe394dd9f894724bfef7e7f6a552bf3e0974909bc5c87e9eaa5073ffe7",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_1/predictions.csv": "3985ebcbc8c6d465273090c34db4793e38203aaa106f110f907b9a227673a2e4",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_1/roles.csv": "0ade9d7c4d2450a164ccfcc13b4104881429d6f585465f8e7e5713e611cbbad8",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_2/model.joblib": "9edca465bdc8b3e5bb404c7979d2a33c767617752dbaf5dbc97d3bb1a6b1a88e",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_2/predictions.csv": "07d8531a0d789489c18b24a2e1fc7c78b26ecf040ebb5663acfd79ddc83d62ca",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_2/roles.csv": "d72bb7912559e1f716d87753af66b78bd925ba4f87056bbafa29347cfadba5f4",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_3/model.joblib": "7c631751334bfdd3f8b82392412e6f399987fb2b1495acdad4eaac1c434c16a3",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_3/predictions.csv": "023d1cbbbd3ae1806dae021e9f4197e3a2e3a718b36c77003f0ea19cad88aa56",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_3/roles.csv": "1fc164700ddf8e492d9509fe09e16e878e18786dc5580913002cdb290acff671",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_4/model.joblib": "54dabb86dc9f338c2fa81225ec6df69645f663bf3de0633e3b3875f761afe079",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_4/predictions.csv": "248b62a43f4dc48cd487c3400cd1d8a323ecc6b05afe3ae751a6b0628ce0739d",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_4/roles.csv": "e4443fb04e229c7b846946fc069b35e426a36dc36b7398dede49de03f7f5be2f",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_0/receipt.json": "cde13983ee6f68e22e9c0c4aec13f3aa7559a8b168c344f9e67661f640aa16d4",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_1/receipt.json": "354998d25a18ecf26062c46bfe06deef78bffbb8b9a6156ce4ba05c77763bfd7",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_2/receipt.json": "177aed04f6ca60900540c1da55440c074e496fe52d21d1d96e1d8c913198b282",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_3/receipt.json": "4f1cad7e96e5d9d812f5454ed0983fa0863d5b2ce09b6a611ac570d3009635c7",
+    "results/metadata_nn_tuning/v2/baseline_diagnostics/original_baseline_v1/fold_4/receipt.json": "3692ca2b9362f10a593114ebe38b97f4e7f7c906dc7965a5d4cc5fad56545e01"
+  }
+}

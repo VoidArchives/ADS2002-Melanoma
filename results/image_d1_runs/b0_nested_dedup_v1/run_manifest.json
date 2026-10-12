@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "run_id": "b0_nested_dedup_v1",
+  "protocol": "bounded_b0_screen_confirm_v1",
+  "compatibility_sha256": "1eac0575f6dc4b0d1efed47000a2a850cfa4a804b97eab43a9bd804f53e1d5ea",
+  "compatibility": {
+    "config": {
+      "schema_version": 1,
+      "run": {
+        "run_id": "b0_nested_dedup_v1",
+        "mode": "nested_b0",
+        "folds_csv": "data/subset/processed/train_folds.csv",
+        "image_dir": "data/subset/train",
+        "output_dir": "results/image_d1_runs",
+        "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+        "metadata_comparator_receipt": "results/dedup_v1/metadata/comparator_receipt.json"
+      },
+      "model": {
+        "architecture": "efficientnet_b0",
+        "weights": "IMAGENET1K_V1",
+        "image_size": 224,
+        "dropout": 0.2,
+        "augmentation": "weak",
+        "preprocessing": "none"
+      },
+      "training": {
+        "microbatch": 64,
+        "effective_batch": 64,
+        "min_microbatch": 4,
+        "head_lr": 0.001,
+        "weight_decay": 0.0001,
+        "warmup_epochs": 1,
+        "schedule_epochs": 30,
+        "min_lr_factor": 0.1,
+        "gradient_clip": 1.0,
+        "amp": true,
+        "num_workers": 0,
+        "seed": 42
+      },
+      "selection": {
+        "protocol": "bounded_b0_screen_confirm_v1",
+        "outer_folds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "inner_folds": 3,
+        "screening_inner_fold": 0,
+        "screening_epochs": 6,
+        "confirmation_epochs": 12,
+        "ap_tie_tolerance": 0.0001,
+        "duration_rule": "median_inner_best_epoch",
+        "recipes": [
+          {
+            "id": "lr3e5_none",
+            "backbone_lr": 3e-05,
+            "loss_weight": "none"
+          },
+          {
+            "id": "lr1e4_none",
+            "backbone_lr": 0.0001,
+            "loss_weight": "none"
+          },
+          {
+            "id": "lr3e5_sqrt",
+            "backbone_lr": 3e-05,
+            "loss_weight": "sqrt_ratio"
+          },
+          {
+            "id": "lr1e4_sqrt",
+            "backbone_lr": 0.0001,
+            "loss_weight": "sqrt_ratio"
+          }
+        ]
+      },
+      "budget": {
+        "session_minutes": 300,
+        "reporting_reserve_minutes": 20,
+        "initial_epoch_seconds": 70,
+        "epoch_safety_factor": 1.25
+      },
+      "evaluation": {
+        "bootstrap_replicates": 2000,
+        "classification_threshold": 0.5,
+        "calibration": "deferred_training_only_fixed_duration_oof",
+        "threshold_selection": "deferred_training_only_fixed_duration_oof",
+        "reserved_test_allowed": false
+      }
+    },
+    "fold_identities": {
+      "0": "fb641ec41faf87cb76a4cbcd40936bdb8145a8683a86603a01c06abef5fac1f5",
+      "1": "bd44d29f05d44b0618167acf07949b5924c3a3c3280a7d5e514637093603b53d",
+      "2": "e13b177f65774277963387049cb5c9bb0adee0b093ca1b6febf6440c268c6870",
+      "3": "6e767b8bb621e923beaa35d434af288c08279926b774871fe8502c932638e54a",
+      "4": "ffd5aba83006415d02d62656c0ef4fb7f1830ffafd4c5461b60289dc85e20fa7"
+    },
+    "images_audited": true
+  },
+  "development_csv": "data/subset/processed/train_folds.csv",
+  "development_csv_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+  "config": {
+    "schema_version": 1,
+    "run": {
+      "run_id": "b0_nested_dedup_v1",
+      "mode": "nested_b0",
+      "folds_csv": "data/subset/processed/train_folds.csv",
+      "image_dir": "data/subset/train",
+      "output_dir": "results/image_d1_runs",
+      "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+      "metadata_comparator_receipt": "results/dedup_v1/metadata/comparator_receipt.json"
+    },
+    "model": {
+      "architecture": "efficientnet_b0",
+      "weights": "IMAGENET1K_V1",
+      "image_size": 224,
+      "dropout": 0.2,
+      "augmentation": "weak",
+      "preprocessing": "none"
+    },
+    "training": {
+      "microbatch": 64,
+      "effective_batch": 64,
+      "min_microbatch": 4,
+      "head_lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup_epochs": 1,
+      "schedule_epochs": 30,
+      "min_lr_factor": 0.1,
+      "gradient_clip": 1.0,
+      "amp": true,
+      "num_workers": 0,
+      "seed": 42
+    },
+    "selection": {
+      "protocol": "bounded_b0_screen_confirm_v1",
+      "outer_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inner_folds": 3,
+      "screening_inner_fold": 0,
+      "screening_epochs": 6,
+      "confirmation_epochs": 12,
+      "ap_tie_tolerance": 0.0001,
+      "duration_rule": "median_inner_best_epoch",
+      "recipes": [
+        {
+          "id": "lr3e5_none",
+          "backbone_lr": 3e-05,
+          "loss_weight": "none"
+        },
+        {
+          "id": "lr1e4_none",
+          "backbone_lr": 0.0001,
+          "loss_weight": "none"
+        },
+        {
+          "id": "lr3e5_sqrt",
+          "backbone_lr": 3e-05,
+          "loss_weight": "sqrt_ratio"
+        },
+        {
+          "id": "lr1e4_sqrt",
+          "backbone_lr": 0.0001,
+          "loss_weight": "sqrt_ratio"
+        }
+      ]
+    },
+    "budget": {
+      "session_minutes": 300,
+      "reporting_reserve_minutes": 20,
+      "initial_epoch_seconds": 70,
+      "epoch_safety_factor": 1.25
+    },
+    "evaluation": {
+      "bootstrap_replicates": 2000,
+      "classification_threshold": 0.5,
+      "calibration": "deferred_training_only_fixed_duration_oof",
+      "threshold_selection": "deferred_training_only_fixed_duration_oof",
+      "reserved_test_allowed": false
+    }
+  },
+  "test_set_loaded": false,
+  "evaluation_status": "development_outer_oof",
+  "scope": "B0 recipe screening and duration confirmation; architecture and transformation selection excluded",
+  "qualification": "Development folds influenced earlier pilots, including an archived fold-0 prototype. OOF estimates this declared bounded procedure, not untouched final-test generalisation.",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  }
+}

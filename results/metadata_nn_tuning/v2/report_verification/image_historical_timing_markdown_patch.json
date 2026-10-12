@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "created_at_utc": "2026-10-12T00:18:02.764131+00:00",
+  "scope": "Three Markdown-only historical timing corrections; notebooks were not rebuilt or executed",
+  "builder": "scripts/build_image_roc_reports.py",
+  "builder_sha256": "c30e95eba47299d76d07c808b2274187f7d2c054c3f4087153bbcaa02d09a319",
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/09_image_b0_pilot.ipynb",
+      "markdown_cell": 20,
+      "before_sha256": "9043708ce64430ceda12b7759c482540b8300ed6f7156d0ddc8cee87705728b5",
+      "after_sha256": "14e60b691bb39b339045477a729744cca23aa691ec3833e189c59fd722b0a34e",
+      "code_cells_and_outputs_unchanged": true,
+      "all_other_cells_and_metadata_unchanged": true,
+      "old_text": "## Limitations\n\n- One inner patient split and six epochs show early behaviour, not final performance.\n- Recipe and epoch choices reuse these validation labels, which can make results optimistic.\n- Class-weighted scores are uncalibrated; 0.5 is a reporting cutoff with potentially low recall.\n- Weighted/unweighted fitting losses have different scales and cannot rank recipes against each other.\n- A finite image preview cannot certify every lesion; full outer evaluation and the reserved test remain pending.\n",
+      "new_text": "## Limitations\n\n- One inner patient split and six epochs show early behaviour, not final performance.\n- Recipe and epoch choices reuse these validation labels, which can make results optimistic.\n- Class-weighted scores are uncalibrated; 0.5 is a reporting cutoff with potentially low recall.\n- Weighted/unweighted fitting losses have different scales and cannot rank recipes against each other.\n- A finite image preview cannot certify every lesion. At this historical pilot's completion, full outer evaluation was pending; the completed five-fold results now appear in [notebook 14](14_image_nested_evaluation.ipynb) and [clean notebook 09](../Subset_dedup/09_image_modelling.ipynb). The reserved test remains unevaluated.\n"
+    },
+    {
+      "notebook": "notebooks/Subset/10_image_architecture_comparison.ipynb",
+      "markdown_cell": 15,
+      "before_sha256": "81e5be49943caf4875f33e33499871daf4e6364bd5acfa37ccba45015717c6d3",
+      "after_sha256": "b7f90511fdd25226b3771ce48c26eba62a43ccf4c8ead9ab0c4fbac3195a316a",
+      "code_cells_and_outputs_unchanged": true,
+      "all_other_cells_and_metadata_unchanged": true,
+      "old_text": "## Limitations\n\n- Six epochs on one inner split measure early learning rather than final potential.\n- Choosing recipes and epochs on these validation labels makes the results optimistic.\n- The shared weak preparation controls this comparison; it does not establish each family's best preparation.\n- Weighted fitting objectives and raw score scales differ; 0.5 is an untuned reporting cutoff.\n- Paused or unmatched trials cannot lose a comparison; short results cannot rule out slower families.\n- Longer confirmation, calibration, full outer evaluation, fusion and the reserved test remain pending.\n",
+      "new_text": "## Limitations\n\n- Six epochs on one inner split measure early learning rather than final potential.\n- Choosing recipes and epochs on these validation labels makes the results optimistic.\n- The shared weak preparation controls this comparison; it does not establish each family's best preparation.\n- Weighted fitting objectives and raw score scales differ; 0.5 is an untuned reporting cutoff.\n- Paused or unmatched trials cannot lose a comparison; short results cannot rule out slower families.\n- At this historical pilot's completion, longer confirmation, calibration and full outer evaluation remained pending. The later five-fold B0 results now appear in [notebook 14](14_image_nested_evaluation.ipynb) and [clean notebook 09](../Subset_dedup/09_image_modelling.ipynb); they do not turn this short architecture pilot into a final family comparison. Fusion and reserved-test evaluation remain deferred.\n"
+    },
+    {
+      "notebook": "notebooks/Subset/15_deduplicated_workflow.ipynb",
+      "markdown_cell": 24,
+      "before_sha256": "86ad33f664dd3ec942d623b18c5eee21b763fd09a74e45645317e806768de8c4",
+      "after_sha256": "f0dd349db3c15a68b4761361e9498a3b2fc4153e1657ec2b8a1d2db4e86574c7",
+      "code_cells_and_outputs_unchanged": true,
+      "all_other_cells_and_metadata_unchanged": true,
+      "old_text": "## Takeaways\n\nThe current complete sensitivity evidence can assess evaluation weighting; a conclusion about clean image training waits for verified five-fold outputs. Preserve the distinction even if the reported rankings agree.\n\nFusion must later use matching clean training-only predictions, with an image-only versus image-plus-metadata control. Calibration, cutoffs, subgroup figures and uncertainty/referral results must be regenerated from their matching clean runs before carrying those conclusions forward. Existing uncertainty results remain historical.",
+      "new_text": "## Takeaways\n\nThe completed sensitivity evidence assesses evaluation weighting. At the historical sensitivity report's preparation, a conclusion about clean image training awaited verified five-fold outputs; those clean outputs now appear in [clean notebook 09](../Subset_dedup/09_image_modelling.ipynb), alongside the original-data evaluation in [notebook 14](14_image_nested_evaluation.ipynb). Keep evaluation-only filtering separate from clean retraining even when the reported rankings agree.\n\nFusion must later use matching clean training-only predictions, with an image-only versus image-plus-metadata control. Calibration, cutoffs, subgroup figures and uncertainty/referral results must be regenerated from their matching clean runs before carrying those conclusions forward. Existing uncertainty results remain historical."
+    }
+  ]
+}

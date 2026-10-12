@@ -1,0 +1,13 @@
+# Explicit v2 development experiment. Existing AP runs remain immutable.
+experiment_version: 2
+run_id: roc_auc_grid36_v1
+selection_metric: roc_auc
+conditions: [original, dedup_v1]
+ap_parent_run_ids: {original: nn_grid36_v1, dedup_v1: nn_grid36_v1}
+dataset_manifest: data/subset/processed/dedup_v1/dataset_manifest.json
+metadata_suite_receipt: results/dedup_v1/metadata_suite/metadata_full_dedup_v1/receipt.json
+clean_comparator_receipt: results/dedup_v1/metadata/comparator_receipt.json
+threads: 4
+outer_reuse: matching_ap_selected
+fixed_baselines: verified_ap_oof
+missing_candidate_policy: clean_classical_only

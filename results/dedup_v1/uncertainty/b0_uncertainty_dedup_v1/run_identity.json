@@ -1,0 +1,88 @@
+{
+  "checkpoint_sha256": {
+    "0": "90049aeaded2fb6285e1e83a6c7b71d005808a657ebe26177c1483a676382664",
+    "1": "a569f9536aa141bce935953ae79fc26532666191d9b7a75a9543050ad146731e",
+    "2": "8f76f0973be38d4022410529f0fa568fd0b23245b3c3e72c94015c71ae50567b",
+    "3": "601f73814bdd07de97ec54d67cd5f4accff63e79014aa7a94be715efe822a670",
+    "4": "41a81707d039ff2b2e2540e6210cd8f638cbf3cf418b3932bbfa33b5985180ff"
+  },
+  "config": {
+    "evaluation": {
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 20242,
+      "classification_cutoff": 0.5,
+      "primary_referral_fraction": 0.2,
+      "random_repeats": 100,
+      "referral_fractions": [
+        0.0,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "referral_seed": 17042,
+      "reserved_test_allowed": false,
+      "score_source": "base"
+    },
+    "inference": {
+      "amp": false,
+      "batch_size": 64,
+      "deterministic_tolerance": 1e-06,
+      "mc_passes": 30,
+      "seed": 20261004,
+      "tta_passes": [
+        "identity",
+        "hflip",
+        "vflip",
+        "hvflip"
+      ]
+    },
+    "run": {
+      "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+      "output_dir": "results/dedup_v1/uncertainty",
+      "run_id": "b0_uncertainty_dedup_v1",
+      "source_run_id": "b0_nested_dedup_v1"
+    },
+    "schema_version": 1
+  },
+  "dataset_identity": {
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    },
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "variant": "dedup_v1"
+  },
+  "runtime": {
+    "cuda_version": "13.0",
+    "device": "cpu",
+    "device_name": "CPU",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.14.6",
+    "torch": "2.14.0+cu130",
+    "torchvision": "0.29.0+cu130"
+  },
+  "source_run_manifest_sha256": "0520c85d1f6e62f13f9f399039b7a5478ccef6f057f15f2e2271db5ff151aebc",
+  "uncertainty_sources": {
+    "src/melanoma_detection/dedup_uncertainty.py": "4d4bee86e62da8874030dd45723c2d14203d2af3ea288890364560c130765b6a",
+    "src/melanoma_detection/image_uncertainty.py": "660cd4ee0b039dfdaa4ff79d4767506b364a0285f89837c7b78c873fd9d4f07c",
+    "src/melanoma_detection/image_uncertainty_evaluation.py": "efe2d7ff586700e4a8f652b1aa9c0d77e5c029107caa3c4d3be37d6ae23bd60b"
+  }
+}

@@ -336,14 +336,32 @@ def build_evaluation(predictions, expected_frame, output_dir, bootstrap_replicat
     return summary
 
 
-def load_matched_metadata(project_root, expected_frame):
+def load_run_development(project_root, manifest):
+    """Resolve a saved run's exact dataset identity without weakening canonical guards."""
+    root = Path(project_root).resolve()
+    source = root / "data/subset/processed/train_folds.csv"
+    if (root / manifest.get("development_csv", "")).resolve() != source.resolve() or sha256(source) != manifest.get("development_csv_sha256"):
+        raise ValueError("Saved run canonical development source changed.")
+    identity = manifest.get("dataset_identity")
+    if identity is None:
+        return pd.read_csv(source)
+    from .development_dataset import load_development_dataset
+    frame, current = load_development_dataset(root, identity.get("dataset_manifest"))
+    if identity != current or current.get("variant") != "dedup_v1":
+        raise ValueError("Saved run development variant identity changed.")
+    return frame
+
+
+def load_matched_metadata(project_root, expected_frame, *, receipt_path=None, dataset_identity=None):
     """Verify the existing hash-recorded metadata OOF bundle, then pair all rows.
 
     The MLP mean and raw spline scores share this verified prediction file.
     Comparisons describe this development population after earlier diagnostics.
     """
     root = Path(project_root).resolve()
-    config_path = root / "results/metrics/metadata_nn_run_config_d1.json"
+    config_path = (root / receipt_path).resolve() if receipt_path is not None else root / "results/metrics/metadata_nn_run_config_d1.json"
+    if not config_path.is_relative_to(root / "results"):
+        raise ValueError("Comparator receipts must remain in project results.")
     config = json.loads(config_path.read_text(encoding="utf-8"))
     input_path = (root / config["input_path"]).resolve()
     prediction_path = (root / config["prediction_path"]).resolve()
@@ -351,14 +369,34 @@ def load_matched_metadata(project_root, expected_frame):
         raise ValueError("Metadata comparator must refer to the canonical development CSV.")
     if not prediction_path.is_relative_to(root) or sha256(input_path) != config["input_sha256"] or sha256(prediction_path) != config["prediction_sha256"]:
         raise ValueError("Metadata comparator input or prediction hash does not match its saved receipt.")
-    recorded_notebook = config["notebook_path"]
-    current_notebook = recorded_notebook
-    registry_path = root / "notebooks/filename_map.json"
-    if registry_path.is_file():
-        for rename in json.loads(registry_path.read_text(encoding="utf-8")).get("renames", []):
-            if rename["old_path"] == recorded_notebook:
-                current_notebook = rename["new_path"]
-    verify_recorded_notebook_code(root, current_notebook, recorded_notebook, config["code_sha256"])
+    if dataset_identity is not None:
+        if config.get("status") != "complete" or config.get("dataset_identity") != dataset_identity:
+            raise ValueError("Metadata comparator must have the same complete development variant receipt.")
+        from .development_dataset import load_development_dataset
+        _, current = load_development_dataset(root, dataset_identity["dataset_manifest"])
+        if current != dataset_identity:
+            raise ValueError("Metadata comparator variant changed.")
+        required_sources = {"src/melanoma_detection/dedup_metadata.py", "src/melanoma_detection/development_dataset.py",
+                            "src/melanoma_detection/metadata_model.py", "src/melanoma_detection/metadata_validation.py",
+                            "src/melanoma_detection/metadata_evaluation.py"}
+        if not isinstance(config.get("source_sha256"), dict) or not required_sources.issubset(config["source_sha256"]):
+            raise ValueError("Metadata comparator receipt lacks its required source provenance.")
+        for relative, digest in config["source_sha256"].items():
+            from .metadata_source_archive import verified_source_path
+            source_path = verified_source_path(root, relative, digest)
+            if not source_path.is_relative_to(root) or sha256(source_path) != digest:
+                raise ValueError("Metadata comparator source changed.")
+    else:
+        if config.get("dataset_identity") is not None:
+            raise ValueError("Variant metadata cannot be compared with original rows implicitly.")
+        recorded_notebook = config["notebook_path"]
+        current_notebook = recorded_notebook
+        registry_path = root / "notebooks/filename_map.json"
+        if registry_path.is_file():
+            for rename in json.loads(registry_path.read_text(encoding="utf-8")).get("renames", []):
+                if rename["old_path"] == recorded_notebook:
+                    current_notebook = rename["new_path"]
+        verify_recorded_notebook_code(root, current_notebook, recorded_notebook, config["code_sha256"])
     source = pd.read_csv(prediction_path)
     output = {}
     for name, column in (("metadata_mlp_mean", "p_nn_mean"), ("metadata_spline_raw", "p_spline")):
@@ -395,7 +433,7 @@ def load_saved_nested_run(project_root, run_id="b0_nested_5fold_5h_v1"):
     prediction_path = run_dir / "outer_oof_predictions.csv"
     if sha256(prediction_path) != summary.get("outer_oof_predictions_sha256"):
         raise ValueError("Saved outer OOF prediction hash changed or is missing.")
-    expected = pd.read_csv(development_path)
+    expected = load_run_development(root, manifest)
     predictions = validate_outer_predictions(pd.read_csv(prediction_path), expected)
     evaluation = summary.get("evaluation", summary)
     hashes = evaluation.get("evaluation_artifact_sha256", {})

@@ -1,0 +1,615 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "original",
+  "run_id": "roc_auc_grid36_v1",
+  "selection_metric": "roc_auc",
+  "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+  "compatibility_sha256": "1a217f19daed0af64ec1ff3db3a08789028e8a099a31f845244c058f4d4e2cbd",
+  "dataset_identity": {
+    "variant": "original",
+    "dataset_manifest": null,
+    "dataset_manifest_sha256": null,
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "837d008754872706f5ac4be9b1402bee7913d1ba95c4e010d26757c0389594d7",
+    "dataset_identity": "fe16b01d7297a18fbcac27bfd4e4f30f27799a7a59b1612c126b97ffdf85435f",
+    "membership_sha256": {},
+    "preserved_inner_memberships": {}
+  },
+  "protocol": {
+    "recipes": [
+      {
+        "recipe_id": "r00",
+        "recipe_order": 0,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r01",
+        "recipe_order": 1,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r02",
+        "recipe_order": 2,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r03",
+        "recipe_order": 3,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r04",
+        "recipe_order": 4,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r05",
+        "recipe_order": 5,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r06",
+        "recipe_order": 6,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r07",
+        "recipe_order": 7,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r08",
+        "recipe_order": 8,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r09",
+        "recipe_order": 9,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r10",
+        "recipe_order": 10,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r11",
+        "recipe_order": 11,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r12",
+        "recipe_order": 12,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r13",
+        "recipe_order": 13,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r14",
+        "recipe_order": 14,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r15",
+        "recipe_order": 15,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r16",
+        "recipe_order": 16,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r17",
+        "recipe_order": 17,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r18",
+        "recipe_order": 18,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r19",
+        "recipe_order": 19,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r20",
+        "recipe_order": 20,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r21",
+        "recipe_order": 21,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r22",
+        "recipe_order": 22,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r23",
+        "recipe_order": 23,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r24",
+        "recipe_order": 24,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r25",
+        "recipe_order": 25,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r26",
+        "recipe_order": 26,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r27",
+        "recipe_order": 27,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r28",
+        "recipe_order": 28,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r29",
+        "recipe_order": 29,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r30",
+        "recipe_order": 30,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r31",
+        "recipe_order": 31,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r32",
+        "recipe_order": 32,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r33",
+        "recipe_order": 33,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r34",
+        "recipe_order": 34,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r35",
+        "recipe_order": 35,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      }
+    ],
+    "neural_training": {
+      "base_seeds": [
+        42,
+        142,
+        242
+      ],
+      "hidden_units": 32,
+      "dropout": 0.2,
+      "max_epochs": 100,
+      "min_epochs": 10,
+      "patience": 12,
+      "minimum_improvement": 1e-05,
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "loss": "unweighted BCEWithLogitsLoss",
+      "device": "CPU",
+      "threads": 4,
+      "training_seed_rule": "base_seed + outer_fold",
+      "stop_fold_rule": "(outer_fold + 1 + run_index) % 5",
+      "ensemble": "equal mean of all three prescribed seeds",
+      "epoch_selection": "minimum stopping-fold BCE within patient-disjoint outer training pool",
+      "refit": "new preprocessor, network, optimiser and scheduler-free fixed epoch fit",
+      "features": [
+        "age_approx",
+        "sex",
+        "anatom_site_general_challenge"
+      ]
+    },
+    "classical_grids": {
+      "spline": {
+        "classifier__C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "preprocessor__smooth_age__spline__n_knots": [
+          3,
+          4,
+          5
+        ],
+        "preprocessor__smooth_age__spline__degree": [
+          2,
+          3
+        ]
+      },
+      "random_forest": {
+        "classifier__max_depth": [
+          4,
+          8,
+          null
+        ],
+        "classifier__min_samples_leaf": [
+          5,
+          15
+        ],
+        "classifier__max_features": [
+          "sqrt",
+          1.0
+        ]
+      },
+      "xgboost": {
+        "classifier__max_depth": [
+          2,
+          3
+        ],
+        "classifier__learning_rate": [
+          0.03,
+          0.05,
+          0.1
+        ],
+        "classifier__min_child_weight": [
+          1,
+          5
+        ]
+      }
+    },
+    "base_seeds": [
+      42,
+      142,
+      242
+    ],
+    "candidate_selection": "unweighted mean of three inner roc_auc scores; NN probabilities averaged before scoring",
+    "tie_rule": "first in declared recipe order; historical baseline first",
+    "inner_stopping": "remaining=[(v+1)%3,(v+2)%3]; stop=remaining[s%2]; fit=remaining[1-s%2]",
+    "outer_stopping": "(outer_fold+1+seed_index)%5",
+    "training_seed": "base_seed+outer_fold",
+    "ensemble": "equal mean of all three seed probabilities",
+    "membership_source": "saved metadata-suite original memberships; clean is retained-ID filtering",
+    "primary_metric": "unweighted mean outer-fold roc_auc",
+    "test_set_loaded": false,
+    "final_model_fitted": false,
+    "experiment_version": 2,
+    "selection_metric": "roc_auc",
+    "secondary_metric": "average_precision",
+    "fixed_baselines": "verified v1 AP parent OOF",
+    "outer_reuse": "exact matching AP-selected procedures; fixed NN only with identical protocol and per-seed diagnostics"
+  },
+  "source_sha256": {
+    "src/melanoma_detection/metadata_nn_tuning.py": "2e8e074847ff95d7519f7813e376e4f45dc4edef852efe4051ff631b1c97cbab",
+    "scripts/run_metadata_nn_tuning.py": "ae02390bc04dc17f6b83c47c86f414ec77dbd1b15408efd1bafcb618b275849b",
+    "src/melanoma_detection/dedup_metadata.py": "80c3fab1be9c6430f07c377cec15522505aec0dd1076eecb2efa70962673dfbb",
+    "src/melanoma_detection/dedup_metadata_suite.py": "76c84796c22917f2963af3cc79271d9aa229035dd2a4a2bf124a6af8c744c6f4",
+    "src/melanoma_detection/development_dataset.py": "9ba76d675b7366f23847dd5f6ee9dfe27e04a2f3d95cd8e38ebbcd85d22f8c89",
+    "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+    "src/melanoma_detection/metadata_source_archive.py": "6e827e9ec9844174413dace5116091802c8982ccc35fff21876667900a84bb79",
+    "src/melanoma_detection/metadata_tuning_v2.py": "d8f3d65f4ed1a2e69ff6afb87eae64423d50fc99dab87e17ce79c42429e132da",
+    "scripts/run_metadata_tuning_v2.py": "bb038e97df2168b7ef5d856bccdbde6c423b7003ad4d711e8fbe358cb3fd34ce",
+    "src/melanoma_detection/metadata_roc_archive.py": "fb520ef426f1db0480f9d7fd53dac9a8183da7d9a027b09b792a0822b2668693",
+    "src/melanoma_detection/historical_reporting_source.py": "8143bb2227a47045fee903add85a6d1fb3f034f17411b2fa8e7e94182114a846"
+  },
+  "config_sha256": "bcaff7216acde58a3ed17442f4263adf9b2c55774fb764e01d918be2abf66537",
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "torch": "2.14.0+cu130",
+    "xgboost": "3.4.1",
+    "joblib": "1.5.3"
+  },
+  "parent_receipt_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/receipt.json": "93be6547c13e88205a61ebc849adcb3bd0db520fcf4f2313d60f1d9e650af7ca",
+    "results/dedup_v1/metadata_nn_tuning/v1/nn_grid36_v1/receipt.json": "e5415184d933003fd16ef9fb8c000cb027689b01f414eb70bc02edfca4109fd9"
+  },
+  "reuse_identity": {
+    "metadata_suite_receipt_sha256": "fdec21ed8f8ad8a8ba089f9ca9380549f96869070b7ab527f947c643976718e2",
+    "clean_comparator_receipt_sha256": "88e74dc199675052be1c79065033cb2269de1f2e1f87cd49f4c9c583726e351e",
+    "metadata_original_memberships_sha256": "22b4f00bf7647727f080a30d76c28e8c384f55f42f7cd95d9450af828b2d471f",
+    "metadata_clean_memberships_sha256": "4d26e6576658f89f92fa19231c00778172264c3d6d1e67772d72f03113b5485a"
+  },
+  "executed_fits": 43,
+  "external_reused_fits": 3917,
+  "resumed_fits": 0,
+  "executed_this_invocation": 43,
+  "rescoring_operations": 1170,
+  "reused_fits": 3917,
+  "maximum_new_fit_calls": 45,
+  "rows": 6864,
+  "patients": 422,
+  "positive_images": 128,
+  "positive_patients": 88,
+  "output_sha256": {
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/candidates.csv": "229ae7645da05030c60470db33f36a70a6946dcfa823683bd4ed064696395d24",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical_candidates.csv": "01d76a72e9b2e8b1746ff17e6f4b721c478d3dc7bf9015b62f882c0d0b96a464",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical_inner_audit.csv": "c50626f087fe6019acc4e6ff97435a713c6444fe094ee5a2de53424ab8673d6d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical_selected_parameters.csv": "2f8e30ec456a6c6d9e4ed6be57ec9b9855771b00d700ba917354b4e580cfa1de",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/epochs.csv": "8e85f5978d0b584da5220e6581327d81a491956ffde06661ee3a06e3abd7752d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/fit_log.csv": "959cf0f8db46014bbe64e6e507b518ced710eee51e61dc275f710d6666611011",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/histories.csv": "c14993eeb608512e0fefa72f0c4feefc90dec2b21dc109044cba81f45e885a8c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/inner_memberships.csv": "22b4f00bf7647727f080a30d76c28e8c384f55f42f7cd95d9450af828b2d471f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/inner_prediction_references.csv": "675a12e9f8a21d8ef7c9b03d8c4847a6c08493422fe183b2a2efb01546609d42",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/memberships.csv": "7f394a0b669c5a51d6f3b69ddfa7f214662f51606991c7bf09766ccbbbe32b7a",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/metrics.csv": "95d385dfbb658d641d99b191e6c0dcdf48b4c1a869ae3122f2adb808ebb76a33",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/oof.csv": "9c9dfcd25dfec5777ff42ebb855cb0122f97d591cc83351f9150a5a654a7d57f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/oof_partial.csv": "493970951f88d113fcce958f1dcda9bd57b0ec4a45c0b9997582f27c87f72c62",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/selected_parameters.csv": "187d78b041628f58f4e7cdeccabe6182003cd5c235974110541350f0b579e718",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/session.json": "e44afcf46405ed60c5da44ebb607d0b5a7c3d1dd03174c4cd8bde3605cb39bd0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/refit/history.csv": "5dd2539414fc77fbee904631fd1a412c74812e7d148009c450913a47e57bb3fc",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/refit/model.joblib": "5cdf6a733d930860b94a3b6e8b9eec32c5571cf4df39d6cfc38c9933d7badd2e",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/refit/predictions.csv": "805a9a3cf54b232c0c0a252ff66ab6d39c778181207e9db883359d5bec551fe4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/refit/result.json": "04d862414bde89e8f557aaafd8f8ccec1168fab0730207db2e1cad7ded02b1f0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/stopping/history.csv": "9edb835f4dd0f28684abf1f1eecbe7dd6de9b981f16469187c5ba3fbd54cacda",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/stopping/result.json": "454520c00a62de69cd57a000472a398e8b3e518ce115439a0ea23f1b8bc50013",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/refit/history.csv": "d7653858341be7399953f7a2db8acb27b5312de96525735f0cdd12389727837a",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/refit/model.joblib": "bac2bbbf3c962183752fd98b7d835b642cf0bffd5b7276e1a2ef44cdb1f52a4f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/refit/predictions.csv": "4978f281df5608cb28b5ee28a56f3913985077704209591015ea5c49e17b6a12",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/refit/result.json": "f249140fcc4d6db0c010cdef7192befb1169ffa8979af189ae7b917afb8d54ff",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/stopping/history.csv": "3e0571a39ee4bb6cddeda6bc15c21f03cf8dd77d650a6faae9357f8a30eda02d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/stopping/result.json": "f6995f9759021c81379bc652724e492ea4cf30187b83cba19f3265e9e72f9049",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/refit/history.csv": "b706a1fa6171be5f6a157d7b2cdddd0655d9832c3ac88c46ca1f111af13c013c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/refit/model.joblib": "08cb8c8aac2651f5b0fb1e00d4b56f450642187ab9b10565b2efa441afc4b2d6",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/refit/predictions.csv": "53de1457748ab7ae5528305d8fad5171fc656d24e4d4944a3d53a4ebd13e976c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/refit/result.json": "9bcad401e613d9296886aa3e4d5a9ec03b0d138b5ecd359be4e9136cd73322e2",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/stopping/history.csv": "5c0d4417749198322dff3626bfbde42fb92c06d988c5a3461fff9819112d7f4d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/stopping/result.json": "b8f6cf851c22473dd688364a2daa75c4140ca2d3f4354e49400a459532767ff0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/history.csv": "1b197bdec2b2b5fcdf377a7c6125932541bdaaf870f84fec44367234d3dba740",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/model.joblib": "5975771279fd5b8513579de66c3b1ae2448b865d53a5caadf85e3d07fb370c34",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/predictions.csv": "eddf0b006a0acec3b0e654064e52fe40558995adff299102c9d3c0e8f95219c8",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/result.json": "b0dab1f9a8cabeffd994746a5e506dfbffc29aaf96caca17e476f03870ee5f17",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/stopping/history.csv": "1c41e52b99d185f54b177553cdfe5fabef4d03417b2b90d3636cec35756d93ed",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/stopping/result.json": "640ff109ef06c680ec843e36422086a12e50e399374179f318744afaee990bff",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/refit/history.csv": "7482e788793d9b79f8d20d500484e95a6f906cd399304d72f498e273e68ca668",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/refit/model.joblib": "663f630b9343fc8e3245174d5aff6b012f7423b7abfd352a8d03a0bd91d4d963",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/refit/predictions.csv": "72df1a4222b3cdd3fc0e1fcd691b3e7719cc4b255f92ce08aed58e3317e5c478",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/refit/result.json": "97ec81afac04f8837cc294c7e53dab4a170557a6b8bf8ddfe164c3c988166150",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/stopping/history.csv": "73ea940fbba18ea22bf9d9d8eb2ede05f4dbbf74abc07a7231d73e49d300d9e8",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/stopping/result.json": "199d1ef4fc34bae3bc8637150ad3d6147e3b6efb01fb2bed0950082e998f4a66",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/refit/history.csv": "07fc4e9efd11474ff06f93e34878efac89cc512948e603a0ce22bc4f0b293535",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/refit/model.joblib": "73ff475b1a1e5faa52340296b19bf801f7b842f2143ec816c5852812b9e3ad94",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/refit/predictions.csv": "7512c9429908a125ffcd54ed20df3a510930c79bdf9ee1c71d2f4ecad7780a3d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/refit/result.json": "e5b4b5fecfb12ff26883a363cfe3928feaa1024ce9e7c55473648248c0e73afa",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/stopping/history.csv": "d6db86781931e281a1d6973c3e0f3a7525e00718b6125f60abd236589f626e51",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/stopping/result.json": "5a0d94030b3bc000145fb070f5066263c83d90f32e170b5f175005b5bfcad8d2",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/refit/history.csv": "a02a87a0722666e87a928f138ea87e4078d5bcd6b540ad9027de865f1879efb3",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/refit/model.joblib": "e78a60cbf3c9795a1835153aded8059e1dc7777d18a73bd04451fb860371c5d9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/refit/predictions.csv": "3bb98d4851307aa045e6bd13797a3045daa239d33225ad44f8a0f5391fc03c10",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/refit/result.json": "4984efb4d2239396b41f87a17cce71266907e468512a7097d31753c6245d5155",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/stopping/history.csv": "36de1d84a657b4f16abe43ff976a5b17b3cab76f11c8f96af1df598a8c139be3",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/stopping/result.json": "ef8428c3a2b56c09d78e57768bc294de0a7bd00b2a8c8207a1d2c30fbaa134d1",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/refit/history.csv": "4e5abcd2dfc6c3fa51aa6e15afef2f6a20904add047acfc69f591d8702136dfa",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/refit/model.joblib": "fcd034919eee23a7fd0a3c9718e12d782258c0210bb241db4ef734ed9e3d9773",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/refit/predictions.csv": "3d1bf2f92d7069a0c16c11fbdfad51dae72ea1759e297103da75d19ed50c842c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/refit/result.json": "009800674a513e5fd86aa7040958e0b937b669c141bf85535dcd2c1cf51b4c8b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/stopping/history.csv": "81c8c1c67d5c1f0eb893354db5067915e9ed7cc51caccd53e76b0d1288930288",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/stopping/result.json": "845fd7ba785fcd71f564191624d1bb5ecc2b872c3a5e087127beef13c1732486",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/refit/history.csv": "8beb8f454403b0ab56f28ca4fd7e45f8ecb130ab96b165c3274a7407eddcdcc4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/refit/model.joblib": "0151f46d30c57782494b1643f56ff089f05906ef679ac28fc66ba2ce44ab9102",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/refit/predictions.csv": "92ccd950414d74ada1daa7c0081d259f0551eb9035f502007c0b553466043c25",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/refit/result.json": "d4036903e301d2db11ce69935c0a457224e8b6ddb2bff8cd78abe0e9e50ab0b2",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/stopping/history.csv": "7423faa32e78be37979d2c79eb3e0ea5ab6bbb36337f560f919f8901f9d6ecbc",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/stopping/result.json": "3516c904e0fd0b7f00909c1ba1b7eb3650192eac5dfad9c8a224a90f3f709598",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/refit/history.csv": "2839ed04b79433109800f315c75850a66272dfbd3b060a0ae2f9952606ea5e9f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/refit/model.joblib": "22710f38756433a0e815449b4897fe41cc92d0060aa7e9cbb6ac414cfab1b648",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/refit/predictions.csv": "fdeac04cb4a9dc54eaec2a04185504f6f7e2397bd2344024f6881104e946c60c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/refit/result.json": "2c7e333858340141d42a0cbd4197fc01f60a906614d183c16e65cda75418f900",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/stopping/history.csv": "de1a0f4812adcaf20734c26e930e6e63789efd21aa9f71334743409b19eb6487",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/stopping/result.json": "7398f00baf5f31aeaa3989c27dd32cd9be01990c5cdb8eaf30e940cf81d0d25a",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/refit/history.csv": "17639e0608361ffc54364fa066f1c41045ea8f04afd8da158e16267d3ba0664b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/refit/model.joblib": "340b5213420322edec5629cca789894e3444bf9134581b684a370f9544a6b1b1",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/refit/predictions.csv": "8be4dc40294aee4b46cc6cd139c6b7002c2caba2aaed97c2a97430b7f4c591f5",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/refit/result.json": "fd1e4d7016ebb2d8c4f07bb6202c127c4dc396a3eccc595eae2a8bcf3e425247",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/stopping/history.csv": "4fb044d18ed31e2fbb59ccffe26eade2e59ac99c6343612abba4cffd43fb0e4e",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/stopping/result.json": "f278047006bbea593136033ce34494fee7812e7208408efba6fb0c677cb1b5e4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/refit/history.csv": "f49dfcc8c0c859564c0dbb01d4ef2191b58f801da10421f6e0c0e61ea09b57c4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/refit/model.joblib": "39fdd120c5d1eced467185d12716d3b77de8f3d65cb638a5f9082ca9292fa3d5",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/refit/predictions.csv": "955cd17dcc9fe69e09693e8a4f080ed07dea2a84f0f5dd799bb739f5b880fa64",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/refit/result.json": "d2c2c2b5c14b3f79dedb64abc11c15d153a29f0205ce4d9f9476fd618cfc6f35",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/stopping/history.csv": "3a636665fb5d107fd9023a0ba59432ae777b9d2edb9496a250a3f9df4d38e343",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/stopping/result.json": "9d05011f0cc0e258a92d74221149ea14b01ca997e3cb5d580769c039b12714e0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/refit/history.csv": "61b6c85cd864139bfebe1f34de3ec87d2ab2c78c4636af796d798fef7714bcc2",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/refit/model.joblib": "f86aff45604dc8b809e52705ff6638b89a931950c4dbc01a5fc54b8b94907eda",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/refit/predictions.csv": "c258117d07f4d13853d7c55d3aed49ef961c73addb62538554e13a3d055153e4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/refit/result.json": "a667859ea20692fcae4282232a0e23e49e7717a2473ef97380864072ebdcbd71",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/stopping/history.csv": "e2ca978f8a514a2130d2e5d2e93e3edba7e73c9eed72b8c890b1b74bd67581e9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/stopping/result.json": "476e6b8d3811b0f0117d7cfed6402fd6d0b764c17fa991d5b0cca5bd331bc5da",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/refit/history.csv": "1ee2f8996f3ff456bd413b850ec552dea6c1527b9a64be509a833334cfa27d4f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/refit/model.joblib": "b41ff9f07eb0bb8bf03ac290fed3a33d9366b645d2d18ca15e3f9da46d0eaf1c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/refit/predictions.csv": "e15215277523667a17d0c316f724d58fc4d89e1d609d44e5213de39882fcbd13",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/refit/result.json": "2f7d4ff6ea4b166cb4a883ba3bca4a1bf1d07c282e03353591f889ec09ec5298",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/stopping/history.csv": "421a6d7ad14fde5994a124fa7af2d2808ffd9ee017503b22ed123a67bab3b03d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/stopping/result.json": "13a03d92b4f021c45238acc730f0669afd5fb806e38b0d1af89cf4a3031ed727",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/refit/history.csv": "3e7cd35cbb1d5e0807fd84c0fb823c25ba23ec8c97d6d56c2f3d5363f429c252",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/refit/model.joblib": "dfe846be9277dbba2382dad19ca8393b8eca305903c72f22350a15304089166f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/refit/predictions.csv": "3c1c074ae931049ed9c0b0db516ecfae9cfeca0b808e8b2519632281beb267ac",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/refit/result.json": "3e56bb33447e39ea4b69bfb406c5e768f83e6eb476bd6ae8403de7f7ecad92ee",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/stopping/history.csv": "7e34d532f1ea71769890a17d52517d1f67bd8f9e8f863dd737185990e7723396",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/stopping/result.json": "cd4515742a39c55f8bd7343ecfc04fe4f408b9c3988cc07ee88e2d32b5f1117f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/model.joblib": "bb7bd47a8b8465de80de082f30e99d3b7a257a6f73de2c9b679327860091e2ca",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/predictions.csv": "deb22c43bdeccc03d2f07ca705a9ae9020e7f9b32fc3d6c8d274e2fa8a2fc242",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/result.json": "5df74b2de7c0ff3eda71264743698168efe80a45281aadde4ff8b76b0240c1e2",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/spline/selected/model.joblib": "2b22f4a2fe96fff97f30d02f3b00162984d7d54fa54d22f5df0f2f812492dd74",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/spline/selected/predictions.csv": "27f3005d2ed9cf27e857e7cbd57fa286d6c506a39f79769003a5c7fef9a1fcb5",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/spline/selected/result.json": "f7e628bb5e75faaacd981f6711bf798c341d5c3cab39fd9cb37a0a429b972874",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/model.joblib": "479c20b89755c26abace5ece7b2f8051664227e9da66e935c2f0041119c20580",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/predictions.csv": "395e66459a8bc7a2ef2a01e507a799923219c9752c896456b578655bcfddfa77",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/result.json": "dcea18e0f7968ee545abc4b3eefb38b2f7e99fe03878e0e102e54c7b46f55077",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/random_forest/selected/model.joblib": "820641e51e2d46065f0ea83e08cabd46df172675b1cf5d7a1356a26175d8e646",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/random_forest/selected/predictions.csv": "af54405584b472fb2c6323c8fcc096920e0031d217005ee533797bcbb09b773b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/random_forest/selected/result.json": "1df48f5987cf2a56e5cf9eadf30ca61013dea2bf56cab3771e62f5e14bb0fc6c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/xgboost/selected/model.joblib": "dae703790b0d19353dab03ecacb8f02b5ef854e487f669dfdcb53ae066d28127",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/xgboost/selected/predictions.csv": "3b0d056890fa7c9cf8fc4dbabbb214300ef7b9a4808753a616545d35470225c6",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/xgboost/selected/result.json": "391e29209211bb0d999cc9986da377f0c7a30876ecb9bbabcd8f0d3c9efc6a03",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/spline/selected/model.joblib": "997deb3a3238ca9cdcab657d57f5a187c5abd490671429e021c3ae1cf1490329",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/spline/selected/predictions.csv": "25915bc98b6bbd1530eaae05a12976f4b45bb199239bccf5bedec50ce5c753a3",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/spline/selected/result.json": "529e6b393676c1bc7bbb58638ccde0e47f9d959c87cadae5ed09eff348cabd57",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/random_forest/selected/model.joblib": "b4d77d08bcca386db5289de47f2178401753b8ccaeaebfa3b61feea04bdb3865",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/random_forest/selected/predictions.csv": "9d951dc869ddc1443b3a206f3827fec38675aa92446e4a21a0335e7ee97d8bb9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/random_forest/selected/result.json": "57b8a70045f8e4d6725a536e33d39dd22cb2b4c1c25659a47865aaa48b80d528",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/xgboost/selected/model.joblib": "e82d0c11b1c3ea33f0b0e3f07b04ee06f47668f035a021775408b7762b75d07d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/xgboost/selected/predictions.csv": "89f6ff752e75e07f76e3f97c94d1319aafe962cee40bb31d16e5f9452b0d8b9a",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/xgboost/selected/result.json": "b4b477a62792ab79164a41e3a1a38928f1858ba05f95106b3a4973bd82740e8b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/spline/selected/model.joblib": "49b988a7aebbcfa4d49bfa78e0e99b102225521f756c4254ef0a5b414b44bb39",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/spline/selected/predictions.csv": "65c02ee0f4b55e732d6a9fe60a240fa0865dfe459465a950d2114cbd0894dd55",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/spline/selected/result.json": "c96971e0bc2df7bcb5792ba32f5efb66b3c9bb27e00926f98319d5d02e051d00",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/random_forest/selected/model.joblib": "1696a8063bb205672749dd402a7469ce9e7b873eb2f9b3f05cbe120ed2920c1d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/random_forest/selected/predictions.csv": "f5b8a600c634d4614bdb30c3b3bed45d53b32ed2828309a4d26c1b48330c52cb",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/random_forest/selected/result.json": "9fcbf16a207e6ff5a0d80aa1f20abc7e139e42ecf3660d1b00b5e2305522cd16",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/xgboost/selected/model.joblib": "2ff2c37acf81b9b7b253d333d291648a5f859462b18ac28f811d121137ec3ede",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/xgboost/selected/predictions.csv": "a3f41ae0d3d0ed675f735182064fd32b439a177e1ef7fd61bdd863766e6ad9f4",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/xgboost/selected/result.json": "6f5b0d2a228dd289e09206536ade825a852631161e53d5127932539e399942d7",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/spline/selected/model.joblib": "16003a8a5d5f0fdf93eb03e130b51c4aed87316f60dbd8d44b4c3a1528a867bf",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/spline/selected/predictions.csv": "315b5d08a21159ef22f98561f1d28a24d801760b11e7f041e9b337e045920a02",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/spline/selected/result.json": "d2fcc73e203c238e0b801f46277da590a1ba95f05e17c0e1cb63117267ada855",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/random_forest/selected/model.joblib": "b0566df2d725a8efa32b415f7980ed5b453f16f842779da91177d704e936a33d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/random_forest/selected/predictions.csv": "15464d6177532863fa313a79620a1966341a89b1af4e16ed14dfbc25299384e3",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/random_forest/selected/result.json": "c4e14f03167344904dfc2ff1178cd345146f4ecefe72f7356b5c316e28f093dc",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/refit/receipt.json": "ed8037011c86d299797c8ba5294b83be68b0eeca93dc548c264d521676a59ca9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_42/stopping/receipt.json": "dde3ade5d76459a276d2b4f9938b6b49858cea451087c8e08c34e68829852c5f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/refit/receipt.json": "bc09c75bd37a4154b8cfdc806ae116f7189a8f65a8b59dfb67daf7641872838a",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_242/stopping/receipt.json": "626f3ab4d84ee6fc1a49ed6e6cd8f872c01b80aa72f55732c99a5470fe875ab9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/refit/receipt.json": "7e5f8f5b8ccc47bdfe7a17ff7c0238625bd8942164cb111d487d6a5be4101df8",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_4/selected/seed_142/stopping/receipt.json": "7095fb89ba2820b706ccc3bd1a52fdce538878e165b1b88c8ebb00a9e0d2809c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/receipt.json": "bf199cf622401f9cb6fc61cf222c8bb9762220290c066166351fc03314195e79",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/stopping/receipt.json": "827e81db248d11da7870ba3beb5b8b72cb22f0380f2b1d0399c56952d83e3ad9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/refit/receipt.json": "a49b219ef07e36b316c34c8c61b309f2fa1cd3f6c6ef0cad5ebe1c0d17c65dd7",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_242/stopping/receipt.json": "5279eb203100e140d2e40eb9953e790367634a6117a64f19c40e7019c9ee5dbc",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/refit/receipt.json": "54280f1a70436ddc1cdf37adb95934b5fd3e2a96aeda4638bebfc71bb077b422",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_142/stopping/receipt.json": "8533dd1348aa944a267f2c34acd76ae5ac2e8f5aab82a451dddf8cdbf50e1859",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/refit/receipt.json": "16c02ba86e390c9712c627ca84aa5d040c933220420a3f31c3f787d1a70ed3a1",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_42/stopping/receipt.json": "fc3f0c70b8b9b0a552f77236f04ea21f1da6b5806d2a76a120e44092486ec065",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/refit/receipt.json": "8d8ca4307f280e894f20e56234ff511b879e781755e345f99e91f5c7a96dbca5",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_242/stopping/receipt.json": "31be6e7876a2617691cb23283cd65b6c9a90faeb67d81b07f2e409e6fc02ccbd",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/refit/receipt.json": "bc81e43af351b8856144c16dce1255cc91ec3227362d751576663e45cc14748c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_2/selected/seed_142/stopping/receipt.json": "fe166a2a23a2d696f77aedb452d1dd86ae275369ccc1160cad83ebf2548b9ffc",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/refit/receipt.json": "eb83adfbed100ecd01db96f4e88a964b39a57923f4a2d08eeaa3dc1dac6a741f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/stopping/receipt.json": "472f8290fb4741a26ec8f4e04af59e36e44fd6b414bc334fd1d3fb49cadb18de",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/refit/receipt.json": "d079c89a82c4f49b0990f3af6cf66e2813591ad886465e6abd3499670788ab1b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_242/stopping/receipt.json": "7fc0db1a4c81c80fe614ec3393dfada0c36474711f0a4c283f6e221f6c1b4cad",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/refit/receipt.json": "e0243751705bf6d400ef60b4901b3e65b52aaea64080c9d01dcc30e33f1678ce",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_1/selected/seed_142/stopping/receipt.json": "65dd4e708e9b7402dd56e888ac4696cbcc3a221efe0ef01b901932e44f505cc1",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/refit/receipt.json": "7a098085737897e327cfac9502a5e37a2d315e148d745440c1127f134c435c5d",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_42/stopping/receipt.json": "d18e575a284f1cab314b0452d0edd274ba68b525ce1e940bebb1197675b4911f",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/refit/receipt.json": "83f71b4f5d6456de4d65c40b10114bff7b05e8f9abeccd6a62a27c3e8b483c3e",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_242/stopping/receipt.json": "d7a069ca3327817f122ba4f7f6777fa78d79efb49dbca0344a78bf02b86b1a5b",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/refit/receipt.json": "8033ab2715393e7a35904480dda94535fbbdec28fbbf61dd4548f172aedb38a0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_0/selected/seed_142/stopping/receipt.json": "5f1e17b28f2bf27f967ae3d64150fed24d341a800d65c025a7ff3497b85eb0d0",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/xgboost/selected/receipt.json": "30a5d0ef8d216adddd00c0242f89e670a3b5ed2c7de84242628b7cfae6784339",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_4/spline/selected/receipt.json": "d10774df89d8ba3b13cf6bac2c54975368ee04e09ae7b56aa82002f6db08c448",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/spline/selected/receipt.json": "36e780a13367037b9379e15db4953677fd9f7ccf738c557841c4fbf1d92a7728",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_3/random_forest/selected/receipt.json": "b85849fd0425f98635db85ff99ea28488d7d826ccca6277600fa26f7fac78f15",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/xgboost/selected/receipt.json": "011b9d6b1b902d1b5428ff8c8de5c944f349ad5e5c64b61c9a7cf9634ec04ca9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/spline/selected/receipt.json": "f2d921ab072725441ce840fef82db35fc28a87034e56c21cfb80f4e37f8d760c",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_2/random_forest/selected/receipt.json": "72781b8bd614ec715056774f4f02c4a5a16298e323f09e365e8e53e33da01ef9",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/xgboost/selected/receipt.json": "8ec8aedc87c52d5235af7b905b01a8adf99312cb97499810494a56dbce4b1a17",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/spline/selected/receipt.json": "093a4d4fbb73b4402a13e221f311d2bb0f3f534c1e901cecfee7fd19811eb2d7",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_1/random_forest/selected/receipt.json": "e0c58f0fe05a96d99c75ad22d380ae44feb714a9badeef304e5ae630441406a8",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/xgboost/selected/receipt.json": "6b70c31592e32516adf5fdb8f9b53f258f730231abb34688dc559ede05894948",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/spline/selected/receipt.json": "fa0429cb36723c8242350e56d5cb598810092532e70d64d6d4810853e25cfa65",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/classical/outer_0/random_forest/selected/receipt.json": "4dd016129d72252b740dc15622611f06bf81f6980566a23e22feba6cbc329da0"
+  },
+  "external_source_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/receipt.json": "93be6547c13e88205a61ebc849adcb3bd0db520fcf4f2313d60f1d9e650af7ca",
+    "results/dedup_v1/metadata_nn_tuning/v1/nn_grid36_v1/receipt.json": "e5415184d933003fd16ef9fb8c000cb027689b01f414eb70bc02edfca4109fd9"
+  },
+  "test_set_loaded": false,
+  "final_model_fitted": false,
+  "interpretation": "ROC/AP objective change after previous development inspection; conditional development evidence, not a new independent test."
+}

@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-11T13:46:58.440849+00:00",
+  "run_id": "nn_grid36_v1",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "76be46871d236c4223f9bb9b7fa7460222885abcfad0419c1165fc2662dd090d",
+  "condition": "original",
+  "dataset_identity": {
+    "variant": "original",
+    "dataset_manifest": null,
+    "dataset_manifest_sha256": null,
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "837d008754872706f5ac4be9b1402bee7913d1ba95c4e010d26757c0389594d7",
+    "dataset_identity": "fe16b01d7297a18fbcac27bfd4e4f30f27799a7a59b1612c126b97ffdf85435f",
+    "membership_sha256": {},
+    "preserved_inner_memberships": {}
+  },
+  "reuse_identity": {
+    "metadata_suite_receipt_sha256": "fdec21ed8f8ad8a8ba089f9ca9380549f96869070b7ab527f947c643976718e2",
+    "clean_comparator_receipt_sha256": "88e74dc199675052be1c79065033cb2269de1f2e1f87cd49f4c9c583726e351e",
+    "metadata_original_memberships_sha256": "22b4f00bf7647727f080a30d76c28e8c384f55f42f7cd95d9450af828b2d471f",
+    "metadata_clean_memberships_sha256": "4d26e6576658f89f92fa19231c00778172264c3d6d1e67772d72f03113b5485a"
+  },
+  "protocol": {
+    "recipes": [
+      {
+        "recipe_id": "r00",
+        "recipe_order": 0,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r01",
+        "recipe_order": 1,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r02",
+        "recipe_order": 2,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r03",
+        "recipe_order": 3,
+        "hidden_units": 8,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r04",
+        "recipe_order": 4,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r05",
+        "recipe_order": 5,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r06",
+        "recipe_order": 6,
+        "hidden_units": 8,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r07",
+        "recipe_order": 7,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r08",
+        "recipe_order": 8,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r09",
+        "recipe_order": 9,
+        "hidden_units": 8,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r10",
+        "recipe_order": 10,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r11",
+        "recipe_order": 11,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r12",
+        "recipe_order": 12,
+        "hidden_units": 16,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r13",
+        "recipe_order": 13,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r14",
+        "recipe_order": 14,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r15",
+        "recipe_order": 15,
+        "hidden_units": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r16",
+        "recipe_order": 16,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r17",
+        "recipe_order": 17,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r18",
+        "recipe_order": 18,
+        "hidden_units": 16,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r19",
+        "recipe_order": 19,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r20",
+        "recipe_order": 20,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r21",
+        "recipe_order": 21,
+        "hidden_units": 32,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r22",
+        "recipe_order": 22,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r23",
+        "recipe_order": 23,
+        "hidden_units": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r24",
+        "recipe_order": 24,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r25",
+        "recipe_order": 25,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r26",
+        "recipe_order": 26,
+        "hidden_units": 32,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r27",
+        "recipe_order": 27,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r28",
+        "recipe_order": 28,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r29",
+        "recipe_order": 29,
+        "hidden_units": 64,
+        "learning_rate": 0.0003,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r30",
+        "recipe_order": 30,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r31",
+        "recipe_order": 31,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r32",
+        "recipe_order": 32,
+        "hidden_units": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.4
+      },
+      {
+        "recipe_id": "r33",
+        "recipe_order": 33,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      },
+      {
+        "recipe_id": "r34",
+        "recipe_order": 34,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      },
+      {
+        "recipe_id": "r35",
+        "recipe_order": 35,
+        "hidden_units": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.4
+      }
+    ],
+    "neural_training": {
+      "base_seeds": [
+        42,
+        142,
+        242
+      ],
+      "hidden_units": 32,
+      "dropout": 0.2,
+      "max_epochs": 100,
+      "min_epochs": 10,
+      "patience": 12,
+      "minimum_improvement": 1e-05,
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "loss": "unweighted BCEWithLogitsLoss",
+      "device": "CPU",
+      "threads": 4,
+      "training_seed_rule": "base_seed + outer_fold",
+      "stop_fold_rule": "(outer_fold + 1 + run_index) % 5",
+      "ensemble": "equal mean of all three prescribed seeds",
+      "epoch_selection": "minimum stopping-fold BCE within patient-disjoint outer training pool",
+      "refit": "new preprocessor, network, optimiser and scheduler-free fixed epoch fit",
+      "features": [
+        "age_approx",
+        "sex",
+        "anatom_site_general_challenge"
+      ]
+    },
+    "classical_grids": {
+      "spline": {
+        "classifier__C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "preprocessor__smooth_age__spline__n_knots": [
+          3,
+          4,
+          5
+        ],
+        "preprocessor__smooth_age__spline__degree": [
+          2,
+          3
+        ]
+      },
+      "random_forest": {
+        "classifier__max_depth": [
+          4,
+          8,
+          null
+        ],
+        "classifier__min_samples_leaf": [
+          5,
+          15
+        ],
+        "classifier__max_features": [
+          "sqrt",
+          1.0
+        ]
+      },
+      "xgboost": {
+        "classifier__max_depth": [
+          2,
+          3
+        ],
+        "classifier__learning_rate": [
+          0.03,
+          0.05,
+          0.1
+        ],
+        "classifier__min_child_weight": [
+          1,
+          5
+        ]
+      }
+    },
+    "base_seeds": [
+      42,
+      142,
+      242
+    ],
+    "candidate_selection": "unweighted mean of three inner ensemble average-precision scores",
+    "tie_rule": "first in declared recipe order; historical baseline first",
+    "inner_stopping": "remaining=[(v+1)%3,(v+2)%3]; stop=remaining[s%2]; fit=remaining[1-s%2]",
+    "outer_stopping": "(outer_fold+1+seed_index)%5",
+    "training_seed": "base_seed+outer_fold",
+    "ensemble": "equal mean of all three seed probabilities",
+    "membership_source": "saved metadata-suite original memberships; clean is retained-ID filtering",
+    "primary_metric": "unweighted mean outer-fold average precision",
+    "test_set_loaded": false,
+    "final_model_fitted": false
+  },
+  "source_sha256": {
+    "src/melanoma_detection/metadata_nn_tuning.py": "2e8e074847ff95d7519f7813e376e4f45dc4edef852efe4051ff631b1c97cbab",
+    "scripts/run_metadata_nn_tuning.py": "ae02390bc04dc17f6b83c47c86f414ec77dbd1b15408efd1bafcb618b275849b",
+    "src/melanoma_detection/dedup_metadata.py": "80c3fab1be9c6430f07c377cec15522505aec0dd1076eecb2efa70962673dfbb",
+    "src/melanoma_detection/dedup_metadata_suite.py": "76c84796c22917f2963af3cc79271d9aa229035dd2a4a2bf124a6af8c744c6f4",
+    "src/melanoma_detection/development_dataset.py": "9ba76d675b7366f23847dd5f6ee9dfe27e04a2f3d95cd8e38ebbcd85d22f8c89",
+    "src/melanoma_detection/metadata_model.py": "dba185a9069423194ec06e429afc7d18078ab56f2e4cd47d2ae60df1f80d4aba",
+    "src/melanoma_detection/metadata_evaluation.py": "5262ad77b74bbb32f1242d36711626b9e837138d21defa04a678971048d31f61",
+    "src/melanoma_detection/metadata_validation.py": "28ca120a7c300674925ba275cc58c561595f77e278311d425c96c062c40d30e9",
+    "src/melanoma_detection/metadata_source_archive.py": "6e827e9ec9844174413dace5116091802c8982ccc35fff21876667900a84bb79"
+  },
+  "config_sha256": "ae719092f0e81b96aa7330d094351dcf4f73adf904b75ab0a8828ce7ba1a73a4",
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "torch": "2.14.0+cu130",
+    "xgboost": "3.4.1",
+    "joblib": "1.5.3"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "presentation_revision": 3,
+  "verified_utc": "2026-10-11T11:00:10.822122+00:00",
+  "notebooks": 12,
+  "executed_code_cells": 195,
+  "rendered_figures": 83,
+  "notebook_errors": 0,
+  "regression_tests_passed": 26,
+  "all_notebook_and_executed_code_hashes_match": true,
+  "markdown_at_least_original_length_in_every_stage": true,
+  "broken_local_notebook_links": 0,
+  "protected_files_verified_unchanged": 887,
+  "model_weight_preservation_method": "size and nanosecond timestamp, plus matching existing checkpoint hash receipts checked by report loaders",
+  "other_protected_file_preservation_method": "SHA-256, size and nanosecond timestamp",
+  "visual_review": "Original-versus-clean baseline/model/calibration/EDA/referral pairs, remaining original figure families, supplementary diagnostic families and final combined model-colour consistency inspected.",
+  "readability_repairs": [
+    "Supplementary fold heatmap contrast",
+    "Supplementary fold label background at reference-line intersections"
+  ],
+  "scope_qualifications": [
+    "Five clean outer image folds replace the exploratory pilot",
+    "Duration/ConvNeXt pilots remain pending",
+    "DenseNet/strong augmentation/CLAHE deferred",
+    "Mean-fold ranking primary; pooled views secondary",
+    "Marginal age profile averages saved outer models",
+    "Final clean fitting and reserved-test evaluation deferred"
+  ],
+  "training_started": false,
+  "reserved_test_loaded": false
+}

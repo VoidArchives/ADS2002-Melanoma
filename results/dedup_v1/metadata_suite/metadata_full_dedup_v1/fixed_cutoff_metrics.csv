@@ -1,0 +1,20 @@
+model,scope,cutoff,purpose,TP,FP,TN,FN,sensitivity,specificity,precision,flagged_fraction
+spline,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_42,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_142,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+nn_seed_242,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+nn_mean,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+dummy,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+categorical_logistic,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+random_forest,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+xgboost,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_age,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_site,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex_age,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_sex_site,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+ablation_age_site,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+spline_tuned,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+random_forest_tuned,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+xgboost_tuned,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0
+spline_calibrated,pooled,0.5,fixed descriptive scenario; no OOF cutoff optimisation,0,0,6579,127,0.0,1.0,,0.0

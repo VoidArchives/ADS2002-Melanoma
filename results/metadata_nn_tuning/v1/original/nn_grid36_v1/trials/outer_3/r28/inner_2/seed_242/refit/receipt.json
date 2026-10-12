@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "condition": "original",
+  "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+  "compatibility_sha256": "026e51361c63943f3e1f3d5458e861ec0cc08ef47859b9138605a7339b051d65",
+  "context": {
+    "condition": "original",
+    "outer_fold": 3,
+    "output_root": "results/metadata_nn_tuning/v1/original/nn_grid36_v1",
+    "recipe_id": "r28",
+    "recipe_order": 28,
+    "hidden_units": 64,
+    "learning_rate": 0.0003,
+    "dropout": 0.2,
+    "stage": "nn_inner",
+    "inner_fold": 2,
+    "base_seed": 242,
+    "training_seed": 245,
+    "stop_group": 0,
+    "phase": "refit",
+    "selected_epochs": 58
+  },
+  "csv_names": [
+    "predictions",
+    "history"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r28/inner_2/seed_242/refit/predictions.csv": "3865aa6df27e75edfc4fb2e9210cb3e70c49ad59f3cf4e6848e8527be7a2ff54",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r28/inner_2/seed_242/refit/history.csv": "6d7b67800b82cecaffc73fbcc72c84f446d9f8d08069768386af49dad45febd9",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r28/inner_2/seed_242/refit/model.joblib": "48b412eea5054babaf3bcbef8ac3b2ddab8644fd3fd3f39752a389508142810d",
+    "results/metadata_nn_tuning/v1/original/nn_grid36_v1/trials/outer_3/r28/inner_2/seed_242/refit/result.json": "014a809f878540d8b47f346f0b9b5ecd5655c55c8c80c34097d191970c59ec62"
+  }
+}

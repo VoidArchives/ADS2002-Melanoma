@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "dedup_v1",
+  "selection_metric": "roc_auc",
+  "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+  "compatibility_sha256": "00323cd79d181aa9366895c263533ef5d5a47cfedb0d20ca5fbb3aa2226a9097",
+  "context": {
+    "condition": "dedup_v1",
+    "outer_fold": 1,
+    "selection_metric": "roc_auc",
+    "output_root": "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1",
+    "recipe_id": "r01",
+    "recipe_order": 1,
+    "hidden_units": 8,
+    "learning_rate": 0.0003,
+    "dropout": 0.0,
+    "model": "nn",
+    "stage": "nn_outer_tuned",
+    "inner_fold": -1,
+    "base_seed": 42,
+    "training_seed": 43,
+    "stop_group": 2,
+    "phase": "stopping"
+  },
+  "csv_names": [
+    "history"
+  ],
+  "output_sha256": {
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/stopping/history.csv": "d42b202dbf123a07d0f8cb52a96db038e68c2dbb3fb1080751eafc15ecb9210d",
+    "results/dedup_v1/metadata_nn_tuning/v2/roc_auc_grid36_v1/trials/outer_1/selected/seed_42/stopping/result.json": "74712382c7806d6a8805b922d1ea3441240d4f9f0b34ad327fc613da974ffe86"
+  }
+}

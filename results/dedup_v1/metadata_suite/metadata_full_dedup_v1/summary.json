@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "run_id": "metadata_full_dedup_v1",
+  "variant": "dedup_v1",
+  "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+  "dataset_identity": {
+    "variant": "dedup_v1",
+    "dataset_manifest": "data/subset/processed/dedup_v1/dataset_manifest.json",
+    "dataset_manifest_sha256": "9f7f0f3bfc436b90372c76c6925fbc12cdd8a413556d7e177b7f6274dc71e3a1",
+    "canonical_source_sha256": "4020a29a53b96943443e4d6173d35dabc6954fd5bd7d4d9db73a6b554a86a324",
+    "retained_ids_sha256": "c428646b3720b2680410f142f3ac7ab467a5b0dafdb159bb8d42fc66f450b904",
+    "dataset_identity": "0562e7bb898ab69d2e5ac7fcf50bf6e9b80663362af4ae9f9eb7e57825b04af1",
+    "membership_sha256": {
+      "0": "49d5e98567580aef16a1590e743ff4258e50229939b71f0220103f58e31fdbca",
+      "1": "1b0922d7685882f3e622b4524d9e32dd69e797dc3bf43de946f75df35ad06b55",
+      "2": "a1a9fc7c828b0e5543a7895a427c026c746e7ec6f1d56212c9623c1372505372",
+      "3": "b3e6a1aaa91216d5b8190c95db509050c46cd93151c51a52f4c1f398f4ce3533",
+      "4": "a9d00f3fb5bf571881b8516f407cbb50860fbc18ab53da827e35f762a14f063b"
+    },
+    "preserved_inner_memberships": {
+      "0": "data/subset/processed/dedup_v1/folds/0/inner_memberships.csv",
+      "1": "data/subset/processed/dedup_v1/folds/1/inner_memberships.csv",
+      "2": "data/subset/processed/dedup_v1/folds/2/inner_memberships.csv",
+      "3": "data/subset/processed/dedup_v1/folds/3/inner_memberships.csv",
+      "4": "data/subset/processed/dedup_v1/folds/4/inner_memberships.csv"
+    }
+  },
+  "created_at_utc": "2026-10-05T08:48:38.265490+00:00",
+  "rows": 6706,
+  "patients": 422,
+  "malignant_images": 127,
+  "malignant_patients": 88,
+  "fit_counts": {
+    "additional_baselines": 20,
+    "partial_feature_ablations": 30,
+    "nested_inner": 630,
+    "tuned_outer_refits": 15
+  },
+  "executed_fits": 695,
+  "executed_fits_this_invocation": 695,
+  "reused_fits": 60,
+  "avoided_repeat_fits": {
+    "full_feature_ablation": 5,
+    "untuned_nested_comparators": 15
+  },
+  "completed_fold_seconds": 172.32728039997164,
+  "elapsed_seconds_this_invocation": 175.04403869999805,
+  "prediction_paths": {
+    "spline_raw": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/spline_raw.csv",
+    "nn_seed_42": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/nn_seed_42.csv",
+    "nn_seed_142": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/nn_seed_142.csv",
+    "nn_seed_242": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/nn_seed_242.csv",
+    "metadata_nn_mean": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/metadata_nn_mean.csv",
+    "dummy": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/dummy.csv",
+    "categorical_logistic": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/categorical_logistic.csv",
+    "random_forest": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/random_forest.csv",
+    "xgboost": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/xgboost.csv",
+    "ablation_sex": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_sex.csv",
+    "ablation_age": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_age.csv",
+    "ablation_site": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_site.csv",
+    "ablation_sex_age": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_sex_age.csv",
+    "ablation_sex_site": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_sex_site.csv",
+    "ablation_age_site": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/ablation_age_site.csv",
+    "spline_tuned": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/spline_tuned.csv",
+    "random_forest_tuned": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/random_forest_tuned.csv",
+    "xgboost_tuned": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/xgboost_tuned.csv",
+    "spline_calibrated": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/spline_calibrated.csv",
+    "ablation_all_features": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/predictions/spline_raw.csv"
+  },
+  "prediction_columns": [
+    "image_name",
+    "patient_id",
+    "fold",
+    "target",
+    "score"
+  ],
+  "metrics_path": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/metrics.csv",
+  "selected_parameters_path": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/selected_parameters.csv",
+  "memberships_receipt_path": "results/dedup_v1/metadata_suite/metadata_full_dedup_v1/memberships_receipt.json",
+  "reuse_receipt_path": "results/dedup_v1/metadata/comparator_receipt.json",
+  "test_set_loaded": false,
+  "final_model_fitted": false,
+  "primary_metric": "unweighted mean outer-fold average precision",
+  "interpretation": "All comparisons beyond predeclared B0/spline/NN are secondary; tuning selections use inner training patients only."
+}

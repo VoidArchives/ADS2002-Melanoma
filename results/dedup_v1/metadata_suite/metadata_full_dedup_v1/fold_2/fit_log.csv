@@ -1,0 +1,14 @@
+outer_fold,stage,model,fits,elapsed_seconds
+2,baseline,dummy,1,0.0022197999933268875
+2,baseline,categorical_logistic,1,0.01914359998772852
+2,baseline,random_forest,1,0.795026699983282
+2,baseline,xgboost,1,0.0735304000263568
+2,ablation,sex,1,0.013134199980413541
+2,ablation,age,1,0.023918699997011572
+2,ablation,site,1,0.01609769999049604
+2,ablation,sex_age,1,0.027497399976709858
+2,ablation,sex_site,1,0.0156338999804575
+2,ablation,age_site,1,0.03156679999665357
+2,nested,spline,55,1.9593230999889784
+2,nested,random_forest,37,29.146317899983842
+2,nested,xgboost,37,2.325279699987732

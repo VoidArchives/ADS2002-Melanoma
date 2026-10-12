@@ -1,0 +1,158 @@
+{
+  "training_started": false,
+  "reserved_test_loaded": false,
+  "kernel_interpreter": "C:\\Users\\thoma\\Documents\\GitHub\\ADS2002-Melanoma\\.venv\\Scripts\\python.exe",
+  "historical_preservation": {
+    "historical_files_checked": 3032,
+    "archived_notebooks_checked": 27
+  },
+  "status": "complete",
+  "notebooks": [
+    {
+      "notebook": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "sha256": "3bd6f2f43a4c5c1dbc96e2bd5fa06dedc994f1c5e872a21d5fa7ff6630f2951d",
+      "errors": 0,
+      "code_cells": 9,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_4.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network.html"
+    },
+    {
+      "notebook": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "sha256": "3a31bbdf05d9add2376fb7194ef5129a19e5dfbd0e227c5c94a402fe2264b891",
+      "errors": 0,
+      "code_cells": 13,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell12_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_4.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_5.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell16_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell18_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_3.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell22_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell26_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning.html"
+    },
+    {
+      "notebook": "notebooks/Subset/08_metadata_robustness.ipynb",
+      "sha256": "1f5b7da832045e5d518faed93c817c65d300212209b31b005e313549800eeb41",
+      "errors": 0,
+      "code_cells": 10,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell9_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell11_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell15_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness_cell23_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset/08_metadata_robustness.html"
+    },
+    {
+      "notebook": "notebooks/Subset/14_image_nested_evaluation.ipynb",
+      "sha256": "4bf6875f60570f5dc9518a701d65c98a2e9b9e32d49a055c524c22e1e82d5040",
+      "errors": 0,
+      "code_cells": 11,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell9_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell9_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell11_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell13_5.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell14_3.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation_cell20_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset/14_image_nested_evaluation.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "sha256": "897d147604dc5c4c7789291e9075f349e3a8c09cf9ab6ec3f1d19a04198c5802",
+      "errors": 0,
+      "code_cells": 9,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_4.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell13_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell13_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "sha256": "500f9456f295438b1ce1509e19c7519dafc3e7b699366aeaae4c83d6c088d6ec",
+      "errors": 0,
+      "code_cells": 13,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell12_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell14_4.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell14_5.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell16_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell18_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_3.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell22_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell26_1.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/08_metadata_robustness.ipynb",
+      "sha256": "021b732a1c53020cbbc7c613e80551a4001ad8a6ca5d4d50c3d87abcf4d8c197",
+      "errors": 0,
+      "code_cells": 17,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell9_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell11_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell15_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell29_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell31_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell33_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness_cell35_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/08_metadata_robustness.html"
+    },
+    {
+      "notebook": "notebooks/Subset_dedup/12_combined_evaluation.ipynb",
+      "sha256": "cca5eb44e30370bad8fd94aec193b827b490175a8ee576bdeeb17810be03c023",
+      "errors": 0,
+      "code_cells": 37,
+      "figures": [
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell9_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell11_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell15_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell29_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell31_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell33_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell44_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell44_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell46_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell46_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell48_3.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell48_5.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell51_0.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell51_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell58_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell60_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell60_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell62_2.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell64_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell66_4.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell68_1.png",
+        "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation_cell76_2.png"
+      ],
+      "html": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/12_combined_evaluation.html"
+    }
+  ],
+  "completed_utc": "2026-10-11T15:20:44.946641+00:00",
+  "visual_inspection": "complete",
+  "visual_inspection_receipt": "results/metadata_nn_tuning/v1/report_verification/visual_inspection_receipt.json"
+}

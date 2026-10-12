@@ -198,7 +198,10 @@ def load_saved_calibration_run(project_root, run_id="b0_nested_calibration_5h_v1
     for path, digest in paths:
         if sha256(path) != digest:
             raise ValueError("Calibration or raw-reference OOF prediction hash changed.")
-    expected = pd.read_csv(canonical)
+    from .image_nested_reporting import load_run_development
+    expected = load_run_development(root, raw_manifest)
+    if manifest.get("dataset_identity") != raw_manifest.get("dataset_identity"):
+        raise ValueError("Calibration and raw runs must resolve the identical development variant.")
     raw_predictions = pd.read_csv(paths[1][0])
     predictions = validate_calibration_predictions(pd.read_csv(paths[0][0]), raw_predictions, expected)
     fold_records = summary.get("folds", [])

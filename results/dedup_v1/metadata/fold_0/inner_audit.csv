@@ -1,0 +1,5 @@
+outer_fold,inner_heldout_fold,fit_patients,validation_patients,patient_overlap,fit_positive_images,validation_positive_images,outer_validation_patients,calibrator_slope,calibrator_intercept
+0,1,254,84,0,77,26,84,0.5979019013497304,-1.576852982091965
+0,2,251,87,0,77,26,84,0.5979019013497304,-1.576852982091965
+0,3,256,82,0,78,25,84,0.5979019013497304,-1.576852982091965
+0,4,253,85,0,77,26,84,0.5979019013497304,-1.576852982091965

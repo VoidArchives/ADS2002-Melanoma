@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-11T15:13:44.484522+00:00",
+  "run_id": "nn_grid36_v1",
+  "result": "pass",
+  "figure_count": 32,
+  "pair_count": 16,
+  "notebook_count": 4,
+  "issues": [],
+  "review_scope": "Direct original-resolution inspection of all original and deduplicated 06/07 figures, followed by corresponding-pair comparison. Original figure hashes reconfirmed unchanged from the earlier direct review.",
+  "original_visual_review": "results/metadata_nn_tuning/v1/report_verification/metadata_original_visual_review.json",
+  "overall_findings": [
+    "Shared colour, font, layout, marker, model-order and section-specific composition conventions are preserved in all pairs.",
+    "Numerical labels, score curves, selected settings, stopping lengths, intervals and prevalence are data-specific and intentionally differ.",
+    "Automatic ranges and tight-bounding-box extents respond to data-specific values and tick labels; matching visual procedures do not require identical pixels.",
+    "Candidate heatmaps use a common AP scale within each condition; their individual colorbar ranges should be read when comparing shades across conditions.",
+    "No clipped labels, overlapping titles or obstructed legends were found."
+  ],
+  "notebooks": [
+    {
+      "condition": "original",
+      "path": "notebooks/Subset/06_metadata_neural_network.ipynb",
+      "sha256": "3bd6f2f43a4c5c1dbc96e2bd5fa06dedc994f1c5e872a21d5fa7ff6630f2951d"
+    },
+    {
+      "condition": "original",
+      "path": "notebooks/Subset/07_metadata_tuning.ipynb",
+      "sha256": "3a31bbdf05d9add2376fb7194ef5129a19e5dfbd0e227c5c94a402fe2264b891"
+    },
+    {
+      "condition": "dedup_v1",
+      "path": "notebooks/Subset_dedup/06_metadata_neural_network.ipynb",
+      "sha256": "897d147604dc5c4c7789291e9075f349e3a8c09cf9ab6ec3f1d19a04198c5802"
+    },
+    {
+      "condition": "dedup_v1",
+      "path": "notebooks/Subset_dedup/07_metadata_tuning.ipynb",
+      "sha256": "500f9456f295438b1ce1509e19c7519dafc3e7b699366aeaae4c83d6c088d6ec"
+    }
+  ],
+  "pairs": [
+    {
+      "filename": "06_metadata_neural_network_cell11_1.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same five bars per panel, blue spline/orange seeds/charcoal mean, primary labels and dashed prevalence reference. Heights and annotations differ with development predictions.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_1.png",
+          "sha256": "5e019926e4f0331151729fd12ba7413fedb045294f750a21e7303075ae6f339b",
+          "dimensions_px": [
+            1304,
+            509
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_1.png",
+          "sha256": "441a840064c81bb638f479669978c37a52ef36514de808d85510bfef42bbaf7a",
+          "dimensions_px": [
+            1304,
+            509
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "06_metadata_neural_network_cell11_2.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same pooled two-panel presentation and palette. Data-specific AP values alter automatic AP upper ticks; this is the same axis-setting procedure.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_2.png",
+          "sha256": "30c79d73b35fa35e7f32db8adceb9de8b6204342dab57071cdd1d6222d2aac08",
+          "dimensions_px": [
+            1304,
+            509
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_2.png",
+          "sha256": "95fec37cead0fdc87796db8ab8d95663c35774d63c6654cf95d2fdc8930c4a79",
+          "dimensions_px": [
+            1304,
+            509
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "06_metadata_neural_network_cell11_4.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same seed markers, spline/ensemble diamonds and legend order. Per-fold positions and automatic AP scale differ with predictions.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_4.png",
+          "sha256": "18f5853a63728ffa3d934600ee316038c4026658db04cc0f405ee0266afc8678",
+          "dimensions_px": [
+            1304,
+            560
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell11_4.png",
+          "sha256": "6cf4257954a433ae5931c3187efc085f99e67709a294b27cc980e0104ea3919a",
+          "dimensions_px": [
+            1304,
+            560
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "06_metadata_neural_network_cell13_1.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same fixed-seed markers, median diamonds, legend placement and axes. Recorded epoch values and automatic upper ticks differ.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_1.png",
+          "sha256": "b57cdf992d297d23fdaca707960e8f01bd3c2e59de26a8a0c5fbf9aca8093c68",
+          "dimensions_px": [
+            1304,
+            560
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell13_1.png",
+          "sha256": "d8eee57e6caafc2055b6a92cb3d97fb2677860b70992e35322c5e20c1693bfb0",
+          "dimensions_px": [
+            1304,
+            560
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "06_metadata_neural_network_cell13_2.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same five-row stopping/refit layout, row height, spacing, orange/charcoal losses and seed line styles. Epoch lengths and curves differ; all labels remain readable.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_2.png",
+          "sha256": "ba1ee26a6b315c52a34b46bcdcd57e731cd9e905b2131ec993866fd8db023b44",
+          "dimensions_px": [
+            1423,
+            2121
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/06_metadata_neural_network_cell13_2.png",
+          "sha256": "ecd552407498fdbae8806c9ccdb6fc569bbce3454a19cdb6e9cde95da847235a",
+          "dimensions_px": [
+            1424,
+            2121
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell12_0.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same 5-by-3 candidate layout, 180 annotated cells, blue colormap, shared within-condition scale, gold selected outlines and global legend placement. AP values, selected cells and condition-specific colorbar range differ.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell12_0.png",
+          "sha256": "17cb40eee06fe524ddd8b442c5a121833e3bcf49d584311319224c063737798a",
+          "dimensions_px": [
+            1351,
+            1969
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell12_0.png",
+          "sha256": "8cc52017ca8d2f08ae7d0e38b5274bc24a6a340baa590657228e288aef5172f5",
+          "dimensions_px": [
+            1351,
+            1969
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell14_4.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same three gold frequency panels and typography. Clean selections use widths 8/16 instead of 8/32 and two learning-rate categories instead of three; category counts are data-specific.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_4.png",
+          "sha256": "0cc3df69710583c0e23f87aad332fa91d9a8b29a4d886d86e6f82c7a0f14eb46",
+          "dimensions_px": [
+            1390,
+            475
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell14_4.png",
+          "sha256": "f094cca1d8dd6b32244e206c2dc6f7ee1af6d50bbaebf199a8d7b3ad1fe69f4a",
+          "dimensions_px": [
+            1390,
+            475
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell14_5.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same gold margin bars, axes and six-decimal annotations; only margins change.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_5.png",
+          "sha256": "890bed899319304e75491a5a33d44fcea05dad1fa7590a7b6abd3d2a7ef67fb1",
+          "dimensions_px": [
+            1040,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell14_5.png",
+          "sha256": "ff120130f020674b4b6ae82edb1bdc0384ed600c747cf366ef4114475fd28ed7",
+          "dimensions_px": [
+            1040,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell16_1.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same tuned gold seed markers, charcoal median, legend and outer-fold layout. Epoch choices change with selected settings.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell16_1.png",
+          "sha256": "4fad35f8ec1d7ceee8514785eb85620b7dac8eb42b8ee33b0ba9688390d1db6c",
+          "dimensions_px": [
+            1090,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell16_1.png",
+          "sha256": "34d1009f90734ca58f16ad8d11268f0a3fa90c99cda8af45b739ce72300376dd",
+          "dimensions_px": [
+            1090,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell18_2.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four-family 2-by-2 gains layout, gold squares, grey zero lines and consistent within-condition y-scale. Data-specific fold differences alter vertical range.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell18_2.png",
+          "sha256": "360fcc7bbe6cc2650f5f196a9093610f3261f3188ed96d090f4511ca3dcfef32",
+          "dimensions_px": [
+            1190,
+            887
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell18_2.png",
+          "sha256": "6d78091136494d10fd756d02a081d8d42de1e95323783afd1e42485f2ed94857",
+          "dimensions_px": [
+            1190,
+            887
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell20_0.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four-family blue/gold primary ROC-AUC bar layout, family order, legend and label precision; only heights and values change.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_0.png",
+          "sha256": "0dc6d451b54be37b1f9ae4d2899475e5a255a598e96ea59e304c7e503107bdb4",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_0.png",
+          "sha256": "6d659a7e18eec73dbbb945c7a5d63aa61b33d9348e26cc409e9d44420a7126e0",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell20_1.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four-family blue/gold primary AP bar layout, family order, legend and label precision; only heights and values change.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_1.png",
+          "sha256": "1aa40268c8508ae96ab96721e22d71393a46b4c82b058ab09c93d05d8c7c1a1b",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_1.png",
+          "sha256": "2cf88153da5f5bee15a5e0d4c95ca58f49e4e0f1c2a53b7f8365cd5b3e308296",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell20_2.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four-family blue/gold secondary ROC-AUC bar layout and secondary title; only heights and values change.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_2.png",
+          "sha256": "ebfe84a3ef62c2506ba0dbb5464a7d335ae34b203f1261a7f9935e4cf7276eb1",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_2.png",
+          "sha256": "1fb812e028e494c80162cdfabe4472fa4a23e6ad6ac234cdffe2a8034bf0490c",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell20_3.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four-family blue/gold secondary AP layout and label precision; data-specific values alter automatic upper AP range.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_3.png",
+          "sha256": "1da505b2b205ec69eb245eadced6cd7f732cb6948cabaf6eefb5671ef6018696",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell20_3.png",
+          "sha256": "e748e290b0b762b14b25e95e94721e48ee29d61d20a1f3c96e8d8fc047b1cc21",
+          "dimensions_px": [
+            1040,
+            570
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell22_0.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same four rows and left-ROC/right-PR composition, row spacing, blue dashed-circle versus gold solid-square curves, complete legends and 0\u201330% PR focus. Curves and prevalence label change from 1.86% to 1.89%.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell22_0.png",
+          "sha256": "fd504ec8331db6e1f6a55163dfc429ae388e32b50769525bbc3f7d8536303cfe",
+          "dimensions_px": [
+            1390,
+            1741
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell22_0.png",
+          "sha256": "239c7c65d0db549b7a8939f83d3a34d29070ad393c03bbf09e95f5080959aac1",
+          "dimensions_px": [
+            1390,
+            1741
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    },
+    {
+      "filename": "07_metadata_tuning_cell26_1.png",
+      "outcome": "pass",
+      "checks": {
+        "colours": "pass",
+        "fonts": "pass",
+        "layout_and_spacing": "pass",
+        "composition": "pass",
+        "labels_and_clipping": "pass"
+      },
+      "findings": "Same three paired comparisons, gold intervals/dark-gold squares and conditional-assessment title. Differences and interval endpoints alter automatic x-axis range; all full labels fit.",
+      "numerical_differences": "intended, data-specific",
+      "figures": {
+        "original": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell26_1.png",
+          "sha256": "3cbc9c02d383c40c91b5ded3de1946d1acf427f41154dfb82fc8481e13c13a1b",
+          "dimensions_px": [
+            1040,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        },
+        "dedup_v1": {
+          "path": "results/metadata_nn_tuning/v1/report_verification/Subset_dedup/07_metadata_tuning_cell26_1.png",
+          "sha256": "70a70cafd0dd94ded5284e483be47002a468f22bafedf9d954aaef19d1459739",
+          "dimensions_px": [
+            1040,
+            470
+          ],
+          "inspection_method": "view_image(detail=original)",
+          "outcome": "pass"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "This receipt documents figure appearance and scope labels. Separate artifact verification and numerical tests establish calculation correctness.",
+    "Original templates include historical experiment scope; the fourth NN tuning row and search diagnostics are documented additions in both conditions."
+  ]
+}

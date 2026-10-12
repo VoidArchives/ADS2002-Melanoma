@@ -99,6 +99,7 @@ def declare_protocol(project_root, config, config_path=None):
     if seen:
         raise ValueError("Calibration must be declared before inspecting raw outer predictions.")
     record = {"schema_version": 1, "declared_utc": _utc_now().isoformat(),
+              "config_path": config_path.resolve().relative_to(root).as_posix(),
               "config_sha256": file_sha256(config_path), "reference_run_id": raw_dir.name,
               "existing_outer_prediction_folds": [], "declared_before_outer_fold0_prediction": True}
     _atomic_json(declaration, record)
@@ -112,7 +113,8 @@ def prepare_calibration(project_root, config, *, raw_prepared=None, audit_images
     declaration_path = run_dir / "protocol_declaration.json"
     if not declaration_path.exists():
         raise ValueError("Missing predeclared calibration protocol; declare it before raw outer inference.")
-    declaration = declare_protocol(root, config)
+    saved_declaration = _read_json(declaration_path)
+    declaration = declare_protocol(root, config, root / saved_declaration.get("config_path", "configs/image_nested_calibration.yaml"))
     if not session.is_file():
         raise ValueError("The original raw session must already exist; calibration cannot create a new allocation.")
     raw_config = raw_stage.load_config(reference_config)
@@ -139,6 +141,8 @@ def prepare_calibration(project_root, config, *, raw_prepared=None, audit_images
                 "reference_session": config["run"]["reference_session"], "test_set_loaded": False,
                 "qualification": reference["qualification"],
                 "evaluation_status": "development_outer_oof_training_only_recalibration"}
+    if reference.get("dataset_identity") is not None:
+        manifest["dataset_identity"] = copy.deepcopy(reference["dataset_identity"])
     return {"root": root, "config": config, "raw_config": raw_config, "raw_dir": raw_dir, "run_dir": run_dir,
             "session_path": session, "raw_prepared": prepared_raw, "manifest": manifest,
             "declaration": declaration, "source_sha256": sources}

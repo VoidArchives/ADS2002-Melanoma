@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-11T14:47:38.075431+00:00",
+  "condition": "original",
+  "run_id": "nn_grid36_v1",
+  "review_scope": "Direct visual inspection of every rendered original metadata 06/07 PNG; no production changes.",
+  "source_templates": [
+    "results/metadata_nn_tuning/v1/archive_before_update/notebooks/Subset/06_metadata_neural_network.ipynb",
+    "results/metadata_nn_tuning/v1/archive_before_update/notebooks/Subset/07_metadata_tuning.ipynb"
+  ],
+  "figure_count": 16,
+  "result": "pass",
+  "issues": [],
+  "checks": [
+    "clipping and margins",
+    "labels, titles and legends",
+    "font conventions",
+    "original semantic colours",
+    "original chart composition with explicitly labelled NN scope additions",
+    "primary mean-fold versus secondary pooled scope"
+  ],
+  "figures": [
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_1.png",
+      "sha256": "5e019926e4f0331151729fd12ba7413fedb045294f750a21e7303075ae6f339b",
+      "dimensions_px": [
+        1304,
+        509
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Primary equal-fold AP/AUC: original five-model, two-panel composition; spline blue, seeds orange, mean charcoal. Values, prevalence reference and labels readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_2.png",
+      "sha256": "30c79d73b35fa35e7f32db8adceb9de8b6204342dab57071cdd1d6222d2aac08",
+      "dimensions_px": [
+        1304,
+        509
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Secondary pooled AP/AUC: same original five-model, two-panel composition and semantic palette; pooled label and malignant-image reference explicit."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell11_4.png",
+      "sha256": "18f5853a63728ffa3d934600ee316038c4026658db04cc0f405ee0266afc8678",
+      "dimensions_px": [
+        1304,
+        560
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional fixed NN stability diagnostic: seed markers distinguish the three orange runs; blue spline and charcoal ensemble visible; legend and long title fit."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_1.png",
+      "sha256": "b57cdf992d297d23fdaca707960e8f01bd3c2e59de26a8a0c5fbf9aca8093c68",
+      "dimensions_px": [
+        1304,
+        560
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional fixed NN stopping-duration diagnostic: all seed markers and charcoal median visible, with unobstructed upper-right legend and readable axes."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/06_metadata_neural_network_cell13_2.png",
+      "sha256": "ba1ee26a6b315c52a34b46bcdcd57e731cd9e905b2131ec993866fd8db023b44",
+      "dimensions_px": [
+        1423,
+        2121
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional fixed NN histories: five fold rows and stopping/refit columns aligned; orange fit and charcoal stopping losses distinguish phases; top legends, titles and lower axes readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell12_0.png",
+      "sha256": "17cb40eee06fe524ddd8b442c5a121833e3bcf49d584311319224c063737798a",
+      "dimensions_px": [
+        1351,
+        1969
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional 36-recipe NN search: all 15 panels and 180 AP annotations readable; one shared blue scale; selected recipes outlined gold; global colour bar does not overlap panels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_4.png",
+      "sha256": "0cc3df69710583c0e23f87aad332fa91d9a8b29a4d886d86e6f82c7a0f14eb46",
+      "dimensions_px": [
+        1390,
+        475
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional selected-setting frequency: three gold panels with integer counts and complete setting labels; title and panel headings separated."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell14_5.png",
+      "sha256": "890bed899319304e75491a5a33d44fcea05dad1fa7590a7b6abd3d2a7ef67fb1",
+      "dimensions_px": [
+        1040,
+        470
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional selection-margin diagnostic: gold bars and six-decimal margin labels readable; y-axis shows tiny differences without truncation."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell16_1.png",
+      "sha256": "4fad35f8ec1d7ceee8514785eb85620b7dac8eb42b8ee33b0ba9688390d1db6c",
+      "dimensions_px": [
+        1090,
+        470
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional tuned NN stopping-duration diagnostic: gold seed symbols and charcoal median, unobstructed lower-left legend, full outer-fold labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell18_2.png",
+      "sha256": "360fcc7bbe6cc2650f5f196a9093610f3261f3188ed96d090f4511ca3dcfef32",
+      "dimensions_px": [
+        1190,
+        887
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional fold-gain diagnostic: four model panels, common vertical scale, gold square markers and grey zero references; titles and axes separated."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_0.png",
+      "sha256": "0dc6d451b54be37b1f9ae4d2899475e5a255a598e96ea59e304c7e503107bdb4",
+      "dimensions_px": [
+        1040,
+        570
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Primary equal-fold ROC-AUC: four fixed/tuned model pairs; original blue/gold bars, separate figure, original width/edge conventions and readable four-decimal labels."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_1.png",
+      "sha256": "1aa40268c8508ae96ab96721e22d71393a46b4c82b058ab09c93d05d8c7c1a1b",
+      "dimensions_px": [
+        1040,
+        570
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Primary equal-fold AP: four fixed/tuned model pairs; original blue/gold palette, separate metric figure and readable four-decimal annotations."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_2.png",
+      "sha256": "ebfe84a3ef62c2506ba0dbb5464a7d335ae34b203f1261a7f9935e4cf7276eb1",
+      "dimensions_px": [
+        1040,
+        570
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Secondary pooled ROC-AUC: same four-model blue/gold composition; secondary title explicit; labels, values and legend unobstructed."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell20_3.png",
+      "sha256": "1da505b2b205ec69eb245eadced6cd7f732cb6948cabaf6eefb5671ef6018696",
+      "dimensions_px": [
+        1040,
+        570
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Secondary pooled AP: same four-model blue/gold composition; secondary title explicit; labels, values and legend unobstructed."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell22_0.png",
+      "sha256": "fd504ec8331db6e1f6a55163dfc429ae388e32b50769525bbc3f7d8536303cfe",
+      "dimensions_px": [
+        1390,
+        1741
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Pooled ROC/PR: original left/right curve composition expanded to a labelled fourth NN row; blue dashed circles versus gold solid squares, original 0\u201330% PR focus, all legends and eight axes readable."
+    },
+    {
+      "path": "results/metadata_nn_tuning/v1/report_verification/Subset/07_metadata_tuning_cell26_1.png",
+      "sha256": "3cbc9c02d383c40c91b5ded3de1946d1acf427f41154dfb82fc8481e13c13a1b",
+      "dimensions_px": [
+        1040,
+        470
+      ],
+      "inspection_method": "view_image(detail=original)",
+      "outcome": "pass",
+      "notes": "Additional paired patient-bootstrap diagnostic: gold intervals with darker gold squares, full comparison labels, grey zero line and explicit conditional-on-predictions title. No clipping."
+    }
+  ],
+  "limitations": [
+    "This review covers rendered figures; numerical correctness and notebook section depth are covered by separate verified artifacts and tests.",
+    "Additional search diagnostics extend the archived experiment scope; identical pixels to historical outputs are not expected."
+  ]
+}

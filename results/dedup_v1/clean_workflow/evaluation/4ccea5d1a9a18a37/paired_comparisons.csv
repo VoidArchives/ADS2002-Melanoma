@@ -1,0 +1,9 @@
+comparison,aggregation,metric,difference,ci_lower,ci_upper,bootstrap_replicates,valid_replicates,rejected_single_class_replicates,seed,role
+metadata_nn_mean minus spline_raw,mean_fold,average_precision,-0.005271143513027869,-0.025521792453665138,0.007595448601726711,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,roc_auc,0.021063062102597008,-0.0056306926617938095,0.04132574536845578,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,log_loss,-0.0008369291590955008,-0.002220965763532795,0.000538841725349242,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,mean_fold,brier,-3.939443074068433e-05,-0.00018598102632300123,0.00011489799885564569,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,average_precision,-0.001533362752247018,-0.019437855298223877,0.0059994176792624405,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,roc_auc,0.026626716120129346,0.0037631587308312895,0.04889362895339751,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,log_loss,-0.0008431907736279609,-0.002236334966968012,0.0004982445591369249,2000,2000,0,42,predeclared development comparison
+metadata_nn_mean minus spline_raw,pooled,brier,-4.074958051780361e-05,-0.00019076170266166788,0.00010835001021689937,2000,2000,0,42,predeclared development comparison

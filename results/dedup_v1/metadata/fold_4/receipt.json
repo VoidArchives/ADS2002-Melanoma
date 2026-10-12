@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "outer_fold": 4,
+  "rows": 1297,
+  "compatibility_sha256": "da31ab577785789e201061923c8abce12db9ba44574874736b0bf9051b89cf64",
+  "elapsed_seconds": 8.23318909999216,
+  "output_sha256": {
+    "results/dedup_v1/metadata/fold_4/predictions.csv": "3b15eb97189680690600fe094afef8800e22fdd82e8bc4dfdf616da7005e3409",
+    "results/dedup_v1/metadata/fold_4/epochs.csv": "da81d13f91039124b7c27c9ca0f7bae768e5fa6aa34514110b2d44d2ddf6a77c",
+    "results/dedup_v1/metadata/fold_4/history.csv": "6f758c46fab016bbca3aa9bd53eb6d208550e0ce9dd4951a310ccfeae8472d88",
+    "results/dedup_v1/metadata/fold_4/selection_memberships.csv": "a7c2712b532782af153dcd988fd26c621c54ae6b91ecccafd7baf45914570fd0",
+    "results/dedup_v1/metadata/fold_4/models.joblib": "6747403d3275160412933f44be54a89ecbae8fe45a36dfc30932aaf75957dabf",
+    "results/dedup_v1/metadata/fold_4/calibration.csv": "2cbb17450df1d193c0bfbc20e67c942d7a89c455637e5e2402ed39e07fc4cbba",
+    "results/dedup_v1/metadata/fold_4/inner_audit.csv": "e5bd3d7b7e0f5b987c145e4bed767be3ab1504b8e0d4488e6faeef8620622b19",
+    "results/dedup_v1/metadata/fold_4/training_oof.csv": "90d44ca95a19f3f70d7999c2159b05503fb41deb5753cf7a5e0158a6853e53dc"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "experiment_version": 2,
+  "status": "complete",
+  "condition": "original",
+  "selection_metric": "roc_auc",
+  "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+  "compatibility_sha256": "a7ca8c48b67a3da0024f461325bf90a2f051637ea996ce75b5fc2fd708977ca3",
+  "context": {
+    "condition": "original",
+    "outer_fold": 3,
+    "selection_metric": "roc_auc",
+    "output_root": "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1",
+    "recipe_id": "r03",
+    "recipe_order": 3,
+    "hidden_units": 8,
+    "learning_rate": 0.0003,
+    "dropout": 0.4,
+    "model": "nn",
+    "stage": "nn_outer_tuned",
+    "inner_fold": -1,
+    "base_seed": 42,
+    "training_seed": 45,
+    "stop_group": 4,
+    "phase": "refit",
+    "selected_epochs": 53
+  },
+  "csv_names": [
+    "predictions",
+    "history"
+  ],
+  "output_sha256": {
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/predictions.csv": "eddf0b006a0acec3b0e654064e52fe40558995adff299102c9d3c0e8f95219c8",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/history.csv": "1b197bdec2b2b5fcdf377a7c6125932541bdaaf870f84fec44367234d3dba740",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/model.joblib": "5975771279fd5b8513579de66c3b1ae2448b865d53a5caadf85e3d07fb370c34",
+    "results/metadata_nn_tuning/v2/original/roc_auc_grid36_v1/trials/outer_3/selected/seed_42/refit/result.json": "b0dab1f9a8cabeffd994746a5e506dfbffc29aaf96caca17e476f03870ee5f17"
+  }
+}

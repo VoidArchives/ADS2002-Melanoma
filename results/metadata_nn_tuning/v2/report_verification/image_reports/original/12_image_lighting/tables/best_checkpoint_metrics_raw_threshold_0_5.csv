@@ -1,0 +1,2 @@
+pipeline_id,selected_epoch,n_images,n_patients,n_melanoma,evaluation_status,average_precision,roc_auc,log_loss,brier,threshold,score_type,decision_rule,TP,FP,TN,FN,sensitivity,specificity,precision,flagged_fraction,recall,f1
+A_weak_none,6,1834,113,33,exploratory_inner_validation_not_outer_oof,0.13831775092020718,0.8663368835495431,0.08764214509797337,0.021025849616033036,0.5,raw_base_probability,score >= threshold,4,14,1787,29,0.12121212121212122,0.9922265408106608,0.2222222222222222,0.009814612868047983,0.12121212121212122,0.1568627450980392

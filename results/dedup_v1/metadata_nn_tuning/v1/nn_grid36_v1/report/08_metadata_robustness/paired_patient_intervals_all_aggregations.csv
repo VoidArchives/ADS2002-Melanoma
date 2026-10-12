@@ -1,0 +1,89 @@
+model_name,aggregation,metric,estimate,ci_lower,ci_upper,bootstrap_replicates,n_valid,rejected_single_class_replicates,seed,interval,reference_model,comparison,difference
+Raw spline,mean_fold,average_precision,0.06484151092137948,0.045574055676529134,0.1150388035872869,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,mean_fold,roc_auc,0.6556306255758139,0.5939947292932696,0.7204167967907358,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,mean_fold,log_loss,0.09100601779886522,0.07300752620751572,0.11201101323863621,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,mean_fold,brier,0.01842180422465106,0.01405124594029434,0.023515919293109026,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,pooled,average_precision,0.04920904410073493,0.03264545732760178,0.08457021121805952,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,pooled,roc_auc,0.6428339754384327,0.5723621823208397,0.7175629205680971,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,pooled,log_loss,0.09094929888866671,0.07265417483029095,0.11122576488454235,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Raw spline,pooled,brier,0.018411038873828507,0.013955190615671999,0.02315578170812002,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,mean_fold,average_precision,0.06484151092137948,0.045574055676529134,0.1150388035872869,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,mean_fold,roc_auc,0.6556306255758139,0.5939947292932696,0.7204167967907358,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,mean_fold,log_loss,0.09082988170618742,0.0727377522082728,0.11170948650531837,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,mean_fold,brier,0.018410399127178432,0.013980558155632738,0.023522749337807312,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,pooled,average_precision,0.04781091437948015,0.03242620567492532,0.07989326452032915,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,pooled,roc_auc,0.6380992731585706,0.5679339742117584,0.7135206536766786,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,pooled,log_loss,0.0907757890254526,0.07236470905110953,0.11070577566983639,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,pooled,brier,0.018398850502986498,0.013919826129626233,0.02321517282138682,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,mean_fold,average_precision,0.05862563270965737,0.043003245945561056,0.1028056133772223,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,mean_fold,roc_auc,0.673250562833279,0.609904485592952,0.7306391893447876,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,mean_fold,log_loss,0.09060633142884765,0.07254858471512983,0.11159149022999905,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,mean_fold,brier,0.01839847196966942,0.014008275412963527,0.023502577471109228,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,pooled,average_precision,0.04671916384687118,0.031933727133597864,0.07339071322242173,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,pooled,roc_auc,0.660620226849209,0.5931184128545606,0.7261195996128812,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,pooled,log_loss,0.09054062810780446,0.07221294147763574,0.11005538054183185,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 42,pooled,brier,0.018386597310504894,0.013916287240250073,0.023182069715770776,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,mean_fold,average_precision,0.0588376548189782,0.04384808787723011,0.10207586140171852,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,mean_fold,roc_auc,0.6740862596627254,0.6131013430490231,0.7319591724916437,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,mean_fold,log_loss,0.0903121086286787,0.07246413725148594,0.11110406274056035,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,mean_fold,brier,0.018380612498860627,0.01398230212975489,0.023466404532015397,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,pooled,average_precision,0.04859201373161832,0.03334350171632836,0.07396795184801926,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,pooled,roc_auc,0.6693302359092939,0.6051555072364893,0.7352450171804082,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,pooled,log_loss,0.09024887168680659,0.07201669879473627,0.10983555536378785,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 142,pooled,brier,0.018368409764370944,0.013907427249092984,0.023163445710465556,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,mean_fold,average_precision,0.05394538954323834,0.04289923307462203,0.0924887101931581,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,mean_fold,roc_auc,0.675615928810083,0.6113226975491229,0.7339814580501612,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,mean_fold,log_loss,0.0901431021536847,0.07260527542352684,0.11087472002178336,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,mean_fold,brier,0.018402228176074294,0.014036869779432344,0.023459754013611816,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,pooled,average_precision,0.046399909671318885,0.03238326550519584,0.07012676797337333,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,pooled,roc_auc,0.6717652085554969,0.6084445958163348,0.7359026707538258,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,pooled,log_loss,0.09008143948752403,0.07208927733798659,0.10943619817188355,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+NN seed 242,pooled,brier,0.0183899905150551,0.013941935924310382,0.02316991582585288,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,mean_fold,average_precision,0.05957036740835161,0.044039471791498974,0.10590039449293347,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,mean_fold,roc_auc,0.6766936876784109,0.6141208557297861,0.7355030891932901,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,mean_fold,log_loss,0.09016908863976972,0.07235105924601627,0.11091276525878012,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,mean_fold,brier,0.018382409793910377,0.013996502776592208,0.023476088993879356,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,pooled,average_precision,0.04767568134848791,0.03294679716140868,0.07219753796571558,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,pooled,roc_auc,0.669460691558562,0.6045012628797235,0.7353745686789462,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,pooled,log_loss,0.09010610811503875,0.07187950429082003,0.10942827520027013,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Fixed NN mean of three,pooled,brier,0.018370289293310704,0.013899652853731287,0.023172266420811768,2000,2000,0,42,"95% percentile, conditional patient-cluster bootstrap",,,
+Recalibrated spline,mean_fold,average_precision,-0.0,-0.0,-0.0,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.0
+Recalibrated spline,mean_fold,roc_auc,-0.0,-0.0,-0.0,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.0
+Recalibrated spline,mean_fold,log_loss,-0.00017613609267780328,-0.0012629893128243777,0.0010094882154015792,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.00017613609267780328
+Recalibrated spline,mean_fold,brier,-1.1405097472629716e-05,-0.00014240042319988702,0.00012619331452377495,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,1.1405097472629716e-05
+Recalibrated spline,pooled,average_precision,-0.001398129721254776,-0.011480847540672726,0.006463984728557581,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.001398129721254776
+Recalibrated spline,pooled,roc_auc,-0.0047347022798620575,-0.00858415869498672,-0.0007638438899039674,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.0047347022798620575
+Recalibrated spline,pooled,log_loss,-0.00017350986321411355,-0.0012581093940714323,0.0009576209573404083,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,0.00017350986321411355
+Recalibrated spline,pooled,brier,-1.218837084200966e-05,-0.00014179368046428217,0.00012184168439584048,2000,2000,0,42,,Raw spline,image minus Recalibrated spline,1.218837084200966e-05
+NN seed 42,mean_fold,average_precision,-0.006215878211722106,-0.030145653637935137,0.006840127162928489,2000,2000,0,42,,Raw spline,image minus NN seed 42,0.006215878211722106
+NN seed 42,mean_fold,roc_auc,0.017619937257465135,-0.010705056133115046,0.03831167907074415,2000,2000,0,42,,Raw spline,image minus NN seed 42,-0.017619937257465135
+NN seed 42,mean_fold,log_loss,-0.00039968637001756846,-0.001759993618526574,0.0010324190364468968,2000,2000,0,42,,Raw spline,image minus NN seed 42,0.00039968637001756846
+NN seed 42,mean_fold,brier,-2.3332254981640876e-05,-0.00016736597929432198,0.00012513094816536587,2000,2000,0,42,,Raw spline,image minus NN seed 42,2.3332254981640876e-05
+NN seed 42,pooled,average_precision,-0.0024898802538637493,-0.01967080012164954,0.006467097760904297,2000,2000,0,42,,Raw spline,image minus NN seed 42,0.0024898802538637493
+NN seed 42,pooled,roc_auc,0.017786251410776277,-0.005419059748912735,0.03870762905210891,2000,2000,0,42,,Raw spline,image minus NN seed 42,-0.017786251410776277
+NN seed 42,pooled,log_loss,-0.00040867078086224973,-0.0018488553535923433,0.001001041560426649,2000,2000,0,42,,Raw spline,image minus NN seed 42,0.00040867078086224973
+NN seed 42,pooled,brier,-2.4441563323613497e-05,-0.00017736822918845325,0.00012252201427893021,2000,2000,0,42,,Raw spline,image minus NN seed 42,2.4441563323613497e-05
+NN seed 142,mean_fold,average_precision,-0.006003856102401277,-0.02929136751773586,0.007176574929268211,2000,2000,0,42,,Raw spline,image minus NN seed 142,0.006003856102401277
+NN seed 142,mean_fold,roc_auc,0.018455634086911532,-0.009777372963442204,0.04014513613045581,2000,2000,0,42,,Raw spline,image minus NN seed 142,-0.018455634086911532
+NN seed 142,mean_fold,log_loss,-0.0006939091701865241,-0.0022556800905717887,0.000820833927826408,2000,2000,0,42,,Raw spline,image minus NN seed 142,0.0006939091701865241
+NN seed 142,mean_fold,brier,-4.119172579043415e-05,-0.00019432812486146477,0.00011721693134703988,2000,2000,0,42,,Raw spline,image minus NN seed 142,4.119172579043415e-05
+NN seed 142,pooled,average_precision,-0.0006170303691166099,-0.019644671977615713,0.009111781267181528,2000,2000,0,42,,Raw spline,image minus NN seed 142,0.0006170303691166099
+NN seed 142,pooled,roc_auc,0.026496260470861177,-0.000715349207864257,0.053689544389958974,2000,2000,0,42,,Raw spline,image minus NN seed 142,-0.026496260470861177
+NN seed 142,pooled,log_loss,-0.0007004272018601154,-0.002270014303580457,0.0008295116328192283,2000,2000,0,42,,Raw spline,image minus NN seed 142,0.0007004272018601154
+NN seed 142,pooled,brier,-4.262910945756343e-05,-0.00019928855333875515,0.00011216614663921067,2000,2000,0,42,,Raw spline,image minus NN seed 142,4.262910945756343e-05
+NN seed 242,mean_fold,average_precision,-0.010896121378141138,-0.033956382748694884,0.007035682025069019,2000,2000,0,42,,Raw spline,image minus NN seed 242,0.010896121378141138
+NN seed 242,mean_fold,roc_auc,0.01998530323426917,-0.0075736159518950685,0.04114168685853482,2000,2000,0,42,,Raw spline,image minus NN seed 242,-0.01998530323426917
+NN seed 242,mean_fold,log_loss,-0.000862915645180512,-0.0024156128243512953,0.0007070419463175933,2000,2000,0,42,,Raw spline,image minus NN seed 242,0.000862915645180512
+NN seed 242,mean_fold,brier,-1.9576048576767924e-05,-0.00017776409124729316,0.00015295898487225934,2000,2000,0,42,,Raw spline,image minus NN seed 242,1.9576048576767924e-05
+NN seed 242,pooled,average_precision,-0.0028091344294160422,-0.023128679881278605,0.006706183960621478,2000,2000,0,42,,Raw spline,image minus NN seed 242,0.0028091344294160422
+NN seed 242,pooled,roc_auc,0.028931233117064248,0.004275751998137055,0.053266268763366244,2000,2000,0,42,,Raw spline,image minus NN seed 242,-0.028931233117064248
+NN seed 242,pooled,log_loss,-0.0008678594011426732,-0.0024273013365245857,0.0006811705280136214,2000,2000,0,42,,Raw spline,image minus NN seed 242,0.0008678594011426732
+NN seed 242,pooled,brier,-2.1048358773406023e-05,-0.00018297721213541814,0.00015136730234572684,2000,2000,0,42,,Raw spline,image minus NN seed 242,2.1048358773406023e-05
+Fixed NN mean of three,mean_fold,average_precision,-0.005271143513027869,-0.025521792453665135,0.007595448601726713,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,0.005271143513027869
+Fixed NN mean of three,mean_fold,roc_auc,0.021063062102597008,-0.005630692661793766,0.04132574536845578,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,-0.021063062102597008
+Fixed NN mean of three,mean_fold,log_loss,-0.0008369291590955008,-0.0022209657635327944,0.0005388417253492421,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,0.0008369291590955008
+Fixed NN mean of three,mean_fold,brier,-3.939443074068433e-05,-0.0001859810263230012,0.00011489799885564585,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,3.939443074068433e-05
+Fixed NN mean of three,pooled,average_precision,-0.001533362752247018,-0.019437855298223866,0.005999417679262441,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,0.001533362752247018
+Fixed NN mean of three,pooled,roc_auc,0.026626716120129346,0.00376315873083129,0.048893628953397536,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,-0.026626716120129346
+Fixed NN mean of three,pooled,log_loss,-0.0008431907736279609,-0.0022363349669680117,0.0004982445591369258,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,0.0008431907736279609
+Fixed NN mean of three,pooled,brier,-4.074958051780361e-05,-0.00019076170266166785,0.0001083500102168994,2000,2000,0,42,,Raw spline,image minus Fixed NN mean of three,4.074958051780361e-05
