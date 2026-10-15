@@ -1,0 +1,34 @@
+{
+  "fusion_manifest": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\metrics\\fusion_all_models_manifest.json",
+  "sources": {
+    "convnext_tiny_224_basic_hair0_7790d73a11 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\convnext_tiny_224_basic_hair0_7790d73a11\\fusion_nn_oof.csv",
+    "convnext_tiny_224_basic_hair0_7790d73a11 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\convnext_tiny_224_basic_hair0_7790d73a11\\fusion_spline_oof.csv",
+    "convnext_tiny_224_basic_hair0_7790d73a11 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\convnext_tiny_224_basic_hair0_7790d73a11\\out_of_fold_predictions.csv",
+    "densenet121_224_basic_hair0_b1f74d0a85 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\densenet121_224_basic_hair0_b1f74d0a85\\fusion_nn_oof.csv",
+    "densenet121_224_basic_hair0_b1f74d0a85 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\densenet121_224_basic_hair0_b1f74d0a85\\fusion_spline_oof.csv",
+    "densenet121_224_basic_hair0_b1f74d0a85 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\densenet121_224_basic_hair0_b1f74d0a85\\out_of_fold_predictions.csv",
+    "efficientnet_b0_224_basic_hair0_e04e2f7486 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b0_224_basic_hair0_e04e2f7486\\fusion_nn_oof.csv",
+    "efficientnet_b0_224_basic_hair0_e04e2f7486 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b0_224_basic_hair0_e04e2f7486\\fusion_spline_oof.csv",
+    "efficientnet_b0_224_basic_hair0_e04e2f7486 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b0_224_basic_hair0_e04e2f7486\\out_of_fold_predictions.csv",
+    "efficientnet_b3_300_basic_hair0_cffe5ac883 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b3_300_basic_hair0_cffe5ac883\\fusion_nn_oof.csv",
+    "efficientnet_b3_300_basic_hair0_cffe5ac883 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b3_300_basic_hair0_cffe5ac883\\fusion_spline_oof.csv",
+    "efficientnet_b3_300_basic_hair0_cffe5ac883 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b3_300_basic_hair0_cffe5ac883\\out_of_fold_predictions.csv",
+    "efficientnet_b4_380_basic_hair0_ff5d164233 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b4_380_basic_hair0_ff5d164233\\fusion_nn_oof.csv",
+    "efficientnet_b4_380_basic_hair0_ff5d164233 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\efficientnet_b4_380_basic_hair0_ff5d164233\\fusion_spline_oof.csv",
+    "efficientnet_b4_380_basic_hair0_ff5d164233 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b4_380_basic_hair0_ff5d164233\\out_of_fold_predictions.csv",
+    "resnet18_224_basic_hair0_012e640076 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet18_224_basic_hair0_012e640076\\fusion_nn_oof.csv",
+    "resnet18_224_basic_hair0_012e640076 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet18_224_basic_hair0_012e640076\\fusion_spline_oof.csv",
+    "resnet18_224_basic_hair0_012e640076 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet18_224_basic_hair0_012e640076\\out_of_fold_predictions.csv",
+    "resnet34_224_basic_hair0_3785453425 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet34_224_basic_hair0_3785453425\\fusion_nn_oof.csv",
+    "resnet34_224_basic_hair0_3785453425 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet34_224_basic_hair0_3785453425\\fusion_spline_oof.csv",
+    "resnet34_224_basic_hair0_3785453425 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet34_224_basic_hair0_3785453425\\out_of_fold_predictions.csv",
+    "resnet50_224_basic_hair0_a035ef4bb7 | CNN + NN": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet50_224_basic_hair0_a035ef4bb7\\fusion_nn_oof.csv",
+    "resnet50_224_basic_hair0_a035ef4bb7 | CNN + Spline": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\predictions\\fusion\\resnet50_224_basic_hair0_a035ef4bb7\\fusion_spline_oof.csv",
+    "resnet50_224_basic_hair0_a035ef4bb7 | CNN only": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet50_224_basic_hair0_a035ef4bb7\\out_of_fold_predictions.csv"
+  },
+  "recall_targets": [
+    0.9,
+    0.95
+  ],
+  "interpretation": "Development-only tuning. Pooled thresholds are unvalidated for final model/ensemble transfer."
+}

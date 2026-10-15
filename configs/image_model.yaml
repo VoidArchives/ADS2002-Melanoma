@@ -1,0 +1,19 @@
+# Registry supplies DEFAULT weights, canonical input size and discriminative LRs.
+# TARGET_EFFECTIVE_BATCH_SIZE=128 and NUMBER_OF_EPOCHS=3 are central constants.
+# image_size=null resolves per architecture; batch_size=null runs CUDA preflight.
+image_size: null
+batch_size: null
+augmentation: basic
+hair_removal: false
+rotation: 0
+max_epochs: 3
+patience: null
+selection_metric: validation_ROC_AUC
+threshold_method: fixed
+num_workers: 0
+worker_timeout: 60
+weight_decay: 0.0001
+gradient_clip_norm: 1.0
+seed: 42
+pretrained: true
+screening: true

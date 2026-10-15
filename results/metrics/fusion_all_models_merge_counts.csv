@@ -1,0 +1,9 @@
+,Image OOF rows,Metadata OOF rows,Matched rows,Matched patients,Matched melanoma positives,Unmatched image rows,Unmatched metadata rows
+convnext_tiny_224_basic_hair0_7790d73a11,6705,6864,6705,422,127,0,159
+densenet121_224_basic_hair0_b1f74d0a85,6705,6864,6705,422,127,0,159
+efficientnet_b0_224_basic_hair0_e04e2f7486,6705,6864,6705,422,127,0,159
+efficientnet_b3_300_basic_hair0_cffe5ac883,6705,6864,6705,422,127,0,159
+efficientnet_b4_380_basic_hair0_ff5d164233,6705,6864,6705,422,127,0,159
+resnet18_224_basic_hair0_012e640076,6705,6864,6705,422,127,0,159
+resnet34_224_basic_hair0_3785453425,6705,6864,6705,422,127,0,159
+resnet50_224_basic_hair0_a035ef4bb7,6705,6864,6705,422,127,0,159

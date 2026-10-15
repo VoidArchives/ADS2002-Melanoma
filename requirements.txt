@@ -1,7 +1,26 @@
-pandas
+# Data and visualisation
 numpy
-scikit-learn
+pandas
 matplotlib
-kagglehub
-ipykernel
-ipywidgets
+seaborn
+
+# Notebook display and image processing
+ipython
+Pillow
+
+# Machine learning
+scikit-learn
+xgboost
+
+# Deep learning
+torch
+torchvision
+
+# Progress bars
+tqdm
+# Strong image augmentation and DullRazor-style hair removal
+albumentations==2.0.8
+opencv-python-headless>=4.9,<5
+
+# YAML experiment configuration
+PyYAML>=6

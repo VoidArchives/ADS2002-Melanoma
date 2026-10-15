@@ -1,2 +1,0 @@
-split_method,best_epoch,best_validation_roc_auc,test_roc_auc,test_pr_auc,sensitivity,specificity,precision,true_negative,false_positive,false_negative,true_positive
-patient_level,3,0.8237248563218391,0.8811050488733579,0.12513388817837828,0.9354838709677419,0.6663260091977516,0.04252199413489736,1304,653,2,29

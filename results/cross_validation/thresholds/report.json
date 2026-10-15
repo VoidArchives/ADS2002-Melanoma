@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "convnext_tiny": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\convnext_tiny_224_basic_hair0_7790d73a11\\out_of_fold_predictions.csv",
+    "densenet121": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\densenet121_224_basic_hair0_b1f74d0a85\\out_of_fold_predictions.csv",
+    "efficientnet_b0": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b0_224_basic_hair0_e04e2f7486\\out_of_fold_predictions.csv",
+    "efficientnet_b3": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b3_300_basic_hair0_cffe5ac883\\out_of_fold_predictions.csv",
+    "efficientnet_b4": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\efficientnet_b4_380_basic_hair0_ff5d164233\\out_of_fold_predictions.csv",
+    "resnet18": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet18_224_basic_hair0_012e640076\\out_of_fold_predictions.csv",
+    "resnet34": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet34_224_basic_hair0_3785453425\\out_of_fold_predictions.csv",
+    "resnet50": "C:\\Users\\jjk91\\OneDrive\\Documents\\GitHub\\ADS2002-Melanoma\\results\\cross_validation\\resnet50_224_basic_hair0_a035ef4bb7\\out_of_fold_predictions.csv"
+  },
+  "recall_targets": [
+    0.9,
+    0.95
+  ],
+  "interpretation": "Thresholds selected and measured on validation scores. Development diagnostics only. Freeze checkpoint-specific thresholds before independent test evaluation. Pooled OOF thresholds do not calibrate a refitted model or fold ensemble."
+}

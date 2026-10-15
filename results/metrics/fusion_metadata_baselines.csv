@@ -1,0 +1,3 @@
+model,AP,ROC_AUC,Sensitivity,Specificity,precision,F1,TN,FP,FN,TP,Balanced accuracy
+Metadata spline only,0.048630271891163604,0.6467537939636536,0.0,1.0,,0.0,6578,0,127,0,0.5
+Metadata NN only,0.04688757345347275,0.6696139362178389,0.0,1.0,,0.0,6578,0,127,0,0.5
