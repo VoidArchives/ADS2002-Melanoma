@@ -17,9 +17,6 @@ an effective batch of 128. Compare pooled OOF ROC-AUC in `architecture_summary.c
 .venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-See [configuration, outputs and compatibility](docs/image_experiments.md).
-The final held-out test set must be excluded from architecture screening.
-
 To compare 0.5 against validation thresholds targeting 90% and 95% recall without
 retraining, open [the saved-results notebook](notebooks/05_image_thresholds.ipynb),
 or run `.venv\Scripts\python.exe scripts/evaluate_image_thresholds.py`.
